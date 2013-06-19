@@ -1,0 +1,8 @@
+{
+    "require": {
+        "atelierspierrot/markdown-extended": "dev-master"
+    },
+    "config" : {
+        "vendor-dir" : "php/components"
+    }
+}
