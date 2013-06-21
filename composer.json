@@ -1,6 +1,9 @@
 {
     "require": {
-        "atelierspierrot/markdown-extended": "dev-master"
+        "atelierspierrot/markdown-extended": "dev-master",
+        "anahkiasen/underscore-php" : "dev-master",
+        "slim/slim": "dev-master",
+        "mustache/mustache": "dev-master"
     },
     "config" : {
         "vendor-dir" : "php/components"

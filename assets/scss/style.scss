@@ -2,3 +2,80 @@
 @import "../components/bourbon/app/assets/stylesheets/bourbon";
 @import "grid-settings";
 @import "../components/neat/app/assets/stylesheets/neat";
+
+@import "_fonts";
+
+html {
+   background-color: #fff;
+   color: #333;
+}
+
+body {
+   margin: 2% 5%;
+   padding: 0;
+   border: 0;
+   font-size: 14px;
+   line-height: 1.4;
+   font-family: Baskerville;
+   word-wrap: break-word;
+   text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   text-align: left;
+   font-family: 'MyriadPro-SemiExt';
+}
+
+h1, h2, h3 {
+   margin: 15px 0 5px 0;
+}
+
+h1 {
+   font-family: 'MyriadPro-Bold';
+   font-weight: 100;
+   padding: 10px 0 0 0;
+   font-size: 170%;
+}
+
+h2 {
+   padding: 5px 0 0 0;
+   font-size: 135%;
+}
+
+h3 {
+   margin: 15px 0 0 0;
+   font-weight: normal;
+   font-size: 115%;
+}
+
+h4 {
+   font-size: 120%;
+}
+
+h5 {
+   font-size: 100%;
+}
+
+h6 {
+   font-style: italic;
+   font-size: 100%;
+}
+
+p {
+   margin-top: 0;
+   padding-top: 0;
+   margin-bottom: 10px;
+}
+
+pre, code {
+   white-space: pre-wrap;
+}
+
+a, a:active, a:visited {
+   color: rgb(81, 121, 203);
+   text-decoration: none;
+}
+
+a:hover {
+   border-bottom: 1px dotted rgb(81, 121, 203);
+}

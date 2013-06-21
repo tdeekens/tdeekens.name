@@ -212,8 +212,10 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
   # Options +SymLinksIfOwnerMatch
+
     RewriteEngine On
-  # RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
 </IfModule>
 
 # ------------------------------------------------------------------------------

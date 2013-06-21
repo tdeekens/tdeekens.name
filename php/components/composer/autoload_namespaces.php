@@ -6,5 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
+    'Underscore' => $vendorDir . '/anahkiasen/underscore-php/src',
+    'Slim' => $vendorDir . '/slim/slim',
+    'Patchwork' => $vendorDir . '/patchwork/utf8/class',
+    'Normalizer' => $vendorDir . '/patchwork/utf8/class',
+    'Mustache' => $vendorDir . '/mustache/mustache/src',
     'MarkdownExtended' => $vendorDir . '/atelierspierrot/markdown-extended/src',
+    'Illuminate\\Support' => $vendorDir . '/illuminate/support',
 );
