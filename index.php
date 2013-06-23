@@ -32,6 +32,8 @@
             $router->get('/', function() use ($pageDirectory) {
                 $file = $pageDirectory . "about.php";
 
+                echo "<h1>Root</h1>";
+
                 require_once $file;
             });
 
@@ -88,6 +90,7 @@
             $router->run();
         ?>
 
-        <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.js"></script>
+        <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.min.js"></script>
+        <script src="<?php echo baseUri; ?>assets/components/jquery.tube/jquery.tube.min.js"></script>
     </body>
 </html>
