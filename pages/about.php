@@ -2,6 +2,8 @@
 
    namespace tdeekens\blog;
 
+   use Underscore\Types\Arrays;
+
    class About {
 
       private
@@ -12,6 +14,7 @@
          $_musicDirectory = 'music',
          $_musicIndex = 'index.json',
          $_music,
+         $_feed = array(),
          $_mustacheEngine = null;
 
       public function __construct() {
@@ -38,7 +41,10 @@
       }
 
       public function activity() {
+         $this->_feed['songs'] = Arrays::last($this->_music->songs, 3);
+         $this->_feed['articles'] = Arrays::last($this->_articles->articles, 2);
 
+         print $this->_mustacheEngine->render('activity', $this->_feed);
       }
    }
 

@@ -1,0 +1,23 @@
+<h2>This is what was up latest</h2>
+
+<h3>Two posts ...</h3>
+<ul>
+   {{# articles}}
+      <li>
+         <a href="post/{{ file }}">
+            {{ title }}
+         </a>
+      </li>
+   {{/ articles}}
+</ul>
+
+<h3>... and some songs</h3>
+<ul>
+   {{# songs}}
+      <li>
+         <a href="http://youtu.be/{{ hash }}">
+            {{ title }}
+         </a>
+      </li>
+   {{/ songs}}
+</ul>
