@@ -16,7 +16,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo baseUri; ?>assets/scss/style.css">
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -57,12 +57,14 @@
                 $posts->showOne($name);
             });
 
-            $router->get('/listen', function($file) use ($pageDirectory) {
-                $file = $pageDirectory . "listen.php";
+            $router->get('/music', function() use ($pageDirectory) {
+                $file = $pageDirectory . "music.php";
 
                 require_once $file;
 
-                $posts = new tdeekens\blog\Listen();
+                $music = new tdeekens\blog\Music();
+
+                $music->listAll();
             });
 
             $router->get('/read', function($file) use ($pageDirectory) {
@@ -89,8 +91,5 @@
 
             $router->run();
         ?>
-
-        <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.min.js"></script>
-        <script src="<?php echo baseUri; ?>assets/components/jquery.tube/jquery.tube.min.js"></script>
     </body>
 </html>
