@@ -15,7 +15,7 @@
          $this->_posts = json_decode(file_get_contents($indexFile));
 
          $this->_mustacheEngine = new \Mustache_Engine(array(
-             'loader' => new \Mustache_Loader_FilesystemLoader(dirname(__FILE__) . DIRECTORY_SEPARATOR),
+             'loader' => new \Mustache_Loader_FilesystemLoader(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'tmpl' . DIRECTORY_SEPARATOR),
          ));
       }
 

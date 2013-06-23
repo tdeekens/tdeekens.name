@@ -18,7 +18,7 @@
          $this->_music->songs = $songsRevered;
 
          $this->_mustacheEngine = new \Mustache_Engine(array(
-             'loader' => new \Mustache_Loader_FilesystemLoader(dirname(__FILE__) . DIRECTORY_SEPARATOR),
+             'loader' => new \Mustache_Loader_FilesystemLoader(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'tmpl' . DIRECTORY_SEPARATOR),
          ));
       }
 
