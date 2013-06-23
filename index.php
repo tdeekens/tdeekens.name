@@ -32,9 +32,12 @@
             $router->get('/', function() use ($pageDirectory) {
                 $file = $pageDirectory . "about.php";
 
-                echo "<h1>Root</h1>";
-
                 require_once $file;
+
+                $about = new tdeekens\blog\About();
+
+                $about->me();
+                $about->activity();
             });
 
             $router->get('/posts', function() use ($pageDirectory) {
