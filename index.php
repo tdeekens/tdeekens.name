@@ -71,6 +71,20 @@
                 $posts = new tdeekens\blog\Read();
             });
 
+            $router->get('/file/:name', function($name) use ($router, $pageDirectory) {
+                $file = $pageDirectory . "files.php";
+
+                require_once $file;
+
+                $files = new tdeekens\blog\Files($router);
+
+                $files->load($name);
+            });
+
+            $router->notFound(function () use ($pageDirectory) {
+                echo "<h1>The 404 has you!</h1>";
+            });
+
             $router->run();
         ?>
 
