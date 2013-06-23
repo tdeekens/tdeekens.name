@@ -40,7 +40,7 @@
                 $about->activity();
             });
 
-            $router->get('/posts', function() use ($pageDirectory) {
+            $router->get('/posts/', function() use ($pageDirectory) {
                 $file = $pageDirectory . "posts.php";
 
                 require_once $file;
@@ -60,7 +60,7 @@
                 $posts->showOne($name);
             });
 
-            $router->get('/music', function() use ($pageDirectory) {
+            $router->get('/music/', function() use ($pageDirectory) {
                 $file = $pageDirectory . "music.php";
 
                 require_once $file;
@@ -70,7 +70,7 @@
                 $music->listAll();
             });
 
-            $router->get('/read', function($file) use ($pageDirectory) {
+            $router->get('/read/', function($file) use ($pageDirectory) {
                 $file = $pageDirectory . "read.php";
 
                 require_once $file;
@@ -86,10 +86,6 @@
                 $files = new tdeekens\blog\Files($router);
 
                 $files->load($name);
-            });
-
-            $router->notFound(function () use ($pageDirectory) {
-                echo "<h1>The 404 has you!</h1>";
             });
 
             $router->run();
