@@ -7,4 +7,4 @@ Furthermore, sharing is fun. Putting out some music, books and thoughts can't ca
 Lastly you can always blame me of just play out of self vanity and for reasons of self-marketing.
 I am just writing up on things so i can memorize them better.
 
-I am also quiet on [Twitter](http://twitter.com/tdeekens) and [Facebook](http://fb.me/tobias.deekens).
+I am also quiet on [Twitter](http://twitter.com/tdeekens), [Facebook](http://fb.me/tobias.deekens) and [Github](http://github.com/tdeekens).

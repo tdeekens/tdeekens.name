@@ -24,6 +24,24 @@ body {
    background: url(../img/header-1.jpg) top center no-repeat;
    height: 300px;
 }
+.header-meta {
+   & h1 {
+      padding: 0;
+   }
+
+   .social-media {
+      float:right;
+      font-size: 1.5em;
+
+      a {
+         color: black;
+
+         &:hover {
+            border: 0;
+         }
+      }
+   }
+}
 div.navigation {
    @include span-columns(12 of 12);
 
@@ -34,7 +52,7 @@ div.navigation {
       & li {
          list-style-type: none;
          display: inline;
-         margin: 0 10px
+         margin: 0 3px
       }
    }
 
@@ -112,7 +130,12 @@ h6 {
    font-style: italic;
    font-size: 100%;
 }
-
+.massivly-fat {
+   font-weight: normal;
+}
+.incredibly-thin {
+   font-family: MyriadPro-LightSemiExt;
+}
 p {
    margin-top: 0;
    padding-top: 0;

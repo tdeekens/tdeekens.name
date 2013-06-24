@@ -22,10 +22,21 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+
+        <div class="wrap-outer">
+            <div class="header-meta">
+                <div class="social-media">
+                    <a href="http://twitter.com/tdeekens"><span class='symbol'>circletwitterbird</span></a>
+                    <a href="http://fb.me/tobias.deekens"><span class='symbol'>circlefacebook</span></a>
+                    <a href="http://github.com/tdeekens"><span class='symbol'>circlegithubalt</span></a>
+                </div>
+
+                <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
+            </div>
+        </div>
         <div class="header-bg">
 
         </div>
-
         <div class="wrap-outer">
             <div class="navigation">
                 <ul>
