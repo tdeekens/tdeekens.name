@@ -375,6 +375,24 @@ body {
   word-wrap: break-word;
   text-align: justify; }
 
+div.wrap-outer {
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  div.wrap-outer:before, div.wrap-outer:after {
+    content: " ";
+    display: table; }
+  div.wrap-outer:after {
+    clear: both; }
+  div.wrap-outer div.navigation {
+    display: block;
+    float: left;
+    margin-right: 2.5641%;
+    width: 28.20513%; }
+    div.wrap-outer div.navigation:last-child {
+      margin-right: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font-family: 'MyriadPro-SemiExt'; }
