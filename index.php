@@ -36,8 +36,7 @@
 
                 $about = new tdeekens\blog\About();
 
-                $about->me();
-                $about->activity();
+                $about->about();
             });
 
             $router->get('/posts/', function() use ($pageDirectory) {

@@ -7,6 +7,10 @@ Apart from all anxiety, this project is a great experiment which deserves some d
 The inside out action… invention of currency
 
 - Curve really wavy
+- Is dat shit legal, can u issue a currency under state law. no they received a letter: no money transmission without a licence
+   - Billed 2.5k per day of BT life equals 5 years prision and 250k fine for the founder, chairman
+   - The organisation is an NGO in Seatle which actually does not transfer money, thats MtGox and others
+   - A organisation releases money, is it the organisation responsible or the banks?
 - Currency is based on trust, fluctuation does not give any
    - Trust in algorithms, not in institutions managing currency
    - Todays currencies are not backed by gold

@@ -29,7 +29,7 @@
          ));
       }
 
-      public function me() {
+      private function _me() {
          $aboutFile = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $this->_aboutDirectory . DIRECTORY_SEPARATOR . 'about.md';
 
          $content = \MarkdownExtended\MarkdownExtended::create()
@@ -37,14 +37,27 @@
             ->parse( new \MarkdownExtended\Content(null, $aboutFile) )
             ->getContent();
 
-          print $content->getBody();
+          return $content->getBody();
       }
 
-      public function activity() {
+      private function _credits() {
+         $creditsFile = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $this->_aboutDirectory . DIRECTORY_SEPARATOR . 'credits.md';
+
+         $content = \MarkdownExtended\MarkdownExtended::create()
+            ->get('Parser', array())
+            ->parse( new \MarkdownExtended\Content(null, $creditsFile) )
+            ->getContent();
+
+          return $content->getBody();
+      }
+
+      public function about() {
          $this->_feed['songs'] = Arrays::last($this->_music->songs, 3);
          $this->_feed['posts'] = Arrays::last($this->_posts->posts, 2);
+         $this->_feed['about'] = $this->_me();
+         $this->_feed['credits'] = $this->_credits();
 
-         print $this->_mustacheEngine->render('activity', $this->_feed);
+         print $this->_mustacheEngine->render('about', $this->_feed);
       }
    }
 
