@@ -28,7 +28,7 @@
                ->parse( new \MarkdownExtended\Content(null, $postFile) )
                ->getContent();
 
-             print $content->getBody();
+            print $this->_mustacheEngine->render('post', $content->getBody());
          }
       }
 

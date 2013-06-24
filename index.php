@@ -17,26 +17,28 @@
         <link rel="stylesheet" type="text/css" href="<?php echo baseUri; ?>assets/scss/style.css">
 
         <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.min.js"></script>
+        <script src="<?php echo baseUri; ?>assets/js/jquery.parallactic.js"></script>
+        <script src="<?php echo baseUri; ?>assets/js/main.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="wrap-outer">
+        <div class="wrap-outer sticky-header">
             <div class="header-meta">
                 <div class="social-media">
-                    <a href="http://twitter.com/tdeekens"><span class='symbol'>circletwitterbird</span></a>
-                    <a href="http://fb.me/tobias.deekens"><span class='symbol'>circlefacebook</span></a>
-                    <a href="http://github.com/tdeekens"><span class='symbol'>circlegithubalt</span></a>
+                    <a class="symbol" href="http://twitter.com/tdeekens" title='&#xe286;'></a>
+                    <a class="symbol" href="http://fb.me/tobias.deekens" title='&#xe227;'></a>
+                    <a class="symbol" href="http://github.com/tdeekens" title='&#xe237;'></a>
                 </div>
 
                 <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
             </div>
         </div>
-        <div class="header-bg">
 
-        </div>
+        <div class="header-bg" data-speed="2"></div>
+
         <div class="wrap-outer">
             <div class="navigation">
                 <ul>

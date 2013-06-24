@@ -406,18 +406,39 @@ body {
   text-align: justify; }
 
 .header-bg {
-  background: url(../img/header-1.jpg) top center no-repeat;
-  height: 300px; }
+  background: url(../img/header-1.jpg) 50% 0 repeat fixed;
+  height: 200px;
+  margin-top: 60px;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed; }
 
-.header-meta h1 {
-  padding: 0; }
-.header-meta .social-media {
-  float: right;
-  font-size: 1.5em; }
-  .header-meta .social-media a {
-    color: black; }
-    .header-meta .social-media a:hover {
-      border: 0; }
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  z-index: 1000;
+  width: 100%; }
+
+.header-meta {
+  display: block;
+  float: left;
+  margin-right: 2.12766%;
+  width: 100%; }
+  .header-meta:last-child {
+    margin-right: 0; }
+  .header-meta h1 {
+    margin: 10px 0;
+    padding: 0; }
+  .header-meta .social-media {
+    float: right;
+    font-size: 1.3em;
+    margin: 10px 0; }
+    .header-meta .social-media a {
+      color: black; }
+      .header-meta .social-media a:hover {
+        border: 0; }
 
 div.navigation {
   display: block;
@@ -473,6 +494,14 @@ div.wrap-outer {
       width: 48.93617%;
       margin-right: 0; }
       div.wrap-outer div.content-body .activity-songs:last-child {
+        margin-right: 0; }
+    div.wrap-outer div.content-body .post {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 65.95745%;
+      margin-left: 17.02128%; }
+      div.wrap-outer div.content-body .post:last-child {
         margin-right: 0; }
     div.wrap-outer div.content-body .foot-note {
       font-size: .7em; }
