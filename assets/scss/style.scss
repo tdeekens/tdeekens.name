@@ -11,21 +11,65 @@ html {
 }
 
 body {
-   margin: 2% 5%;
+   margin: 0;
    padding: 0;
    border: 0;
-   font-size: 14px;
-   line-height: 1.4;
+   font-size: 17px;
+   line-height: 1.6;
    font-family: Baskerville;
    word-wrap: break-word;
    text-align: justify;
 }
+.header-bg {
+   background: url(../img/header-1.jpg) top center no-repeat;
+   height: 300px;
+}
+div.navigation {
+   @include span-columns(12 of 12);
 
+   text-align: center;
+   border-bottom: 1px solid black;
+
+   ul {
+      & li {
+         list-style-type: none;
+         display: inline;
+         margin: 0 10px
+      }
+   }
+
+   & a {
+      color: rgb(0, 0, 0);
+      font: 2px/3px {
+         size: 1.5em;
+         weight: bold;
+      }
+
+      &:hover {
+         border: 0;
+         color: hsla(0, 0%, 50%, 1)
+      }
+   }
+}
 div.wrap-outer {
    @include outer-container;
 
-   div.navigation {
-      @include span-columns(3);
+   div.content-body {
+      @include span-columns(12 of 12);
+
+      .activity-posts {
+         @include span-columns(6 of 12);
+         @include omega;
+      }
+
+      .activity-songs {
+         @include span-columns(6 of 12);
+         @include omega;
+      }
+
+      .foot-note {
+         font-size: .7em;
+      }
    }
 }
 

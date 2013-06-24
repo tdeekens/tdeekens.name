@@ -22,13 +22,17 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <div class="header-bg">
+
+        </div>
+
         <div class="wrap-outer">
             <div class="navigation">
                 <ul>
-                    <li><a href="<?php echo baseUri; ?>about">It's about</a></li>
-                    <li><a href="<?php echo baseUri; ?>posts">posts</a></li>
-                    <li><a href="<?php echo baseUri; ?>music">and music</a></li>
-                    <li><a href="<?php echo baseUri; ?>read">with reading</a></li>
+                    <li><a href="<?php echo baseUri; ?>">It's about</a></li>
+                    <li><a href="<?php echo baseUri; ?>posts">posts,</a></li>
+                    <li><a href="<?php echo baseUri; ?>music">music</a></li>
+                    <li><a href="<?php echo baseUri; ?>read">and some reading.</a></li>
                 </ul>
             </div>
             <div class="content-body">
