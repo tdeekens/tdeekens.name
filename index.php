@@ -25,16 +25,18 @@
     <body>
         <header></header>
 
-        <div class="wrap-outer sticky-header">
-            <div class="header-meta">
+        <div class="wrap-outer">
+            <div class="sticky-header">
+                <div class="header-meta">
+                    <div class="avatar"><img src="<?php echo baseUri; ?>assets/img/avatar.jpg" alt=""></div>
+                    <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
+                </div>
+
                 <div class="social-media">
                     <a class="symbol" href="http://twitter.com/tdeekens" title='&#xe286;'></a>
                     <a class="symbol" href="http://fb.me/tobias.deekens" title='&#xe227;'></a>
                     <a class="symbol" href="http://github.com/tdeekens" title='&#xe237;'></a>
                 </div>
-
-                <div class="avatar"><img src="<?php echo baseUri; ?>assets/img/avatar.jpg" alt=""></div>
-                <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
             </div>
         </div>
 

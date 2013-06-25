@@ -416,51 +416,60 @@ body {
   background-attachment: fixed; }
 
 .sticky-header {
-  position: fixed;
-  top: 0;
-  left: 10%;
-  z-index: 1000;
-  width: 100%; }
-
-.avatar {
-  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6);
-  float: left;
-  margin: 10px 15px 3px 0;
-  border: 1px solid white;
-  height: 40px;
-  width: 40px;
-  display: block;
-  border-radius: 45px; }
-
-.avatar {
-  background: rgba(255, 255, 255, 0.2); }
-
-.avatar img {
-  border-radius: 30px;
-  width: 36px;
-  height: 36px;
-  margin: 1px; }
-
-.header-meta {
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 100%; }
-  .header-meta:last-child {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  max-width: 68em;
+  z-index: 1000; }
+  .sticky-header:last-child {
     margin-right: 0; }
-  .header-meta h1 {
-    margin: 10px 0;
-    padding: 0; }
-  .header-meta .social-media {
-    float: right;
+  .sticky-header .header-meta {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 23.40426%; }
+    .sticky-header .header-meta:last-child {
+      margin-right: 0; }
+    .sticky-header .header-meta h1 {
+      margin: 10px 0;
+      padding: 0; }
+    .sticky-header .header-meta .avatar {
+      box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6);
+      float: left;
+      margin: 10px 15px 3px 0;
+      border: 1px solid white;
+      height: 40px;
+      width: 40px;
+      display: block;
+      border-radius: 45px; }
+    .sticky-header .header-meta .avatar {
+      background: rgba(255, 255, 255, 0.2); }
+    .sticky-header .header-meta .avatar img {
+      border-radius: 30px;
+      width: 36px;
+      height: 36px;
+      margin: 1px; }
+  .sticky-header .social-media {
+    display: block;
+    float: left;
+    margin-right: 2.12766%;
+    width: 14.89362%;
+    margin-left: 59.57447%;
     font-size: 1.3em;
-    margin: 7px 0; }
-    .header-meta .social-media a {
+    margin-top: 7px;
+    text-align: right; }
+    .sticky-header .social-media:last-child {
+      margin-right: 0; }
+    .sticky-header .social-media a {
       color: black; }
-      .header-meta .social-media a:hover {
-        border: 0; }
+      .sticky-header .social-media a:hover {
+        border: 0;
+        color: #5179cb; }
     @media screen and (max-width: 480px) {
-      .header-meta .social-media {
+      .sticky-header .social-media {
         display: none; } }
 
 div.navigation {

@@ -33,52 +33,58 @@ body {
    background-attachment : fixed;
 }
 .sticky-header {
-   position:fixed;
-   top:0;
-   left: 10%;
-   z-index:1000;
-   width: 100%;
-}
-.avatar {
-   @include box-shadow(0 1px 5px 1px hsla(0, 0%, 0%, 0.6));
-
-   float: left;
-   margin: 10px 15px 3px 0;
-   border: 1px solid white;
-   height: 40px;
-   width: 40px;
-   display: block;
-   border-radius: 45px;
-}
-
-.avatar {
-   background: rgba(255, 255, 255, 0.2);
-}
-
-.avatar img {
-   border-radius: 30px;
-   width: 36px;
-   height: 36px;
-   margin: 1px;
-}
-.header-meta {
    @include span-columns(12 of 12);
+   position:fixed;
+   top: 0;
+   max-width: 68em;
+   z-index:1000;
 
-   & h1 {
-      margin: 10px 0;
-      padding: 0;
+   .header-meta {
+      @include span-columns(3 of 12);
+
+      h1 {
+         margin: 10px 0;
+         padding: 0;
+      }
+
+      .avatar {
+         @include box-shadow(0 1px 5px 1px hsla(0, 0%, 0%, 0.6));
+
+         float: left;
+         margin: 10px 15px 3px 0;
+         border: 1px solid white;
+         height: 40px;
+         width: 40px;
+         display: block;
+         border-radius: 45px;
+      }
+
+      .avatar {
+         background: rgba(255, 255, 255, 0.2);
+      }
+
+      .avatar img {
+         border-radius: 30px;
+         width: 36px;
+         height: 36px;
+         margin: 1px;
+      }
    }
 
    .social-media {
-      float:right;
+      @include span-columns(2 of 12);
+      @include shift(7);
+
       font-size: 1.3em;
-      margin: 7px 0;
+      margin-top: 7px;
+      text-align: right;
 
       a {
          color: black;
 
          &:hover {
             border: 0;
+            color: rgb(81, 121, 203);
          }
       }
 
