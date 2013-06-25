@@ -81,6 +81,10 @@ body {
             border: 0;
          }
       }
+
+      @include media($mobile) {
+         display: none;
+      }
    }
 }
 div.navigation {
@@ -90,6 +94,8 @@ div.navigation {
    border-bottom: 1px solid black;
 
    ul {
+      padding: 0;
+
       & li {
          list-style-type: none;
          display: inline;
@@ -97,7 +103,7 @@ div.navigation {
       }
    }
 
-   & a {
+   a {
       color: rgb(0, 0, 0);
       font: 2px/3px {
          size: 1.5em;
@@ -107,6 +113,10 @@ div.navigation {
       &:hover {
          border: 0;
          color: hsla(0, 0%, 50%, 1)
+      }
+
+      @include media($mobile) {
+         font-size: 1em;
       }
    }
 }
@@ -129,6 +139,12 @@ div.wrap-outer {
       article {
          @include span-columns(8 of 12);
          @include shift(2);
+
+         @include media($mobile) {
+            @include span-columns(12 of 12);
+            @include shift(0);
+            @include pad(20px);
+         }
       }
 
       .foot-note {
