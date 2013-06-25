@@ -423,23 +423,23 @@ body {
   width: 100%; }
 
 .avatar {
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6);
   float: left;
-  margin: 3px 10px 3px 0;
+  margin: 10px 15px 3px 0;
   border: 1px solid white;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: block;
-  border-radius: 45px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); }
+  border-radius: 45px; }
 
 .avatar {
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(255, 255, 255, 0.2); }
 
 .avatar img {
-  border-radius: 40px;
-  width: 42px;
-  height: 42px;
-  margin: 4px; }
+  border-radius: 30px;
+  width: 36px;
+  height: 36px;
+  margin: 1px; }
 
 .header-meta {
   display: block;
@@ -454,7 +454,7 @@ body {
   .header-meta .social-media {
     float: right;
     font-size: 1.3em;
-    margin: 10px 0; }
+    margin: 7px 0; }
     .header-meta .social-media a {
       color: black; }
       .header-meta .social-media a:hover {

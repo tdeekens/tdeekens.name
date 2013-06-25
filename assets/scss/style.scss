@@ -40,25 +40,26 @@ body {
    width: 100%;
 }
 .avatar {
+   @include box-shadow(0 1px 5px 1px hsla(0, 0%, 0%, 0.6));
+
    float: left;
-   margin: 3px 10px 3px 0;
+   margin: 10px 15px 3px 0;
    border: 1px solid white;
-   height: 50px;
-   width: 50px;
+   height: 40px;
+   width: 40px;
    display: block;
    border-radius: 45px;
-   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
 .avatar {
-   background: rgba(0, 0, 0, 0.2);
+   background: rgba(255, 255, 255, 0.2);
 }
 
 .avatar img {
-   border-radius: 40px;
-   width: 42px;
-   height: 42px;
-   margin: 4px;
+   border-radius: 30px;
+   width: 36px;
+   height: 36px;
+   margin: 1px;
 }
 .header-meta {
    @include span-columns(12 of 12);
@@ -71,7 +72,7 @@ body {
    .social-media {
       float:right;
       font-size: 1.3em;
-      margin: 10px 0;
+      margin: 7px 0;
 
       a {
          color: black;
