@@ -422,6 +422,25 @@ body {
   z-index: 1000;
   width: 100%; }
 
+.avatar {
+  float: left;
+  margin: 3px 10px 3px 0;
+  border: 1px solid white;
+  height: 50px;
+  width: 50px;
+  display: block;
+  border-radius: 45px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); }
+
+.avatar {
+  background: rgba(0, 0, 0, 0.2); }
+
+.avatar img {
+  border-radius: 40px;
+  width: 42px;
+  height: 42px;
+  margin: 4px; }
+
 .header-meta {
   display: block;
   float: left;

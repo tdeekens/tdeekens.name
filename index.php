@@ -33,6 +33,7 @@
                     <a class="symbol" href="http://github.com/tdeekens" title='&#xe237;'></a>
                 </div>
 
+                <div class="avatar"><img src="<?php echo baseUri; ?>assets/img/avatar.jpg" alt=""></div>
                 <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
             </div>
         </div>
