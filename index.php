@@ -41,7 +41,7 @@
             <div class="navigation">
                 <nav>
                     <ul>
-                        <li><a href="<?php echo baseUri; ?>">It's about</a></li>
+                        <li><a href="<?php echo baseUri; ?>about">It's about</a></li>
                         <li><a href="<?php echo baseUri; ?>posts">posts,</a></li>
                         <li><a href="<?php echo baseUri; ?>music">music</a></li>
                         <li><a href="<?php echo baseUri; ?>read">and some reading.</a></li>
@@ -56,6 +56,16 @@
                     $router = new \Slim\Slim();
 
                     $router->get('/', function() use ($pageDirectory) {
+                        $file = $pageDirectory . "posts.php";
+
+                        require_once $file;
+
+                        $posts = new tdeekens\blog\Posts();
+
+                        $posts->showLatest();
+                    });
+
+                    $router->get('/about', function() use ($pageDirectory) {
                         $file = $pageDirectory . "about.php";
 
                         require_once $file;

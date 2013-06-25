@@ -3,11 +3,11 @@
          "file": "dem-internet-fallen-die-milchzaehne-aus",
          "title": "Dem dem Internet fallen die Milchzaehne aus"
       }, {
-         "file": "a-post-about-bitcoins",
-         "title": "A post about Bitcoins"
-      }, {
          "file": "agile-development-processes-postmortem",
          "title": "Agile Development Processes: Post-mortem"
+      }, {
+         "file": "a-post-about-bitcoins",
+         "title": "A post about Bitcoins"
       }
    ]
 }
