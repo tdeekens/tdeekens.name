@@ -14,6 +14,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+        <link rel="shortcut icon" href="<?php echo baseUri; ?>favicon.ico" type="image/x-icon">
+
         <link rel="stylesheet" type="text/css" href="<?php echo baseUri; ?>assets/scss/style.css">
 
         <script src="<?php echo baseUri; ?>assets/components/jquery/jquery.min.js"></script>
