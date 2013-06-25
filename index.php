@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="header-bg" data-speed="2"></div>
+        <div class="header-bg" data-speed="2" style="background-image: url(<?php echo baseUri; ?>assets/img/header-<?php echo rand(1, 10); ?>.jpg)"></div>
 
         <div class="wrap-outer">
             <div class="navigation">
