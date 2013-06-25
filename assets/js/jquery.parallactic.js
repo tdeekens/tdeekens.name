@@ -3,7 +3,7 @@
    var pluginName = "parallactic",
        defaults = {
          hide: {
-            60: '.header-meta'
+            60: '.sticky-header'
          },
          show: {
             250: 'header, footer'

@@ -430,12 +430,20 @@ body {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 23.40426%; }
+    width: 48.93617%; }
     .sticky-header .header-meta:last-child {
       margin-right: 0; }
     .sticky-header .header-meta h1 {
       margin: 10px 0;
       padding: 0; }
+      @media screen and (max-width: 768px) {
+        .sticky-header .header-meta h1 {
+          margin: 15px 0;
+          font-size: 130%; } }
+      @media screen and (max-width: 480px) {
+        .sticky-header .header-meta h1 {
+          margin: 18px 0;
+          font-size: 100%; } }
     .sticky-header .header-meta .avatar {
       box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6);
       float: left;
@@ -456,8 +464,9 @@ body {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 14.89362%;
-    margin-left: 59.57447%;
+    width: 23.40426%;
+    margin-left: 17.02128%;
+    float: right;
     font-size: 1.3em;
     margin-top: 7px;
     text-align: right; }
