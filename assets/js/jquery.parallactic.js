@@ -4,6 +4,9 @@
        defaults = {
          hide: {
             60: '.header-meta'
+         },
+         show: {
+            250: 'header, footer'
          }
       };
 
@@ -30,15 +33,8 @@
          this.$window.scroll(function() {
             var scrollTop = that.$window.scrollTop();
 
-            $.each(that.settings.hide, function(at, el) {
-               var $el = $(el);
-
-               if(scrollTop > at && $el.is(':visible')) {
-                  $el.fadeOut();
-               } else if(scrollTop <= at) {
-                  $el.fadeIn();
-               }
-            });
+            that.hide(scrollTop);
+            that.show(scrollTop);
 
             var yPos =- ( scrollTop / that.$element.data('speed') );
 
@@ -49,6 +45,32 @@
             that.$element.css({
                backgroundPosition: coords
             });
+         });
+      },
+      hide: function(scrollTop) {
+         var that = this;
+
+         $.each(that.settings.hide, function(at, el) {
+            var $el = $(el);
+
+            if(scrollTop > at && $el.is(':visible')) {
+               $el.fadeOut();
+            } else if(scrollTop <= at) {
+               $el.fadeIn();
+            }
+         });
+      },
+      show: function(scrollTop) {
+         var that = this;
+
+         $.each(that.settings.show, function(at, el) {
+            var $el = $(el);
+
+            if(scrollTop > at && ! $el.is(':visible')) {
+               $el.fadeIn();
+            } else if(scrollTop <= at) {
+               $el.fadeOut();
+            }
          });
       }
    };

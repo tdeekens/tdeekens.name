@@ -101,7 +101,7 @@ div.wrap-outer {
          @include omega;
       }
 
-      .post {
+      article {
          @include span-columns(8 of 12);
          @include shift(2);
       }
@@ -111,7 +111,30 @@ div.wrap-outer {
       }
    }
 }
+header {
+   @include linear-gradient(to top, hsla(0, 0, 99%, .75), hsla(0, 0, 80%, .99));
 
+   position:fixed;
+   top:0;
+   left: 0;
+   z-index:1000;
+   width: 100%;
+   display:none;
+
+   height: 25px;
+}
+footer {
+   @include linear-gradient(to top, hsla(0, 0, 80%, .75), hsla(0, 0, 99%, .99));
+
+   position:fixed;
+   bottom:0;
+   left: 0;
+   z-index:1000;
+   width: 100%;
+   display:none;
+
+   height: 25px;
+}
 h1, h2, h3, h4, h5, h6 {
    text-align: left;
    font-family: 'MyriadPro-SemiExt';
