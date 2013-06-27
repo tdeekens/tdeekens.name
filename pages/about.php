@@ -24,6 +24,12 @@
          $indexFile = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . $this->_musicDirectory . DIRECTORY_SEPARATOR . $this->_musicIndex;
          $this->_music = json_decode(file_get_contents($indexFile));
 
+         $postsRevered = array_reverse($this->_posts->posts);
+         $this->_posts->posts = $postsRevered;
+
+         $songsRevered = array_reverse($this->_music->songs);
+         $this->_music->songs = $songsRevered;
+
          $this->_mustacheEngine = new \Mustache_Engine(array(
              'loader' => new \Mustache_Loader_FilesystemLoader(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'tmpl' . DIRECTORY_SEPARATOR),
          ));
@@ -52,8 +58,8 @@
       }
 
       public function about() {
-         $this->_feed['songs'] = Arrays::last($this->_music->songs, 3);
-         $this->_feed['posts'] = Arrays::last($this->_posts->posts, 2);
+         $this->_feed['songs'] = Arrays::first($this->_music->songs, 3);
+         $this->_feed['posts'] = Arrays::first($this->_posts->posts, 2);
          $this->_feed['about'] = $this->_me();
          $this->_feed['credits'] = $this->_credits();
 

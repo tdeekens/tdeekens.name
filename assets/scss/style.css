@@ -563,30 +563,30 @@ div.wrap-outer {
       font-size: .7em; }
 
 header {
-  background-color: rgba(252, 252, 252, 0.75);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252, 252, 252, 0.75)), color-stop(100%, rgba(204, 204, 204, 0.99)));
-  background-image: -webkit-linear-gradient(bottom, rgba(252, 252, 252, 0.75), rgba(204, 204, 204, 0.99));
-  background-image: linear-gradient(to top,rgba(252, 252, 252, 0.75), rgba(204, 204, 204, 0.99));
+  background-color: rgba(252, 252, 252, 0.3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252, 252, 252, 0.3)), color-stop(100%, rgba(204, 204, 204, 0.9)));
+  background-image: -webkit-linear-gradient(bottom, rgba(252, 252, 252, 0.3), rgba(204, 204, 204, 0.9));
+  background-image: linear-gradient(to top,rgba(252, 252, 252, 0.3), rgba(204, 204, 204, 0.9));
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100%;
   display: none;
-  height: 25px; }
+  height: 50px; }
 
 footer {
-  background-color: rgba(204, 204, 204, 0.75);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(204, 204, 204, 0.75)), color-stop(100%, rgba(252, 252, 252, 0.99)));
-  background-image: -webkit-linear-gradient(bottom, rgba(204, 204, 204, 0.75), rgba(252, 252, 252, 0.99));
-  background-image: linear-gradient(to top,rgba(204, 204, 204, 0.75), rgba(252, 252, 252, 0.99));
+  background-color: rgba(204, 204, 204, 0.3);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(204, 204, 204, 0.3)), color-stop(100%, rgba(252, 252, 252, 0.9)));
+  background-image: -webkit-linear-gradient(bottom, rgba(204, 204, 204, 0.3), rgba(252, 252, 252, 0.9));
+  background-image: linear-gradient(to top,rgba(204, 204, 204, 0.3), rgba(252, 252, 252, 0.9));
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1000;
   width: 100%;
   display: none;
-  height: 25px; }
+  height: 50px; }
 
 h1, h2, h3, h4, h5, h6 {
   text-align: left;

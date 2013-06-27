@@ -70,7 +70,7 @@
                         $posts->showLatest();
                     });
 
-                    $router->get('/about', function() use ($pageDirectory) {
+                    $router->get('/about/', function() use ($pageDirectory) {
                         $file = $pageDirectory . "about.php";
 
                         require_once $file;
