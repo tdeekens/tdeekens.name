@@ -28,31 +28,27 @@ So how can Bitcoins transcent themselves becoming a alternative currentcy, assum
 
 Lets enter the analogies. Bitcoins are obvisouly traded among people in a big network. Everybody either wanting to buy, sell of store units.
 All currencies tend to have major pitfalls in this network. Disbelief is either caused by fraud or double spending. Double spending obviously being part of fraud overall but it remains central an special such as every member interacting through currencies is not allowed to spend his money more than once.
-What if everybody had to sign any transaction to approve its validity. Impossible in reality, possible using computers making them do the work. Moreover, what if people constanly try to fake signitures (fraud) or a bill (double spending) and gets paid as soon as they manage to perfectly copy one. The signiture is taken out of the system and the person has to use a new one.
-This in simple words is the so called verfication-block-chain. Computers mine coins/units by constantly trying to break the systems integrity. Based on the easy of breaking it (verfication sum), which relates to the overall computation power and number of members, the system adjusts its secureness by using stronger signitures (hashes). One of the beauties resulting by this is the fact that the system can even enage with untrusted participants.
-Obvisouly, the "what-if"-question remains. What if the system is broken, an exploit found. Will all stored value puff out? For me this monitary currencies have to be scrutinized using the same question at the moment.
+What if everybody had to sign off on all transactions occuring in the last time-frame to approve their validity. Impossible in reality, possible using computers making them do the work. Moreover, what if people constanly try to fake signitures (fraud) or a bill (double spending) and get paid as soon as they manage to perfectly copy one. The signiture is taken out of the system and the member having managed to copy it gets a reward for keeping the system free of false signatures.
+This is what is called verfication-block-chain. Computers mine coins/units by constantly trying to break the systems verification process and its difficulty. Based on the ease of breaking it (the verfication sum), which relates to the overall computation power and number of members, the system adjusts its secureness by using stronger signitures (hashes). One of the beauties resulting by this is the fact that the system can even enage with untrusted participants.
+Obvisouly, the big "what-if"-question remains: what if the system is broken or an exploit is found. Will all stored value puff out? Monitary currencies have to be scrutinized using the same question at the moment and its a question of trusting tangibile bills being hacked or a complex cryptographic system.
 
 ## It's still different
 
 Apart from the technical differences Bitcoins differ from most other currencies.
 Inflation. Hard to understand at times and a vicious beast to control when it starts running. Economists love and hate it at the same time. It fuels investments and almost tries to force people spend their savings. At 2.x% it has its set rate which is approved to not be dangerous in a sense of harming trust and causing hyper-inflation after all. Bitcoins do not have a static inflation-rate. Their value depends on supply and demand and fluctuation and speculation.
 Most agree that this is a bad thing. All resulting in deflation which is even worth than inflation after all. Money needs to flow, investments need to be made and economy needs to flurish. Deflation will lead to stagnation and value gambling. Others proclaim that inflation is cruel forcing people to spend their money.
-In the end, both can be computationally solved and their risks mitigated.
+In the end, both can be computationally solved and their risks mitigated. Some still argue that deflation will be Bitcoin's gravestone.
 
-- It has no transaction cost, no third parties involved
-   - Nobody gets a percentage of the sum processed which is basically 01s depending on the amount which is paradox in itself
-   - Ironic that now that its becoming popular the project attracts its biggest enemy: bankers
-- The death might be deflation
-- Who's got the power over money, what forces people to pay their debts
-   - Violence and the threat of power to make use of it
-   Governments can shut this down
+One of the most adorable parts of Bitcoin itself is that is does not have any transaction cost. There is no movement of any tangibile asset involved, no person needs to work for the system to perform its tasks. It may thereby be even considered as a threat to the established banking industry which has no influence in the system after all. Most interestingly, the fact that bitcoins can be used for speculation still attracted big investors.
 
 ## Is dat legal after all one may ask
 
-- Is dat shit legal, can u issue a currency under state law. no they received a letter: no money transmission without a licence
-   - Billed 2.5k per day of BT life equals 5 years prision and 250k fine for the founder, chairman
-   - The organisation is an NGO in Seatle which actually does not transfer money, thats MtGox and others
-   - A organisation releases money, is it the organisation responsible or the banks?
+Is anybody allowed to put out a currency which is used to pay for goods and services. This seems a very important question which has only been asked after bitcoin has been around for a while.
+
+Apparently it is not directly legal nor forbidden. The NGO located in Seatle being in charge of managing bitcoins system but not transfering a unit of it received a letter by the US gourvernment.
+Bitcoin has been billed 2.5k per day since the system launched which has been five years ago. In addition the founder (who knows, maybe they're talking about the chairman) is fined 250k.
+
+In the end, any government can shut down bitcoin using their judical system, fines and threats. An intersting question arising though is who is responsible to the money which has been released. Are banks responsible for the money they pull out and put into the economy.
 
 ## May I: the future of it
 
