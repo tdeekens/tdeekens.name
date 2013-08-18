@@ -1,0 +1,64 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+?>
+
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+
+    <?= UI::css(Asset::assets(['style.css'], [], [])) ?>
+
+    <?= UI::js(Asset::assets(['jquery.js'])) ?>
+    <?= UI::js(Asset::assets(['jquery.parallactic.js', 'main.js'])) ?>
+</head>
+<body>
+    <header></header>
+
+    <div class="wrap-outer">
+        <div class="sticky-header">
+            <div class="header-meta">
+                <div class="avatar"><img src="<?= Asset::image(['avatar.jpg']) ?>" alt=""></div>
+                <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
+            </div>
+
+            <div class="social-media">
+                <a class="symbol" href="http://twitter.com/tdeekens" title='&#xe286;'></a>
+                <a class="symbol" href="http://fb.me/tobias.deekens" title='&#xe227;'></a>
+                <a class="symbol" href="http://github.com/tdeekens" title='&#xe237;'></a>
+            </div>
+        </div>
+    </div>
+    <div class="header-bg" data-speed="2" style="background-image: url(
+        <?php
+            $id = rand(1, 10);
+            echo Asset::image(['header-' . $id . '.jpg']);
+        ?>
+    )"></div>
+
+    <div class="wrap-outer">
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="<?= $app->url('About::index') ?>">It's about</a></li>
+                    <li><a href="<?= $app->url('Posts::index') ?>">posts,</a></li>
+                    <li><a href="<?= $app->url('Music::index') ?>">music</a></li>
+                    <li><a href="<?= $app->url('Read::index') ?>">and some reading.</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content-body">
+            <?php include($app->view) ?>
+        </div>
+    </div>
+</div>
+
+<footer></footer>
+</body>
+</html>

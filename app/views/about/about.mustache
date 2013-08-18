@@ -1,0 +1,35 @@
+<h1>This is what was up latest</h1>
+
+<div class="activity-posts">
+   <h3>Two posts ...</h3>
+   <ul>
+      {{# posts}}
+         <li>
+            <a href="posts/show/{{ file }}">
+               {{ title }}
+            </a>
+         </li>
+      {{/ posts}}
+   </ul>
+</div>
+
+<div class="activity-songs">
+   <h3>... and some songs</h3>
+   <ul>
+      {{# songs}}
+         <li>
+            <a href="http://youtu.be/{{ hash }}">
+               {{ title }}
+            </a>
+         </li>
+      {{/ songs}}
+   </ul>
+</div>
+
+<div class="about">
+   {{{ about }}}
+</div>
+
+<div class="credits foot-note">
+   {{{ credits }}}
+</div>

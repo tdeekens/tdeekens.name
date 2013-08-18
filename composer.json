@@ -1,11 +1,29 @@
 {
+    "name": "tdeekens.name blog",
+    "type": "application",
+    "description": "My personal blog.",
+    "keywords": ["php", "application", "mvc", "scandio", "lmvc"],
+    "homepage": "http://tdeekens.name",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Deekens",
+            "homepage": "http://tdeekens.name"
+        }
+    ],
     "require": {
-        "atelierspierrot/markdown-extended": "dev-master",
-        "anahkiasen/underscore-php" : "dev-master",
-        "slim/slim": "dev-master",
-        "mustache/mustache": "dev-master"
+        "php": ">=5.4",
+        "scandio/lmvc": "dev-master",
+        "scandio/lmvc-modules": "dev-master",
+        "anahkiasen/underscore-php" : "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "app"
+        }
     },
     "config" : {
-        "vendor-dir" : "php/components"
+        "vendor-dir" : "composer"
     }
 }

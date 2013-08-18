@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c8f23f6f7e7328d0e7842c331533ab43",
+    "hash": "86f958b23ba41da82e63b5d29abcc3dd",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -11,16 +11,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Anahkiasen/underscore-php.git",
-                "reference": "4aa949b884ace9c3804df0edc745821604a62bde"
+                "reference": "049a491701a2ee1c15f82f4c502bbe87671d1619"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Anahkiasen/underscore-php/zipball/4aa949b884ace9c3804df0edc745821604a62bde",
-                "reference": "4aa949b884ace9c3804df0edc745821604a62bde",
+                "url": "https://api.github.com/repos/Anahkiasen/underscore-php/zipball/049a491701a2ee1c15f82f4c502bbe87671d1619",
+                "reference": "049a491701a2ee1c15f82f4c502bbe87671d1619",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": ">=4.0,<5.0",
+                "illuminate/support": "~4",
                 "patchwork/utf8": "1.1.*",
                 "php": ">=5.3.0"
             },
@@ -41,7 +41,12 @@
                 }
             ],
             "description": "A redacted port of Underscore.js for PHP",
-            "time": "2013-06-05 16:52:33"
+            "keywords": [
+                "internals",
+                "laravel",
+                "toolkit"
+            ],
+            "time": "2013-07-15 09:18:39"
         },
         {
             "name": "atelierspierrot/markdown-extended",
@@ -49,12 +54,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atelierspierrot/markdown-extended.git",
-                "reference": "8e7ce12cb338f34badd86d2072469d679abd1a1c"
+                "reference": "f0d37b3071bfd63df6b70a0b87e47494b0451e1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atelierspierrot/markdown-extended/zipball/8e7ce12cb338f34badd86d2072469d679abd1a1c",
-                "reference": "8e7ce12cb338f34badd86d2072469d679abd1a1c",
+                "url": "https://api.github.com/repos/atelierspierrot/markdown-extended/zipball/f0d37b3071bfd63df6b70a0b87e47494b0451e1d",
+                "reference": "f0d37b3071bfd63df6b70a0b87e47494b0451e1d",
                 "shasum": ""
             },
             "require": {
@@ -68,6 +73,11 @@
                 "bin/markdown_extended"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.*-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "MarkdownExtended": "src"
@@ -92,7 +102,7 @@
                     "homepage": "http://michelf.com/"
                 },
                 {
-                    "name": "Les Ateliers Pierrot & contributors",
+                    "name": "Les Ateliers Pierrot",
                     "email": "contact@ateliers-pierrot.fr",
                     "homepage": "http://www.ateliers-pierrot.fr/"
                 },
@@ -106,21 +116,65 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2013-06-17 12:11:12"
+            "time": "2013-08-07 18:08:02"
+        },
+        {
+            "name": "coffeescript/coffeescript",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alxlit/coffeescript-php.git",
+                "reference": "30c22332f0514f466638eb71e3219526790c1b93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alxlit/coffeescript-php/zipball/30c22332f0514f466638eb71e3219526790c1b93",
+                "reference": "30c22332f0514f466638eb71e3219526790c1b93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CoffeeScript": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Little",
+                    "email": "alxlit@gmail.com",
+                    "homepage": "http://alxlit.name"
+                }
+            ],
+            "description": "A port of the CoffeeScript compiler to PHP.",
+            "homepage": "http://github.com/alxlit/coffeescript-php",
+            "keywords": [
+                "JS",
+                "coffee",
+                "coffeescript",
+                "javascript"
+            ],
+            "time": "2012-12-18 03:52:51"
         },
         {
             "name": "illuminate/support",
-            "version": "v4.0.5",
+            "version": "dev-master",
             "target-dir": "Illuminate/Support",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "v4.0.5"
+                "reference": "9507e57aa5b237993e2bdb82d8534fc89d5dac6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/v4.0.5",
-                "reference": "v4.0.5",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/9507e57aa5b237993e2bdb82d8534fc89d5dac6c",
+                "reference": "9507e57aa5b237993e2bdb82d8534fc89d5dac6c",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +188,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -152,23 +206,162 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Developer"
                 }
             ],
-            "time": "2013-06-11 00:56:49"
+            "time": "2013-08-05 13:28:56"
         },
         {
-            "name": "mustache/mustache",
+            "name": "intervention/image",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "v2.3.1"
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "1.4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/v2.3.1",
-                "reference": "v2.3.1",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/1.4.3",
+                "reference": "1.4.3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "illuminate/support": "4.*",
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intervention\\Image": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.net",
+                    "homepage": "http://olivervogel.net/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel 4 integration",
+            "homepage": "http://intervention.olivervogel.net/image/",
+            "keywords": [
+                "gd",
+                "image",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2013-08-16 17:36:40"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "v0.3.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "v0.3.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/v0.3.9",
+                "reference": "v0.3.9",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-03-02 16:13:31"
+        },
+        {
+            "name": "leafo/scssphp",
+            "version": "v0.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "v0.0.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/v0.0.7",
+                "reference": "v0.0.7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "php": ">=5.3.0",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "scss.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.net/scssphp/",
+            "time": "2013-05-24 14:03:41"
+        },
+        {
+            "name": "mustache/mustache",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php",
+                "reference": "v2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/bobthecow/mustache.php/archive/v2.1.0.zip",
+                "reference": "v2.1.0",
                 "shasum": ""
             },
             "require": {
@@ -197,20 +390,69 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2013-04-25 15:23:30"
+            "time": "2013-01-12 07:18:03"
         },
         {
-            "name": "patchwork/utf8",
-            "version": "v1.1.8",
+            "name": "nitra/php-min",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
-                "reference": "v1.1.8"
+                "url": "https://github.com/nitra/PhpMin.git",
+                "reference": "f2d5e3f16ca837a20bbe11ebafe6143b59de3497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/v1.1.8",
-                "reference": "v1.1.8",
+                "url": "https://api.github.com/repos/nitra/PhpMin/zipball/f2d5e3f16ca837a20bbe11ebafe6143b59de3497",
+                "reference": "f2d5e3f16ca837a20bbe11ebafe6143b59de3497",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CssMin": "CssMin/",
+                    "JSMinPlus": "JSMinPlus/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joe Scylla",
+                    "email": "joe.scylla@gmail.com",
+                    "homepage": "https://profiles.google.com/joe.scylla"
+                },
+                {
+                    "name": "Tino Zijdel",
+                    "email": "crisp@tweakers.net",
+                    "homepage": "https://raw.github.com/mrclay/minify/master/min/lib/JSMinPlus.php"
+                }
+            ],
+            "description": "Minifying CSS, JS",
+            "homepage": "http://code.google.com/p/cssmin/",
+            "keywords": [
+                "cssmin",
+                "jsminplus",
+                "minify"
+            ],
+            "time": "2013-03-02 05:59:09"
+        },
+        {
+            "name": "patchwork/utf8",
+            "version": "v1.1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nicolas-grekas/Patchwork-UTF8.git",
+                "reference": "v1.1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nicolas-grekas/Patchwork-UTF8/zipball/v1.1.10",
+                "reference": "v1.1.10",
                 "shasum": ""
             },
             "require": {
@@ -242,29 +484,29 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2013-05-24 12:11:22"
+            "time": "2013-08-13 16:36:44"
         },
         {
-            "name": "slim/slim",
+            "name": "scandio/lmvc",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/codeguy/Slim.git",
-                "reference": "2.2.0"
+                "url": "https://github.com/scandio/lmvc.git",
+                "reference": "0.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeguy/Slim/zipball/2.2.0",
-                "reference": "2.2.0",
+                "url": "https://api.github.com/repos/scandio/lmvc/zipball/0.4.2",
+                "reference": "0.4.2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.3"
             },
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Slim": "."
+                    "Scandio\\lmvc": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -273,19 +515,123 @@
             ],
             "authors": [
                 {
-                    "name": "Josh Lockhart",
-                    "email": "info@joshlockhart.com",
-                    "homepage": "http://www.joshlockhart.com/"
+                    "name": "Scandio GmbH",
+                    "homepage": "http://www.scandio.de/"
                 }
             ],
-            "description": "Slim Framework, a PHP micro framework",
-            "homepage": "http://github.com/codeguy/Slim",
+            "description": "LMVC is an easy-to-use and extensible PHP (5.3) MVC framework",
+            "homepage": "https://github.com/scandio/lmvc",
             "keywords": [
-                "microframework",
-                "rest",
-                "router"
+                "library",
+                "mvc",
+                "php",
+                "scandio"
             ],
-            "time": "2012-12-13 02:15:50"
+            "time": "2013-08-12 12:01:36"
+        },
+        {
+            "name": "scandio/lmvc-modules",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scandio/lmvc-modules.git",
+                "reference": "0.9.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scandio/lmvc-modules/zipball/0.9.3",
+                "reference": "0.9.3",
+                "shasum": ""
+            },
+            "require": {
+                "coffeescript/coffeescript": "dev-master",
+                "intervention/image": "dev-master",
+                "leafo/lessphp": "v0.3.9",
+                "leafo/scssphp": "v0.0.7",
+                "mustache/mustache": "v2.1.0",
+                "nitra/php-min": "dev-master",
+                "php": ">=5.4",
+                "scandio/lmvc": "dev-master",
+                "scandio/troba": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Scandio\\lmvc\\modules": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scandio GmbH",
+                    "homepage": "http://www.scandio.de/"
+                }
+            ],
+            "description": "LMVC-Modules are easy-to-use extensions to the 'scandio/lmvc'-framework",
+            "homepage": "https://github.com/scandio/lmvc-modules",
+            "keywords": [
+                "library",
+                "lmvc",
+                "mvc",
+                "php",
+                "scandio"
+            ],
+            "time": "2013-08-15 13:24:13"
+        },
+        {
+            "name": "scandio/troba",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scandio/troba.git",
+                "reference": "d41737617555d1235eddf80d7f62eb2df1b0aa5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scandio/troba/zipball/d41737617555d1235eddf80d7f62eb2df1b0aa5d",
+                "reference": "d41737617555d1235eddf80d7f62eb2df1b0aa5d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "troba": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scandio GmbH",
+                    "homepage": "http://www.scandio.de/"
+                }
+            ],
+            "description": "troba is a easy to use and extensible PHP (5.4) entity and query manager based on PDO",
+            "homepage": "https://github.com/scandio/troba",
+            "keywords": [
+                "database",
+                "db",
+                "dbal",
+                "library",
+                "mysql",
+                "orm",
+                "pdo",
+                "php",
+                "scandio",
+                "sqlite"
+            ],
+            "time": "2013-03-19 11:14:40"
         }
     ],
     "packages-dev": [
@@ -294,16 +640,16 @@
     "aliases": [
 
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "scandio/lmvc": 20,
+        "scandio/lmvc-modules": 20,
         "atelierspierrot/markdown-extended": 20,
-        "anahkiasen/underscore-php": 20,
-        "slim/slim": 20,
-        "mustache/mustache": 20
+        "anahkiasen/underscore-php": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.4"
+    },
     "platform-dev": [
 
     ]
