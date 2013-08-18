@@ -23,6 +23,8 @@ Oh my. [Oh_my_zsh](github.com/robbyrussell/oh-my-zsh) will make your like the sh
 * $ mv readme.{text, md}
    * Called expansion lists which can do a whole lot more.
    * In the example they expand on readme. and therefore generate: $ mv readme.txt readme.md
+* ctrl + r
+   * Ever up-arrowed till infinity to find an old command? This allows you to search all your previous commands and run them right away. This was truly a eurka moment for me.
 
 # Some thoughts
 
