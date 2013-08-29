@@ -1,0 +1,13 @@
+{
+  "name": "fluidvids",
+  "homepage": "https://github.com/toddmotto/fluidvids",
+  "_release": "e81f711d79",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e81f711d79defe0ce89ea7810d945908bcf717c1"
+  },
+  "_source": "git@github.com:toddmotto/fluidvids.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:toddmotto/fluidvids.git"
+}
