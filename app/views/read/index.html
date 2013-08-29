@@ -1,1 +1,19 @@
-<h1>I should write about reading</h1>
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+?>
+
+<h1>So much to read and so little time</h1>
+
+<div class="books">
+   <?php foreach($books as $book): ?>
+      <div class="book">
+        <div class="cover">
+           <img src="<?= Asset::image('books/' . $book . '.jpg', ['h' => 250, 'w' => 150]) ?>" alt="">
+        </div>
+        <div class="description">
+           <?= Asset::markdown($book . '.md', ['path' => 'books'], true) ?>
+        </div>
+      </div>
+   <?php endforeach; ?>
+</div>

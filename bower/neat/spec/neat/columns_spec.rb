@@ -42,12 +42,22 @@ describe "@include span-columns()" do
       expect('.span-columns-table').to have_rule('display: table-cell')
     end
 
-    it "sets padding in percentage" do
-      expect('.span-columns-table').to have_rule('padding-right: 2.35765%')
+    it "sets padding evenly between table cells" do
+      expect('.span-columns-table').to have_rule('padding-right: 1.17883%')
+    end
+  end
+
+  context "with argument (collapse)" do
+    it "appends gutter width to column width" do
+      expect('.span-columns-collapse').to have_rule('width: 51.17883%')
     end
 
-    it "substracts gutter from width of last element" do
-      expect('.span-columns-table:last-child').to have_rule('width: 48.82117%')
+    it "removes the next gutter" do
+      expect('.span-columns-collapse').to_not have_rule('margin-right')
+    end
+
+    it "removes gutter percentage from the width of the last child" do
+      expect('.span-columns-collapse:last-child').to have_rule('width: 48.82117%')
     end
   end
 end

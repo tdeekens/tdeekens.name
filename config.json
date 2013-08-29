@@ -29,7 +29,7 @@
             "css": {
                 "fallbacks": ["../bower", "../composer"]
             },
-            "sass": {
+            "scss": {
                 "fallbacks": ["../bower", "../composer"]
             },
             "less": {

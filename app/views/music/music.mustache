@@ -1,13 +1,15 @@
 <h1>Music I've been enjoying as of late</h1>
 
-<div class="yt-player-container"></div>
-
-<ul>
+<ul class='yt-songs'>
    {{# songs}}
-      <li>
+      <li data-hash='{{ hash }}'>
          <a href="http://youtu.be/{{ hash }}">
             {{ title }}
          </a>
       </li>
    {{/ songs}}
 </ul>
+
+<div class="yt-player">
+   <iframe src="http://www.youtube.com/embed/{{ song.hash }}" width="100%" height="300" frameborder="0"></iframe>
+</div>

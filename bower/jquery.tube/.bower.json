@@ -23,5 +23,6 @@
     "commit": "be520450210ae863fd68dab1a2503a453d485817"
   },
   "_source": "git://github.com/inukshuk/jquery.tube.js.git",
-  "_target": "~0.2.6"
+  "_target": "*",
+  "_originalSource": "jquery.tube"
 }

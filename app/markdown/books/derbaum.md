@@ -1,0 +1,5 @@
+# Der Baum der Erkenntnis
+
+## Die biologischen Wurzeln menschlichen Erkennens
+
+Der alten darwinistisch geprägten Biologie zufolge überlebt ein Lebewesen nur dann, wenn es sich möglichst perfekt seiner Umwelt anpasst. Es wäre damit sklavisch abhängig von einer objektiven Außenwelt. Für Maturana und Varela gibt es jedoch keine objektive Wirklichkeit. Wenn Grunderfordernisse des Lebens erfüllt sind, haben lebende Systeme alle Freiheit, sich ihre Welt selbst zu schaffen, anstatt bloß auf Vorgegebenes zu reagieren. Für den Menschen gilt das natürlich in besonderem Maße. Das Subjekt ist somit entscheidend an der Schöpfung seiner nur scheinbar objektiven Wirklichkeit beteiligt. Die neue Bezeichnung von Leben, wie es die Neurobiologen Humberto Maturana und Francisco Varela definiert haben, ist Autopoiesis, was soviel heißt wie: sich selbst schaffen. Die in der Menschheitsgeschichte von Weisen, Mystikern und Philosophen erkannte Einheit von Subjektivität und Objektivität, von Ich und Welt, von Bewusstsein und Sein, wird von Maturana und Varela klar bestätigt und mit naturwissenschaftlichen Forschungsergebnissen belegt.

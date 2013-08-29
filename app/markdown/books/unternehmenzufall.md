@@ -1,0 +1,3 @@
+# Unternehmen Zufall!
+
+Im UNTERNEHMEN ZUFALL schreibt Cringeley über die Jungs (und es sind fast alle Jungs, von denen sein Buch handelt) vom Silicon Valley, in einem Stil, der sich aus einer Mischung von Agentenromanen, Newsweek und "The Wonder Years" zusammensetzt. Der Autor erzählt uns, was wir insgeheim zu hören wünschen - dass diese softwareschreibenden Genies, die Millionen verdienen, uns in anderen Dingen des Lebens unterlegen sind. (Los Angeles Times)

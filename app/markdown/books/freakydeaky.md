@@ -1,0 +1,3 @@
+# Freaky Deaky
+
+Soon after Chris Mankowskilately transferred from the bomb squad to sex crimesvisits rich, mindless alcoholic Woody Ricks on a rape complaint, someone blows up Woody's limousinealong with Woody's brother Mark. Ghosts from their student activist past have returned to haunt them. One ex-Panther even now takes care of Woody, and two ex-demonstrators hope to extort cash. Leonard's latest sports the usual draws of crisp dialogue, satiric wit, and crazy characterization, but it also lacks the pervasive sparkle of Glitz . Better than most, though, and with a wild finale that hoists the villains by their own petard. BOMC featured selection.

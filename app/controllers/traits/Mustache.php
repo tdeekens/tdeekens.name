@@ -11,6 +11,7 @@ trait Mustache
         ));
 
         $renderArgs['mustache'] = isset($renderArgs['mustache']) ? $renderArgs['mustache'] : [];
+
         foreach ($mustache['files'] as $id => $file) {
             $renderArgs['mustache'][$id] = $mustacheEngine->render($file, $renderArgs);
         }

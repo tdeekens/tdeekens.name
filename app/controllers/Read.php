@@ -6,8 +6,14 @@ use Scandio\lmvc\modules\security\AnonymousController;
 
 class Read extends AnonymousController
 {
-    public static function index()
-    {
-        return static::render();
-    }
+   use traits\Mustache;
+
+   public static function index()
+   {
+      $books = json_decode(file_get_contents("./app/views/read/index.json"));
+
+      return static::render([
+         'books'   => $books->books
+      ]);
+   }
 }

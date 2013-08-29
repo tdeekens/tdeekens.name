@@ -1,7 +1,6 @@
-@import '../components/normalize.scss/normalize';
-@import "../components/bourbon/app/assets/stylesheets/bourbon";
+@import "../../bower/bourbon/app/assets/stylesheets/bourbon";
 @import "grid-settings";
-@import "../components/neat/app/assets/stylesheets/neat";
+@import "../../bower/neat/app/assets/stylesheets/neat";
 
 @import "_fonts";
 
@@ -33,14 +32,18 @@ body {
    background-attachment : fixed;
 }
 .sticky-header {
-   @include span-columns(12 of 12);
+   @include span-columns(12);
    position:fixed;
    top: 0;
    max-width: 68em;
    z-index:1000;
 
    .header-meta {
-      @include span-columns(6 of 12);
+      @include span-columns(6);
+
+      @include media($mobile) {
+         @include span-columns(12);
+      }
 
       h1 {
          margin: 10px 0;
@@ -82,10 +85,13 @@ body {
    }
 
    .social-media {
-      @include span-columns(3 of 12);
+      @include span-columns(3);
       @include shift(2);
 
-      float: right;
+      @include media($mobile) {
+         display: none;
+      }
+
       font-size: 1.3em;
       margin-top: 7px;
       text-align: right;
@@ -98,14 +104,10 @@ body {
             color: rgb(81, 121, 203);
          }
       }
-
-      @include media($mobile) {
-         display: none;
-      }
    }
 }
 div.navigation {
-   @include span-columns(12 of 12);
+   @include span-columns(12);
 
    text-align: center;
    border-bottom: 1px solid black;
@@ -140,25 +142,77 @@ div.navigation {
 div.wrap-outer {
    @include outer-container;
 
+   padding: 0 3em;
+
    div.content-body {
-      @include span-columns(12 of 12);
+      @include span-columns(12);
+
+      margin-bottom: 2em;
+
 
       .activity-posts {
-         @include span-columns(6 of 12);
+         @include span-columns(6);
          @include omega;
+
+         @include media($mobile) {
+           @include span-columns(12);
+         }
       }
 
       .activity-songs {
-         @include span-columns(6 of 12);
+         @include span-columns(6);
          @include omega;
+
+         @include media($mobile) {
+           @include span-columns(12);
+         }
+      }
+
+      .yt-songs {
+         @include span-columns(6);
+      }
+
+      .books {
+
+         .book {
+            @include span-columns(12);
+
+            .cover {
+               @include span-columns(2);
+
+               margin-top: 3%;
+            }
+
+            .description {
+               @include span-columns(9);
+            }
+
+            &:after {
+               display: table;
+               content: '';
+               clear: both;
+            }
+         }
+      }
+
+      .yt-player {
+         @include span-columns(5);
+
+         margin:25px auto;
+         text-align: center;
+
+         .fluidvids {
+            background:#000;
+            box-shadow:0 1px 4px #000;
+         }
       }
 
       article {
-         @include span-columns(8 of 12);
+         @include span-columns(8);
          @include shift(2);
 
          @include media($mobile) {
-            @include span-columns(12 of 12);
+            @include span-columns(12);
             @include shift(0);
             @include pad(20px);
          }

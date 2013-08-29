@@ -1,13 +1,14 @@
 {
   "name": "neat",
   "homepage": "https://github.com/thoughtbot/neat",
-  "version": "1.3.0",
-  "_release": "1.3.0",
+  "version": "1.4.0",
+  "_release": "1.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "v1.3.0",
-    "commit": "95ac8e88d2ceae327e087da779980f41af4104e1"
+    "tag": "v1.4.0",
+    "commit": "38a9f3cfd7abb498b4d019c71db69799afc00593"
   },
   "_source": "git://github.com/thoughtbot/neat.git",
-  "_target": "~1.3.0"
+  "_target": "*",
+  "_originalSource": "neat"
 }

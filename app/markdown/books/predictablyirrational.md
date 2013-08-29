@@ -1,0 +1,5 @@
+# Predictably Irrational
+
+## The Hidden Forces That Shape Our Decisions
+
+Irrational behavior is a part of human nature, but as MIT professor Ariely has discovered in 20 years of researching behavioral economics, people tend to behave irrationally in a predictable fashion. Drawing on psychology and economics, behavioral economics can show us why cautious people make poor decisions about sex when aroused, why patients get greater relief from a more expensive drug over its cheaper counterpart and why honest people may steal office supplies or communal food, but not money. According to Ariely, our understanding of economics, now based on the assumption of a rational subject, should, in fact, be based on our systematic, unsurprising irrationality. Ariely argues that greater understanding of previously ignored or misunderstood forces (emotions, relativity and social norms) that influence our economic behavior brings a variety of opportunities for reexamining individual motivation and consumer choice, as well as economic and educational policy. Ariely's intelligent, exuberant style and thought-provoking arguments make for a fascinating, eye-opening read.

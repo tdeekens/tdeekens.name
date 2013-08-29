@@ -11,11 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-
-    <?= UI::css(Asset::assets(['style.css'], [], [])) ?>
+    <?= UI::css(Asset::assets(['normalize.css', 'style.css'], [], [])) ?>
 
     <?= UI::js(Asset::assets(['jquery.js'])) ?>
-    <?= UI::js(Asset::assets(['jquery.parallactic.js', 'main.js'])) ?>
+    <?= UI::js(Asset::assets(['jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 </head>
 <body>
     <header></header>
@@ -60,5 +59,11 @@
 </div>
 
 <footer></footer>
+
+<?php
+    if (strpos($_SERVER['SERVER_NAME'], 'tdeekens.name') !== false) {
+        echo UI::js(Asset::assets(['jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js']));
+    }
+?>
 </body>
 </html>
