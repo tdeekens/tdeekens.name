@@ -1,9 +1,14 @@
-<ul>
+<h1>A bunch of soliloquies</h1>
+
+<ol class="posts">
    {{# posts}}
       <li>
-         <a href="posts/show/{{ file }}">
+         <a href="posts/read/{{ file }}">
             {{ title }}
          </a>
+         <span class="date">
+            {{ from }}
+         </span>
       </li>
    {{/ posts}}
-</ul>
+</ol>

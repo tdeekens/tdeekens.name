@@ -28,9 +28,10 @@
          var that = this;
 
          this.$songEls.on('click', function(e) {
-            e.preventDefault();
-
             var $this = $(this);
+            var isPlayerElHidden = that.playerEl.is(':hidden');
+
+            if (!isPlayerElHidden) { e.preventDefault(); }
 
             that.show($this.data('hash'));
          });

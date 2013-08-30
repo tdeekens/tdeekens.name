@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -49,7 +50,7 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.6;
   font-family: Baskerville;
   word-wrap: break-word;
@@ -143,8 +144,10 @@ div.navigation {
   float: left;
   margin-right: 2.12766%;
   width: 100%;
+  margin-top: 1em;
   text-align: center;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+  border-top: 1px solid black; }
   div.navigation:last-child {
     margin-right: 0; }
   div.navigation ul {
@@ -181,7 +184,7 @@ div.wrap-outer {
     float: left;
     margin-right: 2.12766%;
     width: 100%;
-    margin-bottom: 2em; }
+    margin-bottom: 2.5em; }
     div.wrap-outer div.content-body:last-child {
       margin-right: 0; }
     div.wrap-outer div.content-body .activity-posts {
@@ -216,28 +219,17 @@ div.wrap-outer {
           width: 313.33333%; }
           div.wrap-outer div.content-body .activity-songs:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .yt-songs {
-      display: block;
-      float: left;
-      margin-right: 2.12766%;
-      width: 48.93617%; }
-      div.wrap-outer div.content-body .yt-songs:last-child {
-        margin-right: 0; }
-    div.wrap-outer div.content-body .books .book {
+    div.wrap-outer div.content-body .posts .date {
+      font-family: "MyriadPro-LightSemiExt";
+      float: right;
+      font-size: 80%; }
+    div.wrap-outer div.content-body .books {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 100%; }
-      div.wrap-outer div.content-body .books .book:last-child {
+      div.wrap-outer div.content-body .books:last-child {
         margin-right: 0; }
-      div.wrap-outer div.content-body .books .book .cover {
-        display: block;
-        float: left;
-        margin-right: 2.12766%;
-        width: 14.89362%;
-        margin-top: 3%; }
-        div.wrap-outer div.content-body .books .book .cover:last-child {
-          margin-right: 0; }
       div.wrap-outer div.content-body .books .book .description {
         display: block;
         float: left;
@@ -245,10 +237,46 @@ div.wrap-outer {
         width: 74.46809%; }
         div.wrap-outer div.content-body .books .book .description:last-child {
           margin-right: 0; }
+        @media screen and (max-width: 580px) {
+          div.wrap-outer div.content-body .books .book .description {
+            display: block;
+            float: left;
+            margin-right: 6.66667%;
+            width: 100%; }
+            div.wrap-outer div.content-body .books .book .description:last-child {
+              margin-right: 0; } }
+      div.wrap-outer div.content-body .books .book .cover {
+        display: block;
+        float: left;
+        margin-right: 2.12766%;
+        width: 14.89362%; }
+        div.wrap-outer div.content-body .books .book .cover:last-child {
+          margin-right: 0; }
+        @media screen and (max-width: 580px) {
+          div.wrap-outer div.content-body .books .book .cover {
+            display: none; } }
+        div.wrap-outer div.content-body .books .book .cover img {
+          width: 100%;
+          margin-top: 2em; }
       div.wrap-outer div.content-body .books .book:after {
         display: table;
         content: '';
         clear: both; }
+    div.wrap-outer div.content-body .yt-songs {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      div.wrap-outer div.content-body .yt-songs:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        div.wrap-outer div.content-body .yt-songs {
+          display: block;
+          float: left;
+          margin-right: 3.22581%;
+          width: 151.6129%; }
+          div.wrap-outer div.content-body .yt-songs:last-child {
+            margin-right: 0; } }
     div.wrap-outer div.content-body .yt-player {
       display: block;
       float: left;
@@ -258,9 +286,20 @@ div.wrap-outer {
       text-align: center; }
       div.wrap-outer div.content-body .yt-player:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        div.wrap-outer div.content-body .yt-player {
+          display: none; } }
       div.wrap-outer div.content-body .yt-player .fluidvids {
         background: #000;
         box-shadow: 0 1px 4px #000; }
+    div.wrap-outer div.content-body .nonsense blockquote {
+      margin: 0; }
+      div.wrap-outer div.content-body .nonsense blockquote p:before {
+        content: '” ';
+        font-size: 200%; }
+      div.wrap-outer div.content-body .nonsense blockquote p:after {
+        content: ' “';
+        font-size: 200%; }
     div.wrap-outer div.content-body article {
       display: block;
       float: left;
@@ -319,7 +358,7 @@ h1 {
   font-family: 'MyriadPro-Bold';
   font-weight: 100;
   padding: 10px 0 0 0;
-  font-size: 170%; }
+  font-size: 150%; }
 
 h2 {
   padding: 5px 0 0 0;
@@ -328,7 +367,7 @@ h2 {
 h3 {
   margin: 15px 0 0 0;
   font-weight: normal;
-  font-size: 115%; }
+  font-size: 110%; }
 
 h4 {
   font-size: 120%; }
@@ -351,8 +390,35 @@ p {
   padding-top: 0;
   margin-bottom: 10px; }
 
+ul {
+  margin: 5px 0 10px 0; }
+
+pre {
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+  padding: 6px 10px;
+  margin-bottom: 20px; }
+
+code {
+  border: 1px solid #eaeaea;
+  margin: 0px 2px;
+  padding: 0px 5px;
+  font-size: 80%; }
+
 pre, code {
-  white-space: pre-wrap; }
+  color: #333;
+  background: #f8f8f8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+
+pre code {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px; }
 
 a, a:active, a:visited {
   color: #5179cb;

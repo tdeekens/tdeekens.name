@@ -1,0 +1,10 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+?>
+
+<h1>Thoughts, stupidity 'n references</h1>
+
+<div class="nonsense">
+  <?= Asset::markdown('nonsense' . '.md', ['path' => 'nonsense'], true) ?>
+</div>

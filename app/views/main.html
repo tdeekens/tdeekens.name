@@ -38,19 +38,21 @@
             $id = rand(1, 10);
             echo Asset::image(['header-' . $id . '.jpg']);
         ?>
-    )"></div>
+    )">
+    </div>
 
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li><a href="<?= $app->url('About::index') ?>">It's about</a></li>
+                <li><a href="<?= $app->url('Posts::index') ?>">posts,</a></li>
+                <li><a href="<?= $app->url('Music::index') ?>">music,</a></li>
+                <li><a href="<?= $app->url('Read::index') ?>">reading</a></li>
+                <li><a href="<?= $app->url('Nonsense::index') ?>">'n nonsense.</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="wrap-outer">
-        <div class="navigation">
-            <nav>
-                <ul>
-                    <li><a href="<?= $app->url('About::index') ?>">It's about</a></li>
-                    <li><a href="<?= $app->url('Posts::index') ?>">posts,</a></li>
-                    <li><a href="<?= $app->url('Music::index') ?>">music</a></li>
-                    <li><a href="<?= $app->url('Read::index') ?>">and some reading.</a></li>
-                </ul>
-            </nav>
-        </div>
 
         <div class="content-body">
             <?php include($app->view) ?>

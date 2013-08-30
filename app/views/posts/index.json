@@ -1,16 +1,21 @@
 {
    "posts": [{
          "file": "dem-internet-fallen-die-milchzaehne-aus",
-         "title": "Dem dem Internet fallen die Milchzaehne aus"
+         "title": "Dem dem Internet fallen die Milchzaehne aus",
+         "from": "02/2012"
       }, {
          "file": "agile-development-processes-postmortem",
-         "title": "Agile Development Processes: Post-mortem"
+         "title": "Agile Development Processes: Post-mortem",
+         "from": "05/2013"
       }, {
          "file": "a-post-about-bitcoins",
-         "title": "A post about Bitcoins"
+         "title": "A post about Bitcoins",
+         "from": "06/2013",
+         "draft": true
       }, {
          "file": "know-your-terminal",
-         "title": "Know your Terminal"
+         "title": "Know your Terminal",
+         "from": "08/2013"
       }
    ]
 }
