@@ -3,7 +3,7 @@
    var pluginName = "ytplayer",
        defaults = {
          playerEl: '.yt-player iframe',
-         songEl: 'li',
+         songEl: 'li a',
          playUrl: 'http://www.youtube.com/embed/'
       };
 
@@ -28,10 +28,10 @@
          var that = this;
 
          this.$songEls.on('click', function(e) {
-            var $this = $(this);
-            var isPlayerElHidden = that.playerEl.is(':hidden');
-
+            var isPlayerElHidden = that.$playerEl.is(':hidden');
             if (!isPlayerElHidden) { e.preventDefault(); }
+
+            var $this = $(this);
 
             that.show($this.data('hash'));
          });
