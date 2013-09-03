@@ -1,4 +1,6 @@
 .sass-cache/
 /.idea/
 /composer.lock
+/composer
+.htaccess
 _cache/
