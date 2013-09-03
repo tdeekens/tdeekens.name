@@ -16,6 +16,10 @@
          "file": "know-your-terminal",
          "title": "Know your Terminal",
          "from": "08/2013"
+      }, {
+         "file": "scandiojs",
+         "title": "Scandiojs: yet another JavaScript library",
+         "from": "09/2013"
       }
    ]
 }

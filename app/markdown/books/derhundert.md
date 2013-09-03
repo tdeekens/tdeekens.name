@@ -1,3 +1,4 @@
 # Der Hundertjährige, der aus dem Fenster stieg und verschwand
 
-Allan Karlsson hat Geburtstag. Er wird 100 Jahre alt. Eigentlich ein Grund zu feiern. Doch während sich der Bürgermeister und die lokale Presse auf das große Spektakel vorbereiten, hat der Hundertjährige ganz andere Pläne: er verschwindet einfach – und schon bald steht ganz Schweden wegen seiner Flucht auf dem Kopf. Doch mit solchen Dingen hat Allan seine Erfahrung, er hat schließlich in jungen Jahren die ganze Welt durcheinander gebracht.
+Allan Karlsson ist ein alter Mann. Sein Kopf ist jedoch nicht so alt wie seine Knochen. Ein kleines Abendteuer zieht er daher dem langsamen Ableben im Altersheim vor. Oft stellt man sich Altersheime wie kleine Gefängnisse vor. Er schafft es dennoch zu entkommen.
+Während er quer durch Schweden flieht, ohne Geld und ohne Plan, erzählt das Buch sein bewegtes Leben. Ein Leben indem er mit nahezu jedem Diktator des 19. Jahrhunderts getrunken hat. Sehr unterhaltsam und so garnicht der blutige Schweden-Krimi.

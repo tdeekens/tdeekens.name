@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -223,6 +222,9 @@ div.wrap-outer {
       font-family: "MyriadPro-LightSemiExt";
       float: right;
       font-size: 80%; }
+      @media screen and (max-width: 580px) {
+        div.wrap-outer div.content-body .posts .date {
+          display: none; } }
     div.wrap-outer div.content-body .books {
       display: block;
       float: left;
@@ -282,7 +284,7 @@ div.wrap-outer {
       float: left;
       margin-right: 2.12766%;
       width: 40.42553%;
-      margin: 25px auto;
+      margin: 15px auto;
       text-align: center; }
       div.wrap-outer div.content-body .yt-player:last-child {
         margin-right: 0; }
@@ -292,14 +294,15 @@ div.wrap-outer {
       div.wrap-outer div.content-body .yt-player .fluidvids {
         background: #000;
         box-shadow: 0 1px 4px #000; }
+    div.wrap-outer div.content-body .nonsense a {
+      font-family: "MyriadPro-LightSemiExt";
+      font-size: 110%; }
     div.wrap-outer div.content-body .nonsense blockquote {
-      margin: 0; }
-      div.wrap-outer div.content-body .nonsense blockquote p:before {
-        content: '” ';
-        font-size: 200%; }
-      div.wrap-outer div.content-body .nonsense blockquote p:after {
-        content: ' “';
-        font-size: 200%; }
+      margin: 10px 0;
+      font-family: Baskerville;
+      font-size: 120%; }
+      div.wrap-outer div.content-body .nonsense blockquote p {
+        float: none; }
     div.wrap-outer div.content-body article {
       display: block;
       float: left;

@@ -1,3 +1,3 @@
 # Farewell, My Lovely
 
-A warm day on Central Avenue, and Philip Marlowe's hunch about the man beside him is as vague as the heat waves that dance above the sidewalk. The way business is looking, even a hunch is enough. Moose Malloy stands six five and one-half and weighs two hundred and sixty-four pounds, without his necktie. After eight years in the pen, he wants little Velma back, and no cops or mobsters are ready to stand in his way. Marlowe's tough enough for the ride, but he can't help thinking – there’s never been a happy ending to the story of beauty and the beast . . .
+This man can writer, Chandler can write books a reader gets completely sucked into like almost nobody. A perfect holiday, sun and lying at the pool read this is.

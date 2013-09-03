@@ -1,3 +1,4 @@
 # Freaky Deaky
 
-Soon after Chris Mankowskilately transferred from the bomb squad to sex crimesvisits rich, mindless alcoholic Woody Ricks on a rape complaint, someone blows up Woody's limousinealong with Woody's brother Mark. Ghosts from their student activist past have returned to haunt them. One ex-Panther even now takes care of Woody, and two ex-demonstrators hope to extort cash. Leonard's latest sports the usual draws of crisp dialogue, satiric wit, and crazy characterization, but it also lacks the pervasive sparkle of Glitz . Better than most, though, and with a wild finale that hoists the villains by their own petard. BOMC featured selection.
+Another book to not put aside while reading. Elmore Leonard wrote books which became the foundation of famous movies such as “Get Shorty” or “Bounty”. Leonard is perfect at writing crazy funnny dialouges and embed sarcarism in almost any story.
+A car explodes with the main character's brother in it. Someone is relocated from the bomb squad to look into the case. The more he looks the more he gets involved with Mark who's past with his brother comes in haunting him.
