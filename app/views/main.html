@@ -6,9 +6,23 @@
 <!doctype html>
 <html>
 <head>
-    <title></title>
+    <title>Tobias Deekens - yet another blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="abstract" content="Tobias Deekens' blog. This is were my thoughts chill.">
+    <meta name="audience" content="Alle">
+    <meta name="author" content="Tobias Deekens">
+    <meta name="copyright" content="Tobias Deekens">
+    <meta name="description" content="This is were I (Tobias Deekens) put down my thoughts about tech, books and music. It's not meant to be useful, it's meant to be entertaining. It's my public, private space.">
+    <meta name="keywords" content="web development, reading, music, javascript, html5, thoughts, mind numbing, books, blog">
+    <meta name="language" content="Deutsch">
+    <meta name="language" content="English">
+    <meta name="page-type" content="Blog">
+    <meta name="revisit-after" content="2 weeks">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="Tobias Deekens - yet another blog">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <?= UI::css(Asset::assets(['normalize.css', 'style.css'], [], [])) ?>
@@ -64,7 +78,7 @@
 
 <?php
     if (strpos($_SERVER['SERVER_NAME'], 'tdeekens.name') !== false) {
-        echo UI::js(Asset::assets(['jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js']));
+        echo UI::js(Asset::assets(['piwik.tracking.js']));
     }
 ?>
 </body>

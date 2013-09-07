@@ -2,9 +2,9 @@
 
 namespace controllers;
 
-use Scandio\lmvc\modules\security\AnonymousController;
+use Scandio\lmvc\Controller;
 
-class Read extends AnonymousController
+class Read extends Controller
 {
    use traits\Mustache;
 

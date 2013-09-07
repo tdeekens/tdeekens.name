@@ -2,10 +2,10 @@
 
 namespace controllers;
 
-use Scandio\lmvc\modules\security\AnonymousController;
+use Scandio\lmvc\Controller;
 use Underscore\Types\Arrays;
 
-class Music extends AnonymousController
+class Music extends Controller
 {
    use traits\Mustache;
 

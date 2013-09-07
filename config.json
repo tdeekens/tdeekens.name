@@ -19,6 +19,7 @@
     },
     "assetpipeline" : {
         "useFolders": true,
+        "stage": "dev",
         "assetDirectories": {
             "js": {
                 "fallbacks": ["../bower", "../composer"]

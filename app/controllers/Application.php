@@ -2,11 +2,11 @@
 
 namespace controllers;
 
-use Scandio\lmvc\modules\security\AnonymousController;
+use Scandio\lmvc\Controller;
 use Underscore\Types\Arrays;
 use Scandio\lmvc\LVCConfig;
 
-class Application extends AnonymousController
+class Application extends Controller
 {
    public static function index()
    {

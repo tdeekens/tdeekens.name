@@ -25,26 +25,29 @@
 
    Plugin.prototype = {
       init: function () {
-         this.scollHandler();
+         this.bindEvents();
       },
-      scollHandler: function () {
+      bindEvents: function() {
+         var that = this;
+         this.$window.scroll( function() { that.scrollHandler(); } );
+         this.$window.bind('touchstart touchmove touchend', function() { that.scrollHandler(); } );
+      },
+      scrollHandler: function () {
          var that = this;
 
-         this.$window.scroll(function() {
-            var scrollTop = that.$window.scrollTop();
+         var scrollTop = that.$window.scrollTop();
 
-            that.hide(scrollTop);
-            that.show(scrollTop);
+         that.hide(scrollTop);
+         that.show(scrollTop);
 
-            var yPos =- ( scrollTop / that.$element.data('speed') );
+         var yPos =- ( scrollTop / that.$element.data('speed') );
 
-            // Put together our final background position
-            var coords = '50% '+ yPos + 'px';
+         // Put together our final background position
+         var coords = '50% '+ yPos + 'px';
 
-            // Move the background
-            that.$element.css({
-               backgroundPosition: coords
-            });
+         // Move the background
+         that.$element.css({
+            backgroundPosition: coords
          });
       },
       hide: function(scrollTop) {

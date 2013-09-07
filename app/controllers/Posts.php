@@ -2,10 +2,10 @@
 
 namespace controllers;
 
-use Scandio\lmvc\modules\security\AnonymousController;
+use Scandio\lmvc\Controller;
 use Underscore\Types\Arrays;
 
-class Posts extends AnonymousController
+class Posts extends Controller
 {
    use traits\Mustache;
 

@@ -2,11 +2,11 @@
 
 namespace controllers;
 
-use Scandio\lmvc\modules\security\AnonymousController;
+use Scandio\lmvc\Controller;
 use Scandio\lmvc\modules\assetpipeline\view\Asset;
 use Underscore\Types\Arrays;
 
-class About extends AnonymousController
+class About extends Controller
 {
    use traits\Mustache;
 
