@@ -28,9 +28,11 @@
     <?= UI::css(Asset::assets(['normalize.css', 'style.css'], [], [])) ?>
 
     <?= UI::js(Asset::assets(['jquery.js'])) ?>
-    <?= UI::js(Asset::assets(['jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
+    <?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 </head>
 <body>
+    <div class="js-breakpoint"></div>
+
     <header></header>
 
     <div class="wrap-outer">
@@ -49,8 +51,8 @@
     </div>
     <div class="header-bg" data-speed="2" style="background-image: url(
         <?php
-            $id = rand(1, 10);
-            echo Asset::image(['header-' . $id . '.jpg']);
+            $id = rand(1, 11);
+            echo Asset::image(['headers/header-' . $id . '.jpg']);
         ?>
     )">
     </div>
@@ -61,7 +63,7 @@
                 <li><a href="<?= $app->url('About::index') ?>">It's about</a></li>
                 <li><a href="<?= $app->url('Posts::index') ?>">posts,</a></li>
                 <li><a href="<?= $app->url('Music::index') ?>">music,</a></li>
-                <li><a href="<?= $app->url('Read::index') ?>">reading</a></li>
+                <li><a href="<?= $app->url('Books::index') ?>">reading</a></li>
                 <li><a href="<?= $app->url('Nonsense::index') ?>">'n nonsense.</a></li>
             </ul>
         </nav>
@@ -69,7 +71,7 @@
     <div class="wrap-outer">
 
         <div class="content-body">
-            <?php include($app->view) ?>
+            <?php include($app->view); ?>
         </div>
     </div>
 </div>

@@ -16,7 +16,7 @@ trait Mustache
             $renderArgs['mustache'][$id] = $mustacheEngine->render($file, $renderArgs);
         }
 
-        static::render($renderArgs, $httpCode, $template, $masterTemplate);
+        static::render($renderArgs, $template, $httpCode, $masterTemplate);
 
         return true;
     }

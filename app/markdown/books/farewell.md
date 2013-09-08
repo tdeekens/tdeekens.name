@@ -1,3 +1,3 @@
 # Farewell, My Lovely
 
-This man can writer, Chandler can write books a reader gets completely sucked into like almost nobody. A perfect holiday, sun and lying at the pool read this is.
+This guy can write, Chandler's lines are highly addictive. Take this on your holiday, take a sunbath and wake up with a sunburn. You might have forgotten anything around you for a few hours.

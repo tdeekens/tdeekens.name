@@ -1,7 +1,7 @@
-<h1>This is what was up latest</h1>
+<h1 class="content-title">The latest shabang</h1>
 
 <div class="activity-posts">
-   <h3>Two posts ...</h3>
+   <h3>Writing</h3>
    <ul>
       {{# posts}}
          <li>
@@ -14,7 +14,7 @@
 </div>
 
 <div class="activity-songs">
-   <h3>... and some songs</h3>
+   <h3>Listening</h3>
    <ul>
       {{# songs}}
          <li>
@@ -23,6 +23,19 @@
             </a>
          </li>
       {{/ songs}}
+   </ul>
+</div>
+
+<div class="activity-books">
+   <h3>Reading</h3>
+   <ul>
+      {{# books}}
+         <li>
+            <a href="posts/read/#{{ book }}">
+               {{ title }}
+            </a>
+         </li>
+      {{/ books}}
    </ul>
 </div>
 

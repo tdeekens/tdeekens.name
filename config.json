@@ -28,7 +28,7 @@
                 "fallbacks": ["../bower", "../composer"]
             },
             "css": {
-                "fallbacks": ["../bower", "../composer"]
+                "fallbacks": ["fonts", "../bower", "../composer"]
             },
             "scss": {
                 "fallbacks": ["../bower", "../composer"]

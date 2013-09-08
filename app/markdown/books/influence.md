@@ -2,6 +2,7 @@
 
 ## The Psychology of Persuasion
 
-Influence, the classic book on persuasion, explains the psychology of why people say "yes"—and how to apply these understandings. Dr. Robert Cialdini is the seminal expert in the rapidly expanding field of influence and persuasion. His thirty-five years of rigorous, evidence-based research along with a three-year program of study on what moves people to change behavior has resulted in this highly acclaimed book.
-
-You'll learn the six universal principles, how to use them to become a skilled persuader—and how to defend yourself against them. Perfect for people in all walks of life, the principles of Influence will move you toward profound personal change and act as a driving force for your success.
+Books about self-improvement are surely a strange breed. Tons of which nobody should probably ever have to read but among the great plenty, this is an original.
+Influence, is a book on persuasion. It explains the psychology of why people and their reasons in saying "yes" and "no" and how to gain understandings in it.
+Cialdini explains six underlying principles here: reciprocity, commitment and consistency, social proof, authority, liking and scarcity. Overall all principles draw an positive image of us human beings. We like to give back, we identify ourselves with our creations, we trust one another, we identify ourselves with role models, we tend to obey authority figures and we dislike excess. None of which is a bad thing but some of which are interesting insights.
+I won't promise you being a better person after reading this book.

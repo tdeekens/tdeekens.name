@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,9 +18,9 @@
 
 @font-face {
   font-family: 'Mono Social Icons Font';
-  src: url("../font/MonoSocialIconsFont-1.10.eot");
-  src: url("../font/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../font/MonoSocialIconsFont-1.10.woff") format("woff"), url("../font/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../font/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
-  src: url("../font/MonoSocialIconsFont-1.10.ttf") format("truetype");
+  src: url("MonoSocialIconsFont-1.10.eot");
+  src: url("MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("MonoSocialIconsFont-1.10.woff") format("woff"), url("MonoSocialIconsFont-1.10.ttf") format("truetype"), url("MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
+  src: url("MonoSocialIconsFont-1.10.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -54,6 +55,16 @@ body {
   font-family: Baskerville;
   word-wrap: break-word;
   text-align: justify; }
+
+.js-breakpoint {
+  display: none;
+  content: 'desktop'; }
+  @media screen and (max-width: 768px) {
+    .js-breakpoint {
+      content: 'tablet'; } }
+  @media screen and (max-width: 580px) {
+    .js-breakpoint {
+      content: 'mobile'; } }
 
 .header-bg {
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
@@ -93,14 +104,15 @@ body {
           margin-right: 0; } }
     .sticky-header .header-meta h1 {
       margin: 10px 0;
-      padding: 0; }
+      padding: 4px 0;
+      border: 0; }
       @media screen and (max-width: 768px) {
         .sticky-header .header-meta h1 {
-          margin: 15px 0;
+          margin: 13px 0;
           font-size: 130%; } }
       @media screen and (max-width: 580px) {
         .sticky-header .header-meta h1 {
-          margin: 18px 0;
+          margin: 15px 0;
           font-size: 100%; } }
     .sticky-header .header-meta .avatar {
       box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.6);
@@ -122,10 +134,11 @@ body {
     display: block;
     float: left;
     margin-right: 2.12766%;
-    width: 23.40426%;
+    width: 31.91489%;
     margin-left: 17.02128%;
     font-size: 1.3em;
     margin-top: 7px;
+    padding-right: 1.5em;
     text-align: right; }
     .sticky-header .social-media:last-child {
       margin-right: 0; }
@@ -137,6 +150,8 @@ body {
       .sticky-header .social-media a:hover {
         border: 0;
         color: #5179cb; }
+      .sticky-header .social-media a:last-child {
+        margin-right: 0; }
 
 div.navigation {
   display: block;
@@ -150,7 +165,8 @@ div.navigation {
   div.navigation:last-child {
     margin-right: 0; }
   div.navigation ul {
-    padding: 0; }
+    padding: 0;
+    margin: 10px 0; }
     div.navigation ul li {
       list-style-type: none;
       display: inline;
@@ -190,7 +206,7 @@ div.wrap-outer {
       display: block;
       float: left;
       margin-right: 2.12766%;
-      width: 48.93617%;
+      width: 31.91489%;
       margin-right: 0; }
       div.wrap-outer div.content-body .activity-posts:last-child {
         margin-right: 0; }
@@ -206,7 +222,7 @@ div.wrap-outer {
       display: block;
       float: left;
       margin-right: 2.12766%;
-      width: 48.93617%;
+      width: 31.91489%;
       margin-right: 0; }
       div.wrap-outer div.content-body .activity-songs:last-child {
         margin-right: 0; }
@@ -218,10 +234,27 @@ div.wrap-outer {
           width: 313.33333%; }
           div.wrap-outer div.content-body .activity-songs:last-child {
             margin-right: 0; } }
+    div.wrap-outer div.content-body .activity-books {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 31.91489%;
+      margin-right: 0; }
+      div.wrap-outer div.content-body .activity-books:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 580px) {
+        div.wrap-outer div.content-body .activity-books {
+          display: block;
+          float: left;
+          margin-right: 6.66667%;
+          width: 313.33333%; }
+          div.wrap-outer div.content-body .activity-books:last-child {
+            margin-right: 0; } }
     div.wrap-outer div.content-body .posts .date {
       font-family: "MyriadPro-LightSemiExt";
       float: right;
-      font-size: 80%; }
+      font-size: 80%;
+      margin-top: .25em; }
       @media screen and (max-width: 580px) {
         div.wrap-outer div.content-body .posts .date {
           display: none; } }
@@ -236,7 +269,7 @@ div.wrap-outer {
         display: block;
         float: left;
         margin-right: 2.12766%;
-        width: 74.46809%; }
+        width: 82.97872%; }
         div.wrap-outer div.content-body .books .book .description:last-child {
           margin-right: 0; }
         @media screen and (max-width: 580px) {
@@ -259,11 +292,15 @@ div.wrap-outer {
             display: none; } }
         div.wrap-outer div.content-body .books .book .cover img {
           width: 100%;
-          margin-top: 2em; }
+          margin-top: 1.8em; }
       div.wrap-outer div.content-body .books .book:after {
         display: table;
         content: '';
         clear: both; }
+    div.wrap-outer div.content-body .about:before {
+      display: table;
+      content: '';
+      clear: both; }
     div.wrap-outer div.content-body .yt-songs {
       display: block;
       float: left;
@@ -355,12 +392,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'MyriadPro-SemiExt'; }
 
 h1, h2, h3 {
-  margin: 15px 0 5px 0; }
+  margin: .4em 0; }
 
 h1 {
   font-family: 'MyriadPro-Bold';
   font-weight: 100;
-  padding: 10px 0 0 0;
+  padding: .4em 0 .5em 0;
   font-size: 150%; }
 
 h2 {
@@ -429,3 +466,16 @@ a, a:active, a:visited {
 
 a:hover {
   border-bottom: 1px dotted #5179cb; }
+
+div.wrap-outer div.content-body > h1:first-child, h1.content-title {
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2; }
+  div.wrap-outer div.content-body > h1:first-child:before, h1.content-title:before, div.wrap-outer div.content-body > h1:first-child:after, h1.content-title:after {
+    font-size: 40%;
+    content: '♦';
+    margin-bottom: .25em;
+    vertical-align: middle; }
+  div.wrap-outer div.content-body > h1:first-child:after, h1.content-title:after {
+    margin-left: 2em; }
+  div.wrap-outer div.content-body > h1:first-child:before, h1.content-title:before {
+    margin-right: 2em; }

@@ -1,0 +1,33 @@
+{
+   "books": [
+      {
+         "title": "Future Pefect - Steven Johnson",
+         "file": "futureperfect"
+      }, {
+         "title": "Why Nations Fail - Acemoglu & Robinson",
+         "file":"whynationsfail"
+      }, {
+         "file": "discardedscience"
+      }, {
+         "file":"zeitderrache"
+      }, {
+         "file":"ashorthistory"
+      }, {
+         "file":"derhundert"
+      }, {
+         "file":"influence"
+      }, {
+         "file":"unternehmenzufall"
+      }, {
+         "file":"egoistischesgen"
+      }, {
+         "file":"freakydeaky"
+      }, {
+         "file":"generationx"
+      }, {
+         "file":"farewell"
+      }, {
+         "file":"predictablyirrational"
+      }
+   ]
+}

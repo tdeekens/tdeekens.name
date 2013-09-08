@@ -19,6 +19,18 @@ body {
    word-wrap: break-word;
    text-align: justify;
 }
+.js-breakpoint {
+   display: none;
+   content: 'desktop';
+
+   @include media($tablet) {
+      content: 'tablet';
+   }
+
+   @include media($mobile) {
+      content: 'mobile';
+   }
+}
 .header-bg {
    @include box-shadow(inset 0 0 15px hsla(0, 0%, 0%, 0.8));
 
@@ -47,15 +59,16 @@ body {
 
       h1 {
          margin: 10px 0;
-         padding: 0;
+         padding: 4px 0;
+         border: 0;
 
          @include media($tablet) {
-            margin: 15px 0;
+            margin: 13px 0;
             font-size: 130%;
          }
 
          @include media($mobile) {
-            margin: 18px 0;
+            margin: 15px 0;
             font-size: 100%;
          }
       }
@@ -85,7 +98,7 @@ body {
    }
 
    .social-media {
-      @include span-columns(3);
+      @include span-columns(4);
       @include shift(2);
 
       @include media($mobile) {
@@ -94,6 +107,7 @@ body {
 
       font-size: 1.3em;
       margin-top: 7px;
+      padding-right: 1.5em;
       text-align: right;
 
       a {
@@ -102,6 +116,10 @@ body {
          &:hover {
             border: 0;
             color: rgb(81, 121, 203);
+         }
+
+         &:last-child {
+            margin-right: 0;
          }
       }
    }
@@ -116,6 +134,7 @@ div.navigation {
 
    ul {
       padding: 0;
+      margin: 10px 0;
 
       & li {
          list-style-type: none;
@@ -149,10 +168,14 @@ div.wrap-outer {
    div.content-body {
       @include span-columns(12);
 
+      & > h1:first-child {
+         @extend %h1-title;
+      }
+
       margin-bottom: 2.5em;
 
       .activity-posts {
-         @include span-columns(6);
+         @include span-columns(4);
          @include omega;
 
          @include media($mobile) {
@@ -161,7 +184,16 @@ div.wrap-outer {
       }
 
       .activity-songs {
-         @include span-columns(6);
+         @include span-columns(4);
+         @include omega;
+
+         @include media($mobile) {
+           @include span-columns(12);
+         }
+      }
+
+      .activity-books {
+         @include span-columns(4);
          @include omega;
 
          @include media($mobile) {
@@ -174,6 +206,7 @@ div.wrap-outer {
             font-family: "MyriadPro-LightSemiExt";
             float: right;
             font-size: 80%;
+            margin-top: .25em;
 
             @include media($mobile) {
                display: none;
@@ -186,7 +219,7 @@ div.wrap-outer {
 
          .book {
             .description {
-               @include span-columns(9);
+               @include span-columns(10);
 
                @include media($mobile) {
                   @include span-columns(4);
@@ -203,7 +236,7 @@ div.wrap-outer {
                img {
                   @include fill-parent();
 
-                  margin-top: 2em;
+                  margin-top: 1.8em;
                }
             }
 
@@ -212,6 +245,14 @@ div.wrap-outer {
                content: '';
                clear: both;
             }
+         }
+      }
+
+      .about {
+         &:before {
+            display: table;
+            content: '';
+            clear: both;
          }
       }
 
@@ -302,14 +343,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3 {
-   margin: 15px 0 5px 0;
+   margin: .4em 0;
 }
 
 h1 {
    font-family: 'MyriadPro-Bold';
    font-weight: 100;
-   padding: 10px 0 0 0;
+   padding: .4em 0 .5em 0;
    font-size: 150%;
+
+   &.content-title {
+      @extend %h1-title;
+   }
 }
 
 h2 {
@@ -391,4 +436,24 @@ a, a:active, a:visited {
 
 a:hover {
    border-bottom: 1px dotted rgb(81, 121, 203);
+}
+
+%h1-title {
+   text-align: center;
+   border-bottom: 1px solid hsl(0, 0%, 95%);
+
+   &:before, &:after {
+      font-size: 40%;
+      content: '♦';
+      margin-bottom: .25em;
+      vertical-align: middle;
+   }
+
+   &:after {
+      margin-left: 2em;
+   }
+
+   &:before {
+      margin-right: 2em;
+   }
 }

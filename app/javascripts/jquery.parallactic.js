@@ -29,24 +29,29 @@
       },
       bindEvents: function() {
          var that = this;
-         this.$window.scroll( function() { that.scrollHandler(); } );
-         this.$window.bind('touchstart touchmove touchend', function() { that.scrollHandler(); } );
+
+         this.$window.scroll( function() { that.hideHandler(); } );
+
+         if (window.app.breakpoint !== "mobile") {
+            this.$window.scroll( function() { that.parallaxHandler(); } );
+         }
       },
-      scrollHandler: function () {
-         var that = this;
+      hideHandler: function() {
+         var scrollTop = this.$window.scrollTop();
 
-         var scrollTop = that.$window.scrollTop();
+         this.hide(scrollTop);
+         this.show(scrollTop);
+      },
+      parallaxHandler: function () {
+         var scrollTop = this.$window.scrollTop();
 
-         that.hide(scrollTop);
-         that.show(scrollTop);
-
-         var yPos =- ( scrollTop / that.$element.data('speed') );
+         var yPos =- ( scrollTop / this.$element.data('speed') );
 
          // Put together our final background position
          var coords = '50% '+ yPos + 'px';
 
          // Move the background
-         that.$element.css({
+         this.$element.css({
             backgroundPosition: coords
          });
       },
