@@ -166,7 +166,8 @@ div.navigation {
     margin-right: 0; }
   div.navigation ul {
     padding: 0;
-    margin: 10px 0; }
+    margin: 10px 0;
+    text-align: center; }
     div.navigation ul li {
       list-style-type: none;
       display: inline;
@@ -207,7 +208,8 @@ div.wrap-outer {
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
-      margin-right: 0; }
+      margin-right: 0;
+      padding: 0 2%; }
       div.wrap-outer div.content-body .activity-posts:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
@@ -223,7 +225,8 @@ div.wrap-outer {
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
-      margin-right: 0; }
+      margin-right: 0;
+      padding: 0 2%; }
       div.wrap-outer div.content-body .activity-songs:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
@@ -239,7 +242,8 @@ div.wrap-outer {
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
-      margin-right: 0; }
+      margin-right: 0;
+      padding: 0 2%; }
       div.wrap-outer div.content-body .activity-books:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
@@ -292,7 +296,7 @@ div.wrap-outer {
             display: none; } }
         div.wrap-outer div.content-body .books .book .cover img {
           width: 100%;
-          margin-top: 1.8em; }
+          margin-top: 1.7em; }
       div.wrap-outer div.content-body .books .book:after {
         display: table;
         content: '';
@@ -431,7 +435,8 @@ p {
   margin-bottom: 10px; }
 
 ul {
-  margin: 5px 0 10px 0; }
+  margin: 5px 0 10px 0;
+  text-align: left; }
 
 pre {
   border: 1px solid #ccc;

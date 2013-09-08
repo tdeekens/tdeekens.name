@@ -10,12 +10,12 @@ Please do not consider this as an introduction to the shell. It's rather lessons
 
 Oh my. [Oh_my_zsh](github.com/robbyrussell/oh-my-zsh) will make your like the shell even more. It gives you auto-completion, themes and a lightweight plugin-architecture. All in all a road from which I'd never want to go back.
 
-Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would never try to talk you into things. Nevertheless, you could upgrade Bash with ´brew install bash´ (assuming that you know [homebrew](brew.sh).
+Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would never try to talk you into things. Nevertheless, you could upgrade Bash with ´brew install bash´ (assuming that you know [homebrew](brew.sh)).
 
 ## Some commands: tricky di trick
 
 * **$ !!**
-   * Runs the previous command. Ever ran a command needing sudo without knowing
+   * Runs the previous command. Ever ran a command needing sudo without knowing?
    * Just re-run it: `$ sudo !!`
    * No arrow up, word jumping and tying sudo in front
 * **$ !$**
@@ -27,7 +27,7 @@ Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would ne
    * `$ touch readme.md docs.md && sublime !:1`
 * **$ mv readme.{text, md}**
    * Called expansion lists which can do a whole lot more.
-   * In the example they expand on readme. and therefore generate: $ mv readme.txt readme.md
+   * In the example they expand on readme. and therefore generate: `$ mv readme.txt readme.md`
 * **ctrl + r**
    * Ever up-arrowed till infinity to find an old command? It's love hate. This one allows you to search all your previous commands and run them right away. Calling this eurka.
 

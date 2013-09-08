@@ -6,4 +6,4 @@ I am a pretty tall dude from Germany currently studying Software Engineering at 
 
 So what's this after all? Well, I like playing around. Playing with technology, coding along and building stuff, abusing good stuff for the worse. This is my private playground. Putting out some music, books and thoughts can't cause no harm.
 
-After all, I am just writing up on things so I can memorize them better.
+After all, I am just writing up on things so I can memorize them better. If you want to hit on me: [blog@tdeekena.name](mailto:blog@tdeekena.name).

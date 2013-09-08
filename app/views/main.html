@@ -23,7 +23,7 @@
     <meta name="robots" content="index, follow">
     <meta name="title" content="Tobias Deekens - yet another blog">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <?= UI::css(Asset::assets(['normalize.css', 'style.css'], [], [])) ?>
 
@@ -80,7 +80,7 @@
 
 <?php
     if (strpos($_SERVER['SERVER_NAME'], 'tdeekens.name') !== false) {
-        echo UI::js(Asset::assets(['piwik.tracking.js']));
+        echo UI::js(Asset::assets(['piwik-tracking.js']));
     }
 ?>
 </body>
