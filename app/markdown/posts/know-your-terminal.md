@@ -29,7 +29,8 @@ Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would ne
    * Called expansion lists which can do a whole lot more.
    * In the example they expand on readme. and therefore generate: `$ mv readme.txt readme.md`
 * **ctrl + r**
-   * Ever up-arrowed till infinity to find an old command? It's love hate. This one allows you to search all your previous commands and run them right away. Calling this eurka.
+   * Ever up-arrowed till infinity to find an old command? It's a love hate. This one allows you to search all your previous commands and run them right away. Calling this eurka.
+   * Well, you can even “up-arrow” by hitting *ctrl + r* again after searching.
 
 # Some closing thoughts
 
