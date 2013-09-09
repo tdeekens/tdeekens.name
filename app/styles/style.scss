@@ -181,7 +181,7 @@ div.wrap-outer {
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(12);
+           @include span-columns(4);
          }
       }
 
@@ -191,7 +191,7 @@ div.wrap-outer {
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(12);
+           @include span-columns(4);
          }
       }
 
@@ -201,7 +201,7 @@ div.wrap-outer {
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(12);
+           @include span-columns(4);
          }
       }
 

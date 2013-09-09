@@ -217,7 +217,7 @@ div.wrap-outer {
           display: block;
           float: left;
           margin-right: 6.66667%;
-          width: 313.33333%; }
+          width: 100%; }
           div.wrap-outer div.content-body .activity-posts:last-child {
             margin-right: 0; } }
     div.wrap-outer div.content-body .activity-songs {
@@ -234,7 +234,7 @@ div.wrap-outer {
           display: block;
           float: left;
           margin-right: 6.66667%;
-          width: 313.33333%; }
+          width: 100%; }
           div.wrap-outer div.content-body .activity-songs:last-child {
             margin-right: 0; } }
     div.wrap-outer div.content-body .activity-books {
@@ -251,7 +251,7 @@ div.wrap-outer {
           display: block;
           float: left;
           margin-right: 6.66667%;
-          width: 313.33333%; }
+          width: 100%; }
           div.wrap-outer div.content-body .activity-books:last-child {
             margin-right: 0; } }
     div.wrap-outer div.content-body .posts .date {
