@@ -10,7 +10,7 @@ Please do not consider this as an introduction to the shell. It's rather lessons
 
 Oh my. [Oh_my_zsh](github.com/robbyrussell/oh-my-zsh) will make your like the shell even more. It gives you auto-completion, themes and a lightweight plugin-architecture. All in all a road from which I'd never want to go back.
 
-Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would never try to talk you into things. Nevertheless, you could upgrade Bash with ´brew install bash´ (assuming that you know [homebrew](brew.sh)).
+Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would never try to talk you into things. Nevertheless, you could upgrade Bash with ´brew install bash´ (assuming that you know [homebrew](http://brew.sh)).
 
 ## Some commands: tricky di trick
 
