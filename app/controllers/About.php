@@ -9,21 +9,20 @@ use Underscore\Types\Arrays;
 class About extends Controller
 {
    use traits\Mustache;
+   use traits\IndexFile;
 
    public static function index()
    {
-      $posts = json_decode(file_get_contents("./app/views/posts/index.json"));
-      $music = json_decode(file_get_contents("./app/views/music/index.json"));
-      $books = json_decode(file_get_contents("./app/views/books/index.json"));
-      $music->songs = array_reverse($music->songs);
-      $posts->posts = array_reverse($posts->posts);
+      $posts = static::readIndex('Posts', true);
+      $music = static::readIndex('Music', true);
+      $books = static::readIndex('Books');
 
       return static::renderMustache([
          'about'     => Asset::markdown('about.md', [], true),
          'credits'   => Asset::markdown('credits.md', [], true),
-         'songs'     => Arrays::first($music->songs, 2),
-         'posts'     => Arrays::first($posts->posts, 2),
-         'books'     => Arrays::first($books->books, 2)
+         'songs'     => Arrays::first($music, 2),
+         'posts'     => Arrays::first($posts, 2),
+         'books'     => Arrays::first($books, 2)
       ], ['path' => './app/views/about/', 'files' => ['about' => 'about']]);
    }
 }

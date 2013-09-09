@@ -1,35 +1,33 @@
-{
-   "books": [
-      {
-         "title": "Future Pefect - Steven Johnson",
-         "file": "futureperfect"
-      }, {
-         "title": "Why Nations Fail - Acemoglu & Robinson",
-         "file":"whynationsfail"
-      }, {
-         "file": "discardedscience"
-      }, {
-         "file":"zeitderrache"
-      }, {
-         "file":"ashorthistory"
-      }, {
-         "file":"predictablyirrational"
-      }, {
-         "file":"derhundert"
-      }, {
-         "file":"egoistischesgen"
-      }, {
-         "file":"influence"
-      }, {
-         "file":"pointblank"
-      }, {
-         "file":"unternehmenzufall"
-      }, {
-         "file":"freakydeaky"
-      }, {
-         "file":"generationx"
-      }, {
-         "file":"farewell"
-      }
-   ]
-}
+[
+   {
+      "title": "Future Pefect - Steven Johnson",
+      "file": "futureperfect"
+   }, {
+      "title": "Why Nations Fail - Acemoglu & Robinson",
+      "file": "whynationsfail"
+   }, {
+      "file": "discardedscience"
+   }, {
+      "file": "zeitderrache"
+   }, {
+      "file": "ashorthistory"
+   }, {
+      "file": "predictablyirrational"
+   }, {
+      "file": "derhundert"
+   }, {
+      "file": "egoistischesgen"
+   }, {
+      "file": "influence"
+   }, {
+      "file": "pointblank"
+   }, {
+      "file": "unternehmenzufall"
+   }, {
+      "file": "freakydeaky"
+   }, {
+      "file": "generationx"
+   }, {
+      "file": "farewell"
+   }
+]

@@ -8,16 +8,15 @@ use Underscore\Types\Arrays;
 class Music extends Controller
 {
    use traits\Mustache;
+   use traits\IndexFile;
 
    public static function index()
    {
-      $music = json_decode(file_get_contents("./app/views/music/index.json"));
-      $music->songs  = array_reverse($music->songs);
-      $music->song   = Arrays::first($music->songs);
+      $music = static::readIndex(null, true);
 
       return static::renderMustache([
-         'songs'  => $music->songs,
-         'song'   => $music->song
+         'songs'  => $music,
+         'song'   => Arrays::first($music),
       ], ['path' => './app/views/music/', 'files' => ['songs' => 'music']]);
    }
 }

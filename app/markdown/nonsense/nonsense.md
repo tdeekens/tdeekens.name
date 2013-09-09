@@ -1,5 +1,7 @@
 > ”You can't upstrum yourself into thoughness.“ (Josh Homme)
 
+[Scenic Route - Movie](https://www.youtube.com/watch?v=wb7Hrtwzwjs)
+
 [Jeff Bezos - The electricity metaphor for the web's future](http://www.ted.com/talks/jeff_bezos_on_the_next_web_innovation.html)
 
 [@fat talking OpenSource](http://www.youtube.com/watch?v=UIDb6VBO9os)
@@ -20,7 +22,7 @@
 
 > ”You're not a very emotional person? Noooh!“ (Unknown)
 
-[Scenic Route - Movie](https://www.youtube.com/watch?v=wb7Hrtwzwjs)
+[@holman how GitHub works](http://zachholman.com/posts/how-github-works/)
 
 > ”A life. A life, Jimmy. You know what that is? It's the shit that happens while you're waiting for moments that never come.“ (The Wire)
 

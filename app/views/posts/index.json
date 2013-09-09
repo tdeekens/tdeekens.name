@@ -1,29 +1,28 @@
-{
-   "posts": [{
-         "file": "dem-internet-fallen-die-milchzaehne-aus",
-         "title": "Dem dem Internet fallen die Milchzaehne aus",
-         "from": "02/2012"
-      }, {
-         "file": "tvo-veckor-i-sverge",
-         "title": "Två veckor i Sverige, två veckor i Göteborg",
-         "from": "10/2012"
-      }, {
-         "file": "agile-development-processes-postmortem",
-         "title": "Agile Development Processes: A Post-mortem",
-         "from": "05/2013"
-      }, {
-         "file": "a-post-about-bitcoins",
-         "title": "A post about Bitcoins",
-         "from": "06/2013",
-         "draft": true
-      }, {
-         "file": "scandiojs",
-         "title": "Scandiojs: yet another JavaScript library",
-         "from": "09/2013"
-      }, {
-         "file": "know-your-terminal",
-         "title": "Know your Terminal",
-         "from": "08/2013"
-      }
-   ]
-}
+[
+   {
+      "file": "dem-internet-fallen-die-milchzaehne-aus",
+      "title": "Dem dem Internet fallen die Milchzaehne aus",
+      "from": "02/2012"
+   }, {
+      "file": "tvo-veckor-i-sverge",
+      "title": "Två veckor i Sverige, två veckor i Göteborg",
+      "from": "10/2012"
+   }, {
+      "file": "agile-development-processes-postmortem",
+      "title": "Agile Development Processes: A Post-mortem",
+      "from": "05/2013"
+   }, {
+      "file": "a-post-about-bitcoins",
+      "title": "A post about Bitcoins",
+      "from": "06/2013",
+      "draft": true
+   }, {
+      "file": "scandiojs",
+      "title": "Scandiojs: yet another JavaScript library",
+      "from": "09/2013"
+   }, {
+      "file": "know-your-terminal",
+      "title": "Know your Terminal",
+      "from": "08/2013"
+   }
+]

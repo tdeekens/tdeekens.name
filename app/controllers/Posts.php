@@ -8,12 +8,11 @@ use Underscore\Types\Arrays;
 class Posts extends Controller
 {
    use traits\Mustache;
+   use traits\IndexFile;
 
    public static function index()
    {
-      $posts         = json_decode(file_get_contents("./app/views/posts/index.json"));
-      $posts->posts  = array_reverse($posts->posts);
-      $posts         = $posts->posts;
+      $posts         = static::readIndex(null, true);
       $published     = [];
 
       foreach ($posts as $postKey => $post) {

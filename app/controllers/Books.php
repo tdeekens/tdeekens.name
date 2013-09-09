@@ -7,13 +7,14 @@ use Scandio\lmvc\Controller;
 class Books extends Controller
 {
    use traits\Mustache;
+   use traits\IndexFile;
 
    public static function index()
    {
-      $books = json_decode(file_get_contents("./app/views/books/index.json"));
+      $books = static::readIndex();
 
       return static::render([
-         'books'   => $books->books
+         'books'   => $books
       ]);
    }
 }
