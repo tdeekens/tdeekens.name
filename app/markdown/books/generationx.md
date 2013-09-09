@@ -1,6 +1,6 @@
 # Generation X.
 
-One of my all time favorites. Coupland wrote some seriously entertaining lines. Sometimes this book felt like looking into a mirror; a sarcastic and hurting mirror.
+One of my all time favorites. Coupland wrote some seriously entertaining lines. Sometimes this book felt like looking into a mirror; a sarcastic and painful mirror.
 Coupland was a student when he wrote this book portaying a generation he is part of himself. Growing up after WWII, he caught the phrase and summed up his own observations made. All packaged in a story of a bunch of students studying different subjects but all embodying some part of his thoughts.
-In the book he coins terms such as *McJob*, *Japanese Minimalism* and *Decade Blending*. *McJob* being an underpayed job for somebody with no perspective for anybody not knowing what a future his life might have. *Decade Blending* describing the absence of new styles and fashions replaced with people just mixing up the past and calling it something new. These definitions are part of Coupland's initial thoughts and remained as marginalia in the book.
+In the book he coins terms such as *McJob*, *Japanese Minimalism* and *Decade Blending*. *McJob* being an underpayed job for somebody with no perspective for anybody not knowing what a future his life might have. *Decade Blending* describing the absence of new styles and fashions replaced by people just mixing up the past and calling it something new. These definitions are part of Coupland's initial thoughts and remained as marginalia in the book.
 An incredibly entertaining read making you laugh about society and yourself - though not for everybody.
