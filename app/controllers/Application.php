@@ -12,6 +12,11 @@ class Application extends Controller
 
    public static function index()
    {
+      self::redirect('About::index');
+   }
+
+   public static function latest()
+   {
       $posts = $posts = static::readIndex('Posts', true);
       $postInfo = Arrays::first($posts);
 
