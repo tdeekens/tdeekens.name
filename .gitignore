@@ -4,3 +4,4 @@
 /composer
 .htaccess
 _cache/
+config.json
