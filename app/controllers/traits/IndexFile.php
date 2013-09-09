@@ -6,13 +6,18 @@ use \Scandio\lmvc\LVC;
 
 trait IndexFile
 {
-   public static function readIndex($controller = null, $reverse = false, $extension = 'json')
+   public static function readIndex($controller = null, $reverse = false, $action = null, $extension = 'json')
    {
       $app = LVC::get();
 
       $indexJson = json_decode(
          file_get_contents(
-            static::searchIndex(LVC::camelCaseTo($controller !== null ? $controller : $app->controller) . DIRECTORY_SEPARATOR . LVC::camelCaseTo($app->actionName) . '.' . $extension)
+            static::searchIndex(
+               LVC::camelCaseTo($controller !== null ? $controller : $app->controller)
+                  . DIRECTORY_SEPARATOR .
+               LVC::camelCaseTo($action !== null ? $action : $app->actionName)
+               . '.' . $extension
+            )
          )
       );
 

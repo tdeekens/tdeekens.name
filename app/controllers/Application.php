@@ -17,7 +17,7 @@ class Application extends Controller
 
    public static function latest()
    {
-      $posts = $posts = static::readIndex('Posts', true);
+      $posts = $posts = static::readIndex('Posts', true, 'index');
       $postInfo = Arrays::first($posts);
 
       return static::render([
