@@ -3,4 +3,12 @@
     use Scandio\lmvc\modules\assetpipeline\view\Asset;
 ?>
 
-<?= Asset::markdown($post, ['path' => 'posts'], true) ?>
+<?php $response = Asset::markdown($post, ['path' => 'posts'], true); ?>
+
+<?php
+   if ($response !== false) {
+      echo $response;
+   } else {
+      echo "<h1>Wow, an unknown post! You're looking for the future?";
+   }
+?>
