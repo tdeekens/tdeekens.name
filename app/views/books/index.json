@@ -1,10 +1,12 @@
 [
    {
       "title": "Future Pefect - Steven Johnson",
-      "file": "futureperfect"
+      "file": "futureperfect",
+      "hash": "future_perfect"
    }, {
       "title": "Why Nations Fail - Acemoglu & Robinson",
-      "file": "whynationsfail"
+      "file": "whynationsfail",
+      "hash": "why_nations_fail"
    }, {
       "file": "discardedscience"
    }, {
