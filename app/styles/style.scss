@@ -3,6 +3,7 @@
 @import "../../bower/neat/app/assets/stylesheets/neat";
 
 @import "_fonts";
+@import "_variables";
 
 html {
    background-color: #fff;
@@ -18,6 +19,7 @@ body {
    font-family: Baskerville;
    word-wrap: break-word;
    text-align: justify;
+   color: $root-font-color;
 }
 .js-breakpoint {
    display: none;
@@ -55,6 +57,10 @@ body {
 
       @include media($mobile) {
          @include span-columns(12);
+      }
+
+      & > a {
+         color: $root-font-color;
       }
 
       h1 {

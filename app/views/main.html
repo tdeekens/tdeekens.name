@@ -38,8 +38,10 @@
     <div class="wrap-outer">
         <div class="sticky-header">
             <div class="header-meta">
-                <div class="avatar"><img src="<?= Asset::image(['avatar.jpg']) ?>" alt=""></div>
-                <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
+                <a href="<?= $app->url('About::index') ?>">
+                    <div class="avatar"><img src="<?= Asset::image(['avatar.jpg']) ?>" alt=""></div>
+                    <h1><span class="incredibly-thin">Tobias</span><span class="massivly-fat"> Deekens</span></h1>
+                </a>
             </div>
 
             <div class="social-media">

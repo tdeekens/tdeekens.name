@@ -54,7 +54,8 @@ body {
   line-height: 1.6;
   font-family: Baskerville;
   word-wrap: break-word;
-  text-align: justify; }
+  text-align: justify;
+  color: #333333; }
 
 .js-breakpoint {
   display: none;
@@ -102,6 +103,8 @@ body {
         width: 313.33333%; }
         .sticky-header .header-meta:last-child {
           margin-right: 0; } }
+    .sticky-header .header-meta > a {
+      color: #333333; }
     .sticky-header .header-meta h1 {
       margin: 10px 0;
       padding: 4px 0;
