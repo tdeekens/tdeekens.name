@@ -1,0 +1,9 @@
+<?php
+   use Scandio\lmvc\modules\assetpipeline\view\Asset;
+
+   $url       = $params[0];
+   $extension = $params[1] != null ? $params[1] : '.jpg';
+   $retina    = (bool) $_COOKIE['HTTP_IS_RETINA'] === true ? '_@2x' : '';
+?>
+
+<?= Asset::image([ $url . $retina . $extension ] ) ?>

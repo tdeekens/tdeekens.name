@@ -6,6 +6,14 @@
 <!doctype html>
 <html>
 <head>
+    <script type="text/javascript">
+        if ( (window.devicePixelRatio === undefined ? 1 : window.devicePixelRatio) > 1 ) {
+            document.cookie='HTTP_IS_RETINA=0;';
+        } else {
+            document.cookie='HTTP_IS_RETINA=1;';
+        }
+    </script>
+
     <title>Tobias Deekens - yet another blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,12 +59,7 @@
             </div>
         </div>
     </div>
-    <div class="header-bg" data-speed="2" style="background-image: url(
-        <?php
-            $id = rand(1, 11);
-            echo Asset::image(['headers/header-' . $id . '.jpg']);
-        ?>
-    )">
+    <div class="header-bg" data-speed="2" style="background-image: url(<?= UI::img('headers/header-'.rand(1, 11)) ?>)">
     </div>
 
     <div class="navigation">
