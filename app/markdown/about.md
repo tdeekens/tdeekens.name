@@ -2,7 +2,7 @@
 
 Hank Moody had a hard time understanding the blogging kind - me too. Assuming my own brain juice beub of interest to anybody else always almost felt arrogant and utterly wrong.
 
-So what's this after all? Well, I like playing around. Playing with technology, coding along and building stuff, abusing good stuff for the worse. This is my private playground. Putting out some music, books and thoughts can't cause no harm.
+So what's this after all? Well, it's a playground. At times I like coding along - building stuff. Abusing the good for the worse. This is my private playground. Plus, putting out some music, books and thoughts can't cause no harm.
 
 After all, I am just writing up on things so I can memorize them better. If you want to hit on me: [blog@tdeekens.name](mailto:blog@tdeekens.name).
 
