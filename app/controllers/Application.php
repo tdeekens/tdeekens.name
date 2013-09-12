@@ -24,4 +24,11 @@ class Application extends Controller
          'post'   => $postInfo->file . '.md'
       ]);
    }
+
+   public static function imprint()
+   {
+      return static::render([
+         'imprint'   => 'imprint.md'
+      ]);
+   }
 }

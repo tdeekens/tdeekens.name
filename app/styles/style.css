@@ -187,6 +187,9 @@ div.navigation {
     @media screen and (max-width: 580px) {
       div.navigation a {
         font-size: 1em; } }
+  div.navigation.footer {
+    margin-bottom: 2.5em;
+    border-bottom: 0px; }
 
 div.wrap-outer {
   *zoom: 1;

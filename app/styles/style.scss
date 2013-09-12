@@ -169,6 +169,11 @@ div.navigation {
          font-size: 1em;
       }
    }
+
+   &.footer {
+      margin-bottom: 2.5em;
+      border-bottom: 0px;
+   }
 }
 div.wrap-outer {
    @include outer-container;
