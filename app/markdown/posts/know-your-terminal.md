@@ -34,10 +34,10 @@ Yes, there is Bash and there is [BashIt](). Use what ever you prefer. I would ne
 
 # Some closing thoughts
 
-First of all your should alias all the things. Typing takes time, takes time. Time of you drinking coffee. Find out about commands you run often and customize your own aliases. Most fancy dotfile-repositories come with good ideas on what to alias. Don't take those for granted just keep on thinking and customizing.
+First of all you should alias all the things. Typing takes time. Time of you drinking a coffee. Find out about commands you run often and customize your own aliases. Most fancy dotfile-repositories come with good ideas on what to alias. Don't take those for granted just keep on thinking and customizing.
 
 These are my personal aliases on [GitHub](https://github.com/tdeekens/dotfiles/blob/master/.aliases).
 
-If you want to use aliases for git you can also add them to your *.gitconfig*. For inspiration you might aswell checkout mine (which suck) on [GitHub](https://github.com/tdeekens/dotfiles/blob/master/.gitconfig#L37).
+If you want to use aliases for git you can also add them to your *.gitconfig*. For inspiration you might aswell checkout mine (just a start) on [GitHub](https://github.com/tdeekens/dotfiles/blob/master/.gitconfig#L37).
 
-Now I will leave you alone with your Terminal for a while. If you leanred anything don't hesitate to get back to me and teach me some more nerdism.
+Now I will leave you alone with your Terminal for a while. If you leanred anything don't hesitate to get back to me and teach me some new nerdism.
