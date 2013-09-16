@@ -63,10 +63,9 @@ trait IndexFile
       $config = LVC::get()->config;
 
       # Iterates each registered viewPath
-      foreach ($config->viewPath as $path) {
+      foreach ($config->indexFiles as $path) {
          # Builds a possible, fully qualifying path
          $indexPath = ((substr($path, 0, 1) == '/') ? '' : $config->appPath) . $path . '/' . $indexFile;
-
          # Returns the path in case the file exists
          if (file_exists($indexPath)) {
             return $indexPath;
