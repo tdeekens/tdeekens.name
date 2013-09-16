@@ -13,16 +13,13 @@ class Posts extends Controller
    public static function index()
    {
       $posts         = static::readIndex(null, true);
-      $published     = [];
-
-      foreach ($posts as $postKey => $post) {
-         if (!isset($post->draft) || $post->draft !== true) {
-            $published[] = $post;
-         }
-      }
+      $published     = Arrays::from($posts)->filter(function($post) {
+         return $post->draft === null || $post->draft !== true;
+      })->obtain();
 
       return static::renderMustache([
-         'posts'  => $published
+         # Don't ask! Handing in the $published from __ messes mustache up!
+         'posts'  => array_merge($published)
       ], ['path' => './app/views/posts/', 'files' => ['posts' => 'posts']]);
    }
 
