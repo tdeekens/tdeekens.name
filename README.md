@@ -9,7 +9,9 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
    - Needs `composer` and `bower` being available globally
    - Loads dependencies using the two
    - Sets chmod on AssetPipeline `_cache`-directories
-3. There is no 3rd step, the blog is good to go!
+3. Get a `config.json` as in [lmvc-afresh](https://github.com/scandio/lmvc-afresh/blob/master/config.json) and add an 'indexFiles'-key to point to the appropriate directories.
+4. Get a `.htaccess` as in [lmvc-afresh](https://github.com/scandio/lmvc-afresh/blob/master/.htaccess) and set the root accordingly.
+5. There is no 5th step, the blog is good to go!
 
 ## How it works
 
