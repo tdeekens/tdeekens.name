@@ -491,3 +491,13 @@ div.wrap-outer div.content-body > h1:first-child, h1.content-title {
     margin-left: 2em; }
   div.wrap-outer div.content-body > h1:first-child:before, h1.content-title:before {
     margin-right: 2em; }
+
+@media print {
+  .header-bg {
+    display: none; }
+
+  div.navigation {
+    display: none; }
+
+  .sticky-header {
+    display: none; } }
