@@ -1,3 +1,5 @@
+[In Bruges - it's a shithole. A review.](http://www.youtube.com/watch?v=dhpNun_umE0)
+
 [It drives us: autonomy, mastery, purpose!](http://vimeo.com/15488784)
 
 [Dark matters. A comic on dark matter.](http://vimeo.com/22956103)
