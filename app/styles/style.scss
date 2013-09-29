@@ -258,6 +258,19 @@ div.wrap-outer {
                }
             }
 
+            .symbol {
+               float: right;
+               margin-top: .75em;
+               margin-right: -10px;
+               color: $root-font-color;
+               font-size: 130%;
+
+               &:hover {
+                  border: none;
+                  color: #5179cb;
+               }
+            }
+
             &:after {
                display: table;
                content: '';

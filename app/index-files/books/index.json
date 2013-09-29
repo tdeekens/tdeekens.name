@@ -1,35 +1,54 @@
 [
    {
+      "title": "Outliers - The Story of Success",
+      "file": "outliers",
+      "hash": "outliers_the_story_of_success",
+      "amazon": "http://amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017930"
+   }, {
       "title": "Future Pefect - Steven Johnson",
       "file": "futureperfect",
-      "hash": "future_perfect"
+      "hash": "future_perfect",
+      "amazon": "http://www.amazon.com/Future-Perfect-Case-Progress-Networked/dp/1594631840"
    }, {
       "title": "Why Nations Fail - Acemoglu & Robinson",
       "file": "whynationsfail",
-      "hash": "why_nations_fail"
+      "hash": "why_nations_fail",
+      "amazon": "http://www.amazon.com/Why-Nations-Fail-Origins-Prosperity/dp/0307719227"
    }, {
-      "file": "discardedscience"
+      "file": "discardedscience",
+      "amazon": "http://www.amazon.com/Discarded-Science-Ideas-Seemed-Time/dp"
    }, {
-      "file": "zeitderrache"
+      "file": "zeitderrache",
+      "amazon": "http://www.amazon.com/Zeit-Rache-Jack--Reacher--Roman/dp/"
    }, {
-      "file": "ashorthistory"
+      "file": "ashorthistory",
+      "amazon": "http://www.amazon.com/Short-History-Nearly-Everything/dp/"
    }, {
-      "file": "predictablyirrational"
+      "file": "predictablyirrational",
+      "amazon": "http://www.amazon.com/Predictably-Irrational-Revised-Expanded-Decisions/dp"
    }, {
-      "file": "derhundert"
+      "file": "derhundert",
+      "amazon": "http://www.amazon.com/Hundertj%C3%A4hrige-aus-Fenster-stieg-verschwand/dp"
    }, {
-      "file": "egoistischesgen"
+      "file": "egoistischesgen",
+      "amazon": "http://www.amazon.com/Das-egoistische-GEN-German-Edition/dp/"
    }, {
-      "file": "influence"
+      "file": "influence",
+      "amazon": "http://www.amazon.com/Influence-Psychology-Persuasion-Business-Essentials/dp/006124189X/"
    }, {
-      "file": "pointblank"
+      "file": "pointblank",
+      "amazon": "http://www.amazon.co.uk/Point-Blank-Parker-Richard-Stark/dp/0749079614"
    }, {
-      "file": "unternehmenzufall"
+      "file": "unternehmenzufall",
+      "amazon": "http://www.amazon.com/Unternehmen-Zufall-Robert-X-Cringely/dp/3893194371"
    }, {
-      "file": "freakydeaky"
+      "file": "freakydeaky",
+      "amazon": "http://www.amazon.com/Freaky-Deaky-Novel-Elmore-Leonard/dp/0062120352/"
    }, {
-      "file": "generationx"
+      "file": "generationx",
+      "amazon": "http://www.amazon.com/Generation-X-Tales-Accelerated-Culture/dp/031205436X/"
    }, {
-      "file": "farewell"
+      "file": "farewell",
+      "amazon": "http://www.amazon.com/Farewell-My-Lovely-Raymond-Chandler/dp/0394758277/"
    }
 ]

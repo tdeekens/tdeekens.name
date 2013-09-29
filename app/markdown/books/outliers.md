@@ -1,9 +1,6 @@
 # Outliers - The Story of Success
 
-- This book won't teach you how to become a better man
-- It explains why others did and you can't just change your characteristics to follow their paths
-
-- We tend to look in wrong aspects of life, we focus on personality rather than context
-- We don't pay enough significance to our predececors, our parents
-- Most Hockey Players are good cause they are born in 1-5th month of a year
-- Selections leads to seperation which leads to diverging experience
+No, this book will not teach anybody how to become more successful. It's rather quite discouraging.
+Gladwell argues that we tend to look at certain traits, characteristics and focus on personality when trying to understand other people's success. He looked into it and tries to prove that perception to be incorrect.
+We need to honor our context more: our predecessors and environment. These factors have by far my influence on ourselves than we would ever want to believe as autonomous individuals. It almost hurts as you can not change the circumstances under which you grew up. We can though learn which made people being able to teach society more and try to embrace and copy these. Some of his findings offer rudiments to change already. A date of birth being a decent indicator for a successful hockey career might be something offering change. Realizing that talent is something almost irrelevant. Whereas hard work (10 000 hours) and opportunity is needed to get recognized as e.g. The Beatles. Yes, the played a lot in Hamburg and the did it for drugs, women and fun.
+Stories produce thoughts by observations, mostly introduced early into the book, but sometimes bring in worthwhile secondary objects.
