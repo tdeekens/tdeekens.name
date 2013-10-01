@@ -60,7 +60,7 @@ In the end, any government can shut down Bitcoins using their judicial system, f
 
 ## May I try: The future of it
 
-The future. Too bad I still can predict it, guess I would not be blogging if I could.
+The future. Too bad I still can't predict it, guess I would not be blogging if I could.
 
 It it unlikely but hope for me remains in place that the future will be a poly-monetarist one. Currencies challenging one another. Humans might be anxious about it but it would be to their benefit. Flexibility and competition mostly is. Especially when some can manipulate the sole currency better than others to their advantage. Bitcoins could also always remain subject to speculation and still a means to perform transactions of goods. Pick labile and fragile over artificially robust and exogenously sustained resilience.
 
