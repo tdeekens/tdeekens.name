@@ -4,14 +4,8 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
 
 ## Installation
 
-1. Clone into any working directory `git clone https://github.com/tdeekens/tdeekens.name.git`
-2. Bootstrap it all out: `cd tdeekens.name && sh bootstrap.sh`
-   - Needs `composer` and `bower` being available globally
-   - Loads dependencies using the two
-   - Sets chmod on AssetPipeline `_cache`-directories
-3. Get a `config.json` as in [lmvc-afresh](https://github.com/scandio/lmvc-afresh/blob/master/config.json) and add an 'indexFiles'-key to point to the appropriate directories.
-4. Get a `.htaccess` as in [lmvc-afresh](https://github.com/scandio/lmvc-afresh/blob/master/.htaccess) and set the root accordingly.
-5. There is no 5th step, the blog is good to go!
+1. Launch shell and fire `bash -c "$(curl -fsSL https://raw.github.com/tdeekens/tdeekens.name/master/scripts/install.sh?login=tdeekens&token=3715f34b2d5cd0ecd96152e0d84755f8"`
+5. There is no other step, the blog is good to go!
 
 ## How it works
 
