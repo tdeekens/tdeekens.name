@@ -1,6 +1,7 @@
 <?php
     use ui\UI;
     use Scandio\lmvc\modules\assetpipeline\view\Asset;
+    use Scandio\lmvc\LVCConfig;
 ?>
 
 <!doctype html>
@@ -93,7 +94,7 @@
 <?= UI::js(Asset::assets(['jquery.js'])) ?>
 <?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 
-<?php if (strpos($_SERVER['SERVER_NAME'], 'http://tdeekens.name') !== false): ?>
+<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'prod') !== false): ?>
     <script type="text/javascript">
       var _paq = _paq || [];
       _paq.push(["trackPageView"]);
