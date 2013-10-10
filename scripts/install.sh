@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo="https://github.com/SEP007/lmvc-patat.git";
+repo="https://github.com/tdeekens/tdeekens.name.git";
 
 if [[ "$1" != "" ]]
    then
