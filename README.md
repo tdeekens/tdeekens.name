@@ -4,7 +4,7 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
 
 ## Installation
 
-1. Launch shell and fire `bash -c "$(curl -fsSL https://raw.github.com/tdeekens/tdeekens.name/master/scripts/install.sh?login=tdeekens&token=3715f34b2d5cd0ecd96152e0d84755f8"`
+1. Launch shell and fire `bash -c "$(curl -fsSL http://git.io/gS-RAw"`
 5. There is no other step, the blog is good to go!
 
 ## How it works
