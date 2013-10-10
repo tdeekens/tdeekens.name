@@ -4,7 +4,7 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
 
 ## Installation
 
-Please have [composer](http://composer.org) available globally in your path.
+Please have [composer](http://getcomposer.org/) available globally in your path.
 
 1. Start shell and cd into your localhost's root
 2. Fire the command `bash -c "$(curl -fsSL http://git.io/AEPfRg)"`
