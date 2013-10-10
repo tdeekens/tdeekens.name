@@ -34,9 +34,6 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <?= UI::css(Asset::assets(['normalize.css', 'style.css'], [], [])) ?>
-
-    <?= UI::js(Asset::assets(['jquery.js'])) ?>
-    <?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 </head>
 <body>
     <div class="js-breakpoint"></div>
@@ -93,21 +90,23 @@
 <footer>
 </footer>
 
-<?php if (strpos($_SERVER['SERVER_NAME'], 'tdeekens.name') !== false): ?>
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(["trackPageView"]);
-  _paq.push(["enableLinkTracking"]);
+<?= UI::js(Asset::assets(['jquery.js'])) ?>
+<?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.umsicht.eu/";
-    _paq.push(["setTrackerUrl", u+"piwik.php"]);
-    _paq.push(["setSiteId", "5"]);
-    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
+<?php if (strpos($_SERVER['SERVER_NAME'], 'tdeekens.name') !== false): ?>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.umsicht.eu/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "5"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
 <?php endif; ?>
 
 </body>
