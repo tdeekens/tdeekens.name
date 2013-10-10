@@ -4,6 +4,8 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
 
 ## Installation
 
+Please have [composer](http://composer.org) available globally in your path.
+
 1. Launch shell and fire `bash -c "$(curl -fsSL http://git.io/AEPfRg)"`
 5. There is no other step, the blog is good to go!
 
