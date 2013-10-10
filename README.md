@@ -6,8 +6,9 @@ This is a backup of my private blog build on top of [lmvc](https://github.com/sc
 
 Please have [composer](http://composer.org) available globally in your path.
 
-1. Launch shell and fire `bash -c "$(curl -fsSL http://git.io/AEPfRg)"`
-5. There is no other step, the blog is good to go!
+1. Start shell and cd into your localhost's root
+2. Fire the command `bash -c "$(curl -fsSL http://git.io/AEPfRg)"`
+3. There is no other step, the blog is good to go under your [localhost](http://localhost/tdeekens.name)!
 
 ## How it works
 
