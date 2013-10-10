@@ -31,10 +31,10 @@ The hook's code shell-script might look like:
 ```bash
 git checkout -f
 
-sh /htdocs/flushcaches.sh /htdocs/app
+sh /htdocs/scripts/cache.sh clear /htdocs/app
 ```
 
-Where the second part uses the [flushcaches-script](flushcaches.sh) to clean all the [Asset Pipeline's](https://github.com/scandio/lmvc-modules/tree/master/lib/Scandio/lmvc/modules/assetpipeline) caching directories.
+Where the second part uses the [cache-script](scripts/cache.sh) to clean all the [Asset Pipeline's](https://github.com/scandio/lmvc-modules/tree/master/lib/Scandio/lmvc/modules/assetpipeline) caching directories.
 
 Simply running a `git push origin master` would therefore update your running site as needed.
 
