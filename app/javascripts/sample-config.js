@@ -1,0 +1,3 @@
+window.lmvcConfig = {
+    appDir: 'tdeekens'
+}

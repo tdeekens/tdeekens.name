@@ -1,0 +1,47 @@
+{
+    "appPath": "./",
+    "appNamespace": "",
+    "controllers": ["controllers"],
+
+    "modules": [
+        "Scandio\\lmvc\\modules\\session",
+        "Scandio\\lmvc\\modules\\assetpipeline",
+        "Scandio\\lmvc\\modules\\security"
+    ],
+
+    "views": ["./app/views"],
+    "indexFiles": ["./app/index-files"],
+
+    "security": {
+        "principal": "\\Scandio\\lmvc\\modules\\security\\handlers\\database\\DatabasePrincipal"
+    },
+
+    "registration": {
+        "mediator": "\\Scandio\\lmvc\\modules\\registration\\handlers\\DatabaseMediator"
+    },
+
+    "assetpipeline" : {
+        "useFolders": true,
+        "stage": "dev",
+        "assetDirectories": {
+            "js": {
+                "fallbacks": ["../bower", "../composer"]
+            } ,
+            "coffee": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "css": {
+                "fallbacks": ["fonts", "img", "../bower", "../composer"]
+            },
+            "scss": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "less": {
+                "fallbacks": ["../bower", "../composer"]
+            },
+            "img": {
+                "fallbacks": []
+            }
+        }
+    }
+}

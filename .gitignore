@@ -1,7 +1,10 @@
 .sass-cache/
-/.idea/
-/composer.lock
-/composer
-.htaccess
-_cache/
 config.json
+.htaccess
+/app/javascripts/config.js
+/.idea/
+/bower/
+/composer/
+/composer.phar
+/composer.lock
+_cache/
