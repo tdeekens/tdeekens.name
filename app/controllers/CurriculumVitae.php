@@ -6,10 +6,10 @@ use Scandio\lmvc\Controller;
 use Scandio\lmvc\modules\assetpipeline\view\Asset;
 use Underscore\Types\Arrays;
 
-class CV extends Controller
+class CurriculumVitae extends Controller
 {
    public static function index()
    {
-      return static::render([], null, 200, 'app/views/cv.html');
+      return static::render([], null, 200, 'app/views/curriculum-vitae.html');
    }
 }
