@@ -53,10 +53,10 @@
          }
          &.small-intro {
             @include span-columns(3);
+            margin: 1.5em 0;
          }
          &.inline {
             list-style-type: none;
-            margin: .5em 0;
             padding: 0;
          }
          li span {
@@ -75,6 +75,9 @@
                border: none;
                color: #5179cb;
             }
+         }
+         h3 {
+            display: inline;
          }
       }
    }

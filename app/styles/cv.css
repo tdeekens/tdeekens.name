@@ -46,12 +46,12 @@
   display: block;
   float: left;
   margin-right: 2.12766%;
-  width: 23.40426%; }
+  width: 23.40426%;
+  margin: 1.5em 0; }
   .wrap-outer .cv ul.small-intro:last-child {
     margin-right: 0; }
 .wrap-outer .cv ul.inline {
   list-style-type: none;
-  margin: .5em 0;
   padding: 0; }
 .wrap-outer .cv ul li span {
   color: grey;
@@ -65,6 +65,8 @@
   .wrap-outer .cv ul .symbol:hover {
     border: none;
     color: #5179cb; }
+.wrap-outer .cv ul h3 {
+  display: inline; }
 
 .wrap-outer .cv h1 {
   text-align: center;
