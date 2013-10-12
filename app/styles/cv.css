@@ -4,6 +4,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.wrap-outer .cv .personal-info {
+  font-family: 'MyriadPro-LightSemiExt'; }
 .wrap-outer .cv a {
   color: #333333; }
 .wrap-outer .cv a:hover {
