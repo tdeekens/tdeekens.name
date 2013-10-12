@@ -1,0 +1,69 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+    use Scandio\lmvc\LVCConfig;
+?>
+
+<!doctype html>
+<html>
+<head>
+
+    <title>Tobias Deekens - yet another blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="abstract" content="Tobias Deekens' blog. This is were my thoughts chill.">
+    <meta name="audience" content="Alle">
+    <meta name="author" content="Tobias Deekens">
+    <meta name="copyright" content="Tobias Deekens">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="language" content="Deutsch">
+    <meta name="language" content="English">
+    <meta name="page-type" content="CV">
+    <meta name="revisit-after" content="2 weeks">
+    <meta name="robots" content="index, follow">
+    <meta name="title" content="Tobias Deekens - my CV">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <?= UI::css(Asset::assets(['normalize.css', 'style.css', 'cv.css'], [], [])) ?>
+</head>
+<body>
+    <div class="js-breakpoint"></div>
+
+    <header></header>
+
+    <div class="wrap-outer">
+
+        <div class="content-body">
+            <?php include($app->view); ?>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+</footer>
+
+<?= UI::js(Asset::assets(['jquery.js'])) ?>
+<?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
+
+<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'prod') !== false): ?>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.umsicht.eu/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "5"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+<?php endif; ?>
+
+</body>
+</html>
