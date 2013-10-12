@@ -11,6 +11,9 @@
       .personal-info {
          font-family: 'MyriadPro-LightSemiExt';
       }
+      strong {
+         font-weight: 600;
+      }
       a {
          color: $root-font-color;
       }

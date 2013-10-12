@@ -6,6 +6,8 @@
 
 .wrap-outer .cv .personal-info {
   font-family: 'MyriadPro-LightSemiExt'; }
+.wrap-outer .cv strong {
+  font-weight: 600; }
 .wrap-outer .cv a {
   color: #333333; }
 .wrap-outer .cv a:hover {

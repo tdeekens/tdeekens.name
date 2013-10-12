@@ -15,6 +15,11 @@ class Application extends Controller
       self::redirect('About::index');
    }
 
+   public static function cv()
+   {
+      self::redirect('CurriculumVitae::index');
+   }
+
    public static function latest()
    {
       $posts = $posts = static::readIndex('Posts', true, 'index');
