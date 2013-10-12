@@ -133,7 +133,7 @@ body {
       }
    }
 }
-div.navigation {
+.navigation {
    @include span-columns(12);
 
    margin-top: 1em;
@@ -175,12 +175,12 @@ div.navigation {
       border-bottom: 0px;
    }
 }
-div.wrap-outer {
+.wrap-outer {
    @include outer-container;
 
    padding: 0 1.5em;
 
-   div.content-body {
+   .content-body {
       @include span-columns(12);
 
       & > h1:first-child {

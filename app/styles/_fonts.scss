@@ -25,7 +25,11 @@
     font-style: normal;
 }
 
-.symbol, a.symbol:before {
+.symbol {
+   font-family: 'MyriadPro-SemiExt';
+}
+
+a.symbol:before, , a.symbol:after {
     font-family: 'Mono Social Icons Font';
     -webkit-text-rendering: optimizeLegibility;
     -moz-text-rendering: optimizeLegibility;
@@ -42,5 +46,17 @@
 a.symbol:before {
     content: attr(title);
     margin-right: 0.3em;
+    font-size: 130%;
+}
+
+a.symbol.right:before {
+    content: '';
+    margin-right: 0;
+    font-size: 130%;
+}
+
+a.symbol.right:after {
+    content: attr(title);
+    margin-left: 0.3em;
     font-size: 130%;
 }

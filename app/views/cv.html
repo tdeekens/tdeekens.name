@@ -8,7 +8,7 @@
 <html>
 <head>
 
-    <title>Tobias Deekens - yet another blog</title>
+    <title>Tobias Deekens - Yet another CV</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -36,7 +36,7 @@
 
     <div class="wrap-outer">
 
-        <div class="content-body">
+        <div class="content-body cv">
             <?php include($app->view); ?>
         </div>
 
@@ -47,7 +47,6 @@
 </footer>
 
 <?= UI::js(Asset::assets(['jquery.js'])) ?>
-<?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 
 <?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'prod') !== false): ?>
     <script type="text/javascript">

@@ -24,7 +24,10 @@
   font-weight: normal;
   font-style: normal; }
 
-.symbol, a.symbol:before {
+.symbol {
+  font-family: 'MyriadPro-SemiExt'; }
+
+a.symbol:before, a.symbol:after {
   font-family: 'Mono Social Icons Font';
   -webkit-text-rendering: optimizeLegibility;
   -moz-text-rendering: optimizeLegibility;
@@ -40,6 +43,16 @@
 a.symbol:before {
   content: attr(title);
   margin-right: 0.3em;
+  font-size: 130%; }
+
+a.symbol.right:before {
+  content: '';
+  margin-right: 0;
+  font-size: 130%; }
+
+a.symbol.right:after {
+  content: attr(title);
+  margin-left: 0.3em;
   font-size: 130%; }
 
 html {
@@ -157,7 +170,7 @@ body {
       .sticky-header .social-media a:last-child {
         margin-right: 0; }
 
-div.navigation {
+.navigation {
   display: block;
   float: left;
   margin-right: 2.12766%;
@@ -166,219 +179,219 @@ div.navigation {
   text-align: center;
   border-bottom: 1px solid black;
   border-top: 1px solid black; }
-  div.navigation:last-child {
+  .navigation:last-child {
     margin-right: 0; }
-  div.navigation ul {
+  .navigation ul {
     padding: 0;
     margin: 10px 0;
     text-align: center; }
-    div.navigation ul li {
+    .navigation ul li {
       list-style-type: none;
       display: inline;
       margin: 0 3px; }
-  div.navigation a {
+  .navigation a {
     color: black;
     font: 2px/3px;
       font-size: 1.5em;
       font-weight: bold; }
-    div.navigation a:hover {
+    .navigation a:hover {
       border: 0;
       color: grey; }
     @media screen and (max-width: 580px) {
-      div.navigation a {
+      .navigation a {
         font-size: 1em; } }
-  div.navigation.footer {
+  .navigation.footer {
     margin-bottom: 2.5em;
     border-bottom: 0px; }
 
-div.wrap-outer {
+.wrap-outer {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5em; }
-  div.wrap-outer:before, div.wrap-outer:after {
+  .wrap-outer:before, .wrap-outer:after {
     content: " ";
     display: table; }
-  div.wrap-outer:after {
+  .wrap-outer:after {
     clear: both; }
-  div.wrap-outer div.content-body {
+  .wrap-outer .content-body {
     display: block;
     float: left;
     margin-right: 2.12766%;
     width: 100%;
     margin-bottom: 2.5em; }
-    div.wrap-outer div.content-body:last-child {
+    .wrap-outer .content-body:last-child {
       margin-right: 0; }
-    div.wrap-outer div.content-body .activity-posts {
+    .wrap-outer .content-body .activity-posts {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
       margin-right: 0;
       padding: 0 2%; }
-      div.wrap-outer div.content-body .activity-posts:last-child {
+      .wrap-outer .content-body .activity-posts:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
-        div.wrap-outer div.content-body .activity-posts {
+        .wrap-outer .content-body .activity-posts {
           display: block;
           float: left;
           margin-right: 6.66667%;
           width: 100%; }
-          div.wrap-outer div.content-body .activity-posts:last-child {
+          .wrap-outer .content-body .activity-posts:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .activity-songs {
+    .wrap-outer .content-body .activity-songs {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
       margin-right: 0;
       padding: 0 2%; }
-      div.wrap-outer div.content-body .activity-songs:last-child {
+      .wrap-outer .content-body .activity-songs:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
-        div.wrap-outer div.content-body .activity-songs {
+        .wrap-outer .content-body .activity-songs {
           display: block;
           float: left;
           margin-right: 6.66667%;
           width: 100%; }
-          div.wrap-outer div.content-body .activity-songs:last-child {
+          .wrap-outer .content-body .activity-songs:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .activity-books {
+    .wrap-outer .content-body .activity-books {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 31.91489%;
       margin-right: 0;
       padding: 0 2%; }
-      div.wrap-outer div.content-body .activity-books:last-child {
+      .wrap-outer .content-body .activity-books:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
-        div.wrap-outer div.content-body .activity-books {
+        .wrap-outer .content-body .activity-books {
           display: block;
           float: left;
           margin-right: 6.66667%;
           width: 100%; }
-          div.wrap-outer div.content-body .activity-books:last-child {
+          .wrap-outer .content-body .activity-books:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .posts .date {
+    .wrap-outer .content-body .posts .date {
       font-family: "MyriadPro-LightSemiExt";
       float: right;
       font-size: 80%;
       margin-top: .25em; }
       @media screen and (max-width: 580px) {
-        div.wrap-outer div.content-body .posts .date {
+        .wrap-outer .content-body .posts .date {
           display: none; } }
-    div.wrap-outer div.content-body .books {
+    .wrap-outer .content-body .books {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 100%; }
-      div.wrap-outer div.content-body .books:last-child {
+      .wrap-outer .content-body .books:last-child {
         margin-right: 0; }
-      div.wrap-outer div.content-body .books .book .description {
+      .wrap-outer .content-body .books .book .description {
         display: block;
         float: left;
         margin-right: 2.12766%;
         width: 82.97872%; }
-        div.wrap-outer div.content-body .books .book .description:last-child {
+        .wrap-outer .content-body .books .book .description:last-child {
           margin-right: 0; }
         @media screen and (max-width: 580px) {
-          div.wrap-outer div.content-body .books .book .description {
+          .wrap-outer .content-body .books .book .description {
             display: block;
             float: left;
             margin-right: 6.66667%;
             width: 100%; }
-            div.wrap-outer div.content-body .books .book .description:last-child {
+            .wrap-outer .content-body .books .book .description:last-child {
               margin-right: 0; } }
-      div.wrap-outer div.content-body .books .book .cover {
+      .wrap-outer .content-body .books .book .cover {
         display: block;
         float: left;
         margin-right: 2.12766%;
         width: 14.89362%; }
-        div.wrap-outer div.content-body .books .book .cover:last-child {
+        .wrap-outer .content-body .books .book .cover:last-child {
           margin-right: 0; }
         @media screen and (max-width: 580px) {
-          div.wrap-outer div.content-body .books .book .cover {
+          .wrap-outer .content-body .books .book .cover {
             display: none; } }
-        div.wrap-outer div.content-body .books .book .cover img {
+        .wrap-outer .content-body .books .book .cover img {
           width: 100%;
           margin-top: 1.7em; }
-      div.wrap-outer div.content-body .books .book .symbol {
+      .wrap-outer .content-body .books .book .symbol {
         float: right;
         margin-top: .75em;
         margin-right: -10px;
         color: #333333;
         font-size: 130%; }
-        div.wrap-outer div.content-body .books .book .symbol:hover {
+        .wrap-outer .content-body .books .book .symbol:hover {
           border: none;
           color: #5179cb; }
-      div.wrap-outer div.content-body .books .book:after {
+      .wrap-outer .content-body .books .book:after {
         display: table;
         content: '';
         clear: both; }
-    div.wrap-outer div.content-body .about:before {
+    .wrap-outer .content-body .about:before {
       display: table;
       content: '';
       clear: both; }
-    div.wrap-outer div.content-body .yt-songs {
+    .wrap-outer .content-body .yt-songs {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 48.93617%; }
-      div.wrap-outer div.content-body .yt-songs:last-child {
+      .wrap-outer .content-body .yt-songs:last-child {
         margin-right: 0; }
       @media screen and (max-width: 768px) {
-        div.wrap-outer div.content-body .yt-songs {
+        .wrap-outer .content-body .yt-songs {
           display: block;
           float: left;
           margin-right: 3.22581%;
           width: 151.6129%; }
-          div.wrap-outer div.content-body .yt-songs:last-child {
+          .wrap-outer .content-body .yt-songs:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .yt-player {
+    .wrap-outer .content-body .yt-player {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 40.42553%;
       margin: .8em auto;
       text-align: center; }
-      div.wrap-outer div.content-body .yt-player:last-child {
+      .wrap-outer .content-body .yt-player:last-child {
         margin-right: 0; }
       @media screen and (max-width: 768px) {
-        div.wrap-outer div.content-body .yt-player {
+        .wrap-outer .content-body .yt-player {
           display: none; } }
-      div.wrap-outer div.content-body .yt-player .fluidvids {
+      .wrap-outer .content-body .yt-player .fluidvids {
         background: #000;
         box-shadow: 0 1px 4px #000; }
-    div.wrap-outer div.content-body .nonsense a {
+    .wrap-outer .content-body .nonsense a {
       font-family: "MyriadPro-LightSemiExt";
       font-size: 110%; }
-    div.wrap-outer div.content-body .nonsense blockquote {
+    .wrap-outer .content-body .nonsense blockquote {
       margin: 10px 0;
       font-family: Baskerville;
       font-size: 120%; }
-      div.wrap-outer div.content-body .nonsense blockquote p {
+      .wrap-outer .content-body .nonsense blockquote p {
         float: none; }
-    div.wrap-outer div.content-body article {
+    .wrap-outer .content-body article {
       display: block;
       float: left;
       margin-right: 2.12766%;
       width: 65.95745%;
       margin-left: 17.02128%; }
-      div.wrap-outer div.content-body article:last-child {
+      .wrap-outer .content-body article:last-child {
         margin-right: 0; }
       @media screen and (max-width: 580px) {
-        div.wrap-outer div.content-body article {
+        .wrap-outer .content-body article {
           display: block;
           float: left;
           margin-right: 6.66667%;
           width: 313.33333%;
           margin-left: 0%;
           padding: 20px; }
-          div.wrap-outer div.content-body article:last-child {
+          .wrap-outer .content-body article:last-child {
             margin-right: 0; } }
-    div.wrap-outer div.content-body .foot-note {
+    .wrap-outer .content-body .foot-note {
       font-size: .7em; }
 
 header {
@@ -488,17 +501,17 @@ a, a:active, a:visited {
 a:hover {
   border-bottom: 1px dotted #5179cb; }
 
-div.wrap-outer div.content-body > h1:first-child, h1.content-title {
+.wrap-outer .content-body > h1:first-child, h1.content-title {
   text-align: center;
   border-bottom: 1px solid #f2f2f2; }
-  div.wrap-outer div.content-body > h1:first-child:before, h1.content-title:before, div.wrap-outer div.content-body > h1:first-child:after, h1.content-title:after {
+  .wrap-outer .content-body > h1:first-child:before, h1.content-title:before, .wrap-outer .content-body > h1:first-child:after, h1.content-title:after {
     font-size: 40%;
     content: '♦';
     margin-bottom: .25em;
     vertical-align: middle; }
-  div.wrap-outer div.content-body > h1:first-child:after, h1.content-title:after {
+  .wrap-outer .content-body > h1:first-child:after, h1.content-title:after {
     margin-left: 2em; }
-  div.wrap-outer div.content-body > h1:first-child:before, h1.content-title:before {
+  .wrap-outer .content-body > h1:first-child:before, h1.content-title:before {
     margin-right: 2em; }
 
 @media print {
