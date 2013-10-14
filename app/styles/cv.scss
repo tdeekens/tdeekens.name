@@ -28,6 +28,16 @@
       h2 {
          border-bottom: 1px solid hsl(0, 0%, 95%);
       }
+      h3 {
+         display: inline;
+      }
+      p, ul {
+         color: lighten($root-font-color, 20%);
+
+         &:hover {
+            color: $root-font-color;
+         }
+      }
       section {
          &:before {
             display: table;
@@ -45,11 +55,16 @@
          &.one-half {
             @include span-columns(6);
          }
+
+         @include media($mobile) {
+            padding: 0;
+         }
       }
 
       ul {
          &.main-intro {
-            @include span-columns(6);
+            @include span-columns(4);
+            @include pad(1);
 
             text-align: center;
 
@@ -57,10 +72,34 @@
                font-size: 110%;
                font-weight: bold;
             }
+
+            @include media($mobile) {
+               @include span-columns(2);
+               float: right;
+               margin: 0;
+               text-align: right;
+            }
+
+            h3 {
+               margin: 0;
+            }
          }
          &.small-intro {
-            @include span-columns(3);
-            margin: 1.5em 0;
+            @include span-columns(4);
+            margin-top: 1.5em;
+
+            @include media($tablet) {
+               span {
+                  display: none;
+               }
+            }
+
+            @include media($mobile) {
+               margin: 0;
+               @include media($mobile) {
+                  @include span-columns(2);
+               }
+            }
          }
          &.inline {
             list-style-type: none;
@@ -73,6 +112,11 @@
          &.social {
             float: right;
             text-align: right;
+            margin-top: 1em;
+
+            @include media($mobile) {
+               display: none;
+            }
          }
          .symbol {
             color: $root-font-color;
@@ -82,9 +126,6 @@
                border: none;
                color: #5179cb;
             }
-         }
-         h3 {
-            display: inline;
          }
       }
    }
