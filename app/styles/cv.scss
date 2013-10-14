@@ -31,8 +31,8 @@
       h3 {
          display: inline;
       }
-      p, ul {
-         color: lighten($root-font-color, 20%);
+      article p, article ul {
+         color: lighten($root-font-color, 12%);
 
          &:hover {
             color: $root-font-color;

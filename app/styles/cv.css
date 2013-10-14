@@ -17,9 +17,9 @@
   border-bottom: 1px solid #f2f2f2; }
 .wrap-outer .cv h3 {
   display: inline; }
-.wrap-outer .cv p, .wrap-outer .cv ul {
-  color: #666666; }
-  .wrap-outer .cv p:hover, .wrap-outer .cv ul:hover {
+.wrap-outer .cv article p, .wrap-outer .cv article ul {
+  color: #525252; }
+  .wrap-outer .cv article p:hover, .wrap-outer .cv article ul:hover {
     color: #333333; }
 .wrap-outer .cv section:before {
   display: table;
