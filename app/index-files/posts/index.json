@@ -24,5 +24,10 @@
       "file": "know-your-terminal",
       "title": "Know your Terminal",
       "from": "08/2013"
+   }, {
+      "file": "open-source-a-uni-and-scandio",
+      "title": "Open Source, a Uni and Scandio",
+      "from": "10/2013",
+      "draft": true
    }
 ]
