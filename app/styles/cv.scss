@@ -30,6 +30,19 @@
       }
       h3 {
          display: inline;
+
+         .date {
+            font-family: 'MyriadPro-LightSemiExt';
+            color: lighten($root-font-color, 12%);
+            font-weight: normal;
+            font-style: normal;
+            float: right;
+         }
+
+         .activity {
+            font-style: normal;
+            color: $root-font-color;
+         }
       }
       article p, article ul {
          color: lighten($root-font-color, 12%);

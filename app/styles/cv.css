@@ -17,6 +17,15 @@
   border-bottom: 1px solid #f2f2f2; }
 .wrap-outer .cv h3 {
   display: inline; }
+  .wrap-outer .cv h3 .date {
+    font-family: 'MyriadPro-LightSemiExt';
+    color: #525252;
+    font-weight: normal;
+    font-style: normal;
+    float: right; }
+  .wrap-outer .cv h3 .activity {
+    font-style: normal;
+    color: #333333; }
 .wrap-outer .cv article p, .wrap-outer .cv article ul {
   color: #525252; }
   .wrap-outer .cv article p:hover, .wrap-outer .cv article ul:hover {
