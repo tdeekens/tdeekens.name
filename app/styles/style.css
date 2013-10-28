@@ -524,4 +524,7 @@ a:hover {
     display: none; }
 
   .sticky-header {
+    display: none; }
+
+  .no-print {
     display: none; } }
