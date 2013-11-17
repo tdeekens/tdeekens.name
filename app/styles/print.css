@@ -14,4 +14,7 @@
     display: none; }
 
   .no-print {
-    display: none; } }
+    display: none; }
+
+  .page-break {
+    page-break-before: always; } }
