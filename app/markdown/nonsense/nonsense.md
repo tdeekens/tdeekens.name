@@ -1,3 +1,5 @@
+[What does earth look like? Well, not as you thought!](http://www.youtube.com/watch?v=2lR7s1Y6Zig)
+
 [In Bruges - it's a shithole. A review.](http://www.youtube.com/watch?v=dhpNun_umE0)
 
 [It drives us: autonomy, mastery, purpose!](http://vimeo.com/15488784)
