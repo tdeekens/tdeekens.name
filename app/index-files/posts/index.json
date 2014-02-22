@@ -29,5 +29,9 @@
       "title": "Open Source, a Uni and Scandio",
       "from": "10/2013",
       "draft": true
+   }, {
+      "file": "eine-assetpipeline-fuer-lmvc",
+      "title": "Eine Asset Pipeline für LMVC",
+      "from": "02/2014"
    }
 ]
