@@ -12,4 +12,9 @@ class CurriculumVitae extends Controller
    {
       return static::render([], null, 200, 'app/views/curriculum-vitae.html');
    }
+
+   public static function cover()
+   {
+      return static::render([], null, 200, 'app/views/curriculum-vitae.html');
+   }
 }

@@ -97,6 +97,11 @@
                margin: 0;
             }
          }
+         &.main-intro--half {
+            @extend .main-intro;
+
+            text-align: left;
+         }
          &.small-intro {
             @include span-columns(4);
             margin-top: 1.5em;
@@ -113,6 +118,13 @@
                   @include span-columns(2);
                }
             }
+         }
+         &.small-intro--half {
+            @extend .small-intro;
+
+            margin-top: 2em;
+            float: right;
+            text-align: right;
          }
          &.inline {
             list-style-type: none;
