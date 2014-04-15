@@ -498,6 +498,9 @@ a {
 a:hover {
   border-bottom: 1px dotted #5179cb; }
 
+.print-only {
+  display: none; }
+
 .wrap-outer .content-body > h1:first-child, h1.content-title {
   text-align: center;
   border-bottom: 1px solid #f2f2f2; }
@@ -530,4 +533,7 @@ a:hover {
     display: none; }
 
   .page-break {
-    page-break-before: always; } }
+    page-break-before: always; }
+
+  .print-only {
+    display: inline; } }

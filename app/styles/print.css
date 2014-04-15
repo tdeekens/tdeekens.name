@@ -17,4 +17,7 @@
     display: none; }
 
   .page-break {
-    page-break-before: always; } }
+    page-break-before: always; }
+
+  .print-only {
+    display: inline; } }

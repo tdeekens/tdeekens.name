@@ -13,6 +13,9 @@
 .wrap-outer .cv a:hover {
   color: #5179cb;
   border-bottom: none; }
+.wrap-outer .cv em, .wrap-outer .cv .em {
+  font-family: "MyriadPro-Bold";
+  font-style: normal; }
 .wrap-outer .cv h2 {
   border-bottom: 1px solid #f2f2f2; }
 .wrap-outer .cv h3 {

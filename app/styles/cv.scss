@@ -21,7 +21,10 @@
          color: rgb(81, 121, 203);
          border-bottom: none;
       }
-
+      em, .em {
+         font-family: "MyriadPro-Bold";
+         font-style: normal;
+      }
       h1 {
          @extend %h1-title;
       }
