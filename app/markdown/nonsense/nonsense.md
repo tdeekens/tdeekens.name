@@ -1,3 +1,5 @@
+[The Power of Ten](https://www.youtube.com/watch?v=0fKBhvDjuy0)
+
 [The most used hack around (UTF-8)](http://www.youtube.com/watch?v=MijmeoH9LT4)
 
 [What does earth look like? Well, not as you thought!](http://www.youtube.com/watch?v=2lR7s1Y6Zig)
@@ -37,4 +39,3 @@
 [@holman how GitHub works](http://zachholman.com/posts/how-github-works/)
 
 > “A life. A life, Jimmy. You know what that is? It's the shit that happens while you're waiting for moments that never come.” (The Wire)
-
