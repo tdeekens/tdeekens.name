@@ -12,6 +12,8 @@ module.exports = {
 
     debugInfo: true,
 
+    logConnections: true,
+
     ghostMode: {
         clicks: true,
         links: true,
