@@ -110,5 +110,13 @@
     </script>
 <?php endif; ?>
 
+<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'dev') !== false): ?>
+   <script type='text/javascript'>
+      //<![CDATA[
+         ;document.write("<script defer src='//HOST:4000/socket.io/socket.io.js'><\/script><script defer src='//HOST:4001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
+      //]]>
+</script>
+<?php endif; ?>
+
 </body>
 </html>

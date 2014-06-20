@@ -8,6 +8,11 @@ module.exports = {
 
     proxy: "tdeekens.local",
 
+    ports: {
+        min: 4000,
+        max: 4003
+    },
+
     startPath: "tdeekens.name",
 
     debugInfo: true,
