@@ -1,3 +1,5 @@
+No food, requires coding <3. Currying and function composition: [in text](http://fr.umio.us/favoring-curry/) and [moving images](https://www.youtube.com/watch?v=m3svKOdZijA).
+
 [The Power of Ten](https://www.youtube.com/watch?v=0fKBhvDjuy0)
 
 [The most used hack around (UTF-8)](http://www.youtube.com/watch?v=MijmeoH9LT4)
