@@ -28,10 +28,14 @@
       "file": "open-source-a-uni-and-scandio",
       "title": "Open Source, a Uni and Scandio",
       "from": "10/2013",
-      "draft": true
+      "draft": false
    }, {
       "file": "eine-assetpipeline-fuer-lmvc",
       "title": "Eine Asset Pipeline für LMVC",
       "from": "02/2014"
+   }, {
+      "file": "umsicht-terminal-commands",
+      "title": "Terminal Commands for UmSicht & Blixxum",
+      "from": "08/2014"
    }
 ]
