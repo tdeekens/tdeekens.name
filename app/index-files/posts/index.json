@@ -36,6 +36,7 @@
    }, {
       "file": "umsicht-terminal-commands",
       "title": "Terminal Commands for UmSicht & Blixxum",
-      "from": "08/2014"
+      "from": "08/2014",
+      "draft": true
    }
 ]
