@@ -1,6 +1,6 @@
 ## A blog... another one? Srly!
 
-Oh understanding this understanding the blogging kind tough times. Strange breed
+Oh understanding the blogging kind: tough times. Strange breed
 they are indeed. Assuming their pipe dreams being of interest to anybody else: what an
 almost arrogant and utterly erroneously assumed perception.
 
