@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/tdeekens
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tdeekens.name
+  * I am tdeekens (https://keybase.io/tdeekens) on keybase.
+  * I have a public key with fingerprint A3BB 5D77 6134 11AD B201  F14D A671 6D21 535E 2771
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "a3bb5d77613411adb201f14da6716d21535e2771",
+            "host": "keybase.io",
+            "key_id": "a6716d21535e2771",
+            "kid": "0101454ac273d935612c7b2e13a95a855539c4f3edd94a06fbac627af37ea1ed152a0a",
+            "uid": "572018e4d557761398772ffc14c0bf19",
+            "username": "tdeekens"
+        },
+        "service": {
+            "hostname": "tdeekens.name",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1428077739,
+    "expire_in": 157680000,
+    "prev": "550f5a1144febd9ea298814f4c03e6d7b8130e3853c163e22a3f8881ef0ead06",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIYAnicZZJdSBVBFMfvLS2SlMgSglRYiyAuurOzs7N7rahIRSus/MCovM3uzuqq
+7d5Py+/yoZJSBC2SCn0p+kZNFLEHS0ko6EEwQ+njQUwxfCk0MrPdS73UvAznnN/5
+z/kPZzh6tSPKOfSrp3o27/ic8/XzfSFHXsKzh1WMbKoVjLuKKaXhS9ONIur3+nUj
+yLgZAmUZqRgLAPIAEFXmWKABXiUCBoLKAQQR5TAGjIspNgN2hyUjkwBN1k0rZwUe
+XbV1/udLwwUWsIBHPFE4DFUJIgFwCpY5CiCREBERQlBSeA1SVZV4wgqaTBSBw0SD
+mBJAVYA4whJLLhSWQ9gaUKS8ilB4aEnEmNM0BfAKK2tAssEA9RvkDLXooEppKTUC
+TI2LsbLlukLtL7Cd/EMkh2MX4/WbQVMxy6xScTDoddudwQqvjZ6lsuePiEfWDdX6
+R6uhnPoDumkwbmCRSlC3VQHPiSzGGEouhp7z6n7q0W0CYUFkrWM/Q8ttN4jVEAGA
+5zUqqxIlnCSKgNcsM5AKKpZFAFkKRQQVIEDKcQRqokVQjaVEZQXGtuUzTMYNrTFJ
+kSUZ0IsMEgz5KVPzYvBkhMMZ5VgTucreBEfUug1/96M8f+1K2sW8/pLCgkedGffW
+ErOlerDO57rbuPdo9NWXt3IapprGIrLrulIa4h4ktLFPsmsP+zJXNaOOLXHjFWLc
+VMpiyUjjwu6JL31JvY1l/SMZuR3tk7f2HxhrHy2+Mnv50IklI7FF6x4uo/Xv08e/
+3VzfGnUhN2ls2cgcn4mP6X566e1w+uav/o/NA6VtLYUzXbGPM0Y9c2WfU1MnxBJn
+KK/Aez0Lbh/wLW4tEXb13UmrnA4sVB7Jaft5I2f6fKM49C62cyCx8EP+7eL4V/dT
+nD462DVf/31PaE9r01JP7jbpU2e2djpycnkHqD24M2bR/ePUyU35cQs989dW4Jve
+6oKsYxt/A2VpKsg=
+=k6F9
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tdeekens
+
+==================================================================
