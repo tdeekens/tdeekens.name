@@ -328,6 +328,20 @@ body {
          }
       }
 
+      .thoughts {
+         list-style-type: none;
+
+         li {
+            font-size: 25px;
+
+            &:before {
+               content: '☁️';
+               margin-bottom: .25em;
+               vertical-align: middle;
+            }
+         }
+      }
+
       article {
          @include span-columns(8);
          @include shift(2);
@@ -494,4 +508,4 @@ a:hover {
    }
 }
 
-@import "print";
+@import "print.scss";

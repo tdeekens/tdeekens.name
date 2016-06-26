@@ -1,0 +1,14 @@
+<?php
+    use ui\UI;
+    use Scandio\lmvc\modules\assetpipeline\view\Asset;
+?>
+
+<?php $response = Asset::markdown($thought, ['path' => 'thoughts'], true); ?>
+
+<?php
+   if ($response !== false) {
+      echo $response;
+   } else {
+      echo "<h1>Wow, an unknown thought! Share it!";
+   }
+?>
