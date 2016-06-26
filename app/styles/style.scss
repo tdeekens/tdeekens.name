@@ -190,32 +190,42 @@ body {
       margin-bottom: 2.5em;
 
       .activity-posts {
-         @include span-columns(4);
+         @include span-columns(6);
          @include omega;
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(4);
+           @include span-columns(6);
          }
       }
 
       .activity-songs {
-         @include span-columns(4);
+         @include span-columns(6);
          @include omega;
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(4);
+           @include span-columns(6);
          }
       }
 
       .activity-books {
-         @include span-columns(4);
+         @include span-columns(6);
          @include omega;
          @include pad(0 2%);
 
          @include media($mobile) {
-           @include span-columns(4);
+           @include span-columns(6);
+         }
+      }
+
+      .activity-thoughts {
+         @include span-columns(6);
+         @include omega;
+         @include pad(0 2%);
+
+         @include media($mobile) {
+           @include span-columns(6);
          }
       }
 

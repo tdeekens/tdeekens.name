@@ -1,5 +1,18 @@
 <h1 class="content-title">The latest shabang</h1>
 
+<div class="activity-thoughts">
+   <h3>Thinking</h3>
+   <ul>
+      {{# thoughts}}
+         <li>
+            <a href="thoughts/capture/{{ file }}">
+               {{ title }}
+            </a>
+         </li>
+      {{/ thoughts}}
+   </ul>
+</div>
+
 <div class="activity-posts">
    <h3>Writing</h3>
    <ul>

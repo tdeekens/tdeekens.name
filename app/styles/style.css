@@ -220,7 +220,7 @@ body {
       display: block;
       float: left;
       margin-right: 2.12766%;
-      width: 31.91489%;
+      width: 48.93617%;
       margin-right: 0;
       padding: 0 2%; }
       .wrap-outer .content-body .activity-posts:last-child {
@@ -230,14 +230,14 @@ body {
           display: block;
           float: left;
           margin-right: 2.12766%;
-          width: 31.91489%; }
+          width: 48.93617%; }
           .wrap-outer .content-body .activity-posts:last-child {
             margin-right: 0; } }
     .wrap-outer .content-body .activity-songs {
       display: block;
       float: left;
       margin-right: 2.12766%;
-      width: 31.91489%;
+      width: 48.93617%;
       margin-right: 0;
       padding: 0 2%; }
       .wrap-outer .content-body .activity-songs:last-child {
@@ -247,14 +247,14 @@ body {
           display: block;
           float: left;
           margin-right: 2.12766%;
-          width: 31.91489%; }
+          width: 48.93617%; }
           .wrap-outer .content-body .activity-songs:last-child {
             margin-right: 0; } }
     .wrap-outer .content-body .activity-books {
       display: block;
       float: left;
       margin-right: 2.12766%;
-      width: 31.91489%;
+      width: 48.93617%;
       margin-right: 0;
       padding: 0 2%; }
       .wrap-outer .content-body .activity-books:last-child {
@@ -264,8 +264,25 @@ body {
           display: block;
           float: left;
           margin-right: 2.12766%;
-          width: 31.91489%; }
+          width: 48.93617%; }
           .wrap-outer .content-body .activity-books:last-child {
+            margin-right: 0; } }
+    .wrap-outer .content-body .activity-thoughts {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 48.93617%;
+      margin-right: 0;
+      padding: 0 2%; }
+      .wrap-outer .content-body .activity-thoughts:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 580px) {
+        .wrap-outer .content-body .activity-thoughts {
+          display: block;
+          float: left;
+          margin-right: 2.12766%;
+          width: 48.93617%; }
+          .wrap-outer .content-body .activity-thoughts:last-child {
             margin-right: 0; } }
     .wrap-outer .content-body .posts .date {
       font-family: "MyriadPro-LightSemiExt";
