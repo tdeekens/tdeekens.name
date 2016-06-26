@@ -1,7 +1,7 @@
 <?php
     use ui\UI;
     use Scandio\lmvc\modules\assetpipeline\view\Asset;
-    use Scandio\lmvc\LVCConfig;
+    use Scandio\lmvc\Config;
 ?>
 
 <!doctype html>
@@ -46,7 +46,7 @@
 
 <?= UI::js(Asset::assets(['jquery.js'])) ?>
 
-<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'prod') !== false): ?>
+<?php if (strpos(Config::get()->assetpipeline->stage, 'prod') !== false): ?>
     <script type="text/javascript">
       var _paq = _paq || [];
       _paq.push(["trackPageView"]);

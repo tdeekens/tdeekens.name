@@ -4,7 +4,7 @@ namespace controllers;
 
 use Scandio\lmvc\Controller;
 use Underscore\Types\Arrays;
-use Scandio\lmvc\LVCConfig;
+use Scandio\lmvc\Config;
 
 class Application extends Controller
 {

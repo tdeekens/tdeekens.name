@@ -1,7 +1,7 @@
 <?php
     use ui\UI;
     use Scandio\lmvc\modules\assetpipeline\view\Asset;
-    use Scandio\lmvc\LVCConfig;
+    use Scandio\lmvc\Config;
 ?>
 
 <!doctype html>
@@ -94,7 +94,7 @@
 <?= UI::js(Asset::assets(['jquery.js'])) ?>
 <?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 
-<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'prod') !== false): ?>
+<?php if (strpos(Config::get()->assetpipeline->stage, 'prod') !== false): ?>
     <script type="text/javascript">
       var _paq = _paq || [];
       _paq.push(["trackPageView"]);
@@ -110,7 +110,7 @@
     </script>
 <?php endif; ?>
 
-<?php if (strpos(LVCConfig::get()->assetpipeline->stage, 'dev') !== false): ?>
+<?php if (strpos(Config::get()->assetpipeline->stage, 'dev') !== false): ?>
    <script type='text/javascript'>
       //<![CDATA[
          ;document.write("<script defer src='//HOST:4000/socket.io/socket.io.js'><\/script><script defer src='//HOST:4001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
