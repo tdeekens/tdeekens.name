@@ -12,11 +12,6 @@
       "title": "Agile Development Processes: A Post-mortem",
       "from": "05/2013"
    }, {
-      "file": "a-post-about-bitcoins",
-      "title": "A post about Bitcoins",
-      "from": "06/2013",
-      "draft": true
-   }, {
       "file": "scandiojs",
       "title": "Scandiojs: yet another JavaScript library",
       "from": "09/2013"
@@ -38,5 +33,10 @@
       "title": "Terminal Commands for UmSicht & Blixxum",
       "from": "08/2014",
       "draft": true
+   }, {
+      "file": "a-post-about-bitcoins",
+      "title": "A post about Bitcoins",
+      "from": "05/2015",
+      "draft": false
    }
 ]
