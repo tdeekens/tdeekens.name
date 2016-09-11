@@ -8,4 +8,8 @@ The often forgotten stakeholder and participant in code review is the consumer o
 
 Lastly, the importance of review friendliness increases with the number of its participants. An approach to this to commit early and often to tighten up interaction loops. Communication around a feature is linear in time as should the history of its changes. This allows everybody to step in early and avoids the big bang review. A kind of review often leading to resignation and blindfold merging.
 
-Summarising the above: do not underestimate the impact and importance of code review. Do not hesitate to involve different parties from across an organisation but define their roles and focus areas. Do not envision code review as a process or quality gate but rather guide communication around a change through them.  
+Summarising the above
+
+1. Do not underestimate the impact and importance of code review due to time constraints: it comes to hunt you
+2. Do not hesitate to involve different parties from across an organisation: still define their roles and focus areas
+3. Do not envision code review as a process or quality gate: rather guide communication and change through them
