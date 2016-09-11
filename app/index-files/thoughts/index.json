@@ -2,5 +2,10 @@
    {
       "file": "code-review-boundaries",
       "title": "Boundaries of code review (or who to involve)"
+   },
+   {
+      "file": "eogcentric-software-department",
+      "title": "The paradox of the egocentric software department",
+      "draft": true
    }
 ]
