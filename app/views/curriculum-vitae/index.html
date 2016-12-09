@@ -122,13 +122,14 @@
       <h3>Talks</h3>
       <ul>
          <li><a href="http://slides.com/tdeekens/micropuzzling#/">Micropuzzling: Implications of slicing web frontends according to Microservices</a> <span>(microxchg.io)</span></li>
-         <li><a href="http://slides.com/tdeekens/this-immutable-thing#/">This Immutable Thing - about persistent immutable data structures</a></li>
+         <li><a href="http://slides.com/tdeekens/this-immutable-thing#/">This Immutable Thing - about persistent immutable data structures</a>(Engineering Talk)</li>
          <li><a href="http://slides.com/tdeekens/es6-es2015-harmony">Transpile all the things (TypeScript)</a></li>
       </ul>
 
       <h3>Conferences</h3>
       <ul>
-         <li>JSUnconf 2016</li>
+         <li>ReactiveConf 2016</li>
+         <li>Bed-Con 2016</li>
          <li>DotJS & DotCSS 2015</li>
          <li>Beyond Tellerrand 2015</li>
          <li>Reject.js 2015</li>
@@ -151,8 +152,9 @@
 
       <h3>Meetup visitor</h3>
       <ul>
+         <li>ReactNative Meetup</li>
          <li>React Meetup</li>
-         <li>Angular Meetup</li>
+         <li>Thoughtworks Meetup</li>
          <li>Node.js Meetup</li>
          <li>Berlin.js</li>
       </ul>
@@ -298,6 +300,11 @@
    <h2>Projects</h2>
 
    <article>
+      <h3><a href="https://github.com/tdeekens/tamesy">tamesy</a> - Tames a set of wild concurrent promises by a concurrency limit <span class="date">end 2016</span></h3>
+      <p>
+         Tamesy exposes a map function to map over a set of Promises or a iterator factory with a given concurrency. It returns a Promise which resolves to an Array whenever all tasks have ben run. The order of items is maintained - same as in the list of factory functions passed. It is built using webpack as a UMD module and runs on Node.js or in the browser as CommonJS, AMD, ESM or as a global.
+      </p>
+
       <h3><a href="https://github.com/dactylographsy">dactylographsy</a> - A set of tools generating manifests with fingerprinted assets to be injected and cached <span class="date">mid 2015</span></h3>
       <p>
          Every unit of an application can create a <strong>custom manifest</strong> listing all assets it consists of. These <strong>assets will be injected</strong> into the page while their contents will be cached when they are once loaded. After the <strong>cache (localstorage)</strong> is filled it serves all files on any subsequent page load to speed up the initial load time. The <strong>caches might be invalidated</strong> at runtime by making a comparison between old and eventually new manifest(s).
