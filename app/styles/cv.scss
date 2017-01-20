@@ -60,6 +60,10 @@
             content: '';
             clear: both;
          }
+
+         article.job {
+            margin-top: 2%;
+         }
       }
 
       article {
@@ -67,6 +71,7 @@
          @include span-columns(12);
 
          float: none;
+         overflow: hidden;
 
          &.one-half {
             @include span-columns(6);

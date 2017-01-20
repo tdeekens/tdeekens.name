@@ -6,18 +6,24 @@
 
 .wrap-outer .cv .personal-info {
   font-family: 'MyriadPro-LightSemiExt'; }
+
 .wrap-outer .cv strong {
   font-weight: 600; }
+
 .wrap-outer .cv a {
   color: #333333; }
+
 .wrap-outer .cv a:hover {
   color: #5179cb;
   border-bottom: none; }
+
 .wrap-outer .cv em, .wrap-outer .cv .em {
   font-family: "MyriadPro-Bold";
   font-style: normal; }
+
 .wrap-outer .cv h2 {
   border-bottom: 1px solid #f2f2f2; }
+
 .wrap-outer .cv h3 {
   display: inline; }
   .wrap-outer .cv h3 .date {
@@ -29,21 +35,28 @@
   .wrap-outer .cv h3 .activity {
     font-style: normal;
     color: #333333; }
+
 .wrap-outer .cv article p, .wrap-outer .cv article ul {
   color: #525252; }
   .wrap-outer .cv article p:hover, .wrap-outer .cv article ul:hover {
     color: #333333; }
+
 .wrap-outer .cv section:before {
   display: table;
   content: '';
   clear: both; }
+
+.wrap-outer .cv section article.job {
+  margin-top: 2%; }
+
 .wrap-outer .cv article {
   margin-left: 0%;
   display: block;
   float: left;
   margin-right: 2.12766%;
   width: 100%;
-  float: none; }
+  float: none;
+  overflow: hidden; }
   .wrap-outer .cv article:last-child {
     margin-right: 0; }
   .wrap-outer .cv article.one-half {
@@ -56,6 +69,7 @@
   @media screen and (max-width: 580px) {
     .wrap-outer .cv article {
       padding: 0; } }
+
 .wrap-outer .cv ul.main-intro, .wrap-outer .cv ul.main-intro--half {
   display: block;
   float: left;
@@ -72,8 +86,8 @@
     .wrap-outer .cv ul.main-intro, .wrap-outer .cv ul.main-intro--half {
       display: block;
       float: left;
-      margin-right: 6.66667%;
-      width: 46.66667%;
+      margin-right: 2.12766%;
+      width: 14.89362%;
       float: right;
       margin: 0;
       text-align: right; }
@@ -81,8 +95,10 @@
         margin-right: 0; } }
   .wrap-outer .cv ul.main-intro h3, .wrap-outer .cv ul.main-intro--half h3 {
     margin: 0; }
+
 .wrap-outer .cv ul.main-intro--half {
   text-align: left; }
+
 .wrap-outer .cv ul.small-intro, .wrap-outer .cv ul.small-intro--half {
   display: block;
   float: left;
@@ -97,24 +113,28 @@
   @media screen and (max-width: 580px) {
     .wrap-outer .cv ul.small-intro, .wrap-outer .cv ul.small-intro--half {
       margin: 0; } }
-    @media screen and (max-width: 580px) and (max-width: 580px) {
-      .wrap-outer .cv ul.small-intro, .wrap-outer .cv ul.small-intro--half {
-        display: block;
-        float: left;
-        margin-right: 6.66667%;
-        width: 46.66667%; }
-        .wrap-outer .cv ul.small-intro:last-child, .wrap-outer .cv ul.small-intro--half:last-child {
-          margin-right: 0; } }
+  @media screen and (max-width: 580px) and (max-width: 580px) {
+    .wrap-outer .cv ul.small-intro, .wrap-outer .cv ul.small-intro--half {
+      display: block;
+      float: left;
+      margin-right: 2.12766%;
+      width: 14.89362%; }
+      .wrap-outer .cv ul.small-intro:last-child, .wrap-outer .cv ul.small-intro--half:last-child {
+        margin-right: 0; } }
+
 .wrap-outer .cv ul.small-intro--half {
   margin-top: 2em;
   float: right;
   text-align: right; }
+
 .wrap-outer .cv ul.inline {
   list-style-type: none;
   padding: 0; }
+
 .wrap-outer .cv ul li span {
-  color: grey;
+  color: gray;
   font-style: italic; }
+
 .wrap-outer .cv ul.social {
   float: right;
   text-align: right;
@@ -122,6 +142,7 @@
   @media screen and (max-width: 580px) {
     .wrap-outer .cv ul.social {
       display: none; } }
+
 .wrap-outer .cv ul .symbol {
   color: #333333;
   font-size: 100%; }
