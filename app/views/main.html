@@ -96,19 +96,7 @@
 <?= UI::js(Asset::assets(['init.js', 'jquery.parallactic.js', 'jquery.ytplayer.js', 'main.js'])) ?>
 
 <?php if (strpos(Config::get()->assetpipeline->stage, 'prod') !== false): ?>
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-
-      (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.umsicht.eu/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "5"]);
-        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
+    <?= UI::js(Asset::assets(['piwik-tracking.js'])) ?>
 <?php endif; ?>
 
 <?php if (strpos(Config::get()->assetpipeline->stage, 'dev') !== false): ?>
