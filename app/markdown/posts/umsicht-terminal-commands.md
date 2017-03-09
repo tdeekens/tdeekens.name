@@ -3,6 +3,12 @@
 * **`um new project`**
    * Creates a new project in the version control and downloads it.
    * `um new clientXY` would create a new project for clientXY, download it and open it in the editor.
+* **`um status project`**
+   * Outputs the status on stage and live of a given project.
+   * `um status umsicht` would output time of last change, the author and files affected of the project.
+* **`um browse project`**
+   * Opens the project in the default browser on the operating system.
+   * `um browse umsicht` open umsicht in the default browser with the root of the webserver in mind.
 * **`um down project`**
    * Downloads a project from the version control to work on it locally.
    * `um down umsicht` would download the umsicht project and open it in the editor.
