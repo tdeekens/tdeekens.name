@@ -92,8 +92,7 @@
       </p>
       <p>
          Working on the frontend and nearby REST & GraphQL APIs of the merchant center built with
-         <a class="em" href="https://facebook.github.io/react/"
-            target="_blank">React</a> and
+         <a class="em" href="https://facebook.github.io/react/" target="_blank">React</a> and
          <a class="em" href="redux.js.org/" target="_blank">Redux</a> while being tested with
          <a class="em" href="https://facebook.github.io/jest/" target="_blank">Jest</a>. Additional infrastructure includes
          <a href="https://webpack.js.org/" target="_blank">webpack@2</a>,
@@ -101,7 +100,7 @@
          <a href="https://github.com/storybooks/storybook" target="_blank">react-storybook</a>. The application follows a plugin architecture allowing easy extensions and parallel development
          and deployments by multiple teams in a
          <b>test-driven and pull request</b> based development environment on GitHub. Continous Integration is performed via
-         <a href="https://wercker.com" target="_blank">Wercker</a> with development branches being automatically pushed to
+         <a href="https://circleci.com" target="_blank">CircleCI</a> with development branches being automatically pushed to
          <a class="em" href="https://cloud.docker.com/" target="_blank">Docker Cloud</a> whereas the live stack is runs in a
          <a class="em" href="kubernetes.io/" target="_blank">Kubernetes</a> cluster.
       </p>
@@ -123,12 +122,14 @@
          <h3>Tasks</h3>
          <ul>
             <li>Implementing PIM (Productinformation Management) features for the Merchant Center</li>
-            <li>Introducing feature toggling via LaunchDarkly and the
+            <li>Introducing feature toggling via LaunchDarkly and the self-written
                <a href="https://github.com/tdeekens/flopflip" target="_blank">flopflop</a> library</li>
+            <li>Migrating Frontend and Node.js monitoring from Influx to
+               <a href="https://prometheus.io/" target="_blank">Prometheus</a> and Grafana</li>
             <li>Introducing
                <a href="https://github.com/prettier/prettier" target="_blank">prettier</a> for automatic code formatting</li>
-            <li>Migrating the JavaScript SDK to mono repository to a
-               <a href="https://github.com/rollup/rollup" target="_blank">Rollup</a> based build</li>
+            <li>Migrating the JavaScript SDK to a
+               <a href="https://github.com/rollup/rollup" target="_blank">Rollup</a> based build via CircleCI</li>
             <li>Codemodding a ~50k SLOC React project (e.g. `React.createClass` to `React.Component`)</li>
          </ul>
       </article>
@@ -591,8 +592,7 @@
 
       <h3>
          <a href="https://github.com/dactylographsy">dactylographsy</a> - A set of tools generating manifests with fingerprinted assets to be injected and cached
-         <span
-            class="date">mid 2015</span>
+         <span class="date">mid 2015</span>
       </h3>
       <p>
          Every unit of an application can create a
