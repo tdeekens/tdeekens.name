@@ -4,51 +4,54 @@
     use Scandio\lmvc\Config;
 ?>
 
-<!doctype html>
-<html>
-<head>
+   <!doctype html>
+   <html>
 
-    <title>CV - Tobias Deekens</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
 
-    <meta name="abstract" content="Tobias Deekens' blog. This is were my thoughts chill.">
-    <meta name="audience" content="Alle">
-    <meta name="author" content="Tobias Deekens">
-    <meta name="copyright" content="Tobias Deekens">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="language" content="Deutsch">
-    <meta name="language" content="English">
-    <meta name="page-type" content="CV">
-    <meta name="revisit-after" content="2 weeks">
-    <meta name="robots" content="index, follow">
-    <meta name="title" content="Tobias Deekens - CV">
+      <title>Curriculum Vitae</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+      <meta name="abstract" content="Tobias Deekens' blog. This is were my thoughts chill.">
+      <meta name="audience" content="Alle">
+      <meta name="author" content="Tobias Deekens">
+      <meta name="copyright" content="Tobias Deekens">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="language" content="Deutsch">
+      <meta name="language" content="English">
+      <meta name="page-type" content="CV">
+      <meta name="revisit-after" content="2 weeks">
+      <meta name="robots" content="index, follow">
+      <meta name="title" content="Tobias Deekens - CV">
 
-    <?= UI::css(Asset::assets(['normalize.css', 'style.css', 'cv.css'], [], [])) ?>
-</head>
-<body>
-    <div class="js-breakpoint"></div>
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <div class="wrap-outer">
+      <?= UI::css(Asset::assets(['normalize.css', 'style.css', 'cv.css'], [], [])) ?>
+   </head>
 
-        <div class="content-body cv">
+   <body>
+      <div class="js-breakpoint"></div>
+
+      <div class="wrap-outer">
+
+         <div class="content-body cv">
             <?php include($app->view); ?>
-        </div>
+         </div>
 
-    </div>
-</div>
+      </div>
+      </div>
 
-<footer>
-</footer>
+      <footer>
+      </footer>
 
-<?= UI::js(Asset::assets(['jquery.js'])) ?>
+      <?= UI::js(Asset::assets(['jquery.js'])) ?>
 
-<?php if (strpos(Config::get()->assetpipeline->stage, 'prod') !== false): ?>
-    <?= UI::js(Asset::assets(['piwik-tracking.js'])) ?>
-<?php endif; ?>
+         <?php if (strpos(Config::get()->assetpipeline->stage, 'prod') !== false): ?>
+         <?= UI::js(Asset::assets(['piwik-tracking.js'])) ?>
+            <?php endif; ?>
 
-</body>
-</html>
+   </body>
+
+   </html>
