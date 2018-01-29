@@ -70,6 +70,11 @@
   margin-top: 2%;
 }
 
+.wrap-outer .cv section article.job2 {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
 .wrap-outer .cv article {
   margin-left: 0%;
   display: block;
