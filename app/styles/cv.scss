@@ -7,179 +7,186 @@
 @import "_variables";
 
 .wrap-outer {
-   .cv  {
-      .personal-info {
-         font-family: 'MyriadPro-LightSemiExt';
-      }
-      strong {
-         font-weight: 600;
-      }
-      a {
-         color: $root-font-color;
-      }
-      a:hover {
-         color: rgb(81, 121, 203);
-         border-bottom: none;
-      }
-      em, .em {
-         font-family: "MyriadPro-Bold";
-         font-style: normal;
-      }
-      h1 {
-         @extend %h1-title;
-      }
-      h2 {
-         border-bottom: 1px solid hsl(0, 0%, 95%);
-      }
-      h3 {
-         display: inline;
+  .cv {
+    .personal-info {
+      font-family: "MyriadPro-LightSemiExt";
+    }
+    strong {
+      font-weight: 600;
+    }
+    a {
+      color: $root-font-color;
+    }
+    a:hover {
+      color: rgb(81, 121, 203);
+      border-bottom: none;
+    }
+    em,
+    .em {
+      font-family: "MyriadPro-Bold";
+      font-style: normal;
+    }
+    h1 {
+      @extend %h1-title;
+    }
+    h2 {
+      border-bottom: 1px solid hsl(0, 0%, 95%);
+    }
+    h3 {
+      display: inline;
 
-         .date {
-            font-family: 'MyriadPro-LightSemiExt';
-            color: lighten($root-font-color, 12%);
-            font-weight: normal;
-            font-style: normal;
-            float: right;
-         }
-
-         .activity {
-            font-style: normal;
-            color: $root-font-color;
-         }
-      }
-      article p, article ul {
-         color: lighten($root-font-color, 12%);
-
-         &:hover {
-            color: $root-font-color;
-         }
-      }
-      section {
-         &:before {
-            display: table;
-            content: '';
-            clear: both;
-         }
-
-         article.job {
-            margin-top: 2%;
-         }
+      .date {
+        font-family: "MyriadPro-LightSemiExt";
+        color: lighten($root-font-color, 12%);
+        font-weight: normal;
+        font-style: normal;
+        float: right;
       }
 
-      article {
-         @include shift(0);
-         @include span-columns(12);
+      .activity {
+        font-style: normal;
+        color: $root-font-color;
+      }
+    }
+    article p,
+    article ul {
+      color: lighten($root-font-color, 12%);
 
-         float: none;
-         overflow: hidden;
-
-         &.one-half {
-            @include span-columns(6);
-         }
-
-         @include media($mobile) {
-            padding: 0;
-         }
+      &:hover {
+        color: $root-font-color;
+      }
+    }
+    section {
+      &:before {
+        display: table;
+        content: "";
+        clear: both;
       }
 
-      ul {
-         &.main-intro {
-            @include span-columns(4);
-            @include pad(1);
+      article.job {
+        margin-top: 2%;
 
-            text-align: center;
-
-            .emphasize {
-               font-size: 110%;
-               font-weight: bold;
-            }
-
-            @include media($mobile) {
-               @include span-columns(2);
-               float: right;
-               margin: 0;
-               text-align: right;
-            }
-
-            h3 {
-               margin: 0;
-            }
-         }
-         &.main-intro--half {
-            @extend .main-intro;
-
-            text-align: left;
-         }
-         &.small-intro {
-            @include span-columns(4);
-            margin-top: 1.5em;
-
-            @include media($tablet) {
-               span {
-                  display: none;
-               }
-            }
-
-            @include media($mobile) {
-               margin: 0;
-               @include media($mobile) {
-                  @include span-columns(2);
-               }
-            }
-         }
-         &.small-intro--half {
-            @extend .small-intro;
-
-            margin-top: 2em;
-            float: right;
-            text-align: right;
-         }
-         &.inline {
-            list-style-type: none;
-            padding: 0;
-         }
-         li span {
-            color: hsl(0, 0%, 50%);
-            font-style: italic;
-         }
-         &.social {
-            float: right;
-            text-align: right;
-            margin-top: 1em;
-
-            @include media($mobile) {
-               display: none;
-            }
-         }
-         .symbol {
-            color: $root-font-color;
-            font-size: 100%;
-
-            &:hover {
-               border: none;
-               color: #5179cb;
-            }
-         }
+        &.subtitle {
+          font-style: italic;
+        }
       }
-   }
+    }
+
+    article {
+      @include shift(0);
+      @include span-columns(12);
+
+      float: none;
+      overflow: hidden;
+
+      &.one-half {
+        @include span-columns(6);
+      }
+
+      @include media($mobile) {
+        padding: 0;
+      }
+    }
+
+    ul {
+      &.main-intro {
+        @include span-columns(4);
+        @include pad(1);
+
+        text-align: center;
+
+        .emphasize {
+          font-size: 110%;
+          font-weight: bold;
+        }
+
+        @include media($mobile) {
+          @include span-columns(2);
+          float: right;
+          margin: 0;
+          text-align: right;
+        }
+
+        h3 {
+          margin: 0;
+        }
+      }
+      &.main-intro--half {
+        @extend .main-intro;
+
+        text-align: left;
+      }
+      &.small-intro {
+        @include span-columns(4);
+        margin-top: 1.5em;
+
+        @include media($tablet) {
+          span {
+            display: none;
+          }
+        }
+
+        @include media($mobile) {
+          margin: 0;
+          @include media($mobile) {
+            @include span-columns(2);
+          }
+        }
+      }
+      &.small-intro--half {
+        @extend .small-intro;
+
+        margin-top: 2em;
+        float: right;
+        text-align: right;
+      }
+      &.inline {
+        list-style-type: none;
+        padding: 0;
+      }
+      li span {
+        color: hsl(0, 0%, 50%);
+        font-style: italic;
+      }
+      &.social {
+        float: right;
+        text-align: right;
+        margin-top: 1em;
+
+        @include media($mobile) {
+          display: none;
+        }
+      }
+      .symbol {
+        color: $root-font-color;
+        font-size: 100%;
+
+        &:hover {
+          border: none;
+          color: #5179cb;
+        }
+      }
+    }
+  }
 }
 
 %h1-title {
-   text-align: center;
-   border-bottom: 1px solid hsl(0, 0%, 95%);
+  text-align: center;
+  border-bottom: 1px solid hsl(0, 0%, 95%);
 
-   &:before, &:after {
-      font-size: 40%;
-      content: '♦';
-      margin-bottom: .25em;
-      vertical-align: middle;
-   }
+  &:before,
+  &:after {
+    font-size: 40%;
+    content: "♦";
+    margin-bottom: 0.25em;
+    vertical-align: middle;
+  }
 
-   &:after {
-      margin-left: 2em;
-   }
+  &:after {
+    margin-left: 2em;
+  }
 
-   &:before {
-      margin-right: 2em;
-   }
+  &:before {
+    margin-right: 2em;
+  }
 }
