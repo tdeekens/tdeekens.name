@@ -48,6 +48,10 @@
         color: $root-font-color;
       }
     }
+    h4 {
+      margin: 0;
+      font-size: 100%;
+    }
     article p,
     article ul {
       color: lighten($root-font-color, 12%);
@@ -66,7 +70,7 @@
       article.job {
         margin-top: 2%;
 
-        &.subtitle {
+        .subtitle {
           font-style: italic;
         }
       }
