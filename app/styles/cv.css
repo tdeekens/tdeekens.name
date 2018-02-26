@@ -93,6 +93,11 @@
   margin-right: 2.12766%;
   width: 48.93617%;
 }
+.wrap-outer .cv .full-width:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .wrap-outer .cv article.one-half:last-child {
   margin-right: 0;
 }
