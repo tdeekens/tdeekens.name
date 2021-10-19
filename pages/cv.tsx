@@ -17,7 +17,7 @@ const CurriculumVitae: NextPage = () => {
         <Text.Headline as="h1">Curriculum Vitae</Text.Headline>
 
         <section className="flex py-6 flex-row text-md">
-          <ul className="flex-none pt-8">
+          <ul className="hidden pt-8 md:block">
             <li>
               German <span>(native speaker)</span>
             </li>
@@ -42,7 +42,7 @@ const CurriculumVitae: NextPage = () => {
               </ExternalLink>
             </li>
           </ul>
-          <ul className="flex-none pt-8 text-right">
+          <ul className="hidden pt-8 text-right md:block">
             <li>
               <ExternalLink href="http://github.com/tdeekens">
                 github.com
