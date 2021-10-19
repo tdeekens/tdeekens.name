@@ -758,27 +758,27 @@ const CurriculumVitae: NextPage = () => {
                 <List.Item>
                   <ExternalLink href="http://slides.com/tdeekens/css-with-a-hash#/">
                     CSS with a hash - from a convention to a hash
-                  </ExternalLink>
+                  </ExternalLink>{' '}
                   <span className="italic">(ThoughtWorks Meetup)</span>
                 </List.Item>
                 <List.Item>
                   <ExternalLink href="http://slides.com/tdeekens/micropuzzling#/">
                     Micropuzzling: Implications of slicing web frontends
                     according to Microservices
-                  </ExternalLink>
+                  </ExternalLink>{' '}
                   <span className="italic">(microXchg.io)</span>
                 </List.Item>
                 <List.Item>
                   <ExternalLink href="http://slides.com/tdeekens/this-immutable-thing#/">
                     Escaping mutability hell - persistent immutable data
                     structures
-                  </ExternalLink>
+                  </ExternalLink>{' '}
                   <span className="italic">(EuroStaff Meetup)</span>
                 </List.Item>
                 <List.Item>
                   <ExternalLink href="http://slides.com/tdeekens/es6-es2015-harmony">
-                    Transpile all the things (TypeScript)
-                  </ExternalLink>
+                    Transpile all the things from TypeScript
+                  </ExternalLink>{' '}
                   <span className="italic">(Engineering Talk)</span>
                 </List.Item>
               </List.Unordered>
