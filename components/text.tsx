@@ -4,7 +4,7 @@ type THeadlineProps = {
   children: React.ReactNode;
 };
 
-function Headline(props: THeadlineProps): React.FC {
+function Headline(props: THeadlineProps) {
   const HeadlineElement = props.as;
 
   let className;
@@ -30,7 +30,7 @@ function Headline(props: THeadlineProps): React.FC {
 type TParagraphProps = {
   children: React.ReactNode;
 };
-function Paragraph(props: TParagraphProps): React.Fc {
+function Paragraph(props: TParagraphProps) {
   return <p className="py-2">{props.children}</p>;
 }
 
