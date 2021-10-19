@@ -1,12 +1,13 @@
 import { Children, cloneElement } from 'react';
 
 type TUnorderedProps = {
-  children: React.ReactNode;
+  children: Array<React.ReactElement>;
 };
 
-function Unordered(props: TUnorderedProps): React.FC {
+function Unordered(props: TUnorderedProps) {
   const itemElements = Children.map(props.children, (child, index) => {
     // NOTE: Allowing to intersperse other elements than `Item`.
+    // @ts-expect-error
     if (child?.type && child.type.displayName === Item.displayName) {
       const clonedChild = cloneElement(child, {});
 
@@ -21,7 +22,7 @@ function Unordered(props: TUnorderedProps): React.FC {
 type TItemProps = {
   children: React.ReactNode;
 };
-function Item(props: TItemProps): React.FC {
+function Item(props: TItemProps) {
   return <li className="py-1">{props.children}</li>;
 }
 Item.displayName = 'Item';

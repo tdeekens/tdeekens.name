@@ -3,7 +3,7 @@ type TExternalLinkProps = {
   href: string;
 };
 
-function ExternalLink(props: TExternalLinkProps): React.FC {
+function ExternalLink(props: TExternalLinkProps) {
   return (
     <a href={props.href} className="underline hover:no-underline">
       {props.children}

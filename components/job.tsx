@@ -8,10 +8,9 @@ type TJobHeadlineProps = {
   duration: string;
   href: string;
   company: string;
-  link: React.ReactNode;
 };
 
-function Headline(props: TJobHeadlineProps): React.FC {
+function Headline(props: TJobHeadlineProps) {
   return (
     <Text.Headline as="h3">
       {props.role}{' '}
@@ -22,7 +21,10 @@ function Headline(props: TJobHeadlineProps): React.FC {
   );
 }
 
-function Details(props: TJobDetailsProps): React.FC {
+type TJobDetailsProps = {
+  children: React.ReactElement;
+};
+function Details(props: TJobDetailsProps) {
   const detailsChildren = Children.map(props.children, (child, index) => {
     // NOTE: Allowing to intersperse other elements than `Item`.
     if (child) {
