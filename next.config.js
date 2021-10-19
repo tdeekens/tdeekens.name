@@ -2,12 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/cv',
-        permanent: false,
-      },
-    ];
+    return [];
   },
 };
