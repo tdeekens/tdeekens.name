@@ -718,8 +718,8 @@ const CurriculumVitae: NextPage = () => (
             </List.Item>
             <List.Item>
               <ExternalLink href="https://techblog.commercetools.com/seven-patterns-by-example-the-many-ways-to-type-radio-in-react-bfe14322bb6f">
-                Seven patterns by example: The many ways to `type="radio"` in
-                React
+                Seven patterns by example: The many ways to
+                `type=&quot;radio&quot;` in React
               </ExternalLink>
             </List.Item>
             <List.Item>

@@ -1,5 +1,5 @@
 type THeadlineLevel = 'h1' | 'h2' | 'h3';
-type THeadlineProps = {
+export type THeadlineProps = {
   as: THeadlineLevel;
   children: React.ReactNode;
 };
@@ -27,7 +27,7 @@ function Headline(props: THeadlineProps) {
   );
 }
 
-type TParagraphProps = {
+export type TParagraphProps = {
   children: React.ReactNode;
 };
 function Paragraph(props: TParagraphProps) {
