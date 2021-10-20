@@ -46,19 +46,49 @@ const Home = (props: THomeProps) => (
         <Text.Paragraph>You can also find me on:</Text.Paragraph>
 
         <List.Unordered>
-          <li>
-            <ExternalLink href="http://www.github.com/tdeekens">
-              GitHub
+          <li className="list-none">
+            <ExternalLink
+              underline={false}
+              href="http://www.github.com/tdeekens"
+            >
+              <div className="flex space-x-2 items-baseline">
+                <Image
+                  src="/github-icon.svg"
+                  alt="GitHub profile"
+                  width="13"
+                  height="13"
+                />
+                <span>GitHub</span>
+              </div>
             </ExternalLink>
           </li>
-          <li>
-            <ExternalLink href="http://twitter.com/tdeekens">
-              twitter.com
+          <li className="list-none">
+            <ExternalLink underline={false} href="http://twitter.com/tdeekens">
+              <div className="flex space-x-2 items-baseline">
+                <Image
+                  src="/twitter-icon.svg"
+                  alt="Twitter profile"
+                  width="13"
+                  height="13"
+                />
+                <span>Twitter</span>
+              </div>
             </ExternalLink>
           </li>
-          <li>
-            <ExternalLink href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197">
-              linkedin.com
+          <li className="list-none">
+            <ExternalLink
+              underline={false}
+              href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197"
+            >
+              <div className="flex space-x-2 items-baseline">
+                <Image
+                  src="/linkedin-icon.svg"
+                  alt="Linkedin profile"
+                  width="11"
+                  height="11"
+                />
+                <span>LinkedIn</span>
+              </div>
             </ExternalLink>
           </li>
         </List.Unordered>
@@ -78,13 +108,13 @@ const Home = (props: THomeProps) => (
         <Text.Headline as="h2">🔗 External articles</Text.Headline>
         <Text.Paragraph>
           <ExternalLink href="https://techblog.commercetools.com/five-practical-tips-when-using-react-hooks-in-production-990a79745229">
-            👩🏻 Five practical tips when using React hooks in production
+            Five practical tips when using React hooks in production
           </ExternalLink>
         </Text.Paragraph>
         <Text.Paragraph>
           <ExternalLink href="https://techblog.commercetools.com/render-props-apollo-and-formik-build-and-compose-forms-in-react-with-ease-f79a594be239">
-            👩🏻‍🍳 Render Props, Apollo and Formik: build and compose forms in React
-            with ease 🏄🏾‍
+            Render Props, Apollo and Formik: build and compose forms in React
+            with ease
           </ExternalLink>
         </Text.Paragraph>
         <Text.Paragraph>
