@@ -8,6 +8,7 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import ExternalLink from '@components/external-link';
+import InternalLink from '@components/internal-link';
 
 type THomeProps = {
   posts: Array<{
@@ -67,7 +68,9 @@ const Home = (props: THomeProps) => (
           <Link href="/curriculum-vitae" passHref>
             <a className="underline hover:no-underline">curriculum vitae</a>
           </Link>
-          .
+          . If you&apos;re not here on serious matters you can check out some
+          hopefully entertaining{' '}
+          <InternalLink href="/nonsense">nonsense</InternalLink>.
         </Text.Paragraph>
       </section>
 
@@ -103,9 +106,9 @@ const Home = (props: THomeProps) => (
           (post) =>
             !post.draft && (
               <Text.Paragraph key={post.slug}>
-                <Link href={`posts/${post.slug}`} passHref>
-                  <a className="underline hover:no-underline">{post.title}</a>
-                </Link>
+                <InternalLink href={`posts/${post.slug}`}>
+                  {post.title}
+                </InternalLink>
               </Text.Paragraph>
             )
         )}
