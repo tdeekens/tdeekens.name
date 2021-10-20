@@ -37,8 +37,8 @@ const Home = (props: THomeProps) => (
         <Text.Headline as="h1">👋 Hi there,</Text.Headline>
 
         <Text.Paragraph>
-          my name is <strong>Tobias Deekens</strong>. I am a developer with
-          passion for the web. I currently work at commercetools as a Tech Lead
+          my name is <strong>Tobias Deekens</strong>. I like to design and build
+          software for the web. I currently work at commercetools as a Tech Lead
           on the Platform team.
         </Text.Paragraph>
 
