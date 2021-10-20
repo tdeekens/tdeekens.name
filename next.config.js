@@ -2,6 +2,12 @@
 module.exports = {
   reactStrictMode: true,
   async redirects() {
-    return [];
+    return [
+      {
+        source: '/cv',
+        destination: '/curriculum-vitae',
+        permanent: true,
+      },
+    ];
   },
 };

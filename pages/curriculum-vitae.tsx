@@ -55,7 +55,7 @@ const CurriculumVitae: NextPage = () => (
         </li>
         <li className="print-only">
           <ExternalLink href="http://tdeekens.name/curriculum-vitae">
-            tdeekens.name/cv
+            tdeekens.name/curriculum-vitae
           </ExternalLink>
         </li>
       </ul>
