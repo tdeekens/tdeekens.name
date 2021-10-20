@@ -9,8 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "typecheck": "tsc --noEmit --skipLibCheck",
     "css:dev": "TAILWIND_MODE=watch postcss ./styles/tailwind.css -o ./styles/globals.css --watch",
-    "css:build": "postcss ./styles/tailwind.css -o ./styles/globals.css"
+    "css:build": "postcss ./styles/tailwind.css -o ./styles/globals.css",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "11.1.2",
@@ -25,18 +27,21 @@
     "@types/react": "17.0.29",
     "autoprefixer": "^10.3.7",
     "babel-jest": "^27.2.5",
-    "eslint": "8.0.1",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
-    "jest": "^27.2.5",
+    "eslint": "8.0.1",
+    "husky": "7.0.2",
     "jest-dom": "^4.0.0",
+    "jest": "^27.2.5",
+    "lint-staged": "11.2.3",
     "node-mocks-http": "^1.11.0",
-    "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
+    "postcss": "^8.3.9",
     "prettier": "2.4.1",
     "tailwindcss": "^2.2.17",
     "ts-jest": "^27.0.5",
     "ts-loader": "^9.2.6",
+    "tsc-files": "1.1.2",
     "typescript": "4.4.4"
   }
 }
