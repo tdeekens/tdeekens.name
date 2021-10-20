@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Text from '@components/text';
 import List from '@components/list';
 import ExternalLink from '@components/external-link';
@@ -41,21 +42,48 @@ const CurriculumVitae: NextPage = () => (
       </ul>
       <ul className="hidden pt-8 text-right md:block">
         <li>
-          <ExternalLink href="http://github.com/tdeekens">
-            github.com
+          <ExternalLink underline={false} href="http://www.github.com/tdeekens">
+            <div className="flex space-x-2 items-baseline">
+              <Image
+                src="/github-icon.svg"
+                alt="GitHub profile"
+                width="13"
+                height="13"
+              />
+              <span>GitHub</span>
+            </div>
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197">
-            linkedin.com
+          <ExternalLink
+            underline={false}
+            href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197"
+          >
+            <div className="flex space-x-2 items-baseline">
+              <Image
+                src="/linkedin-icon.svg"
+                alt="Linkedin profile"
+                width="11"
+                height="11"
+              />
+              <span>LinkedIn</span>
+            </div>
           </ExternalLink>
         </li>
         <li>
-          <ExternalLink href="http://tdeekens.name">tdeekens.name</ExternalLink>
-        </li>
-        <li className="print-only">
-          <ExternalLink href="http://tdeekens.name/curriculum-vitae">
-            tdeekens.name/curriculum-vitae
+          <ExternalLink
+            underline={false}
+            href="http://tdeekens.name/curriculum-vitae"
+          >
+            <div className="flex space-x-2 items-baseline">
+              <Image
+                src="/pencil-icon.svg"
+                alt="Link to curriculum vitae"
+                width="13"
+                height="13"
+              />
+              <span>tdeekens.name</span>
+            </div>
           </ExternalLink>
         </li>
       </ul>
