@@ -13,6 +13,7 @@ type THomeProps = {
   posts: Array<{
     title: string;
     slug: string;
+    draft: boolean;
   }>;
 };
 
@@ -70,15 +71,44 @@ const Home = (props: THomeProps) => (
         </Text.Paragraph>
       </section>
 
-      <section className="my-4">
-        <Text.Headline as="h1">📝 Blog</Text.Headline>
-        {props.posts.map((post) => (
-          <Text.Paragraph key={post.slug}>
-            <Link href={`posts/${post.slug}`} passHref>
-              <a className="underline hover:no-underline">{post.title}</a>
-            </Link>
-          </Text.Paragraph>
-        ))}
+      <section className="my-8">
+        <Text.Headline as="h2">🔗 External articles</Text.Headline>
+        <Text.Paragraph>
+          <ExternalLink href="https://techblog.commercetools.com/five-practical-tips-when-using-react-hooks-in-production-990a79745229">
+            👩🏻 Five practical tips when using React hooks in production
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://techblog.commercetools.com/render-props-apollo-and-formik-build-and-compose-forms-in-react-with-ease-f79a594be239">
+            👩🏻‍🍳 Render Props, Apollo and Formik: build and compose forms in React
+            with ease 🏄🏾‍
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://techblog.commercetools.com/seven-patterns-by-example-the-many-ways-to-type-radio-in-react-bfe14322bb6f">
+            Seven patterns by example: The many ways to `type=&quot;radio&quot;`
+            in React
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://techblog.commercetools.com/embracing-real-time-feature-toggling-in-your-react-application-a5e6052716a9">
+            Embracing real-time feature toggling in your React application
+          </ExternalLink>
+        </Text.Paragraph>
+      </section>
+
+      <section className="my-8">
+        <Text.Headline as="h2">📝 Blog</Text.Headline>
+        {props.posts.map(
+          (post) =>
+            !post.draft && (
+              <Text.Paragraph key={post.slug}>
+                <Link href={`posts/${post.slug}`} passHref>
+                  <a className="underline hover:no-underline">{post.title}</a>
+                </Link>
+              </Text.Paragraph>
+            )
+        )}
       </section>
     </div>
   </>
@@ -95,6 +125,7 @@ export const getStaticProps = async () => {
     return {
       title: parsedWithFrontmatter.data.title,
       slug: parsedWithFrontmatter.data.slug,
+      draft: parsedWithFrontmatter.data.draft,
     };
   });
 
