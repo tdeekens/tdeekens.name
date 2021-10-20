@@ -1,6 +1,6 @@
 import { Children, cloneElement } from 'react';
 
-type TUnorderedProps = {
+export type TUnorderedProps = {
   children: Array<React.ReactElement>;
 };
 
@@ -19,7 +19,7 @@ function Unordered(props: TUnorderedProps) {
   return <ul className="list-disc pl-8">{itemElements}</ul>;
 }
 
-type TItemProps = {
+export type TItemProps = {
   children: React.ReactNode;
 };
 function Item(props: TItemProps) {
