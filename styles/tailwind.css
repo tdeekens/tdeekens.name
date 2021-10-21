@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.print-only {
-  display: none;
-}
-
-@media print {
-  body {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-  .page-break {
-    page-break-before: always;
-  }
-  .print-only {
-    display: inline;
-  }
-  .print-hidden {
-    display: none;
-  }
+.page-break {
+  page-break-before: always;
 }

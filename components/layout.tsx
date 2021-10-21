@@ -11,7 +11,7 @@ function Layout(props: TLayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="my-8 mx-4 md:mx-16 font-mono xl:text-sm max-w-6xl">
+      <main className="my-8 mx-4 md:mx-16 font-mono xl:text-sm print:text-sm max-w-6xl">
         {props.children}
       </main>
     </div>

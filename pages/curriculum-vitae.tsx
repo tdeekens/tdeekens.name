@@ -15,7 +15,7 @@ const CurriculumVitae: NextPage = () => (
     <Text.Headline as="h1">Curriculum vitae</Text.Headline>
 
     <section className="flex py-6 flex-row text-md">
-      <ul className="hidden pt-8 md:block">
+      <ul className="hidden pt-8 md:block print:block">
         <li>
           German <span>(native speaker)</span>
         </li>
@@ -33,14 +33,14 @@ const CurriculumVitae: NextPage = () => (
         <li>
           <h3>Tobias Deekens</h3>
         </li>
-        <li>living in Vienna, Austria</li>
+        <li>Vienna, Austria</li>
         <li>
           <ExternalLink href="mailto:me@tdeekens.name">
             me@tdeekens.name
           </ExternalLink>
         </li>
       </ul>
-      <ul className="hidden pt-8 text-right md:block">
+      <ul className="hidden pt-8 text-right md:block print:block">
         <li>
           <ExternalLink underline={false} href="http://www.github.com/tdeekens">
             <div className="flex space-x-2 items-baseline">
@@ -163,65 +163,65 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
 
         <Job.Details>
-          <>
-            <section>
-              <Text.Headline as="h3">Responsibilities</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  <span className="italic">Hiring:</span> setting and
-                  communicating long-term staffing and hiring plans for the
-                  engineering department growing the group from four to sixteen
-                  engineers.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Onboarding:</span> defining
-                  organisation wide onboarding goals for frontend engineers in
-                  all teams. Enabling and easing the continuous growth of the
-                  department.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Planning:</span> contributed to
-                  quarterly roadmap planning for six development teams. Aiming
-                  to help to make delivery as predictable and calm as possible.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Technology:</span> setting technical
-                  visions for the department enabling long-term stability of
-                  delivery.
-                </List.Item>
-              </List.Unordered>
-            </section>
-            <section>
-              <Text.Headline as="h3">Tasks</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  Guided the implementation of a testing strategy allowing
-                  continuous deployment of ten independent frontends owned by
-                  various teams. Increasing the deployment velocity from a
-                  weekly cadence to multiple times a day.
-                </List.Item>
-                <List.Item>
-                  Setup a recurring democratic Open Source donation model for
-                  projects used by various projects inside the company. Allowing
-                  commercetools financially support various projects.
-                </List.Item>
-                <List.Item>
-                  Managed a budget for all external services such as Sentry,
-                  CircleCI and Percy used by various teams.
-                </List.Item>
-                <List.Item>
-                  Setup and steered a frontend chapter consisting of six members
-                  meeting to guide execution of cross-cutting technical concerns
-                  across teams with product managers.
-                </List.Item>
-                <List.Item>
-                  Contributed to the long-term structure in the engineering
-                  department from each team&apos;s responsibilities to roles
-                  within and across teams.
-                </List.Item>
-              </List.Unordered>
-            </section>
-          </>
+          <section>
+            <Text.Headline as="h3" pageBreak>
+              Responsibilities
+            </Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                <span className="italic">Hiring:</span> setting and
+                communicating long-term staffing and hiring plans for the
+                engineering department growing the group from four to sixteen
+                engineers.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Onboarding:</span> defining
+                organisation wide onboarding goals for frontend engineers in all
+                teams. Enabling and easing the continuous growth of the
+                department.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Planning:</span> contributed to
+                quarterly roadmap planning for six development teams. Aiming to
+                help to make delivery as predictable and calm as possible.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Technology:</span> setting technical
+                visions for the department enabling long-term stability of
+                delivery.
+              </List.Item>
+            </List.Unordered>
+          </section>
+          <section>
+            <Text.Headline as="h3">Tasks</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                Guided the implementation of a testing strategy allowing
+                continuous deployment of ten independent frontends owned by
+                various teams. Increasing the deployment velocity from a weekly
+                cadence to multiple times a day.
+              </List.Item>
+              <List.Item>
+                Setup a recurring democratic Open Source donation model for
+                projects used by various projects inside the company. Allowing
+                commercetools financially support various projects.
+              </List.Item>
+              <List.Item>
+                Managed a budget for all external services such as Sentry,
+                CircleCI and Percy used by various teams.
+              </List.Item>
+              <List.Item>
+                Setup and steered a frontend chapter consisting of six members
+                meeting to guide execution of cross-cutting technical concerns
+                across teams with product managers.
+              </List.Item>
+              <List.Item>
+                Contributed to the long-term structure in the engineering
+                department from each team&apos;s responsibilities to roles
+                within and across teams.
+              </List.Item>
+            </List.Unordered>
+          </section>
         </Job.Details>
       </article>
 
@@ -278,80 +278,78 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
 
         <Job.Details>
-          <>
-            <section>
-              <Text.Headline as="h3">Responsibilities</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  <span className="italic">Onboarding:</span> onboarding
-                  frontend engineers across 3 cross-function teams.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Hiring:</span> defining code
-                  challenges and interviewing potential hires.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Code Reviewer:</span> being
-                  responsible for reviews of both internal and external
-                  developers.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Collaboration:</span> defining
-                  processes and tooling for style guides to support seamless
-                  design and development collaboration.
-                </List.Item>
-              </List.Unordered>
-            </section>
-            <section>
-              <Text.Headline as="h3">Tasks</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  Introducing feature toggling via LaunchDarkly with the
-                  self-written{' '}
-                  <ExternalLink href="https://github.com/tdeekens/flopflip">
-                    flopflip
-                  </ExternalLink>{' '}
-                  library. Allowing more frequent deployments and beta testing
-                  of features with collaboration with selected customers product
-                  managers.
-                </List.Item>
-                <List.Item>
-                  Migrating Frontend and Node.js monitoring from Influx to{' '}
-                  <ExternalLink href="https://prometheus.io/">
-                    Prometheus
-                  </ExternalLink>{' '}
-                  and Grafana with the help of{' '}
-                  <ExternalLink href="https://github.com/tdeekens/promster">
-                    promster
-                  </ExternalLink>
-                  . Increasing observability of the platform to increase its
-                  health but also enable auto scaling.
-                </List.Item>
-                <List.Item>
-                  Introducing and advocating{' '}
-                  <ExternalLink href="https://github.com/prettier/prettier">
-                    prettier
-                  </ExternalLink>{' '}
-                  for automatic code formatting. Simplifying and speeding up
-                  code changes while removing discussions around code
-                  formatting.
-                </List.Item>
-                <List.Item>
-                  Migrating the JavaScript SDK to a{' '}
-                  <ExternalLink href="https://github.com/rollup/rollup">
-                    Rollup
-                  </ExternalLink>{' '}
-                  based build via CircleCI. Sppeding up Continuous Integration
-                  but also enabling an automated release process without needing
-                  a local machine.
-                </List.Item>
-                <List.Item>
-                  Adding a dual deployment workflow to AWS and GCP onto a
-                  Kubernetes cluster with Helm into six production environments.
-                </List.Item>
-              </List.Unordered>
-            </section>
-          </>
+          <section>
+            <Text.Headline as="h3" pageBreak>
+              Responsibilities
+            </Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                <span className="italic">Onboarding:</span> onboarding frontend
+                engineers across 3 cross-function teams.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Hiring:</span> defining code challenges
+                and interviewing potential hires.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Code Reviewer:</span> being responsible
+                for reviews of both internal and external developers.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Collaboration:</span> defining
+                processes and tooling for style guides to support seamless
+                design and development collaboration.
+              </List.Item>
+            </List.Unordered>
+          </section>
+          <section>
+            <Text.Headline as="h3">Tasks</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                Introducing feature toggling via LaunchDarkly with the
+                self-written{' '}
+                <ExternalLink href="https://github.com/tdeekens/flopflip">
+                  flopflip
+                </ExternalLink>{' '}
+                library. Allowing more frequent deployments and beta testing of
+                features with collaboration with selected customers product
+                managers.
+              </List.Item>
+              <List.Item>
+                Migrating Frontend and Node.js monitoring from Influx to{' '}
+                <ExternalLink href="https://prometheus.io/">
+                  Prometheus
+                </ExternalLink>{' '}
+                and Grafana with the help of{' '}
+                <ExternalLink href="https://github.com/tdeekens/promster">
+                  promster
+                </ExternalLink>
+                . Increasing observability of the platform to increase its
+                health but also enable auto scaling.
+              </List.Item>
+              <List.Item>
+                Introducing and advocating{' '}
+                <ExternalLink href="https://github.com/prettier/prettier">
+                  prettier
+                </ExternalLink>{' '}
+                for automatic code formatting. Simplifying and speeding up code
+                changes while removing discussions around code formatting.
+              </List.Item>
+              <List.Item>
+                Migrating the JavaScript SDK to a{' '}
+                <ExternalLink href="https://github.com/rollup/rollup">
+                  Rollup
+                </ExternalLink>{' '}
+                based build via CircleCI. Sppeding up Continuous Integration but
+                also enabling an automated release process without needing a
+                local machine.
+              </List.Item>
+              <List.Item>
+                Adding a dual deployment workflow to AWS and GCP onto a
+                Kubernetes cluster with Helm into six production environments.
+              </List.Item>
+            </List.Unordered>
+          </section>
         </Job.Details>
       </article>
 
@@ -380,47 +378,47 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
 
         <Job.Details>
-          <>
-            <section>
-              <Text.Headline as="h3">Responsibilities</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  <span className="italic">Tech Lead:</span> aligning
-                  architectural decisions with remote teams.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Teacher:</span> giving small internal
-                  tech talks to share knowledge.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Code Reviewer:</span> being
-                  responsible for reviews and all code merged to production.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Backlog:</span> interim Product Owner
-                  defining the backlog and leading grooming and reviews.
-                </List.Item>
-              </List.Unordered>
-            </section>
-            <section>
-              <Text.Headline as="h3">Tasks</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  Migrating a ~100k SLOC project from RequireJS to webpack.
-                </List.Item>
-                <List.Item>
-                  Replacing bower with npm in the main product&apos;s code base.
-                </List.Item>
-                <List.Item>
-                  Helping code modding from underscore to lodash.
-                </List.Item>
-                <List.Item>
-                  Implementing an Instagram OAuth2 integration allowing to build
-                  visualisations with Instagram data.
-                </List.Item>
-              </List.Unordered>
-            </section>
-          </>
+          <section>
+            <Text.Headline as="h3">Responsibilities</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                <span className="italic">Tech Lead:</span> aligning
+                architectural decisions with remote teams.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Teacher:</span> giving small internal
+                tech talks to share knowledge.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Code Reviewer:</span> being responsible
+                for reviews and all code merged to production.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Backlog:</span> interim Product Owner
+                defining the backlog and leading grooming and reviews.
+              </List.Item>
+            </List.Unordered>
+          </section>
+          <section>
+            <Text.Headline as="h3" pageBreak>
+              Tasks
+            </Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                Migrating a ~100k SLOC project from RequireJS to webpack.
+              </List.Item>
+              <List.Item>
+                Replacing bower with npm in the main product&apos;s code base.
+              </List.Item>
+              <List.Item>
+                Helping code modding from underscore to lodash.
+              </List.Item>
+              <List.Item>
+                Implementing an Instagram OAuth2 integration allowing to build
+                visualisations with Instagram data.
+              </List.Item>
+            </List.Unordered>
+          </section>
         </Job.Details>
 
         <Text.Paragraph>
@@ -456,39 +454,37 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
 
         <Job.Details>
-          <>
-            <section>
-              <Text.Headline as="h3">Responsibilities</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  <span className="italic">DX:</span> project setup and
-                  developer tool management.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Workshops:</span> giving frontend
-                  workshops to mitigate the grap between frontend and backend.
-                </List.Item>
-                <List.Item>
-                  <span className="italic">Hiring:</span> defining code
-                  challenges and interviewing potential hires.
-                </List.Item>
-              </List.Unordered>
-            </section>
-            <section>
-              <Text.Headline as="h3">Tasks</Text.Headline>
-              <List.Unordered>
-                <List.Item>
-                  Improving frontend performance in a legacy UI.
-                </List.Item>
-                <List.Item>
-                  Setup of frontend verticals tied to backend (BFF).
-                </List.Item>
-                <List.Item>
-                  Managing rollout of new frontends from beta to live.
-                </List.Item>
-              </List.Unordered>
-            </section>
-          </>
+          <section>
+            <Text.Headline as="h3">Responsibilities</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                <span className="italic">DX:</span> project setup and developer
+                tool management.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Workshops:</span> giving frontend
+                workshops to mitigate the grap between frontend and backend.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Hiring:</span> defining code challenges
+                and interviewing potential hires.
+              </List.Item>
+            </List.Unordered>
+          </section>
+          <section>
+            <Text.Headline as="h3">Tasks</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                Improving frontend performance in a legacy UI.
+              </List.Item>
+              <List.Item>
+                Setup of frontend verticals tied to backend (BFF).
+              </List.Item>
+              <List.Item>
+                Managing rollout of new frontends from beta to live.
+              </List.Item>
+            </List.Unordered>
+          </section>
         </Job.Details>
 
         <Text.Paragraph>
@@ -518,7 +514,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
       </article>
 
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Job.Headline
           role="Summer job at"
           location="from Munich, Germany"
@@ -542,7 +538,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
       </article>
 
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Job.Headline
           role="Internship at"
           location="from Hamburg, Germany"
@@ -561,7 +557,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
       </article>
 
-      <article className="py-2">
+      <article className="py-2 page-break">
         <Job.Headline
           role="Thesis work at"
           location="from Hamburg, Germany"
@@ -580,7 +576,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
       </article>
 
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Job.Headline
           role="Student Assistant at"
           location=""
@@ -655,7 +651,7 @@ const CurriculumVitae: NextPage = () => (
           BrowserStack in 8 different browsers.
         </Text.Paragraph>
       </article>
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Text.Headline as="h3">
           <ExternalLink href="https://github.com/tdeekens/colloq">
             Colloq
@@ -670,7 +666,7 @@ const CurriculumVitae: NextPage = () => (
           (linting), nodemon, Docker and PM2.
         </Text.Paragraph>
       </article>
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Text.Headline as="h3">
           <ExternalLink href="https://github.com/tdeekens/react-memoise">
             react-memoise
@@ -684,7 +680,7 @@ const CurriculumVitae: NextPage = () => (
           React-memoise enables this through an render-prop based API.
         </Text.Paragraph>
       </article>
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Text.Headline as="h3">
           <ExternalLink href="https://github.com/tdeekens/tamesy">
             tamesy
@@ -700,7 +696,7 @@ const CurriculumVitae: NextPage = () => (
           the browser as CommonJS, AMD, ESM or as a global.
         </Text.Paragraph>
       </article>
-      <article className="py-2 print-hidden">
+      <article className="py-2 print:hidden">
         <Text.Headline as="h3">
           <ExternalLink href="https://github.com/dactylographsy">
             dactylographsy
@@ -816,7 +812,7 @@ const CurriculumVitae: NextPage = () => (
       </section>
     </section>
 
-    <section className="print-hidden">
+    <section className="print:hidden">
       <Text.Headline as="h2">Extracurricular Activities</Text.Headline>
       <article className="py-2">
         <Text.Headline as="h3">Basketball and Sports</Text.Headline>
@@ -836,7 +832,7 @@ const CurriculumVitae: NextPage = () => (
       </article>
     </section>
 
-    <section className="print-hidden">
+    <section className="print:hidden">
       <article className="py-2">
         <Text.Headline as="h2">University Education</Text.Headline>
         <Text.Headline as="h3">

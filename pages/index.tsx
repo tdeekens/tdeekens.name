@@ -143,6 +143,32 @@ const Home = (props: THomeProps) => (
             )
         )}
       </section>
+
+      <section className="my-8">
+        <Text.Headline as="h2">🗣️ Talks</Text.Headline>
+        <Text.Paragraph>
+          <ExternalLink href="https://slides.com/tdeekens/power-to-the-toggles-exended">
+            Power to the toggles - how feature flags liberate your development
+            workflow
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://slides.com/tdeekens/this-immutable-thing">
+            Escaping mutability hell with persistent immutable data structures
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://slides.com/tdeekens/micropuzzling">
+            Micropuzzling: Implications of slicing web frontends according to
+            Microservices
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://slides.com/tdeekens/css-with-a-hash">
+            CSS with a hash
+          </ExternalLink>
+        </Text.Paragraph>
+      </section>
     </div>
   </>
 );
