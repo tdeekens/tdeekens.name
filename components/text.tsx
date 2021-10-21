@@ -1,4 +1,4 @@
-type THeadlineLevel = 'h1' | 'h2' | 'h3';
+type THeadlineLevel = 'h1' | 'h2' | 'h3' | 'h4';
 export type THeadlineProps = {
   as: THeadlineLevel;
   pageBreak: boolean;
@@ -18,6 +18,9 @@ function Headline(props: THeadlineProps) {
       break;
     case 'h3':
       className = 'text-l font-bold pb-1';
+      break;
+    case 'h4':
+      className = 'text-xs pb-1 text-gray-500';
       break;
 
     default:
