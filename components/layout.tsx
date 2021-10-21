@@ -12,8 +12,8 @@ function Layout(props: TLayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="flex justify-center items-center ">
-        <main className="my-8 mx-4 md:mx-16 font-mono xl:text-sm print:text-sm max-w-6xl">
+      <div className="flex items-center justify-center ">
+        <main className="max-w-6xl mx-4 my-8 font-mono md:mx-16 xl:text-sm print:text-sm">
           {props.children}
         </main>
       </div>

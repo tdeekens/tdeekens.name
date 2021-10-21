@@ -11,16 +11,16 @@ function Headline(props: THeadlineProps) {
   let className;
   switch (props.as) {
     case 'h1':
-      className = 'mx-auto pb-2 text-3xl border-b text-center';
+      className = 'pb-2 mx-auto text-3xl text-center border-b';
       break;
     case 'h2':
-      className = 'text-2xl pt-2 pb-1 mb-1 border-b';
+      className = 'pt-2 pb-1 mb-1 text-2xl border-b';
       break;
     case 'h3':
-      className = 'text-l font-bold pb-1';
+      className = 'pb-1 font-bold text-l';
       break;
     case 'h4':
-      className = 'text-xs pb-1 text-gray-500';
+      className = 'pb-1 text-xs text-gray-500';
       break;
 
     default:

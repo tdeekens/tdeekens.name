@@ -14,7 +14,7 @@ const CurriculumVitae: NextPage = () => (
 
     <Text.Headline as="h1">Curriculum vitae</Text.Headline>
 
-    <section className="flex py-6 flex-row text-md">
+    <section className="flex flex-row py-6 text-md">
       <ul className="hidden pt-8 md:block print:block">
         <li>
           German <span>(native speaker)</span>
@@ -43,7 +43,7 @@ const CurriculumVitae: NextPage = () => (
       <ul className="hidden pt-8 text-right md:block print:block">
         <li>
           <ExternalLink underline={false} href="http://www.github.com/tdeekens">
-            <div className="flex space-x-2 items-baseline">
+            <div className="flex items-baseline space-x-2">
               <Image
                 src="/github-icon.svg"
                 alt="GitHub profile"
@@ -59,7 +59,7 @@ const CurriculumVitae: NextPage = () => (
             underline={false}
             href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197"
           >
-            <div className="flex space-x-2 items-baseline">
+            <div className="flex items-baseline space-x-2">
               <Image
                 src="/linkedin-icon.svg"
                 alt="Linkedin profile"
@@ -75,7 +75,7 @@ const CurriculumVitae: NextPage = () => (
             underline={false}
             href="http://tdeekens.name/curriculum-vitae"
           >
-            <div className="flex space-x-2 items-baseline">
+            <div className="flex items-baseline space-x-2">
               <Image
                 src="/pencil-icon.svg"
                 alt="Link to curriculum vitae"
@@ -720,8 +720,8 @@ const CurriculumVitae: NextPage = () => (
     <section>
       <Text.Headline as="h2">Talks, Workshops & Community</Text.Headline>
 
-      <section className="sm:block md:flex flex-row items-stretch text-md">
-        <article className="sm:my-4 flex-grow flex-1 pr-8">
+      <section className="flex-row items-stretch sm:block md:flex text-md">
+        <article className="flex-1 flex-grow pr-8 sm:my-4">
           <Text.Headline as="h3">Talks & Posts</Text.Headline>
           <List.Unordered>
             <List.Item>
@@ -778,7 +778,7 @@ const CurriculumVitae: NextPage = () => (
             </List.Item>
           </List.Unordered>
         </article>
-        <article className="sm:my-4 flex-grow flex-1 pr-8">
+        <article className="flex-1 flex-grow pr-8 sm:my-4">
           <Text.Headline as="h3">Courses</Text.Headline>
           <List.Unordered>
             <List.Item>

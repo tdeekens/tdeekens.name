@@ -4,7 +4,7 @@ type TBlockquoteProps = {
 
 function Blockquote(props: TBlockquoteProps) {
   return (
-    <blockquote className="border-solid border-l-4 border-gray-300 pl-4">
+    <blockquote className="pl-4 border-l-4 border-gray-300 border-solid">
       {props.children}
     </blockquote>
   );
