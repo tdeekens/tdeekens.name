@@ -1,18 +1,9 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 import Text from '@components/text';
-import List from '@components/list';
-import path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
 import ExternalLink from '@components/external-link';
 import Blockquote from '@components/blockquote';
 
-type TNonsenseProps = {};
-
-const Nonsense = (props: TNonsenseProps) => (
+const Nonsense = () => (
   <>
     <Head>
       <title>Tobias Deekens (@tdeekens) - Nonsense</title>
