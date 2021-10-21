@@ -14,7 +14,9 @@ function Book(props: TBookProps) {
     <article className="flex flex-row max-w-xs space-x-4">
       <div>
         <ExternalLink underline={false} href={props.href}>
-          <Image src={props.src} alt={props.title} width="75" height="100" />
+          <div className="w-20">
+            <Image src={props.src} alt={props.title} width="75" height="100" />
+          </div>
         </ExternalLink>
       </div>
       <div>
