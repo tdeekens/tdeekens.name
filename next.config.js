@@ -8,6 +8,11 @@ module.exports = {
         destination: '/curriculum-vitae',
         permanent: true,
       },
+      {
+        source: '/posts',
+        destination: '/',
+        permanent: false,
+      },
     ];
   },
 };
