@@ -98,7 +98,8 @@ const Home = (props: THomeProps) => (
           <Link href="/curriculum-vitae" passHref>
             <a className="underline hover:no-underline">curriculum vitae</a>
           </Link>
-          . If you&apos;re not here on serious matters you can check out some
+          . For you&apos;re none serious matters you can check out my{' '}
+          <InternalLink href="/bookshelf">bookshelf</InternalLink> or some
           hopefully entertaining{' '}
           <InternalLink href="/nonsense">nonsense</InternalLink>.
         </Text.Paragraph>
