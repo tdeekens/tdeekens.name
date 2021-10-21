@@ -1,5 +1,5 @@
 type TExternalLinkProps = {
-  underline: boolean;
+  underline?: boolean;
   children: React.ReactNode;
   href: string;
 };
