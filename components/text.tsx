@@ -1,6 +1,7 @@
 type THeadlineLevel = 'h1' | 'h2' | 'h3';
 export type THeadlineProps = {
   as: THeadlineLevel;
+  pageBreak: boolean;
   children: React.ReactNode;
 };
 
@@ -22,10 +23,17 @@ function Headline(props: THeadlineProps) {
     default:
       break;
   }
+  if (props.pageBreak) {
+    className += ' page-break';
+  }
+
   return (
     <HeadlineElement className={className}>{props.children}</HeadlineElement>
   );
 }
+Headline.defaultProps = {
+  pageBreak: false,
+};
 
 export type TParagraphProps = {
   children: React.ReactNode;
