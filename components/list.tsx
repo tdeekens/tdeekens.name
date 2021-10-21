@@ -5,9 +5,9 @@ export type TUnorderedProps = {
 };
 
 function Unordered(props: TUnorderedProps) {
-  const itemElements = Children.map(props.children, (child, index) => {
+  const itemElements = Children.map(props.children, (child) => {
     // NOTE: Allowing to intersperse other elements than `Item`.
-    // @ts-expect-error
+    // @ts-expect-error type doesn't exist
     if (child?.type && child.type.displayName === Item.displayName) {
       const clonedChild = cloneElement(child, {});
 

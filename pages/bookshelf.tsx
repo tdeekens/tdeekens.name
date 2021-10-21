@@ -1,19 +1,8 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
 import Book from '@components/book';
 import Text from '@components/text';
-import List from '@components/list';
-import path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
-import ExternalLink from '@components/external-link';
-import Blockquote from '@components/blockquote';
 
-type TBookshelfProps = {};
-
-const Bookshelf = (props: TBookshelfProps) => (
+const Bookshelf = () => (
   <>
     <Head>
       <title>Tobias Deekens (@tdeekens) - Bookshelf</title>

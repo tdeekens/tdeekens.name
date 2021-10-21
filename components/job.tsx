@@ -25,7 +25,7 @@ type TJobDetailsProps = {
   children: JSX.Element | JSX.Element[];
 };
 function Details(props: TJobDetailsProps) {
-  const detailsChildren = Children.map(props.children, (child, index) => {
+  const detailsChildren = Children.map(props.children, (child) => {
     // NOTE: Allowing to intersperse other elements than `Item`.
     if (child) {
       const clonedChild = cloneElement(child, {
