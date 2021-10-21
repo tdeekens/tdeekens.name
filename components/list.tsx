@@ -16,7 +16,7 @@ function Unordered(props: TUnorderedProps) {
     return child;
   });
 
-  return <ul className="list-disc pl-8">{itemElements}</ul>;
+  return <ul className="pl-8 list-disc">{itemElements}</ul>;
 }
 
 export type TItemProps = {

@@ -38,7 +38,7 @@ function Details(props: TJobDetailsProps) {
   });
 
   return (
-    <section className="sm:block md:flex flex-row items-stretch text-md">
+    <section className="flex-row items-stretch sm:block md:flex text-md">
       {detailsChildren}
     </section>
   );

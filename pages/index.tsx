@@ -25,9 +25,9 @@ const Home = (props: THomeProps) => (
 
     <div className="flex-auto">
       <section>
-        <div className="flex-auto text-center mb-8">
+        <div className="flex-auto mb-8 text-center">
           <Image
-            className="object-cover w-100 h-100 rounded-full"
+            className="object-cover rounded-full w-100 h-100"
             src="/me.jpg"
             alt="@tdeekens avatar"
             width="100"
@@ -50,7 +50,7 @@ const Home = (props: THomeProps) => (
               underline={false}
               href="http://www.github.com/tdeekens"
             >
-              <div className="flex space-x-2 items-baseline">
+              <div className="flex items-baseline space-x-2">
                 <Image
                   src="/github-icon.svg"
                   alt="GitHub profile"
@@ -63,7 +63,7 @@ const Home = (props: THomeProps) => (
           </li>
           <li className="list-none">
             <ExternalLink underline={false} href="http://twitter.com/tdeekens">
-              <div className="flex space-x-2 items-baseline">
+              <div className="flex items-baseline space-x-2">
                 <Image
                   src="/twitter-icon.svg"
                   alt="Twitter profile"
@@ -79,7 +79,7 @@ const Home = (props: THomeProps) => (
               underline={false}
               href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197"
             >
-              <div className="flex space-x-2 items-baseline">
+              <div className="flex items-baseline space-x-2">
                 <Image
                   src="/linkedin-icon.svg"
                   alt="Linkedin profile"
