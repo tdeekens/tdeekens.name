@@ -141,16 +141,15 @@ const CurriculumVitae: NextPage = () => (
           href="https://commercetools.com"
         />
         <Text.Paragraph>
-          Transitioned into being a <strong>fully remote Tech Lead</strong> for
+          Transitioned into being a <strong>fully remote Tech Lead</strong> of
           all frontend related topics for{' '}
           <strong>six teams across Europe and the United States</strong>.
           Involved in <strong>defining hiring and staffing plans</strong>,
           quarterly planning and cross-team engineering efforts. During
-          execution <strong>mentors engineers</strong> in across teams in{' '}
-          <strong>different areas of the tech stack</strong> from testing to
-          monitoring or Kubernetes. Sets long-term vision and goals
-          collaboratively with engineers and product managers while then guiding
-          and communicating their realisation.
+          execution <strong>mentors engineers</strong> across teams in{' '}
+          <strong>different areas of the tech stack</strong>. Sets long-term
+          vision and goals collaboratively with engineers and product managers
+          while guiding and communicating their execution.
         </Text.Paragraph>
         <Text.Paragraph>
           During my time at commercetools the engineering team grew from ten to

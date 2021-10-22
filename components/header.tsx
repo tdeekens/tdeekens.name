@@ -12,8 +12,8 @@ function Header() {
   const breadcrumbs = path.split('/').slice(1);
 
   return (
-    <header className="flex items-center justify-center flex-auto my-4 font-mono text-sm space-x-4 print:hidden">
-      <div>
+    <header className="flex items-center justify-center flex-auto m-4 my-4 space-x-4 font-mono text-sm print:hidden">
+      <div className="flex-shrink-0">
         <InternalLink href="/">
           <Image
             className="object-cover w-40 h-40 rounded-full"
@@ -25,7 +25,7 @@ function Header() {
         </InternalLink>
       </div>
 
-      <span className="text-gray-500">
+      <span className="flex-shrink text-gray-500">
         <InternalLink href="/" underline={false}>
           tdeekens
         </InternalLink>
