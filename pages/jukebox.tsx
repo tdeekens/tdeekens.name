@@ -119,7 +119,7 @@ const Jukebox = () => (
     <Text.Headline as="h1">Jukebox</Text.Headline>
 
     <Text.Paragraph>
-      Music I liked at some point in the last give years. Sparing you my
+      Music I liked at some point in the last five plus years. Sparing you my
       intermezzo with house and boy groups.
     </Text.Paragraph>
 
