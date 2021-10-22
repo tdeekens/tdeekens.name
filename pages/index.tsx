@@ -37,9 +37,9 @@ const Home = (props: THomeProps) => (
         <Text.Headline as="h1">👋 Hi there,</Text.Headline>
 
         <Text.Paragraph>
-          my name is <strong>Tobias Deekens</strong>. I like to design and build
-          software for the web. I currently work at commercetools as a Tech Lead
-          on the Platform team.
+          my name is <strong>Tobias Deekens</strong>. I like to design and build{' '}
+          <strong>software for the web</strong>. I currently work at
+          commercetools as a Tech Lead on the Platform Team.
         </Text.Paragraph>
 
         <Text.Paragraph>You can also find me on:</Text.Paragraph>
@@ -97,9 +97,10 @@ const Home = (props: THomeProps) => (
           <Link href="/curriculum-vitae" passHref>
             <a className="underline hover:no-underline">curriculum vitae</a>
           </Link>
-          . Given you&apos;re here for nonserious matters you can check out my{' '}
-          <InternalLink href="/bookshelf">bookshelf</InternalLink> or some
-          hopefully entertaining{' '}
+          . Given you&apos;re here for nonserious matters you can{' '}
+          <InternalLink href="/bookshelf">bookshelf</InternalLink>, listen to
+          some music in my <InternalLink href="/jukebox">jukebox</InternalLink>{' '}
+          or enjoy some hopefully entertaining{' '}
           <InternalLink href="/nonsense">nonsense</InternalLink>.
         </Text.Paragraph>
       </section>
