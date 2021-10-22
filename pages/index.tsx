@@ -97,7 +97,7 @@ const Home = (props: THomeProps) => (
           <Link href="/curriculum-vitae" passHref>
             <a className="underline hover:no-underline">curriculum vitae</a>
           </Link>
-          . Given you&apos;re here for nonserious matters you can{' '}
+          . Given you&apos;re here for nonserious matters you can check out a{' '}
           <InternalLink href="/bookshelf">bookshelf</InternalLink>, listen to
           some music in my <InternalLink href="/jukebox">jukebox</InternalLink>{' '}
           or enjoy some hopefully entertaining{' '}
