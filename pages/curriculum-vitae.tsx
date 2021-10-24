@@ -130,7 +130,7 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Work Experience</Text.Headline>
+      <Text.Headline as="h2">Work experience</Text.Headline>
 
       <article className="py-4">
         <Job.Headline
@@ -524,7 +524,7 @@ const CurriculumVitae: NextPage = () => (
         <Text.Paragraph>
           Scandio GmbH is a medium sized web consultancy firm. Working as a{' '}
           <strong>PHP and JavaScript developer</strong> mainly extending and
-          maintaining Scandio’s
+          maintaining Scandio’s{' '}
           <strong>
             <a href="https://github.com/scandio/">Open Source portfolio</a>
           </strong>
@@ -532,8 +532,7 @@ const CurriculumVitae: NextPage = () => (
           <a href="https://github.com/scandio/lmc">lmvc</a> and
           <a href="https://github.com/scandio/lmvc-modules">lmvc-modules</a>.
           Also engaged in daily development working with <strong>Drupal</strong>{' '}
-          and
-          <strong>Solr</strong>.
+          and <strong>Solr</strong>.
         </Text.Paragraph>
       </article>
 
@@ -598,7 +597,7 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Side Projects</Text.Headline>
+      <Text.Headline as="h2">Side projects</Text.Headline>
 
       <article className="py-2">
         <Text.Headline as="h3">
@@ -717,7 +716,7 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Talks, Workshops & Community</Text.Headline>
+      <Text.Headline as="h2">Blog posts, talks and workshops</Text.Headline>
 
       <section className="flex-row items-stretch sm:block md:flex text-md">
         <article className="flex-1 flex-grow pr-8 sm:my-4">
@@ -812,9 +811,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section className="print:hidden">
-      <Text.Headline as="h2">Extracurricular Activities</Text.Headline>
+      <Text.Headline as="h2">Extracurricular activities</Text.Headline>
       <article className="py-2">
-        <Text.Headline as="h3">Basketball and Sports</Text.Headline>
+        <Text.Headline as="h3">Basketball and sports</Text.Headline>
         <Text.Paragraph>
           Been actively engaged in teams and clubs since the age of nine playing
           in many cities and countries. Helping clubs, taking over coaching at
@@ -823,7 +822,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
       </article>
       <article className="py-2">
-        <Text.Headline as="h3">Guitar and Music</Text.Headline>
+        <Text.Headline as="h3">Guitar and music</Text.Headline>
         <Text.Paragraph>
           Picked up the guitar as an autodidact learning to play for four years
           now.
@@ -833,7 +832,7 @@ const CurriculumVitae: NextPage = () => (
 
     <section className="print:hidden">
       <article className="py-2">
-        <Text.Headline as="h2">University Education</Text.Headline>
+        <Text.Headline as="h2">University education</Text.Headline>
         <Text.Headline as="h3">
           Gothenburg University (Chalmers), Sweden{' '}
           <span className="xl:float-right xl:font-thin">
