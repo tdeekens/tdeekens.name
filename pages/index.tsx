@@ -96,9 +96,9 @@ const Home = (props: THomeProps) => (
 
         <Text.Paragraph>
           If you want to learn more about my work please head to my{' '}
-          <Link href="/curriculum-vitae" passHref>
-            <a className="underline hover:no-underline">curriculum vitae</a>
-          </Link>
+          <InternalLink href="/curriculum-vitae" testId="cv-link">
+            curriculum vitae
+          </InternalLink>
           . Given you&apos;re here for nonserious matters you can check out a{' '}
           <InternalLink href="/bookshelf">bookshelf</InternalLink>, listen to
           some music in my <InternalLink href="/jukebox">jukebox</InternalLink>{' '}
