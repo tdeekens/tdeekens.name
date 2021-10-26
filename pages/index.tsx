@@ -100,9 +100,12 @@ const Home = (props: THomeProps) => (
             curriculum vitae
           </InternalLink>
           . Given you&apos;re here for nonserious matters you can check out a{' '}
-          <InternalLink href="/bookshelf">bookshelf</InternalLink>, listen to
-          some music in my <InternalLink href="/jukebox">jukebox</InternalLink>{' '}
-          or enjoy some hopefully entertaining{' '}
+          <InternalLink testId="bookshelf-link" href="/bookshelf">
+            bookshelf
+          </InternalLink>
+          , listen to some music in my{' '}
+          <InternalLink href="/jukebox">jukebox</InternalLink> or enjoy some
+          hopefully entertaining{' '}
           <InternalLink href="/nonsense">nonsense</InternalLink>.
         </Text.Paragraph>
       </section>
