@@ -34,7 +34,9 @@ const Home = (props: THomeProps) => (
             height="100"
           />
         </div>
-        <Text.Headline as="h1">👋 Hi there,</Text.Headline>
+        <Text.Headline as="h1" testId="index-welcome-heading">
+          👋 Hi there,
+        </Text.Headline>
 
         <Text.Paragraph>
           my name is <strong>Tobias Deekens</strong>. I like to design and build{' '}

@@ -90,7 +90,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section className="flex flex-col justify-center align-middle">
-      <Text.Headline as="h2">Profile</Text.Headline>
+      <Text.Headline as="h2" testId="cv-profile-heading">
+        Profile
+      </Text.Headline>
       <article className="py-4">
         <Text.Paragraph>
           Retired basketball player, lousy guitarist but also developer, avid
@@ -811,7 +813,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section className="print:hidden">
-      <Text.Headline as="h2">Extracurricular activities</Text.Headline>
+      <Text.Headline as="h2" testId="cv-extracurricular-activities-heading">
+        Extracurricular activities
+      </Text.Headline>
       <article className="py-2">
         <Text.Headline as="h3">Basketball and sports</Text.Headline>
         <Text.Paragraph>
