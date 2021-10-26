@@ -8,14 +8,16 @@ const Bookshelf = () => (
       <title>Tobias Deekens (@tdeekens) - Bookshelf</title>
     </Head>
 
-    <Text.Headline as="h1">Bookshelf</Text.Headline>
+    <Text.Headline testId="bookshelf-heading" as="h1">
+      Bookshelf
+    </Text.Headline>
 
     <Text.Paragraph>
       A collection of some of the books I enjoyed. Some relate to work or
       programming, few to fiction and more are popular science.
     </Text.Paragraph>
 
-    <section className="my-8 grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+    <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       <Book
         title="The Stuff of Thought"
         href="https://www.amazon.com/The-Stuff-Thought-Language-Window/dp/0143114247"
