@@ -32,7 +32,7 @@ function Headline(props: THeadlineProps) {
   }
 
   return (
-    <HeadlineElement data-testid={props.testId} className={className}>
+    <HeadlineElement data-test-id={props.testId} className={className}>
       {props.children}
     </HeadlineElement>
   );
