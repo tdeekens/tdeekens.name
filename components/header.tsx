@@ -26,7 +26,7 @@ function Header() {
       </div>
 
       <span className="flex-shrink text-gray-500">
-        <InternalLink href="/" underline={false}>
+        <InternalLink testId="index-link" href="/" underline={false}>
           tdeekens
         </InternalLink>
         {breadcrumbs.map((breadcrumb, index) => (
