@@ -1,8 +1,9 @@
 type THeadlineLevel = 'h1' | 'h2' | 'h3' | 'h4';
 export type THeadlineProps = {
   as: THeadlineLevel;
-  pageBreak: boolean;
+  pageBreak?: boolean;
   children: React.ReactNode;
+  testId?: string;
 };
 
 function Headline(props: THeadlineProps) {
@@ -31,7 +32,9 @@ function Headline(props: THeadlineProps) {
   }
 
   return (
-    <HeadlineElement className={className}>{props.children}</HeadlineElement>
+    <HeadlineElement data-testid={props.testId} className={className}>
+      {props.children}
+    </HeadlineElement>
   );
 }
 Headline.defaultProps = {
