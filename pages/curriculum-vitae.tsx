@@ -14,22 +14,8 @@ const CurriculumVitae: NextPage = () => (
 
     <Text.Headline as="h1">Curriculum vitae</Text.Headline>
 
-    <section className="flex flex-row py-6 text-md">
-      <ul className="hidden pt-8 md:block print:block">
-        <li>
-          German <span>(native speaker)</span>
-        </li>
-        <li>
-          Dutch <span>(native speaker)</span>
-        </li>
-        <li>
-          English <span>(business fluent)</span>
-        </li>
-        <li>
-          Swedish <span>(beginner, A2)</span>
-        </li>
-      </ul>
-      <ul className="flex-grow text-center">
+    <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-between">
+      <ul className="">
         <li>
           <h3>Tobias Deekens</h3>
         </li>
@@ -40,7 +26,7 @@ const CurriculumVitae: NextPage = () => (
           </ExternalLink>
         </li>
       </ul>
-      <ul className="hidden pt-8 text-right md:block print:block">
+      <ul className="hidden text-right md:block print:block">
         <li>
           <ExternalLink underline={false} href="http://www.github.com/tdeekens">
             <div className="flex items-baseline space-x-2">
