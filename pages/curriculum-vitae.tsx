@@ -585,6 +585,51 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
+      <Text.Headline as="h2">Technology experiences</Text.Headline>
+
+      <section className="flex-row items-stretch sm:block md:flex text-md">
+        <article className="flex-1 flex-grow pr-8 sm:my-4">
+          <Text.Headline as="h3">Programming languages</Text.Headline>
+          <List.Unordered>
+            <List.Item>JavaScript (advanced)</List.Item>
+            <List.Item>PHP (advanced)</List.Item>
+            <List.Item>Scala (intermediate)</List.Item>
+            <List.Item>Java (intermediate)</List.Item>
+            <List.Item>ActionScript & MXML (intermediate)</List.Item>
+            <List.Item>Objective-C (basic)</List.Item>
+            <List.Item>Python (beginner)</List.Item>
+            <List.Item>Elixir & Rust (goof-off)</List.Item>
+          </List.Unordered>
+        </article>
+        <article className="flex-1 flex-grow pr-8 sm:my-4">
+          <Text.Headline as="h3">Technology stacks</Text.Headline>
+          <List.Unordered>
+            <List.Item>
+              React, Redux & Apollo, AngularJS, Node.js, Backbone.js, Express
+              and HapiJs: (JavaScript)
+            </List.Item>
+            <List.Item>
+              Kubernetes, Prometheus, Kibana and Grafana: (Operations)
+            </List.Item>
+            <List.Item>
+              CSS3, PostCSS, Stylus, SASS and LESS (CSS & Preprocessors)
+            </List.Item>
+            <List.Item>
+              MySQL, SQLite, PostgreSQL, MongoDB, Solr and Redis (Databases)
+            </List.Item>
+            <List.Item>
+              Webpack, Next.js, Rollup, Gulp, Grunt, SBT and ANT (Build Tools)
+            </List.Item>
+            <List.Item>
+              Jest, Cypress, Jasmine, Mocha, Sinon, GitHub Actions, CircleCI,
+              TeamCity, Jenkins and Coveralls (Testing & CI)
+            </List.Item>
+          </List.Unordered>
+        </article>
+      </section>
+    </section>
+
+    <section>
       <Text.Headline as="h2">Side projects</Text.Headline>
 
       <article className="py-2">
