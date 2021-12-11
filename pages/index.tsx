@@ -141,7 +141,7 @@ const Home = (props: THomeProps) => (
           (post) =>
             !post.draft && (
               <Text.Paragraph key={post.slug}>
-                <InternalLink href={`posts/${post.slug}`}>
+                <InternalLink href={`/posts/${post.slug}`}>
                   {post.title}
                 </InternalLink>
               </Text.Paragraph>
