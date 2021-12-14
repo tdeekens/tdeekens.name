@@ -14,7 +14,7 @@ const CurriculumVitae: NextPage = () => (
 
     <Text.Headline as="h1">Curriculum vitae</Text.Headline>
 
-    <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-between sm:place-content-center">
+    <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-center md:place-content-between">
       <ul className="">
         <li>
           <h3>Tobias Deekens</h3>
