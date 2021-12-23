@@ -26,11 +26,11 @@ const Home = (props: THomeProps) => (
       <section>
         <div className="flex-auto mb-8 text-center">
           <Image
-            className="object-cover rounded-full w-100 h-100"
+            className="object-cover rounded-full w-200 h-200"
             src="/me.jpg"
             alt="@tdeekens avatar"
-            width="100"
-            height="100"
+            width="200"
+            height="200"
           />
         </div>
         <Text.Headline as="h1" testId="index-welcome-heading">
