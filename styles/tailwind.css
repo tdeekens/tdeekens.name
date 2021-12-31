@@ -5,3 +5,14 @@
 .page-break {
   page-break-before: always;
 }
+
+@font-face {
+  font-family: Manrope;
+  src: url('../public/Manrope-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url('../public/Manrope-Bold.woff2') format('woff2');
+  font-weight: bold;
+}

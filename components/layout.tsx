@@ -13,7 +13,7 @@ function Layout(props: TLayoutProps) {
       </Head>
       <Header />
       <div className="flex items-center justify-center ">
-        <main className="max-w-6xl mx-4 my-8 font-mono md:mx-16 xl:text-sm print:text-sm">
+        <main className="max-w-6xl mx-4 my-8 font-custom md:mx-16 xl:text-md print:text-sm">
           {props.children}
         </main>
       </div>
