@@ -16,7 +16,9 @@ function Headline(props: TJobHeadlineProps) {
       {props.role}{' '}
       <ExternalLink href={props.href}>{props.company}</ExternalLink>{' '}
       {props.location}{' '}
-      <span className="xl:float-right xl:font-thin">{props.duration}</span>
+      <span className="ml-4 italic font-thin xl:ml-0 xl:float-right xl:not-italic">
+        {props.duration}
+      </span>
     </Text.Headline>
   );
 }
