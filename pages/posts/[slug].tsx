@@ -37,7 +37,7 @@ const Post = (props: TPostProps) => (
     </Head>
 
     <Text.Headline as="h1">{props.matter.title}</Text.Headline>
-    {/* @ts-expect-error */}
+    {/* @ts-expect-error As MDX does not follow types correctly. */}
     <MDXRemote {...props.source} components={components} />
   </>
 );
