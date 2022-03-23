@@ -122,6 +122,22 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
+          role="Remote Principal Engineer at"
+          company="commercetools"
+          location="from Vienna, Austria"
+          duration="March 2022 - now"
+          href="https://commercetools.com"
+        />
+        <Text.Paragraph>
+          An increased focus on frontend architecture across all teams ensuring
+          that architecture evolves with organisational growth to enable teams
+          to develop and deploy their frontends autonomously with as little
+          coordination as possible.
+        </Text.Paragraph>
+      </article>
+
+      <article className="py-4">
+        <Job.Headline
           role="Remote Frontend Tech Lead at"
           location="from Vienna, Austria"
           duration="January 2020 - now"
@@ -216,7 +232,7 @@ const CurriculumVitae: NextPage = () => (
         <Job.Headline
           role="Senior Software Engineer at"
           location="from Vienna, Austria"
-          duration="April 2017 - January 2020"
+          duration="April 2017 - February 2022"
           company="commercetools"
           href="https://commercetools.com"
         />
