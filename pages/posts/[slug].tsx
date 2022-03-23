@@ -1,7 +1,8 @@
 import type { GetStaticPropsContext } from 'next';
 import type { THeadlineProps, TParagraphProps } from '@components/text';
 import type { TUnorderedProps } from '@components/list';
-import { MDXRemoteSerializeResult, MDXRemote } from 'next-mdx-remote';
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { MDXRemote } from 'next-mdx-remote';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
@@ -19,8 +20,12 @@ type TPostProps = {
 };
 
 const components = {
-  h1: (props: THeadlineProps) => <Text.Headline {...props} as="h1" />,
-  h2: (props: THeadlineProps) => <Text.Headline {...props} as="h2" />,
+  h1: (props: Omit<THeadlineProps, 'as'>) => (
+    <Text.Headline as="h1" {...props} />
+  ),
+  h2: (props: Omit<THeadlineProps, 'as'>) => (
+    <Text.Headline as="h2" {...props} />
+  ),
   p: (props: TParagraphProps) => <Text.Paragraph {...props} />,
   ul: (props: TUnorderedProps) => <List.Unordered {...props} />,
 };
@@ -32,6 +37,7 @@ const Post = (props: TPostProps) => (
     </Head>
 
     <Text.Headline as="h1">{props.matter.title}</Text.Headline>
+    {/* @ts-expect-error */}
     <MDXRemote {...props.source} components={components} />
   </>
 );
