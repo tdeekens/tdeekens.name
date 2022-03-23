@@ -140,7 +140,7 @@ const CurriculumVitae: NextPage = () => (
         <Job.Headline
           role="Remote Frontend Tech Lead at"
           location="from Vienna, Austria"
-          duration="January 2020 - now"
+          duration="January 2020 - February 2022"
           company="commercetools"
           href="https://commercetools.com"
         />
@@ -232,7 +232,7 @@ const CurriculumVitae: NextPage = () => (
         <Job.Headline
           role="Senior Software Engineer at"
           location="from Vienna, Austria"
-          duration="April 2017 - February 2022"
+          duration="April 2017 - January 2020"
           company="commercetools"
           href="https://commercetools.com"
         />
