@@ -40,8 +40,8 @@ const Home = (props: THomeProps) => (
         <Text.Paragraph>
           my name is <strong>Tobias Deekens</strong>. I like to design and build{' '}
           <strong>software for the web</strong>. I currently work at
-          commercetools as a Principal Engineer on the Platform Team focussing
-          on Frontend Architecture.
+          commercetools as a Principal Engineer on the Composable Commerce Team
+          focussing on Frontend Architecture.
         </Text.Paragraph>
 
         <Text.Paragraph>You can also find me on:</Text.Paragraph>
