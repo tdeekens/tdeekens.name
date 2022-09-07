@@ -113,6 +113,11 @@ const Home = (props: THomeProps) => (
       <section className="my-8">
         <Text.Headline as="h2">🔗 External articles</Text.Headline>
         <Text.Paragraph>
+          <ExternalLink href="https://techblog.commercetools.com/veni-vidi-vici-my-journey-into-mastering-remote-working-79131ec974d7">
+            Veni, vidi, vici: my journey into mastering remote working
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
           <ExternalLink href="https://techblog.commercetools.com/five-practical-tips-when-using-react-hooks-in-production-990a79745229">
             Five practical tips when using React hooks in production
           </ExternalLink>
