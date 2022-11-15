@@ -106,7 +106,9 @@ const Home = (props: THomeProps) => (
           , listen to some music in my{' '}
           <InternalLink href="/jukebox">jukebox</InternalLink> or enjoy some
           hopefully entertaining{' '}
-          <InternalLink href="/nonsense">nonsense</InternalLink>.
+          <InternalLink href="/nonsense">nonsense</InternalLink>. If you are
+          enjoying cooking I made some mediocre fotos of things I cooked in my{' '}
+          <InternalLink href="/cooking-diary">cooking diary</InternalLink>.
         </Text.Paragraph>
       </section>
 
