@@ -72,6 +72,5 @@ function Dishes(props: TDishesProps) {
     </div>
   );
 }
-Dishes.defaultProps = {};
 
 export default Dishes;

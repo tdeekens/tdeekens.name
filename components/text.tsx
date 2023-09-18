@@ -8,6 +8,7 @@ export type THeadlineProps = {
 
 function Headline(props: THeadlineProps) {
   const HeadlineElement = props.as;
+  const pageBreak = props.pageBreak ?? false;
 
   let className;
   switch (props.as) {
@@ -27,7 +28,7 @@ function Headline(props: THeadlineProps) {
     default:
       break;
   }
-  if (props.pageBreak) {
+  if (pageBreak) {
     className += ' page-break';
   }
 
@@ -37,9 +38,6 @@ function Headline(props: THeadlineProps) {
     </HeadlineElement>
   );
 }
-Headline.defaultProps = {
-  pageBreak: false,
-};
 
 export type TParagraphProps = {
   children: React.ReactNode;
