@@ -115,8 +115,18 @@ const Home = (props: THomeProps) => (
       <section className="my-8">
         <Text.Headline as="h2">🔗 External articles</Text.Headline>
         <Text.Paragraph>
+          <ExternalLink href="https://commercetools.com/blog/how-we-evaluated-the-impact-of-github-copilot-for-3-months">
+            How we evaluated the impact of GitHub Copilot for 3 months
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
           <ExternalLink href="https://techblog.commercetools.com/veni-vidi-vici-my-journey-into-mastering-remote-working-79131ec974d7">
             Veni, vidi, vici: my journey into mastering remote working
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="https://commercetools.com/blog/3-years-of-sustaining-open-source-through-our-donation-program">
+            3 years of sustaining Open Source through our donation program
           </ExternalLink>
         </Text.Paragraph>
         <Text.Paragraph>
