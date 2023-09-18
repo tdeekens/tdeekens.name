@@ -16,7 +16,7 @@ function Header() {
       <div className="flex-shrink-0">
         <InternalLink href="/">
           <Image
-            className="object-cover w-40 h-40 rounded-full"
+            className="object-cover w-10 h-10 rounded-full"
             src="/me.jpg"
             alt="@tdeekens avatar"
             width="40"
