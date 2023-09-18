@@ -5,10 +5,12 @@ type TExternalLinkProps = {
 };
 
 function ExternalLink(props: TExternalLinkProps) {
+  const underline = props.underline ?? true;
+
   return (
     <a
       href={props.href}
-      className={[props.underline && 'underline', 'hover:no-underline']
+      className={[underline && 'underline', 'hover:no-underline']
         .filter(Boolean)
         .join(' ')}
     >
@@ -16,8 +18,5 @@ function ExternalLink(props: TExternalLinkProps) {
     </a>
   );
 }
-ExternalLink.defaultProps = {
-  underline: true,
-};
 
 export default ExternalLink;

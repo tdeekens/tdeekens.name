@@ -25,13 +25,15 @@ const Home = (props: THomeProps) => (
     <div className="flex-auto">
       <section>
         <div className="flex-auto mb-8 text-center">
-          <Image
-            className="object-cover rounded-full w-200 h-200"
-            src="/me.jpg"
-            alt="@tdeekens avatar"
-            width="200"
-            height="200"
-          />
+          <center>
+            <Image
+              className="object-cover rounded-full w-200 h-200"
+              src="/me.jpg"
+              alt="@tdeekens avatar"
+              width="200"
+              height="200"
+            />
+          </center>
         </div>
         <Text.Headline as="h1" testId="index-welcome-heading">
           👋 Hi there,
@@ -163,7 +165,7 @@ const Home = (props: THomeProps) => (
                   {post.title}
                 </InternalLink>
               </Text.Paragraph>
-            )
+            ),
         )}
       </section>
 

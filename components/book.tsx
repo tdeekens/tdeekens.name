@@ -26,6 +26,5 @@ function Book(props: TBookProps) {
     </article>
   );
 }
-Book.defaultProps = {};
 
 export default Book;

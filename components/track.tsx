@@ -19,6 +19,5 @@ function Track(props: TTrackProps) {
     </article>
   );
 }
-Track.defaultProps = {};
 
 export default Track;

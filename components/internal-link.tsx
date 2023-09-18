@@ -8,21 +8,19 @@ type TInternalLinkProps = {
 };
 
 function InternalLink(props: TInternalLinkProps) {
+  const underline = props.underline ?? true;
+
   return (
-    <Link href={props.href} passHref>
-      <a
-        data-test-id={props.testId}
-        className={[props.underline && 'underline', 'hover:no-underline']
-          .filter(Boolean)
-          .join(' ')}
-      >
-        {props.children}
-      </a>
+    <Link
+      href={props.href}
+      data-test-id={props.testId}
+      className={[underline && 'underline', 'hover:no-underline']
+        .filter(Boolean)
+        .join(' ')}
+    >
+      {props.children}
     </Link>
   );
 }
-InternalLink.defaultProps = {
-  underline: true,
-};
 
 export default InternalLink;
