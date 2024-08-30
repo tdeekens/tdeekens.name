@@ -117,6 +117,11 @@ const Home = (props: THomeProps) => (
       <section className="my-8">
         <Text.Headline as="h2">🔗 External articles</Text.Headline>
         <Text.Paragraph>
+          <ExternalLink href="https://commercetools.com/blog/cross-functional-team-collaboration-tools-strategies">
+            Ingredients to successfully manage cross-team engineering projects
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
           <ExternalLink href="https://commercetools.com/blog/how-we-evaluated-the-impact-of-github-copilot-for-3-months">
             How we evaluated the impact of GitHub Copilot for 3 months
           </ExternalLink>
