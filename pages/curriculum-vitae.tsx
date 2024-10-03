@@ -129,11 +129,77 @@ const CurriculumVitae: NextPage = () => (
           href="https://commercetools.com"
         />
         <Text.Paragraph>
-          An increased focus on frontend architecture across all teams ensuring
-          that architecture evolves with organisational growth to enable teams
-          to develop and deploy their frontends autonomously with as little
-          coordination as possible.
+          I was selected as the first Principal Engineer within the Tech
+          Leadership department when commercetools defined a structured Tech
+          Leadership discipline as part of the Individual Contributor track.
+          Tasked with the Director of Tech Leadership to expand the Principal
+          Engineering role to Service Architecture, API Design, Performance,
+          Security and Reliability. My own responsibility increased with a focus
+          on frontend architecture across all teams ensuring that architecture
+          evolves with organizational growth to enable teams to develop and
+          deploy their frontends autonomously with as little coordination as
+          possible.
         </Text.Paragraph>
+        <Job.Details>
+          <section>
+            <Text.Headline as="h3" pageBreak>
+              Responsibilities
+            </Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                <span className="italic">Direction setting:</span> setting
+                technical direction by contributing to a Tech Strategy among the
+                entire company my technical discipline.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Hiring & onboarding:</span> define
+                interview processes and onboarding plans for other Principal
+                Engineers joining the Tech Leadership department.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Project leadership:</span> Led highly
+                visible initiatives spanning across all product teams with
+                stakeholders across the entire company.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Public visibility:</span> Contributed
+                to internal and external visibility of the company by publishing
+                blog posts, giving conference talks and build partnerships with
+                other companies.
+              </List.Item>
+            </List.Unordered>
+          </section>
+          <section>
+            <Text.Headline as="h3">Tasks</Text.Headline>
+            <List.Unordered>
+              <List.Item>
+                Led two large scale redesigns of the Merchant Center involving
+                eight teams for two and four months. In the process defined the
+                skeleton how cross-team projects are managed in engineering
+                within commercetools through Tech Leadership.
+              </List.Item>
+              <List.Item>
+                Setup and strengthened the Chapter function which drives
+                technical initiatives across various teams. Planned and
+                implemented a Chapter Rotation which ensures continuous
+                technical investments to improve operability and maintenance
+                through the entire engineering department.
+              </List.Item>
+              <List.Item>
+                Managed the evaluation and introduction of GitHub Copilot to the
+                engineering department. This included a series of workshops and
+                internal blog posts to transfer knowledge learnings between
+                teams.
+              </List.Item>
+              <List.Item>
+                Introduced a concept called Service Quality for service tiering
+                paired with production readiness checks. This concept ensures
+                services among teams follow similar quality well defined
+                standards to ensure operability.
+              </List.Item>
+            </List.Unordered>
+          </section>
+        </Job.Details>
       </article>
 
       <article className="py-4">
@@ -179,7 +245,7 @@ const CurriculumVitae: NextPage = () => (
               </List.Item>
               <List.Item>
                 <span className="italic">Onboarding:</span> defining
-                organisation wide onboarding goals for frontend engineers in all
+                organization wide onboarding goals for frontend engineers in all
                 teams. Enabling and easing the continuous growth of the
                 department.
               </List.Item>
@@ -239,7 +305,7 @@ const CurriculumVitae: NextPage = () => (
         <Text.Paragraph>
           Working as a Software Engineer focussing on JavaScript across the
           stack within a cross-functional team building an{' '}
-          <strong>internationalised</strong>, customisable web application for{' '}
+          <strong>internationalized</strong>, customizable web application for{' '}
           <strong>e-commerce</strong> merchants allowing administration of
           complex and large scale product, category, order, discount and
           customer data.
@@ -371,10 +437,10 @@ const CurriculumVitae: NextPage = () => (
         </Text.Paragraph>
         <Text.Paragraph>
           Working on frontend and related backends powering browser based data
-          visualisations of social media data from various sources. Activities
+          visualizations of social media data from various sources. Activities
           include the implementation of performant and reusable{' '}
-          <strong>visualisation components</strong> using Backbone.js as well as
-          maintaining a large, highly interactive and customisable dashboard UI.
+          <strong>visualization components</strong> using Backbone.js as well as
+          maintaining a large, highly interactive and customizable dashboard UI.
           All with a focus on <strong>Continuous Integration</strong> and
           Continuous Delivery in a <strong>test-driven and pull request</strong>{' '}
           based development environment using GitHub and TravisCI.
@@ -418,7 +484,7 @@ const CurriculumVitae: NextPage = () => (
               </List.Item>
               <List.Item>
                 Implementing an Instagram OAuth2 integration allowing to build
-                visualisations with Instagram data.
+                visualizations with Instagram data.
               </List.Item>
             </List.Unordered>
           </section>
@@ -573,7 +639,7 @@ const CurriculumVitae: NextPage = () => (
           entailed a systematic comparison of <strong>NoSQL</strong> (BigTable,
           Dynamo and MongoDB) and <strong>SQL</strong> (MySQL and Oracle)
           databases while performing benchmarks and developing a backend
-          angostic <strong>proof-of-concept prototype</strong> of a product
+          agnostic <strong>proof-of-concept prototype</strong> of a product
           database for their media asset management system.
         </Text.Paragraph>
       </article>
@@ -590,7 +656,9 @@ const CurriculumVitae: NextPage = () => (
           Working on project Cadena in designing and implementing a{' '}
           <strong>Software as a Service</strong> supporting elderly care
           services build upon{' '}
-          <strong>Adobe Flex®, ActionScript, Flash Media Server and PHP</strong>{' '}
+          <strong>
+            Adobe Flex®, ActionScript, Flash Media Server and PHP
+          </strong>{' '}
           (Zend backed). The application’s features included video conferences
           between care service and a retiree and administration of clinical
           records. My duties included implementation and{' '}
@@ -659,7 +727,7 @@ const CurriculumVitae: NextPage = () => (
           A Express middleware (or Hapi plugin) to easily export request timing
           metrics from an Express/Hapi application to Prometheus. The library
           contains few but powerful abilities to configure e.g. labels or to
-          perform normalisation on measured values.
+          perform normalization on measured values.
         </Text.Paragraph>
       </article>
       <article className="py-2">
