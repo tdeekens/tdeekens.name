@@ -6,10 +6,12 @@ import { MDXRemote } from 'next-mdx-remote';
 import fs from 'fs';
 import path from 'path';
 import Head from 'next/head';
+import Image from 'next/image';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import Text from '@components/text';
 import List from '@components/list';
+import Blockquote from '@components/blockquote';
 
 type TPostProps = {
   matter: {
@@ -28,6 +30,8 @@ const components = {
   ),
   p: (props: TParagraphProps) => <Text.Paragraph {...props} />,
   ul: (props: TUnorderedProps) => <List.Unordered {...props} />,
+  Blockquote,
+  Image,
 };
 
 const Post = (props: TPostProps) => (
@@ -37,7 +41,6 @@ const Post = (props: TPostProps) => (
     </Head>
 
     <Text.Headline as="h1">{props.matter.title}</Text.Headline>
-    {/* @ts-expect-error As MDX does not follow types correctly. */}
     <MDXRemote {...props.source} components={components} />
   </>
 );
@@ -45,7 +48,7 @@ const Post = (props: TPostProps) => (
 const postsDirectory = path.join(process.cwd(), '_posts');
 
 export async function getStaticProps(
-  context: GetStaticPropsContext<Pick<TPostProps, 'slug'>>
+  context: GetStaticPropsContext<Pick<TPostProps, 'slug'>>,
 ) {
   const files = fs.readdirSync(postsDirectory);
   // @ts-expect-error params always exist (pray)
@@ -74,7 +77,7 @@ export async function getStaticPaths() {
         .replace(/\.mdx?$/, '')
         .split('-')
         .splice(1)
-        .join('-')
+        .join('-'),
     )
     .map((slug) => ({ params: { slug } }));
 
