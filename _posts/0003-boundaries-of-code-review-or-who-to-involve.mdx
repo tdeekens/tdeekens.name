@@ -1,0 +1,19 @@
+---
+title: Boundaries of code review (or who to involve)
+slug: boundaries-of-code-review-or-who-to-involve
+draft: false
+---
+
+Software engineering seems to agree that code review is a meaningful and important activity. Still, it seems to disagree on how to carry out the act and who to involve. Pre and post commit review is often thrown into the bowl, stirred up and boiled with efficiency (time to production) spices - a mostly misleading argument. It should however be a first class citizen and priority to software development otherwise it will be perceived as a bottleneck and inevitably be pushed in to a corner or even discarded.
+
+Code review allows to tighten and stabilise code under inspection. Creating an agreement around it accepting that it will embody all communication previously performed around it. The more of this being carried out upfront, the lower the fragility and need to gratuitously reiterate around it later on. New code is easier to get into master than out again. Clearly it will be read more often than it is written. Poor decisions will hit a engineering department over an over and eventually slow it down over time. Hence, there is a higher cost in change after merging than there is before.
+
+The often forgotten stakeholder and participant in code review is the consumer of an API or component. He is to judge if it fits his domain and integrates well. In order not to allow to too many cooks spoiling the broth different roles can help and be set up. Roles defining themselves around the area they should have a say in. Cohesion and consistency - even though often overrated - should be judged by the creators of a module and the owners of the project. External facing artefacts such as APIs or UX should be evaluated by the appropriate party themselves.
+
+Lastly, the importance of review friendliness increases with the number of its participants. An approach to this to commit early and often to tighten up interaction loops. Communication around a feature is linear in time as should the history of its changes. This allows everybody to step in early and avoids the big bang review. A kind of review often leading to resignation and blindfold merging.
+
+Summarising the above
+
+- Do not underestimate the impact and importance of code review due to time constraints: it comes to hunt you
+- Do not hesitate to involve different parties from across an organisation: still define their roles and focus areas
+- Do not envision code review as a process or quality gate: rather guide communication and change through them

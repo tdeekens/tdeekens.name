@@ -27,7 +27,7 @@ const Home = (props: THomeProps) => (
         <div className="flex-auto mb-8 text-center">
           <center>
             <Image
-              className="object-cover rounded-full w-200 h-200"
+              className="object-cover rounded-full w-[200px] h-[200px]"
               src="/me.jpg"
               alt="@tdeekens avatar"
               width="200"
@@ -116,11 +116,7 @@ const Home = (props: THomeProps) => (
 
       <section className="my-8">
         <Text.Headline as="h2">🔗 External articles</Text.Headline>
-        <Text.Paragraph>
-          <ExternalLink href="https://commercetools.com/blog/cross-functional-team-collaboration-tools-strategies">
-            Ingredients to successfully manage cross-team engineering projects
-          </ExternalLink>
-        </Text.Paragraph>
+        <Text.Paragraph></Text.Paragraph>
         <Text.Paragraph>
           <ExternalLink href="https://commercetools.com/blog/how-we-evaluated-the-impact-of-github-copilot-for-3-months">
             How we evaluated the impact of GitHub Copilot for 3 months
@@ -177,6 +173,16 @@ const Home = (props: THomeProps) => (
       <section className="my-8">
         <Text.Headline as="h2">🗣️ Talks</Text.Headline>
         <Text.Paragraph>
+          <ExternalLink href="./bedcon.pdf">
+            Bridging silos using cross-team rotations
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
+          <ExternalLink href="./decompiled.pdf">
+            Ingredients to successfully manage cross-team projects
+          </ExternalLink>
+        </Text.Paragraph>
+        <Text.Paragraph>
           <ExternalLink href="https://slides.com/tdeekens/power-to-the-toggles-exended">
             Power to the toggles - how feature flags liberate your development
             workflow
@@ -207,7 +213,7 @@ const postsDirectory = path.join(process.cwd(), '_posts');
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(postsDirectory);
-  const posts = files.map((filename) => {
+  const posts = files.reverse().map((filename) => {
     const rawPost = fs.readFileSync(`${postsDirectory}/${filename}`, 'utf-8');
     const parsedWithFrontmatter = matter(rawPost);
 
