@@ -1,4 +1,4 @@
-import { Children, cloneElement } from 'react';
+import { type ReactElement, Children, cloneElement } from 'react';
 import Text from '@components/text';
 import ExternalLink from '@components/external-link';
 
@@ -30,9 +30,12 @@ function Details(props: TJobDetailsProps) {
   const detailsChildren = Children.map(props.children, (child) => {
     // NOTE: Allowing to intersperse other elements than `Item`.
     if (child) {
-      const clonedChild = cloneElement(child, {
-        className: 'sm:my-4 flex-grow flex-1 pr-8',
-      });
+      const clonedChild = cloneElement(
+        child as ReactElement<Record<string, unknown>>,
+        {
+          className: 'sm:my-4 flex-grow flex-1 pr-8',
+        },
+      );
 
       return clonedChild;
     }
