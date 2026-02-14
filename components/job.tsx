@@ -24,7 +24,7 @@ function Headline(props: TJobHeadlineProps) {
 }
 
 type TJobDetailsProps = {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactElement | React.ReactElement[];
 };
 function Details(props: TJobDetailsProps) {
   const detailsChildren = Children.map(props.children, (child) => {
