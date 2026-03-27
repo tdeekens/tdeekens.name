@@ -122,6 +122,86 @@ const dishes6 = [
     src: '/cooking-diary/dish-36.png',
   },
 ];
+const dishes7 = [
+  {
+    src: '/cooking-diary/dish-37.png',
+  },
+  {
+    src: '/cooking-diary/dish-38.png',
+  },
+  {
+    src: '/cooking-diary/dish-39.png',
+  },
+  {
+    src: '/cooking-diary/dish-40.png',
+  },
+  {
+    src: '/cooking-diary/dish-41.png',
+  },
+  {
+    src: '/cooking-diary/dish-42.png',
+  },
+];
+const dishes8 = [
+  {
+    src: '/cooking-diary/dish-43.png',
+  },
+  {
+    src: '/cooking-diary/dish-44.png',
+  },
+  {
+    src: '/cooking-diary/dish-45.png',
+  },
+  {
+    src: '/cooking-diary/dish-46.png',
+  },
+  {
+    src: '/cooking-diary/dish-47.png',
+  },
+  {
+    src: '/cooking-diary/dish-48.png',
+  },
+];
+const dishes9 = [
+  {
+    src: '/cooking-diary/dish-49.png',
+  },
+  {
+    src: '/cooking-diary/dish-50.png',
+  },
+  {
+    src: '/cooking-diary/dish-51.png',
+  },
+  {
+    src: '/cooking-diary/dish-52.png',
+  },
+  {
+    src: '/cooking-diary/dish-53.png',
+  },
+  {
+    src: '/cooking-diary/dish-54.png',
+  },
+];
+const dishes10 = [
+  {
+    src: '/cooking-diary/dish-55.png',
+  },
+  {
+    src: '/cooking-diary/dish-56.png',
+  },
+  {
+    src: '/cooking-diary/dish-57.png',
+  },
+  {
+    src: '/cooking-diary/dish-58.png',
+  },
+  {
+    src: '/cooking-diary/dish-59.png',
+  },
+  {
+    src: '/cooking-diary/dish-60.png',
+  },
+];
 
 const Bookshelf = () => (
   <>
@@ -139,12 +219,16 @@ const Bookshelf = () => (
     </Text.Paragraph>
 
     <section className="overflow-hidden text-gray-700">
-      <Dishes images={dishes1} />
-      <Dishes images={dishes2} />
-      <Dishes images={dishes3} />
-      <Dishes images={dishes4} />
-      <Dishes images={dishes5} />
+      <Dishes images={dishes10} />
+      <Dishes images={dishes9} />
+      <Dishes images={dishes8} />
+      <Dishes images={dishes7} />
       <Dishes images={dishes6} />
+      <Dishes images={dishes5} />
+      <Dishes images={dishes4} />
+      <Dishes images={dishes3} />
+      <Dishes images={dishes2} />
+      <Dishes images={dishes1} />
     </section>
   </>
 );
