@@ -1,5 +1,11 @@
 {
   "permissions": {
-    "allow": ["Bash(pnpm add:*)", "Bash(pnpm build:*)"]
+    "allow": [
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(npm run:*)",
+      "Bash(claude mcp:*)",
+      "mcp__anybox__search_bookmarks"
+    ]
   }
 }
