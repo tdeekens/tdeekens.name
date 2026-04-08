@@ -105,7 +105,8 @@ const Home = (props: THomeProps) => (
           <InternalLink testId="bookshelf-link" href="/bookshelf">
             bookshelf
           </InternalLink>
-          , listen to some music in my{' '}
+          , browse a <InternalLink href="/blogroll">blogroll</InternalLink>,
+          listen to some music in my{' '}
           <InternalLink href="/jukebox">jukebox</InternalLink> or enjoy some
           hopefully entertaining{' '}
           <InternalLink href="/nonsense">nonsense</InternalLink>. If you are
