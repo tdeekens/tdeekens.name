@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from '@components/header';
+import { Analytics } from '@vercel/analytics/next';
 
 type TLayoutProps = {
   children: React.ReactElement;
@@ -17,6 +18,7 @@ function Layout(props: TLayoutProps) {
           {props.children}
         </main>
       </div>
+      <Analytics />
     </div>
   );
 }
