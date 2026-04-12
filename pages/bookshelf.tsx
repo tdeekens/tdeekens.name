@@ -19,6 +19,276 @@ const Bookshelf = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       <Book
+        title="The Five Dysfunctions of a Team"
+        href="https://amazon.de/dp/0787960756"
+        src="/bookshelf/five-dysfunctions.jpg"
+        author="Patrick Lencioni"
+      />
+      <Book
+        title="Clean Architecture"
+        href="https://amazon.de/dp/0134494164"
+        src="/bookshelf/clean-architecture.jpg"
+        author="Robert C. Martin"
+      />
+      <Book
+        title="A Philosophy of Software Design"
+        href="https://amazon.de/dp/1732102201"
+        src="/bookshelf/philosophy-software-design.jpg"
+        author="John K. Ousterhout"
+      />
+      <Book
+        title="Unlocking Leadership Mindtraps"
+        href="https://amazon.de/dp/1503609014"
+        src="/bookshelf/unlocking-leadership.png"
+        author="Jennifer Garvey Berger"
+      />
+      <Book
+        title="The Upstarts"
+        href="https://amazon.de/dp/0316523135"
+        src="/bookshelf/the-upstarts.jpg"
+        author="Brad Stone"
+      />
+      <Book
+        title="Essentialism: The Disciplined Pursuit of Less"
+        href="https://amazon.de/dp/0804137404"
+        src="/bookshelf/essentialism.jpg"
+        author="Greg McKeown"
+      />
+      <Book
+        title="System Design Interview"
+        href="https://amazon.de/dp/B08CMF2CQF"
+        src="/bookshelf/system-design-interview.jpg"
+        author="Alex Xu"
+      />
+      <Book
+        title="So Good They Can't Ignore You"
+        href="https://amazon.de/dp/0349415862"
+        src="/bookshelf/so-good-they-cant-ignore-you.jpg"
+        author="Cal Newport"
+      />
+      <Book
+        title="Scaling Fast"
+        href="https://amazon.de/dp/1662964773"
+        src="/bookshelf/scaling-fast.png"
+        author="Yoav Shoham"
+      />
+      <Book
+        title="Modern Software Engineering"
+        href="https://amazon.de/dp/0137314914"
+        src="/bookshelf/modern-software-engineering.jpg"
+        author="David Farley"
+      />
+      <Book
+        title="Engineering Management for the Rest of Us"
+        href="https://amazon.de/dp/B0BHX6NLGZ"
+        src="/bookshelf/engineering-management-rest-of-us.jpg"
+        author="Sarah Drasner"
+      />
+      <Book
+        title="Good Strategy/Bad Strategy"
+        href="https://amazon.de/dp/1781256179"
+        src="/bookshelf/good-strategy-bad-strategy.jpg"
+        author="Richard Rumelt"
+      />
+      <Book
+        title="Four Thousand Weeks"
+        href="https://amazon.de/dp/1784704008"
+        src="/bookshelf/four-thousand-weeks.jpg"
+        author="Oliver Burkeman"
+      />
+      <Book
+        title="Quit: The Power of Knowing When to Walk Away"
+        href="https://amazon.de/dp/1529146151"
+        src="/bookshelf/quit.jpg"
+        author="Annie Duke"
+      />
+      <Book
+        title="The Deficit Myth"
+        href="https://amazon.de/dp/1529352568"
+        src="/bookshelf/deficit-myth.jpg"
+        author="Stephanie Kelton"
+      />
+      <Book
+        title="Thinking in Systems"
+        href="https://amazon.de/dp/1603580557"
+        src="/bookshelf/thinking-in-systems.jpg"
+        author="Donella H. Meadows"
+      />
+      <Book
+        title="Make Time"
+        href="https://amazon.de/dp/0593079582"
+        src="/bookshelf/make-time.jpg"
+        author="Jake Knapp"
+      />
+      <Book
+        title="The 15 Commitments of Conscious Leadership"
+        href="https://amazon.de/dp/0990976904"
+        src="/bookshelf/15-commitments.jpg"
+        author="Jim Dethmer"
+      />
+      <Book
+        title="Building Micro-Frontends"
+        href="https://amazon.de/dp/1492082996"
+        src="/bookshelf/building-micro-frontends.jpg"
+        author="Luca Mezzalira"
+      />
+      <Book
+        title="Factfulness"
+        href="https://amazon.de/dp/1250123828"
+        src="/bookshelf/factfulness.jpg"
+        author="Hans Rosling"
+      />
+      <Book
+        title="On Writing Well"
+        href="https://amazon.de/dp/0060891548"
+        src="/bookshelf/on-writing-well.jpg"
+        author="William Zinsser"
+      />
+      <Book
+        title="Working in Public"
+        href="https://amazon.de/dp/0578675862"
+        src="/bookshelf/working-in-public.jpg"
+        author="Nadia Eghbal"
+      />
+      <Book
+        title="Radical Candor"
+        href="https://amazon.de/dp/1529038340"
+        src="/bookshelf/radical-candor.jpg"
+        author="Kim Scott"
+      />
+      <Book
+        title="Death by Meeting"
+        href="https://amazon.de/dp/0787968056"
+        src="/bookshelf/death-by-meeting.jpg"
+        author="Patrick Lencioni"
+      />
+      <Book
+        title="No Rules Rules: Netflix and the Culture of Reinvention"
+        href="https://amazon.de/dp/0753553635"
+        src="/bookshelf/no-rules-rules.jpg"
+        author="Reed Hastings and Erin Meyer"
+      />
+      <Book
+        title="Baustellen der Nation"
+        href="https://amazon.de/dp/3550202415"
+        src="/bookshelf/baustellen-der-nation.png"
+        author="Philip Banse and Ulf Buermeyer"
+      />
+      <Book
+        title="The Software Engineer's Guidebook"
+        href="https://amazon.de/dp/908338182X"
+        src="/bookshelf/software-engineers-guidebook.jpg"
+        author="Gergely Orosz"
+      />
+      <Book
+        title="Rethinking Productivity in Software Engineering"
+        href="https://amazon.de/dp/B07RHXW6T7"
+        src="/bookshelf/rethinking-productivity.jpg"
+        author="Caitlin Sadowski and Thomas Zimmermann"
+      />
+      <Book
+        title="How the Future Works"
+        href="https://amazon.de/dp/111987095X"
+        src="/bookshelf/how-the-future-works.png"
+        author="Brian Elliott"
+      />
+      <Book
+        title="Innovator's Dilemma"
+        href="https://amazon.de/dp/1633691780"
+        src="/bookshelf/innovators-dilemma.jpg"
+        author="Clayton M. Christensen"
+      />
+      <Book
+        title="Project Zero Trust"
+        href="https://amazon.de/dp/1119884845"
+        src="/bookshelf/zero-trust.png"
+        author="George Finney"
+      />
+      <Book
+        title="Spiral Dynamics: Mastering Values, Leadership and Change"
+        href="https://amazon.de/dp/1405133562"
+        src="/bookshelf/spiral-dynamics.jpg"
+        author="Don Beck and Christopher Cowan"
+      />
+      <Book
+        title="Getting to Yes"
+        href="https://amazon.de/dp/0143118757"
+        src="/bookshelf/getting-to-yes.jpg"
+        author="Roger Fisher and William Ury"
+      />
+      <Book
+        title="Your Code as a Crime Scene"
+        href="https://amazon.de/dp/B0CSJR386C"
+        src="/bookshelf/code-crime-scene.jpg"
+        author="Adam Tornhill"
+      />
+      <Book
+        title="Slow Productivity"
+        href="https://amazon.de/dp/0593719433"
+        src="/bookshelf/slow-productivity.jpg"
+        author="Cal Newport"
+      />
+      <Book
+        title="Facilitating Software Architecture"
+        href="https://amazon.de/dp/1098151860"
+        src="/bookshelf/facilitating-software-architecture.png"
+        author="Andrew Harmel-Law"
+      />
+      <Book
+        title="Talking to My Daughter"
+        href="https://amazon.de/dp/B07P25G9WL"
+        src="/bookshelf/talking-to-my-daughter.jpg"
+        author="Yanis Varoufakis"
+      />
+      <Book
+        title="Facilitator's Guide to Participatory Decision-Making"
+        href="https://amazon.de/dp/1118404955"
+        src="/bookshelf/facilitators-guide.jpg"
+        author="Sam Kaner"
+      />
+      <Book
+        title="AI Engineering: Building Applications with Foundation Models"
+        href="https://amazon.de/dp/1098166302"
+        src="/bookshelf/ai-engineering.jpg"
+        author="Chip Huyen"
+      />
+      <Book
+        title="Co-Intelligence: Living and Working with AI"
+        href="https://amazon.de/dp/059371671X"
+        src="/bookshelf/co-intelligence.jpg"
+        author="Ethan Mollick"
+      />
+      <Book
+        title="The Art of Gathering: How We Meet and Why It Matters"
+        href="https://amazon.de/dp/0241973848"
+        src="/bookshelf/art-of-gathering.jpg"
+        author="Priya Parker"
+      />
+      <Book
+        title="The Power of Geography"
+        href="https://amazon.de/-/en/Tim-Marshall-ebook/dp/B08SGJ9WHG"
+        src="/bookshelf/power-of-geography.jpg"
+        author="Tim Marshall"
+      />
+      <Book
+        title="Leading Effective Engineering Teams"
+        href="https://amazon.de/dp/109814824X"
+        src="/bookshelf/leading-effective-teams.jpg"
+        author="Addy Osmani"
+      />
+      <Book
+        title="Wiring the Winning Organization"
+        href="https://amazon.de/dp/B0BY39YKBT"
+        src="/bookshelf/wiring-winning-organization.jpg"
+        author="Gene Kim and Steven J. Spear"
+      />
+      <Book
+        title="Worth Dying For: The Power and Politics of Flags"
+        href="https://amazon.de/dp/B08CMF2CQF"
+        src="/bookshelf/worth-dying-for.jpg"
+        author="Tim Marshall"
+      />
+      <Book
         title="The Stuff of Thought"
         href="https://www.amazon.com/The-Stuff-Thought-Language-Window/dp/0143114247"
         src="/bookshelf/stuff-of-thought.jpg"
