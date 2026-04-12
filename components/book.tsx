@@ -20,7 +20,9 @@ function Book(props: TBookProps) {
         </ExternalLink>
       </div>
       <div>
-        <Text.Headline as="h3">{props.title}</Text.Headline>
+        <ExternalLink underline={true} href={props.href}>
+          <Text.Headline as="h3">{props.title}</Text.Headline>
+        </ExternalLink>
         <Text.Headline as="h4">by {props.author}</Text.Headline>
       </div>
     </article>
