@@ -158,16 +158,16 @@ const CurriculumVitae: NextPage = () => (
               </List.Item>
               <List.Item>
                 <span className="italic">Project leadership:</span> Led highly
-                visible initiatives spanning across all product teams with
-                stakeholders across the entire company.
+                visible initiatives spanning all product teams with stakeholders
+                across the entire company.
               </List.Item>
               <List.Item>
                 <span className="italic">Technical excellence:</span> Defined
                 knowledge sharing mechanisms and engineering practices through
-                which technical quality was sustained over 8+ years within my
-                discipline. Notable examples are software observability and On
-                Call rotations, enabling delivery through CI/CD pipelines,
-                release and security automation among others.
+                which I sustained technical quality over 8+ years within my
+                discipline, including software observability and On Call
+                rotations, CI/CD pipelines, release and security automation and
+                others.
               </List.Item>
               <List.Item>
                 <span className="italic">Public visibility:</span> Contributed
@@ -194,32 +194,32 @@ const CurriculumVitae: NextPage = () => (
                 design documents.
               </List.Item>
               <List.Item>
-                Led two large scale redesigns of the Merchant Center involving
+                Led two large-scale redesigns of the Merchant Center involving
                 eight teams for two and four months respectively. In the process
                 defined the framework for how cross-team projects are managed in
                 engineering within commercetools through tech leadership.
               </List.Item>
               <List.Item>
                 Set up and strengthened cross-team collaboration called Chapters
-                which drives technical initiatives across various teams. Planned
-                and implemented a Chapter Rotation which ensures continuous
+                which drove technical initiatives across various teams; planned
+                and implemented a chapter rotation which ensured continuous
                 technical investments to improve operability and maintenance
-                through the entire engineering department. Using Chapters to
+                through the entire engineering department; used Chapters to
                 structure and organize engineering onsites spanning all 100+
                 individual contributors in engineering.
               </List.Item>
               <List.Item>
                 Managed the evaluation and introduction of GitHub Copilot,
                 Cursor, Claude Code and OpenCode to the engineering department.
-                This included a series of workshops, company wide upskilling and
+                This included a series of workshops, company-wide upskilling and
                 internal blog posts to transfer learnings between all
                 departments.
               </List.Item>
               <List.Item>
                 Introduced a concept called Service Quality for service tiering
-                paired with production readiness checks. This concept ensures
-                services across teams follow similar, well-defined quality
-                standards to ensure operability.
+                paired with production readiness checks. This concept ensured
+                services across teams followed similar, well-defined quality
+                standards for operability.
               </List.Item>
             </List.Unordered>
           </section>
