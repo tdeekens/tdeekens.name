@@ -122,7 +122,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
-          role="Remote Principal Engineer at"
+          jobRole="Remote Principal Engineer at"
           company="commercetools"
           location="from Vienna, Austria"
           duration="March 2022 - now"
@@ -147,14 +147,14 @@ const CurriculumVitae: NextPage = () => (
             </Text.Headline>
             <List.Unordered>
               <List.Item>
-                <span className="italic">Direction setting:</span> setting
-                technical direction by contributing to a Tech Strategy among the
-                entire company my technical discipline.
+                <span className="italic">Technical direction setting:</span>{' '}
+                setting technical direction by contributing to tech and product
+                strategies among the entire company.
               </List.Item>
               <List.Item>
                 <span className="italic">Hiring & onboarding:</span> define
                 interview processes and onboarding plans for other Principal
-                Engineers joining the Tech Leadership department.
+                Engineers joining the tech leadership department.
               </List.Item>
               <List.Item>
                 <span className="italic">Project leadership:</span> Led highly
@@ -162,10 +162,24 @@ const CurriculumVitae: NextPage = () => (
                 stakeholders across the entire company.
               </List.Item>
               <List.Item>
+                <span className="italic">Technical excellence:</span> Defined
+                knowledge sharing mechanisms and engineering practices through
+                which technical quality was sustained over 8+ years within my
+                discipline. Notable examples are software observability and On
+                Call rotations, enabling delivery through CI/CD pipelines,
+                release and security automation among others.
+              </List.Item>
+              <List.Item>
                 <span className="italic">Public visibility:</span> Contributed
                 to internal and external visibility of the company by publishing
                 blog posts, giving conference talks and build partnerships with
                 other companies.
+              </List.Item>
+              <List.Item>
+                <span className="italic">Challenging the status quo:</span>{' '}
+                Introducing novel tools and ways of working such as introducing
+                Artificial Intelligence in 2023, rolling out Checkly in 2020,
+                feature flagging in 2018 and more.
               </List.Item>
             </List.Unordered>
           </section>
@@ -173,23 +187,33 @@ const CurriculumVitae: NextPage = () => (
             <Text.Headline as="h3">Tasks</Text.Headline>
             <List.Unordered>
               <List.Item>
+                Defined the structure, ways of working and led the execution of
+                technical working groups spanning various teams and disciples.
+                These working groups researched and defined the architecture for
+                5+ teams through RFCs (Request for Comments) and technical
+                design documents.
+              </List.Item>
+              <List.Item>
                 Led two large scale redesigns of the Merchant Center involving
                 eight teams for two and four months. In the process defined the
                 skeleton how cross-team projects are managed in engineering
-                within commercetools through Tech Leadership.
+                within commercetools through tech leadership.
               </List.Item>
               <List.Item>
-                Setup and strengthened the Chapter function which drives
-                technical initiatives across various teams. Planned and
-                implemented a Chapter Rotation which ensures continuous
+                Setup and strengthened cross-team collaboration called Chapters
+                which drives technical initiatives across various teams. Planned
+                and implemented a Chapter Rotation which ensures continuous
                 technical investments to improve operability and maintenance
-                through the entire engineering department.
+                through the entire engineering department. Using Chapters to
+                structure and organize engineering onsites spanning all 100+
+                individual contributors in engineering.
               </List.Item>
               <List.Item>
-                Managed the evaluation and introduction of GitHub Copilot to the
-                engineering department. This included a series of workshops and
-                internal blog posts to transfer knowledge learnings between
-                teams.
+                Managed the evaluation and introduction of GitHub Copilot,
+                Cursor, Claude Code and OpenCode to the engineering department.
+                This included a series of workshops, company wide upskilling and
+                internal blog posts to transfer knowledge learnings between all
+                departments.
               </List.Item>
               <List.Item>
                 Introduced a concept called Service Quality for service tiering
@@ -204,7 +228,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
-          role="Remote Frontend Tech Lead at"
+          jobRole="Remote Frontend Tech Lead at"
           location="from Vienna, Austria"
           duration="January 2020 - February 2022"
           company="commercetools"
@@ -296,7 +320,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
-          role="Senior Software Engineer at"
+          jobRole="Senior Software Engineer at"
           location="from Vienna, Austria"
           duration="April 2017 - January 2020"
           company="commercetools"
@@ -424,7 +448,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
-          role="Tech Lead & JavaScript Developer at"
+          jobRole="Tech Lead & JavaScript Developer at"
           location="from Berlin, Germany"
           duration="March 2016 - March 2017"
           company="Brandwatch"
@@ -498,7 +522,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-4">
         <Job.Headline
-          role="Frontend Engineer at"
+          jobRole="Frontend Engineer at"
           location="from Berlin, Germany"
           duration="September 2014 - March 2016"
           company="E-Post Development GmbH"
@@ -565,7 +589,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-2">
         <Job.Headline
-          role="Thesis work at"
+          jobRole="Thesis work at"
           location="in Gothenburg, Sweden"
           duration="February 2014 - June 2014"
           company="Ericsson AB"
@@ -585,7 +609,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-2 print:hidden">
         <Job.Headline
-          role="Summer job at"
+          jobRole="Summer job at"
           location="from Munich, Germany"
           duration="July 2013 - September 2013"
           company="Scandio GmbH"
@@ -608,7 +632,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-2 print:hidden">
         <Job.Headline
-          role="Internship at"
+          jobRole="Internship at"
           location="from Hamburg, Germany"
           duration="April 2012 - October 2012"
           company="zweitwerk GmbH"
@@ -627,7 +651,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-2 page-break">
         <Job.Headline
-          role="Thesis work at"
+          jobRole="Thesis work at"
           location="from Hamburg, Germany"
           duration="April 2012 - October 2012"
           company="zweitwerk GmbH"
@@ -646,7 +670,7 @@ const CurriculumVitae: NextPage = () => (
 
       <article className="py-2 print:hidden">
         <Job.Headline
-          role="Student Assistant at"
+          jobRole="Student Assistant at"
           location=""
           duration="May 2009 - April 2010"
           company="Universiät Bamberg"
@@ -656,9 +680,7 @@ const CurriculumVitae: NextPage = () => (
           Working on project Cadena in designing and implementing a{' '}
           <strong>Software as a Service</strong> supporting elderly care
           services build upon{' '}
-          <strong>
-            Adobe Flex®, ActionScript, Flash Media Server and PHP
-          </strong>{' '}
+          <strong>Adobe Flex®, ActionScript, Flash Media Server and PHP</strong>{' '}
           (Zend backed). The application’s features included video conferences
           between care service and a retiree and administration of clinical
           records. My duties included implementation and{' '}

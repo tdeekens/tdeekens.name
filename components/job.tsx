@@ -3,7 +3,7 @@ import Text from '@components/text';
 import ExternalLink from '@components/external-link';
 
 type TJobHeadlineProps = {
-  role: string;
+  jobRole: string;
   location: string;
   duration: string;
   href: string;
@@ -13,7 +13,7 @@ type TJobHeadlineProps = {
 function Headline(props: TJobHeadlineProps) {
   return (
     <Text.Headline as="h3">
-      {props.role}{' '}
+      {props.jobRole}{' '}
       <ExternalLink href={props.href}>{props.company}</ExternalLink>{' '}
       {props.location}{' '}
       <span className="italic font-thin xl:float-right xl:not-italic">
