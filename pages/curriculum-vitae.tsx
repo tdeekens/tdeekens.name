@@ -132,13 +132,13 @@ const CurriculumVitae: NextPage = () => (
           I was selected as the first Principal Engineer within the Tech
           Leadership department when commercetools defined a structured Tech
           Leadership discipline as part of the Individual Contributor track.
-          Tasked with the Director of Tech Leadership to expand the Principal
+          Tasked by the Director of Tech Leadership to expand the Principal
           Engineering role to Service Architecture, API Design, Performance,
           Security and Reliability. My own responsibility increased with a focus
-          on frontend architecture across all teams ensuring that architecture
+          on frontend architecture across all teams, ensuring that architecture
           evolves with organizational growth to enable teams to develop and
-          deploy their frontends autonomously with as little coordination as
-          possible.
+          deploy their frontend applications autonomously with as little
+          coordination as possible.
         </Text.Paragraph>
         <Job.Details>
           <section>
@@ -148,11 +148,11 @@ const CurriculumVitae: NextPage = () => (
             <List.Unordered>
               <List.Item>
                 <span className="italic">Technical direction setting:</span>{' '}
-                setting technical direction by contributing to tech and product
-                strategies among the entire company.
+                Contributed to tech and product strategies across the entire
+                company.
               </List.Item>
               <List.Item>
-                <span className="italic">Hiring & onboarding:</span> define
+                <span className="italic">Hiring & onboarding:</span> Defined
                 interview processes and onboarding plans for other Principal
                 Engineers joining the tech leadership department.
               </List.Item>
@@ -172,14 +172,14 @@ const CurriculumVitae: NextPage = () => (
               <List.Item>
                 <span className="italic">Public visibility:</span> Contributed
                 to internal and external visibility of the company by publishing
-                blog posts, giving conference talks and build partnerships with
-                other companies.
+                blog posts, giving conference talks and building partnerships
+                with other companies.
               </List.Item>
               <List.Item>
                 <span className="italic">Challenging the status quo:</span>{' '}
-                Introducing novel tools and ways of working such as introducing
-                Artificial Intelligence in 2023, rolling out Checkly in 2020,
-                feature flagging in 2018 and more.
+                Introduced novel tools and ways of working such as Artificial
+                Intelligence in 2023, Checkly in 2020, feature flagging in 2018
+                and more.
               </List.Item>
             </List.Unordered>
           </section>
@@ -188,19 +188,19 @@ const CurriculumVitae: NextPage = () => (
             <List.Unordered>
               <List.Item>
                 Defined the structure, ways of working and led the execution of
-                technical working groups spanning various teams and disciples.
+                technical working groups spanning various teams and disciplines.
                 These working groups researched and defined the architecture for
                 5+ teams through RFCs (Request for Comments) and technical
                 design documents.
               </List.Item>
               <List.Item>
                 Led two large scale redesigns of the Merchant Center involving
-                eight teams for two and four months. In the process defined the
-                skeleton how cross-team projects are managed in engineering
-                within commercetools through tech leadership.
+                eight teams for two and four months respectively. In the process
+                defined the framework for how cross-team projects are managed in
+                engineering within commercetools through tech leadership.
               </List.Item>
               <List.Item>
-                Setup and strengthened cross-team collaboration called Chapters
+                Set up and strengthened cross-team collaboration called Chapters
                 which drives technical initiatives across various teams. Planned
                 and implemented a Chapter Rotation which ensures continuous
                 technical investments to improve operability and maintenance
@@ -212,13 +212,13 @@ const CurriculumVitae: NextPage = () => (
                 Managed the evaluation and introduction of GitHub Copilot,
                 Cursor, Claude Code and OpenCode to the engineering department.
                 This included a series of workshops, company wide upskilling and
-                internal blog posts to transfer knowledge learnings between all
+                internal blog posts to transfer learnings between all
                 departments.
               </List.Item>
               <List.Item>
                 Introduced a concept called Service Quality for service tiering
                 paired with production readiness checks. This concept ensures
-                services among teams follow similar quality well defined
+                services across teams follow similar, well-defined quality
                 standards to ensure operability.
               </List.Item>
             </List.Unordered>
