@@ -18,6 +18,111 @@ const Blogroll = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2">
       <BlogrollEntry
+        title="React Server Components Your Way"
+        href="https://tanstack.com/blog/react-server-components"
+        author="Tanner Linsley"
+        teaser="RSCs became a paradigm you orbit around, not a primitive you reach for. TanStack reframes them as just streams of data the client fetches, caches, and composes. Powerful primitives lose their leverage the moment a framework makes them mandatory."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Uses for Nested Promises"
+        href="https://blog.jcoglan.com/2026/03/23/uses-for-nested-promises/"
+        author="James Coglan"
+        teaser="Promise.then() implicitly flattens nested promises, a choice that lost functional programmers the Promises/A+ debate but won on convenience. Real concurrency control code reveals rare but legitimate uses for keeping the nesting intact."
+        tags={['engineering', 'frontend']}
+      />
+      <BlogrollEntry
+        title="Dropping Sprints: A Year with Shape Up"
+        href="https://newsletter.manager.dev/p/dropping-sprints-a-year-with-shape-up"
+        author="Anton Zaides"
+        teaser="One year after ditching Scrum for Shape Up, the team moved from maintenance mode to high output with happier engineers. Fixed time with variable scope beat the sprint treadmill."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Under the Hood of MDN's New Frontend"
+        href="https://developer.mozilla.org/en-US/blog/mdn-front-end-deep-dive/"
+        author="Leo McArdle"
+        teaser="MDN rebuilt its frontend and unpacks the why. Lit-powered web components replace a tangle of four git repos, cutting friction for authors of interactive examples."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The Vertical Codebase"
+        href="https://tkdodo.eu/blog/the-vertical-codebase"
+        author="Dominik Dorfmeister"
+        teaser="Organizing code by technical layer scales poorly once features cross boundaries. Slicing vertically by feature keeps related code colocated, reduces cross-cutting churn, and makes ownership obvious."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Signals: The Push-Pull Based Algorithm"
+        href="https://willybrauner.com/journal/signal-the-push-pull-based-algorithm"
+        author="Willy Brauner"
+        teaser="Signals power Solid, Vue, and modern reactivity, yet few devs can explain their internals. Pushes notify downward, pulls re-evaluate upward, and together they keep reactive graphs efficient."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="How Does React Fiber Render Your UI"
+        href="https://inside-react.vercel.app/blog/how-does-react-fiber-render-your-ui"
+        author="Sankalpa Acharya"
+        teaser="Recursive rendering blocks the browser. Fiber slices work into ~5ms chunks so the main thread stays responsive. A walk through the linked-list tree of fiber nodes that powers interruptible reconciliation."
+        tags={['frontend']}
+      />
+      <BlogrollEntry
+        title="9 Stupid Power Moves Managers Make"
+        href="https://yanivpreiss.com/2026/03/29/9-stupid-power-moves-managers-make-and-the-damage-they-leave-behind/"
+        author="Yaniv Preiss"
+        teaser="Power moves spring from insecurity, not authority, and they quietly corrode trust. Nine common ones and the damage each leaves behind."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="The Economics of Software Teams"
+        href="https://www.viktorcessan.com/the-economics-of-software-teams/"
+        author="Viktor Cessan"
+        teaser="A team of eight engineers burns roughly 4,000 euros per working day, yet most organizations have no visibility into that number or what it takes to break even. Two decades of structural blindness now collides with the arrival of LLMs."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="AI Cybersecurity After Mythos: The Jagged Frontier"
+        href="https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier"
+        author="Stanislav Fort"
+        teaser="Cybersecurity capability in LLMs is jagged. It does not scale smoothly with size, generation, or price. Small open-weights models matched a flagship on the same FreeBSD exploit at a fraction of the cost."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The Center Has a Bias"
+        href="https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/"
+        author="Armin Ronacher"
+        teaser="The middle ground on AI isn't neutral. It's occupied by people who actually used the tools long enough to judge them. Non-use is not the same as balance."
+        tags={['ai', 'leadership']}
+      />
+      <BlogrollEntry
+        title="The Uphill Climb of Making Diff Lines Performant"
+        href="https://github.blog/engineering/architecture-optimization/the-uphill-climb-of-making-diff-lines-performant/"
+        author="GitHub Engineering"
+        teaser="GitHub rebuilt diff rendering and found the win was not smarter code but less of it. The fastest path to performance often runs through simplicity."
+        tags={['engineering', 'frontend']}
+      />
+      <BlogrollEntry
+        title="Evaluating GenAI Features in Enterprise Software Requires a Human Touch"
+        href="https://medium.com/@mbarrena/evaluating-genai-features-in-enterprise-software-requires-a-human-touch-9ab4a7f0fabf"
+        author="Mario Barrena"
+        teaser="Automated benchmarks miss what actually matters in enterprise GenAI. Real quality signals come from humans in the loop, not leaderboards."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="What I Learned From Nearly 1,000 Interviews at Amazon"
+        href="https://alifeengineered.substack.com/p/what-i-learned-from-nearly-1000-interviews"
+        author="A Life Engineered"
+        teaser="A decade as an Amazon Bar Raiser, distilled into what actually separates strong candidates from the rest. Signal beats polish, and most interviewers look for the wrong things."
+        tags={['leadership', 'career']}
+      />
+      <BlogrollEntry
+        title="Finding Comfort in the Uncertainty"
+        href="https://annievella.com/posts/finding-comfort-in-the-uncertainty/"
+        author="Annie Vella"
+        teaser="Forty of the sharpest minds in software gathered to map the AI-shaped future. The biggest takeaway. Nobody has it figured out, and that shared uncertainty is oddly the most useful answer."
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
         title="Good Taste the Only Real Moat Left"
         href="https://rajnandan.com/posts/taste-in-the-age-of-ai-and-llms/"
         author="Raj Nandan"
