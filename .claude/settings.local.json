@@ -15,7 +15,14 @@
       "WebSearch",
       "WebFetch(domain:www.amazon.com)",
       "WebFetch(domain:www.simonandschuster.com)",
-      "WebFetch(domain:itrevolution.com)"
+      "WebFetch(domain:itrevolution.com)",
+      "mcp__anybox__list_tags",
+      "mcp__anybox__list_folders",
+      "Bash(/bin/ls -t ~/.claude/projects/*/*.jsonl)",
+      "Bash(xargs -I {} jq -r 'select\\(.message.content\\) | .message.content[]? | select\\(.type==\"tool_use\"\\) | [.name, \\(.input.command // \"\"\\)] | @tsv' {})",
+      "Bash(awk -F'\\\\t' '$1==\"Bash\" && $2 ~ /^claude / {print $2}' /tmp/toolcalls.tsv)",
+      "Bash(awk -F'\\\\t' '$1==\"Bash\" && $2 ~ /^gh api/ {print $2}' /tmp/toolcalls.tsv)",
+      "Bash(/bin/ls -la .claude/)"
     ]
   }
 }

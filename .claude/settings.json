@@ -1,0 +1,5 @@
+{
+  "permissions": {
+    "allow": ["mcp__anybox__search_bookmarks", "Bash(npm run typecheck *)"]
+  }
+}
