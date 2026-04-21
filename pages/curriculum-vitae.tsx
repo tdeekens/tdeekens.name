@@ -132,98 +132,203 @@ const CurriculumVitae: NextPage = () => (
           I was selected as the first Principal Engineer within the Tech
           Leadership department when commercetools defined a structured Tech
           Leadership discipline as part of the Individual Contributor track.
-          Tasked by the Director of Tech Leadership to expand the Principal
-          Engineering role to Service Architecture, API Design, Performance,
-          Security and Reliability. My own responsibility increased with a focus
-          on frontend architecture across all teams, ensuring that architecture
-          evolves with organizational growth to enable teams to develop and
-          deploy their frontend applications autonomously with as little
-          coordination as possible.
+          Together with the Director of Tech Leadership, I expanded the
+          Principal Engineering role to Service Architecture, API Design,
+          Performance, Security and Reliability. My own responsibility increased
+          with a focus on frontend architecture across all teams, ensuring that
+          architecture evolves with organizational growth to enable teams to
+          develop and deploy their frontend applications autonomously and at
+          scale.
         </Text.Paragraph>
-        <Job.Details>
-          <section>
-            <Text.Headline as="h3" pageBreak>
-              Responsibilities
-            </Text.Headline>
-            <List.Unordered>
-              <List.Item>
-                <span className="italic">Technical direction setting:</span>{' '}
-                Contributed to tech and product strategies across the entire
-                company.
-              </List.Item>
-              <List.Item>
-                <span className="italic">Hiring & onboarding:</span> Defined
-                interview processes and onboarding plans for other Principal
-                Engineers joining the tech leadership department.
-              </List.Item>
-              <List.Item>
-                <span className="italic">Project leadership:</span> Led highly
-                visible initiatives spanning all product teams with stakeholders
-                across the entire company.
-              </List.Item>
-              <List.Item>
-                <span className="italic">Technical excellence:</span> Defined
-                knowledge sharing mechanisms and engineering practices through
-                which I sustained technical quality over 8+ years within my
-                discipline, including software observability and On Call
-                rotations, CI/CD pipelines, release and security automation and
-                others.
-              </List.Item>
-              <List.Item>
-                <span className="italic">Public visibility:</span> Contributed
-                to internal and external visibility of the company by publishing
-                blog posts, giving conference talks and building partnerships
-                with other companies.
-              </List.Item>
-              <List.Item>
-                <span className="italic">Challenging the status quo:</span>{' '}
-                Introduced novel tools and ways of working such as Artificial
-                Intelligence in 2023, Checkly in 2020, feature flagging in 2018
-                and more.
-              </List.Item>
-            </List.Unordered>
-          </section>
-          <section>
-            <Text.Headline as="h3">Tasks</Text.Headline>
-            <List.Unordered>
-              <List.Item>
-                Defined the structure, ways of working and led the execution of
-                technical working groups spanning various teams and disciplines.
-                These working groups researched and defined the architecture for
-                5+ teams through RFCs (Request for Comments) and technical
-                design documents.
-              </List.Item>
-              <List.Item>
-                Led two large-scale redesigns of the Merchant Center involving
-                eight teams for two and four months respectively. In the process
-                defined the framework for how cross-team projects are managed in
-                engineering within commercetools through tech leadership.
-              </List.Item>
-              <List.Item>
-                Set up and strengthened cross-team collaboration called Chapters
-                which drove technical initiatives across various teams; planned
-                and implemented a chapter rotation which ensured continuous
-                technical investments to improve operability and maintenance
-                through the entire engineering department; used Chapters to
-                structure and organize engineering onsites spanning all 100+
-                individual contributors in engineering.
-              </List.Item>
-              <List.Item>
-                Managed the evaluation and introduction of GitHub Copilot,
-                Cursor, Claude Code and OpenCode to the engineering department.
-                This included a series of workshops, company-wide upskilling and
-                internal blog posts to transfer learnings between all
-                departments.
-              </List.Item>
-              <List.Item>
-                Introduced a concept called Service Quality for service tiering
-                paired with production readiness checks. This concept ensured
-                services across teams followed similar, well-defined quality
-                standards for operability.
-              </List.Item>
-            </List.Unordered>
-          </section>
-        </Job.Details>
+        <section className="sm:my-4">
+          <Text.Headline as="h3" pageBreak>
+            Responsibilities
+          </Text.Headline>
+          <List.Unordered>
+            <List.Item>
+              <span className="italic">Technical direction setting:</span>{' '}
+              Shaped tech and product strategies across the entire company.
+            </List.Item>
+            <List.Item>
+              <span className="italic">Hiring & onboarding:</span> Defined
+              interview processes and onboarding plans for Principal Engineers,
+              Engineering Managers and Chapter Leads joining or transitioning
+              within the engineering department.
+            </List.Item>
+            <List.Item>
+              <span className="italic">Technical excellence:</span> Defined
+              knowledge sharing mechanisms and engineering practices sustaining
+              technical quality over 8+ years within my discipline.
+            </List.Item>
+            <List.Item>
+              <span className="italic">Public visibility:</span> Contributed to
+              internal and external visibility of the company by publishing blog
+              posts, giving conference talks and building partnerships with
+              other companies.
+            </List.Item>
+          </List.Unordered>
+        </section>
+        <section className="sm:my-4">
+          <Text.Headline as="h3">Initiatives</Text.Headline>
+          <div className="md:columns-2 md:gap-8 text-md">
+            <div className="break-inside-avoid pt-4">
+              <Text.Headline as="h4">AI & Agentic Systems</Text.Headline>
+              <List.Unordered>
+                <List.Item>
+                  Established and led the{' '}
+                  <strong>Agentic Commerce Working Group</strong> as a technical
+                  steering committee which curated a unified Design Document
+                  from individual RFCs. Then defined and transitioned the work
+                  into the autonomous Agent Platform Team, building foundations
+                  for 3+ product teams.
+                </List.Item>
+                <List.Item>
+                  Led or facilitated{' '}
+                  <strong>architectural guidance for AI integration</strong>{' '}
+                  across the Business User Tooling surfaces including a chat
+                  assistant, Order Summary, Cora, MCP Essentials and the Smart
+                  Product Data Modeller.
+                </List.Item>
+                <List.Item>
+                  Authored{' '}
+                  <strong>Architectural Guidelines for AI projects</strong> and
+                  contributed to the company-wide Tech Radar including the
+                  contribution process and integration into the product
+                  engineering department's way of working.
+                </List.Item>
+                <List.Item>
+                  Managed the evaluation and introduction of GitHub Copilot,
+                  Cursor, JetBrains AI, Claude Code and OpenCode.{' '}
+                  <strong>Scaled Claude Code to 100+ seats</strong>, GitHub
+                  Copilot and Cursor to 80+ users. All backed by vendor
+                  contracts and an updated IT Security policy for AI usage.
+                </List.Item>
+                <List.Item>
+                  Established <strong>Agent Anonymous</strong> as a recurring
+                  knowledge-sharing format with 50+ participants. Defined and
+                  drove a <strong>Try-AI-Thon</strong> project including
+                  staffing for 15+ teams across the engineering department,
+                  culminating in a company-wide hackathon to upskill all
+                  departments.
+                </List.Item>
+              </List.Unordered>
+            </div>
+
+            <div className="break-inside-avoid pt-4">
+              <Text.Headline as="h4">Organizational Design</Text.Headline>
+              <List.Unordered>
+                <List.Item>
+                  Set up and strengthened <strong>Chapters</strong> as
+                  cross-team collaboration which drove technical initiatives
+                  across various teams. Planned and implemented a chapter
+                  rotation ensuring continuous technical investments into
+                  operability and maintenance. Used Chapters to structure and
+                  organize engineering onsites spanning all 100+ individual
+                  contributors.
+                </List.Item>
+                <List.Item>
+                  Authored the <strong>Chapter of Chapters</strong>{' '}
+                  ways-of-working and ran interviews with Chapter Leads to align
+                  practice across product and engineering disciplines.
+                </List.Item>
+                <List.Item>
+                  Contributed to the{' '}
+                  <strong>transition from Chapters to Foundation Teams</strong>{' '}
+                  including communication strategy, rotation guardrails and
+                  Staff Engineer role definitions.
+                </List.Item>
+                <List.Item>
+                  Introduced a concept called <strong>Service Quality</strong>{' '}
+                  for service tiering paired with production readiness checks,
+                  ensuring services across teams followed similar, well-defined
+                  quality standards for operability.
+                </List.Item>
+              </List.Unordered>
+            </div>
+
+            <div className="break-inside-avoid pt-4">
+              <Text.Headline as="h4">
+                Reliability, Security & Resilience
+              </Text.Headline>
+              <List.Unordered>
+                <List.Item>
+                  Introduced and upskilled individual contributors for an{' '}
+                  <strong>On Call rotation for Business User Tooling</strong>{' '}
+                  covering Frontend and APIs. Later ran Wheel of Misfortune
+                  exercises and retrospectives to onboard replacements and
+                  prepared the rotation for Black Friday.
+                </List.Item>
+                <List.Item>
+                  Drove <strong>multi-cloud resilience</strong> for the Business
+                  User Tooling, eliminating single points of failure and
+                  enabling availability in China alongside cross-cloud failover.
+                </List.Item>
+                <List.Item>
+                  Led a <strong>credential rotation programme</strong> including
+                  an automated Postgres rotation. Introduced and distributed
+                  responsibility for rotation run books for manual rotations and
+                  migrated to auto-rotated, highly-privileged API Clients.
+                </List.Item>
+              </List.Unordered>
+            </div>
+
+            <div className="break-inside-avoid pt-4">
+              <Text.Headline as="h4">Cross-Team Initiatives</Text.Headline>
+              <List.Unordered>
+                <List.Item>
+                  Led <strong>two large-scale redesigns</strong> of the Business
+                  User Tooling involving eight teams for two and four months
+                  respectively. In the process defined the framework for how
+                  cross-team projects are managed in engineering within
+                  commercetools through tech leadership.
+                </List.Item>
+                <List.Item>
+                  Defined the structure and led the execution of{' '}
+                  <strong>technical working groups</strong> spanning various
+                  teams and disciplines. These working groups researched and
+                  defined the architecture for 5+ teams through RFCs (Request
+                  for Comments) and technical design documents.
+                </List.Item>
+                <List.Item>
+                  Facilitated <strong>PR/FAQ processes</strong> for 5+
+                  initiatives across Business User Tooling, for example the new
+                  Design System and Filters &amp; Navigation improvements.
+                </List.Item>
+                <List.Item>
+                  Provided <strong>intermittent technical support</strong> to 5+
+                  teams inside and outside the primary department, for example
+                  integrating commercetools Identity and supporting teams to
+                  plan new functionality as well as decommission legacy
+                  integrations.
+                </List.Item>
+              </List.Unordered>
+            </div>
+
+            <div className="break-inside-avoid pt-4">
+              <Text.Headline as="h4">Vendor Management & Hiring</Text.Headline>
+              <List.Unordered>
+                <List.Item>
+                  Negotiated <strong>SaaS contracts</strong> with Anthropic and
+                  six additional vendors and managed asset compliance through
+                  OneTrust including user lifecycle for leavers across the
+                  Business User Tooling.
+                </List.Item>
+                <List.Item>
+                  Defined <strong>transparent hiring processes</strong> for
+                  Engineering Managers and for dedicated high profile roles such
+                  as Frontend Chapter Lead. Contributed to hiring processes for
+                  Head of Product, Head of Engineering and Vice President of
+                  Engineering.
+                </List.Item>
+                <List.Item>
+                  Organized <strong>SaaS tool trainings</strong> on
+                  LaunchDarkly, CircleCI and GitHub Copilot to deepen tool usage
+                  across the engineering department.
+                </List.Item>
+              </List.Unordered>
+            </div>
+          </div>
+        </section>
       </article>
 
       <article className="py-4">
@@ -286,7 +391,7 @@ const CurriculumVitae: NextPage = () => (
             </List.Unordered>
           </section>
           <section>
-            <Text.Headline as="h3">Tasks</Text.Headline>
+            <Text.Headline as="h3">Initiatives</Text.Headline>
             <List.Unordered>
               <List.Item>
                 Guided the implementation of a testing strategy allowing
@@ -396,7 +501,7 @@ const CurriculumVitae: NextPage = () => (
             </List.Unordered>
           </section>
           <section>
-            <Text.Headline as="h3">Tasks</Text.Headline>
+            <Text.Headline as="h3">Initiatives</Text.Headline>
             <List.Unordered>
               <List.Item>
                 Introducing feature toggling via LaunchDarkly with the
@@ -494,7 +599,7 @@ const CurriculumVitae: NextPage = () => (
           </section>
           <section>
             <Text.Headline as="h3" pageBreak>
-              Tasks
+              Initiatives
             </Text.Headline>
             <List.Unordered>
               <List.Item>
@@ -565,7 +670,7 @@ const CurriculumVitae: NextPage = () => (
             </List.Unordered>
           </section>
           <section>
-            <Text.Headline as="h3">Tasks</Text.Headline>
+            <Text.Headline as="h3">Initiatives</Text.Headline>
             <List.Unordered>
               <List.Item>
                 Improving frontend performance in a legacy UI.

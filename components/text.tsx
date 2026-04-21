@@ -22,7 +22,7 @@ function Headline(props: THeadlineProps) {
       className = 'pb-1 font-bold text-l';
       break;
     case 'h4':
-      className = 'pb-1 text-xs text-gray-500';
+      className = 'pb-1 text-sm font-semibold text-gray-600';
       break;
 
     default:
