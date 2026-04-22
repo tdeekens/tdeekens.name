@@ -28,7 +28,10 @@ const CurriculumVitae: NextPage = () => (
       </ul>
       <ul className="hidden text-right md:block print:block">
         <li>
-          <ExternalLink underline={false} href="http://www.github.com/tdeekens">
+          <ExternalLink
+            underline={false}
+            href="https://www.github.com/tdeekens"
+          >
             <div className="flex items-baseline space-x-2">
               <Image
                 src="/github-icon.svg"
@@ -43,12 +46,12 @@ const CurriculumVitae: NextPage = () => (
         <li>
           <ExternalLink
             underline={false}
-            href="http://www.linkedin.com/pub/tobias-deekens/76/b00/197"
+            href="https://www.linkedin.com/pub/tobias-deekens/76/b00/197"
           >
             <div className="flex items-baseline space-x-2">
               <Image
                 src="/linkedin-icon.svg"
-                alt="Linkedin profile"
+                alt="LinkedIn profile"
                 width="11"
                 height="11"
               />
@@ -59,7 +62,7 @@ const CurriculumVitae: NextPage = () => (
         <li>
           <ExternalLink
             underline={false}
-            href="http://tdeekens.name/curriculum-vitae"
+            href="https://tdeekens.name/curriculum-vitae"
           >
             <div className="flex items-baseline space-x-2">
               <Image
@@ -81,30 +84,27 @@ const CurriculumVitae: NextPage = () => (
       </Text.Headline>
       <article className="py-4">
         <Text.Paragraph>
-          Retired basketball player, lousy autodidactic guitarist but also
-          developer, avid teacher and <strong>spontaneous speaker</strong> with
-          a strong experience in{' '}
-          <strong>fullstack development and architecture</strong>. Feels{' '}
-          <strong>great joy in mentoring</strong> while working with diverse
-          teams in agile environments. Likes participation in the{' '}
-          <strong>entire product development life-cycle</strong>. Through
-          various projects deepened and broadened{' '}
-          <strong>knowledge of the tech stack</strong> by gaining practical
-          experience in building robust and well tested frontends while also{' '}
-          <strong>working on RESTful and GraphQL APIs</strong>. Additionally,
-          knowledgeable in{' '}
-          <strong>continuous integration and deployment strategies</strong> with
-          backing infrastructure such as Prometheus, Kubernetes and various
-          aspects of the observability and monitoring.
+          Engineer, architect, retired basketball player, mentor, lousy
+          guitarist and speaker with experience across{' '}
+          <strong>frontend platforms, APIs, and engineering leadership</strong>.
+          Enjoys <strong>building products end to end</strong> and helping teams
+          grow stronger in both{' '}
+          <strong>technical judgment and execution</strong>. Work spans the{' '}
+          <strong>full product lifecycle</strong>, from shaping architecture and
+          engineering practices to delivering robust frontends,{' '}
+          <strong>RESTful and GraphQL APIs</strong>, and supporting
+          infrastructure from Kubernetes to Prometheus. Cares deeply about{' '}
+          <strong>mentoring</strong>, cross-team collaboration, and building
+          systems that scale both technically and organisationally.
           <br />
-          Always has been an Open Source enthusiast and is a contributor to{' '}
+          Active Open Source contributor to{' '}
           <ExternalLink href="https://github.com/mswjs/msw">
             msw
           </ExternalLink>,{' '}
           <ExternalLink href="https://github.com/cure53/DOMPurify">
             DOMPurify
-          </ExternalLink>{' '}
-          and creator of{' '}
+          </ExternalLink>
+          , and creator of{' '}
           <ExternalLink href="https://github.com/tdeekens/flopflip">
             flopflip
           </ExternalLink>{' '}
@@ -125,20 +125,18 @@ const CurriculumVitae: NextPage = () => (
           jobRole="Remote Principal Engineer at"
           company="commercetools"
           location="from Vienna, Austria"
-          duration="March 2022 - now"
+          duration="March 2022 - present"
           href="https://commercetools.com"
         />
         <Text.Paragraph>
-          I was selected as the first Principal Engineer within the Tech
-          Leadership department when commercetools defined a structured Tech
-          Leadership discipline as part of the Individual Contributor track.
-          Together with the Director of Tech Leadership, I expanded the
-          Principal Engineering role to Service Architecture, API Design,
-          Performance, Security and Reliability. My own responsibility increased
-          with a focus on architecture of the Business User Tooling across all
-          teams, ensuring that architecture evolves with organizational growth
-          to enable teams to develop and deploy their services and frontend
-          applications autonomously and at scale.
+          Selected as the first Principal Engineer within the engineering
+          department, helping commercetools define a structured Tech Leadership
+          discipline as part of the Individual Contributor track. Together with
+          the Director of Tech Leadership, I expanded the role to cover Service
+          Architecture, API Design, Performance, Security, and Reliability. My
+          focus was the architecture of Business User Tooling across teams,
+          enabling teams to develop and deploy services and frontend
+          applications autonomously at scale.
         </Text.Paragraph>
         <section className="sm:my-4">
           <Text.Headline as="h3" pageBreak>
@@ -147,7 +145,7 @@ const CurriculumVitae: NextPage = () => (
           <List.Unordered>
             <List.Item>
               <span className="italic">Technical direction setting:</span>{' '}
-              Contributed to tech strategies and their alignment product
+              Contributed to tech strategies and their alignment with product
               strategies across the entire company. Provided technical support
               and guidance for various teams to assist with their deliverables.
             </List.Item>
@@ -160,8 +158,7 @@ const CurriculumVitae: NextPage = () => (
             <List.Item>
               <span className="italic">Technical excellence:</span> Defined
               engineering practices and associated knowledge sharing mechanisms
-              to sustaining technical quality over 8+ years within my
-              discipline.
+              to sustain technical quality over 8+ years within my discipline.
             </List.Item>
             <List.Item>
               <span className="italic">Public visibility:</span> Contributed to
@@ -210,7 +207,7 @@ const CurriculumVitae: NextPage = () => (
                 <List.Item>
                   Established <strong>Agent Anonymous</strong> as a recurring
                   knowledge-sharing format with 50+ participants. Defined and
-                  co-owned a so called <strong>Try-AI-Thon</strong> project.
+                  co-owned a so-called <strong>Try-AI-Thon</strong> project.
                   Through it we staffed 15+ project teams, culminating in a
                   company-wide hackathon to upskill AI adoption across all
                   departments.
@@ -257,7 +254,7 @@ const CurriculumVitae: NextPage = () => (
               <List.Unordered>
                 <List.Item>
                   Introduced and upskilled individual contributors for an{' '}
-                  <strong>On Call rotation for Business User Tooling</strong>{' '}
+                  <strong>on-call rotation for Business User Tooling</strong>{' '}
                   covering Frontend and APIs. Later ran Wheel of Misfortune
                   exercises and retrospectives to onboard replacements and
                   prepared the rotation for Black Friday.
@@ -315,9 +312,9 @@ const CurriculumVitae: NextPage = () => (
               <List.Unordered>
                 <List.Item>
                   Managed and negotiated <strong>SaaS contracts</strong> with
-                  Anthropic, CircleCI, GitHuband other vendors. Managing asset
-                  compliance through OneTrust including user lifecycle for
-                  leavers across the Business User Tooling.
+                  Anthropic, CircleCI, GitHub and other vendors. Managed asset
+                  compliance through OneTrust, including user lifecycle
+                  management for leavers across the Business User Tooling.
                 </List.Item>
                 <List.Item>
                   Defined <strong>transparent hiring processes</strong> for
@@ -357,13 +354,12 @@ const CurriculumVitae: NextPage = () => (
           while guiding and communicating their execution.
         </Text.Paragraph>
         <Text.Paragraph>
-          During my time at commercetools the engineering team grew from ten to
-          about 70 engineers while the company now has about 360 employees. The
-          product, an headless e-commerce API, managed to attract more than 200
-          customers. Such as large enterprises from Lego, Volkswagen, Yamaha,
-          AT&T, Bang & Olufsen, Quantas and Universal. In the process
-          commercetools went through various rounds of funding and a 1.9B dollar
-          evaluation.
+          During this period, I helped scale frontend engineering across six
+          teams while supporting a rapidly growing company and product. The work
+          included enabling independent frontend delivery, improving engineering
+          quality, and supporting enterprise-grade product development for large
+          global brands including LEGO, Volkswagen, Yamaha, AT&T, Bang &
+          Olufsen, Qantas, and Universal.
         </Text.Paragraph>
 
         <Job.Details>
@@ -406,16 +402,16 @@ const CurriculumVitae: NextPage = () => (
                 cadence to multiple times a day.
               </List.Item>
               <List.Item>
-                Setup a recurring democratic Open Source donation model for
-                projects used by various projects inside the company. Allowing
-                commercetools financially support various projects.
+                Set up a recurring democratic Open Source donation model for
+                projects used inside the company, allowing commercetools to
+                financially support various projects.
               </List.Item>
               <List.Item>
                 Managed a budget for all external services such as Sentry,
                 CircleCI and Percy used by various teams.
               </List.Item>
               <List.Item>
-                Setup and steered a frontend chapter consisting of six members
+                Set up and steered a frontend chapter consisting of six members
                 meeting to guide execution of cross-cutting technical concerns
                 across teams with product managers.
               </List.Item>
@@ -438,8 +434,8 @@ const CurriculumVitae: NextPage = () => (
           href="https://commercetools.com"
         />
         <Text.Paragraph>
-          Working as a Software Engineer focussing on JavaScript across the
-          stack within a cross-functional team building an{' '}
+          Working as a Software Engineer focusing on JavaScript across the stack
+          within a cross-functional team building an{' '}
           <strong>internationalized</strong>, customizable web application for{' '}
           <strong>e-commerce</strong> merchants allowing administration of
           complex and large scale product, category, order, discount and
@@ -461,7 +457,7 @@ const CurriculumVitae: NextPage = () => (
           <ExternalLink href="https://github.com/kentcdodds/react-testing-library">
             react-testing-library
           </ExternalLink>{' '}
-          and <ExternalLink href="http://cypress.io">Cypress</ExternalLink>.
+          and <ExternalLink href="https://cypress.io">Cypress</ExternalLink>.
           Additional infrastructure includes but is not limited to{' '}
           <ExternalLink href="https://webpack.js.org/">webpack</ExternalLink>,{' '}
           <ExternalLink href="https://github.com/prettier/prettier">
@@ -471,14 +467,14 @@ const CurriculumVitae: NextPage = () => (
           <ExternalLink href="https://github.com/storybooks/storybook">
             react-storybook
           </ExternalLink>
-          . The application follows a sub application architecture allowing easy
+          . The application follows a sub-application architecture allowing easy
           extensions and parallel development and deployments by multiple teams
           in a <b>test-driven and pull request</b> based development environment
           on GitHub. Continuous Integration is performed via{' '}
           <ExternalLink href="https://circleci.com">CircleCI</ExternalLink> with
           development branches being automatically pushed to a{' '}
-          <ExternalLink href="kubernetes.io/">Kubernetes</ExternalLink> cluster.
-          Additionally supporting the Node.js and JavaScript SDK team.
+          <ExternalLink href="https://kubernetes.io/">Kubernetes</ExternalLink>{' '}
+          cluster. Additionally supporting the Node.js and JavaScript SDK team.
         </Text.Paragraph>
 
         <Job.Details>
@@ -489,7 +485,7 @@ const CurriculumVitae: NextPage = () => (
             <List.Unordered>
               <List.Item>
                 <span className="italic">Onboarding:</span> onboarding frontend
-                engineers across 3 cross-function teams.
+                engineers across 3 cross-functional teams.
               </List.Item>
               <List.Item>
                 <span className="italic">Hiring:</span> defining code challenges
@@ -544,7 +540,7 @@ const CurriculumVitae: NextPage = () => (
                 <ExternalLink href="https://github.com/rollup/rollup">
                   Rollup
                 </ExternalLink>{' '}
-                based build via CircleCI. Sppeding up Continuous Integration but
+                based build via CircleCI. Speeding up Continuous Integration but
                 also enabling an automated release process without needing a
                 local machine.
               </List.Item>
@@ -566,12 +562,12 @@ const CurriculumVitae: NextPage = () => (
           href="https://brandwatch.com"
         />
         <Text.Paragraph>
-          Working as a JavaScript developer within a agile team building great{' '}
+          Working as a JavaScript developer within an agile team building great{' '}
           <strong>web-based software</strong> for comprehensive{' '}
           <strong>social network data monitoring</strong> and analysis.
         </Text.Paragraph>
         <Text.Paragraph>
-          Working on frontend and related backends powering browser based data
+          Working on frontend and related backends powering browser-based data
           visualizations of social media data from various sources. Activities
           include the implementation of performant and reusable{' '}
           <strong>visualization components</strong> using Backbone.js as well as
@@ -642,7 +638,7 @@ const CurriculumVitae: NextPage = () => (
         <Text.Paragraph>
           Working as a frontend developer within a cross-functional team
           developing <strong>Single Page Applications</strong>. Furthermore
-          focussing on <strong>frontend architecture</strong>, tooling and{' '}
+          focusing on <strong>frontend architecture</strong>, tooling and{' '}
           <strong>testing</strong> to increase{' '}
           <strong>developer experience</strong>.
         </Text.Paragraph>
@@ -652,7 +648,7 @@ const CurriculumVitae: NextPage = () => (
           built of multiple separate frontends, interacting with several backend
           services. Furthermore, helped simplifying and rebuilding registration
           processes while being heavily engaged in UX discussions. A heavy focus
-          on developer experience lead to building multiple mostly open sourced
+          on developer experience led to building multiple mostly open sourced
           build-tasks while also maintaining modern development stacks across
           projects.
         </Text.Paragraph>
@@ -667,7 +663,7 @@ const CurriculumVitae: NextPage = () => (
               </List.Item>
               <List.Item>
                 <span className="italic">Workshops:</span> giving frontend
-                workshops to mitigate the grap between frontend and backend.
+                workshops to mitigate the gap between frontend and backend.
               </List.Item>
               <List.Item>
                 <span className="italic">Hiring:</span> defining code challenges
@@ -710,7 +706,7 @@ const CurriculumVitae: NextPage = () => (
           Investigating Ericsson’s adoption of{' '}
           <strong>organisational structure</strong> in regards to communication
           flow and blockages relating to the empowerment of cross-functional
-          teams. A full version be found on{' '}
+          teams. A full version can be found on{' '}
           <a href="https://github.com/tdeekens/msc-thesis/raw/master/thesis/2nd-submission-examiner/msc-thesis.pdf">
             GitHub
           </a>
@@ -747,7 +743,7 @@ const CurriculumVitae: NextPage = () => (
           location="from Hamburg, Germany"
           duration="April 2012 - October 2012"
           company="zweitwerk GmbH"
-          href="#"
+          href=""
         />
         <Text.Paragraph>
           Continuation of work after finishing bachelor’s thesis. Evolving the
@@ -755,7 +751,7 @@ const CurriculumVitae: NextPage = () => (
           <strong>developing a data administration application</strong>. Gaining
           more experience with modern web development using{' '}
           <strong>HTML5/CSS3</strong>, <strong>JavaScript</strong> and related
-          frameworks such asBackbone.js, martionette.js and jQuery. Also partly
+          frameworks such as Backbone.js, Marionette.js and jQuery. Also partly
           worked on daily development of other products.
         </Text.Paragraph>
       </article>
@@ -766,7 +762,7 @@ const CurriculumVitae: NextPage = () => (
           location="from Hamburg, Germany"
           duration="April 2012 - October 2012"
           company="zweitwerk GmbH"
-          href="#"
+          href=""
         />
         <Text.Paragraph>
           Combined experience in working at zweitwerk while performing research
@@ -784,19 +780,19 @@ const CurriculumVitae: NextPage = () => (
           jobRole="Student Assistant at"
           location=""
           duration="May 2009 - April 2010"
-          company="Universiät Bamberg"
+          company="Universität Bamberg"
           href="https://www.uni-bamberg.de"
         />
         <Text.Paragraph>
           Working on project Cadena in designing and implementing a{' '}
           <strong>Software as a Service</strong> supporting elderly care
-          services build upon{' '}
+          services built upon{' '}
           <strong>Adobe Flex®, ActionScript, Flash Media Server and PHP</strong>{' '}
           (Zend backed). The application’s features included video conferences
           between care service and a retiree and administration of clinical
           records. My duties included implementation and{' '}
           <strong>testing of a PHP-based backend</strong> as well as working on
-          every part of the frontend. c
+          every part of the frontend.
         </Text.Paragraph>
       </article>
     </section>
@@ -823,7 +819,7 @@ const CurriculumVitae: NextPage = () => (
           <List.Unordered>
             <List.Item>
               React, Redux & Apollo, AngularJS, Node.js, Backbone.js, Express
-              and HapiJs: (JavaScript)
+              and Hapi.js: (JavaScript)
             </List.Item>
             <List.Item>
               Kubernetes, Prometheus, Kibana and Grafana: (Operations)
@@ -857,7 +853,7 @@ const CurriculumVitae: NextPage = () => (
           - A Hapi & Express Prometheus exporter
         </Text.Headline>
         <Text.Paragraph>
-          A Express middleware (or Hapi plugin) to easily export request timing
+          An Express middleware (or Hapi plugin) to easily export request timing
           metrics from an Express/Hapi application to Prometheus. The library
           contains few but powerful abilities to configure e.g. labels or to
           perform normalization on measured values.
@@ -873,7 +869,7 @@ const CurriculumVitae: NextPage = () => (
         </Text.Headline>
         <Text.Paragraph>
           A library with multiple packages in a mono-repo (maintained with
-          lerna) offering Higher Order Components (HoCs) and other utilities to
+          Lerna) offering Higher Order Components (HoCs) and other utilities to
           enable easy feature toggling of React components (supporting single-
           and multivariate flags). A version for Redux (via a store enhancer)
           integrates nicely with the Redux DevTools. Another standalone React
@@ -904,13 +900,13 @@ const CurriculumVitae: NextPage = () => (
           <ExternalLink href="https://github.com/tdeekens/colloq">
             Colloq
           </ExternalLink>{' '}
-          - A playground: four NodeJs services with GraphQL in front
+          - A playground: four Node.js services with GraphQL in front
         </Text.Headline>
         <Text.Paragraph>
           A pet project with the domain model of a conference and its attendees,
-          speakers and organisers. Build with a NodeJs service for each entity
+          speakers and organisers. Built with a Node.js service for each entity
           and with a GraphQL (Apollo Stack) server in front. Technologies
-          included in this project is: GraphQL, HapiJs, Ava (testing), XO
+          included in this project are: GraphQL, Hapi.js, Ava (testing), XO
           (linting), nodemon, Docker and PM2.
         </Text.Paragraph>
       </article>
@@ -923,9 +919,9 @@ const CurriculumVitae: NextPage = () => (
         </Text.Headline>
         <Text.Paragraph>
           Expensive computations should be memoised. In React projects
-          memoisation is often performed imparatively whereas it could and
+          memoisation is often performed imperatively whereas it could and
           likely should also be declarative within the tree of components.
-          React-memoise enables this through an render-prop based API.
+          React-memoise enables this through a render-prop based API.
         </Text.Paragraph>
       </article>
       <article className="py-2 print:hidden">
@@ -1000,26 +996,26 @@ const CurriculumVitae: NextPage = () => (
               </ExternalLink>
             </List.Item>
             <List.Item>
-              <ExternalLink href="http://slides.com/tdeekens/css-with-a-hash#/">
+              <ExternalLink href="https://slides.com/tdeekens/css-with-a-hash#/">
                 CSS with a hash - from a convention to a hash
               </ExternalLink>{' '}
               <span className="italic">(ThoughtWorks Meetup)</span>
             </List.Item>
             <List.Item>
-              <ExternalLink href="http://slides.com/tdeekens/micropuzzling#/">
+              <ExternalLink href="https://slides.com/tdeekens/micropuzzling#/">
                 Micropuzzling: Implications of slicing web frontends according
                 to Microservices
               </ExternalLink>{' '}
               <span className="italic">(microXchg.io)</span>
             </List.Item>
             <List.Item>
-              <ExternalLink href="http://slides.com/tdeekens/this-immutable-thing#/">
+              <ExternalLink href="https://slides.com/tdeekens/this-immutable-thing#/">
                 Escaping mutability hell - persistent immutable data structures
               </ExternalLink>{' '}
               <span className="italic">(EuroStaff Meetup)</span>
             </List.Item>
             <List.Item>
-              <ExternalLink href="http://slides.com/tdeekens/es6-es2015-harmony">
+              <ExternalLink href="https://slides.com/tdeekens/es6-es2015-harmony">
                 Transpile all the things from TypeScript
               </ExternalLink>{' '}
               <span className="italic">(Engineering Talk)</span>
@@ -1070,7 +1066,7 @@ const CurriculumVitae: NextPage = () => (
           Been actively engaged in teams and clubs since the age of nine playing
           in many cities and countries. Helping clubs, taking over coaching at
           times and just enjoying being around a team while playing at a high
-          level. Recently been focussing more on guitar than basketball.
+          level. Recently been focusing more on guitar than basketball.
         </Text.Paragraph>
       </article>
       <article className="py-2">

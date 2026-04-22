@@ -11,11 +11,16 @@ type TJobHeadlineProps = {
 };
 
 function Headline(props: TJobHeadlineProps) {
+  const company =
+    props.href && props.href !== '#' ? (
+      <ExternalLink href={props.href}>{props.company}</ExternalLink>
+    ) : (
+      props.company
+    );
+
   return (
     <Text.Headline as="h3">
-      {props.jobRole}{' '}
-      <ExternalLink href={props.href}>{props.company}</ExternalLink>{' '}
-      {props.location}{' '}
+      {props.jobRole} {company} {props.location}{' '}
       <span className="italic font-thin xl:float-right xl:not-italic">
         {props.duration}
       </span>
