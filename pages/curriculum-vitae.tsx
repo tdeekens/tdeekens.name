@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Text from '@components/text';
 import List from '@components/list';
 import ExternalLink from '@components/external-link';
+import InternalLink from '@components/internal-link';
 import Job from '@components/job';
 
 const CurriculumVitae: NextPage = () => (
@@ -980,14 +981,14 @@ const CurriculumVitae: NextPage = () => (
               </ExternalLink>
             </List.Item>
             <List.Item>
-              <ExternalLink href="https://commercetools.com/blog/how-we-evaluated-the-impact-of-github-copilot-for-3-months">
+              <InternalLink href="/posts/how-we-evaluated-the-impact-of-github-copilot-for-three-months">
                 How we evaluated the impact of GitHub Copilot for 3 months
-              </ExternalLink>
+              </InternalLink>
             </List.Item>
             <List.Item>
-              <ExternalLink href="https://commercetools.com/blog/3-years-of-sustaining-open-source-through-our-donation-program">
+              <InternalLink href="/posts/three-years-of-sustaining-open-source-through-our-donation-program">
                 3 years of sustaining Open Source through our donation program
-              </ExternalLink>
+              </InternalLink>
             </List.Item>
             <List.Item>
               <ExternalLink href="https://techblog.commercetools.com/veni-vidi-vici-my-journey-into-mastering-remote-working-79131ec974d7">

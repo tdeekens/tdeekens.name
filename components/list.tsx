@@ -19,6 +19,24 @@ function Unordered(props: TUnorderedProps) {
   return <ul className="pl-8 list-disc">{itemElements}</ul>;
 }
 
+export type TOrderedProps = {
+  children: Array<React.ReactElement>;
+};
+function Ordered(props: TOrderedProps) {
+  const itemElements = Children.map(props.children, (child) => {
+    // NOTE: Allowing to intersperse other elements than `Item`.
+    // @ts-expect-error type doesn't exist
+    if (child?.type && child.type.displayName === Item.displayName) {
+      const clonedChild = cloneElement(child, {});
+
+      return clonedChild;
+    }
+    return child;
+  });
+
+  return <ol className="pl-8 list-decimal">{itemElements}</ol>;
+}
+
 export type TItemProps = {
   children: React.ReactNode;
 };
@@ -27,6 +45,6 @@ function Item(props: TItemProps) {
 }
 Item.displayName = 'Item';
 
-const List = { Unordered, Item };
+const List = { Unordered, Ordered, Item };
 
 export default List;
