@@ -81,21 +81,21 @@ const CurriculumVitae: NextPage = () => (
       </Text.Headline>
       <article className="py-4">
         <Text.Paragraph>
-          Retired basketball player, lousy guitarist but also developer, avid
-          teacher and <strong>spontaneous speaker</strong> with a strong
-          experience in <strong>frontend development and architecture</strong>.
-          Feels <strong>great joy in mentoring</strong> while working with
-          diverse teams in agile environments. Likes{' '}
-          <strong>early involvement in product ideation</strong> to support
-          Product Managers and stakeholders to make more balanced decisions.
-          Over time broadened <strong>knowledge of the tech stack</strong> by
-          gaining practical experience in building robust and well tested
-          frontends while also{' '}
-          <strong>working on associated RESTful and GraphQL APIs</strong>.
-          Additionally, knowledgeable in{' '}
+          Retired basketball player, lousy autodidactic guitarist but also
+          developer, avid teacher and <strong>spontaneous speaker</strong> with
+          a strong experience in{' '}
+          <strong>fullstack development and architecture</strong>. Feels{' '}
+          <strong>great joy in mentoring</strong> while working with diverse
+          teams in agile environments. Likes participation in the{' '}
+          <strong>entire product development life-cycle</strong>. Through
+          various projects deepened and broadened{' '}
+          <strong>knowledge of the tech stack</strong> by gaining practical
+          experience in building robust and well tested frontends while also{' '}
+          <strong>working on RESTful and GraphQL APIs</strong>. Additionally,
+          knowledgeable in{' '}
           <strong>continuous integration and deployment strategies</strong> with
-          backing infrastructure such as Prometheus, Kubernetes, Kibana and
-          Grafana.
+          backing infrastructure such as Prometheus, Kubernetes and various
+          aspects of the observability and monitoring.
           <br />
           Always has been an Open Source enthusiast and is a contributor to{' '}
           <ExternalLink href="https://github.com/mswjs/msw">
@@ -135,10 +135,10 @@ const CurriculumVitae: NextPage = () => (
           Together with the Director of Tech Leadership, I expanded the
           Principal Engineering role to Service Architecture, API Design,
           Performance, Security and Reliability. My own responsibility increased
-          with a focus on frontend architecture across all teams, ensuring that
-          architecture evolves with organizational growth to enable teams to
-          develop and deploy their frontend applications autonomously and at
-          scale.
+          with a focus on architecture of the Business User Tooling across all
+          teams, ensuring that architecture evolves with organizational growth
+          to enable teams to develop and deploy their services and frontend
+          applications autonomously and at scale.
         </Text.Paragraph>
         <section className="sm:my-4">
           <Text.Headline as="h3" pageBreak>
@@ -147,7 +147,9 @@ const CurriculumVitae: NextPage = () => (
           <List.Unordered>
             <List.Item>
               <span className="italic">Technical direction setting:</span>{' '}
-              Shaped tech and product strategies across the entire company.
+              Contributed to tech strategies and their alignment product
+              strategies across the entire company. Provided technical support
+              and guidance for various teams to assist with their deliverables.
             </List.Item>
             <List.Item>
               <span className="italic">Hiring & onboarding:</span> Defined
@@ -157,14 +159,16 @@ const CurriculumVitae: NextPage = () => (
             </List.Item>
             <List.Item>
               <span className="italic">Technical excellence:</span> Defined
-              knowledge sharing mechanisms and engineering practices sustaining
-              technical quality over 8+ years within my discipline.
+              engineering practices and associated knowledge sharing mechanisms
+              to sustaining technical quality over 8+ years within my
+              discipline.
             </List.Item>
             <List.Item>
               <span className="italic">Public visibility:</span> Contributed to
               internal and external visibility of the company by publishing blog
               posts, giving conference talks and building partnerships with
-              other companies.
+              other companies. Managed an Open Source donation program for three
+              years supporting 20+ projects financially.
             </List.Item>
           </List.Unordered>
         </section>
@@ -180,14 +184,14 @@ const CurriculumVitae: NextPage = () => (
                   steering committee which curated a unified Design Document
                   from individual RFCs. Then defined and transitioned the work
                   into the autonomous Agent Platform Team, building foundations
-                  for 3+ product teams.
+                  for three product teams.
                 </List.Item>
                 <List.Item>
                   Led or facilitated{' '}
                   <strong>architectural guidance for AI integration</strong>{' '}
                   across the Business User Tooling surfaces including a chat
-                  assistant, Order Summary, Cora, MCP Essentials and the Smart
-                  Product Data Modeller.
+                  assistant, Order Summary, Cora, MCP Essentials, the Smart
+                  Product Data Modeller and AI Hub.
                 </List.Item>
                 <List.Item>
                   Authored{' '}
@@ -206,9 +210,9 @@ const CurriculumVitae: NextPage = () => (
                 <List.Item>
                   Established <strong>Agent Anonymous</strong> as a recurring
                   knowledge-sharing format with 50+ participants. Defined and
-                  drove a <strong>Try-AI-Thon</strong> project including
-                  staffing for 15+ teams across the engineering department,
-                  culminating in a company-wide hackathon to upskill all
+                  co-owned a so called <strong>Try-AI-Thon</strong> project.
+                  Through it we staffed 15+ project teams, culminating in a
+                  company-wide hackathon to upskill AI adoption across all
                   departments.
                 </List.Item>
               </List.Unordered>
@@ -223,8 +227,8 @@ const CurriculumVitae: NextPage = () => (
                   across various teams. Planned and implemented a chapter
                   rotation ensuring continuous technical investments into
                   operability and maintenance. Used Chapters to structure and
-                  organize engineering onsites spanning all 100+ individual
-                  contributors.
+                  organize engineering a total of eight onsites spanning all
+                  100+ individual contributors.
                 </List.Item>
                 <List.Item>
                   Authored the <strong>Chapter of Chapters</strong>{' '}
@@ -291,8 +295,10 @@ const CurriculumVitae: NextPage = () => (
                 </List.Item>
                 <List.Item>
                   Facilitated <strong>PR/FAQ processes</strong> for 5+
-                  initiatives across Business User Tooling, for example the new
-                  Design System and Filters &amp; Navigation improvements.
+                  initiatives across Business User Tooling, for example a new
+                  Design System and Filters &amp; Navigation improvements with
+                  the Business User Tooling. Aligned all discovery and execution
+                  planning across engineering, product management and UX.
                 </List.Item>
                 <List.Item>
                   Provided <strong>intermittent technical support</strong> to 5+
@@ -308,10 +314,10 @@ const CurriculumVitae: NextPage = () => (
               <Text.Headline as="h4">Vendor Management & Hiring</Text.Headline>
               <List.Unordered>
                 <List.Item>
-                  Negotiated <strong>SaaS contracts</strong> with Anthropic and
-                  six additional vendors and managed asset compliance through
-                  OneTrust including user lifecycle for leavers across the
-                  Business User Tooling.
+                  Managed and negotiated <strong>SaaS contracts</strong> with
+                  Anthropic, CircleCI, GitHuband other vendors. Managing asset
+                  compliance through OneTrust including user lifecycle for
+                  leavers across the Business User Tooling.
                 </List.Item>
                 <List.Item>
                   Defined <strong>transparent hiring processes</strong> for
