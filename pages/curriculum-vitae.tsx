@@ -959,8 +959,39 @@ const CurriculumVitae: NextPage = () => (
           <Text.Headline as="h3">Talks & Posts</Text.Headline>
           <List.Unordered>
             <List.Item>
+              <ExternalLink href="./bedcon.pdf">
+                Bridging silos using cross-team rotations
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
+              <ExternalLink href="./decompiled.pdf">
+                Ingredients to successfully manage cross-team projects
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
               <ExternalLink href="https://slides.com/tdeekens/power-to-the-toggles-exended">
                 Power to the toggles
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
+              <ExternalLink href="https://commercetools.com/blog/ai-first-engineering-at-commercetools">
+                The commercetools AI-first engineering journey: From
+                autocomplete to near-universal adoption
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
+              <ExternalLink href="https://commercetools.com/blog/how-we-evaluated-the-impact-of-github-copilot-for-3-months">
+                How we evaluated the impact of GitHub Copilot for 3 months
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
+              <ExternalLink href="https://commercetools.com/blog/3-years-of-sustaining-open-source-through-our-donation-program">
+                3 years of sustaining Open Source through our donation program
+              </ExternalLink>
+            </List.Item>
+            <List.Item>
+              <ExternalLink href="https://techblog.commercetools.com/veni-vidi-vici-my-journey-into-mastering-remote-working-79131ec974d7">
+                Veni, vidi, vici: my journey into mastering remote working
               </ExternalLink>
             </List.Item>
             <List.Item>
