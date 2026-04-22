@@ -1,0 +1,96 @@
+---
+title: How we evaluated the impact of GitHub Copilot for three months
+slug: how-we-evaluated-the-impact-of-github-copilot-for-three-months
+draft: true
+---
+
+We at commercetools use various programming languages and tools to build our different products. From Scala to TypeScript, to PHP, Go or Rust. We value making educated choices about technology decisions to pick tools which make us productive. Furthermore, as our company grew we wanted to retain our collaborative mindset which is ingrained into our company values. We see a huge impact towards collaboration in software engineering by the breadth of tools built with Generative AI and are eager to embed them into our daily routines.
+
+GitHub announced GitHub Copilot for Business in February of this year. This announcement immediately caught our attention and interest. Engineers across the organization shared their desire to use GitHub Copilot. After aligning internally on an adoption strategy we decided to evaluate GitHub Copilot for three months to learn how it can help us be more productive. This blog post describes our path to evaluate and adopt Copilot.
+
+## Why evaluate first and not just adopt?
+
+You may wonder why we evaluated an omnipresent and successful product such as GitHub Copilot for three months instead of just adopting it for all engineers. commercetools believes in a pragmatic approach to the adoption of AI. AI is a widely supported initiative, but the usage and determination is bottom-up. We want our teams to evaluate and decide how AI can enable productivity and functionality. In this case, the engineering department will evaluate Copilot just as we would any other new tool. In doing so we involve those actually using and being affected by the tool and get their pragmatic and humble opinion.
+
+Moreover, the incoming flux of enhanced and new products backed with Generative AI increases the importance to be aware of each tool’s impact. Only by doing so one can complement them to maximize the sum of their impact thoughtfully. Is it for example valuable to use Replit Ghostwriter, Codeium, CodeComplete and GitHub Copilot together or should we rather complement one with something different such as mintlify or wrap. Question one can only answer after exploring tools in practice and not only through scanning their marketing website.
+
+To perform an informed adopting we wanted to clearly understand the expected and actual impact of GitHub Copilot across our engineering organization. This includes Frontend Engineers as well as Backend Engineers just as much as Site Reliability Engineers, Test Automation Engineers or people working on documentation.
+
+## How we evaluated GitHub Copilot
+
+After having decided that we wanted to perform a controlled evaluation we first settled on a meaningful duration for it. Three months which span over two quarters felt ideal. Through it we hoped to get a good snapshot of the engineering cycle including the end of a quarter where teams often roll out new functionality across our products.
+
+After having settled on a duration we needed a sample size. When having 150 engineers, running an evaluation with just 5-10 of them can easily lead to skewed results. As a result we wanted to aim for 30-35 engineers to join the team of evaluators in turn yielding a representation of 20-25%. Lastly, we wanted to involve as many disciplines as possible to get a heterogeneous group using different tools and languages.
+
+We were now ready to share our plans through an internal blog post and. Through it we shared the process and linked a Google form allowing anybody to sign up. After a week 34 people across the organization signed up. This roughly matched out desired sample size and we luckily didn’t have to adjust our pool or evaluators retroactively. Everybody was now added to an E-Mail list and Slack channel to share updates. To grant access all members were added to a dedicated team on GitHub giving them access to GitHub Copilot.
+
+With all of this setup we got out of people’s way and just let them do their work and use Copilot in the process. Only after a week we briefly checked in to ensure that everybody successfully installed and integrated Copilot into their editor of choice. For the coming weeks people shared their impression and code sample in Slack or on Pull Requests while we remained in the background preparing a larger final survey.
+
+Throughout the duration of our evaluation we remained in touch with GitHub in the background. They shared interesting statistics with us such as the average code acceptance rate. Moreover, we managed to get Copilot Chat for the last two weeks of our evaluation which allowed us to peak into the future of Copilot being more collaborative. We are excited to see where the future of Copilot X and its different offering takes us.
+
+## The results and outcome
+
+We anticipated GitHub Copilot to be convenient to integrate into daily workflows and ease to use. We hoped suggestions to be useful across programming languages and not get in the way of people. Throughout our evaluation we were not disappointed in any of these expectations but we also noticed room for improvements and the quality of suggestions varied a lot by the type of work somebody was performing.
+
+In more detail, our main survey turned out to be 15 question long focussed around three key areas:
+
+1. Is Copilot used continuously
+2. Does Copilot make us more productive
+3. Does Copilot not pose major risks or downsides to us
+
+Around these three key areas we drilled deeper with questions such as:
+
+1. How often did you use GitHub Copilot during our trial?
+2. Did your usage of GitHub Copilot change during the three months?
+3. How often did you have to adjust the suggestions by Copilot?
+4. In what tasks did you see your biggest productivity gains?
+5. Should we evaluate other tools using generative AI this year to improve our productivity?
+
+Having asked all these questions, what are the main takeaways?
+
+- 57% used Copilot every day, anybody else every other day.
+- 95% stated that Copilot makes them more productive
+- 63% claimed that their usage increased over time
+- 67% stated that suggestions are helpful
+- 82% stated that suggestions are rarely problematic
+- 60% claimed that Copilot is sufficient as a AI coding assistant
+- 80% do not expect other tools to be significantly better
+- 100% would like continue using Copilot
+
+In addition to these numbers we also managed to gather more qualitative insights around where Copilot shines and did not manage to impress.
+
+1. Copilot succeeds at writing tests (72%)
+2. Copilot helps in refactoring code (42%)
+3. Copilot shines autocompletion, boilerplate and scaffolding (~60%)
+4. Copilot struggles with complex business logic (82%)
+5. Copilot is not powerful when code context matters (43%)
+6. Copilot should be considered carefully with performance or security related topics (27%)
+7. Copilot is not helpful with highly specialist or modern frameworks (14%)
+
+As we evaluated Copilot for a longer period we also saw areas for improvements:
+
+1. You can't give it feedback on a suggestion yet
+2. It can't be configured to not work in certain folders or situations
+3. It doesn't work very well across file boundaries
+4. Homogenous refactoring across a larger code base isn't working well with it
+
+That's a lot of numbers but they certainly helped us understand the usefulness of Copilot across our organization. Once enabled, it was used continuously and the usage even increased. Suggestions were often accepted and of good quality. Users were able to embed it easily into their existing work environments and got huge productivity gains out of it. All of which means for us that we will continue to roll it out wider across our organization in the coming weeks. As a result we expect it to become an essential part of our toolbelt in the coming years.
+
+## Quotes
+
+**I thought we could put these as quotes in between the blog post’s paragraphs. Just to shake up the attention a bit.**
+
+> “It hallucinated more functions in common libraries than I expected”
+> Somebody describing initially pessimistic expectations
+
+> “At times it seems asleep with many VS Code windows open. Then it yells 50 lines of code at you.”
+> Somebody being hit by a rapid suggestion burst
+
+> “There was a daily wrestle of Copilot vs. regular IntelliSense”
+> Somebody watching a fight
+
+> “It writes release notes for me! This is the best thing ever!”
+> Somebody getting an early coffee
+
+> “Copilot is exactly smart enough to be dangerously stupid”
+> Somebody after Copilot suggested to load 40k entities from a database one by one

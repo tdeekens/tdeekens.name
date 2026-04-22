@@ -1,6 +1,6 @@
 import type { GetStaticPropsContext } from 'next';
 import type { THeadlineProps, TParagraphProps } from '@components/text';
-import type { TUnorderedProps } from '@components/list';
+import type { TOrderedProps, TUnorderedProps } from '@components/list';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MDXRemote } from 'next-mdx-remote';
 import fs from 'fs';
@@ -30,6 +30,7 @@ const components = {
   ),
   p: (props: TParagraphProps) => <Text.Paragraph {...props} />,
   ul: (props: TUnorderedProps) => <List.Unordered {...props} />,
+  ol: (props: TOrderedProps) => <List.Ordered {...props} />,
   Blockquote,
   Image,
 };
