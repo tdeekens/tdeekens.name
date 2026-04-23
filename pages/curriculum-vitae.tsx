@@ -102,15 +102,16 @@ const CurriculumVitae: NextPage = () => (
           <strong>mentoring engineers</strong>, and scaling systems and
           practices with{' '}
           <strong>clarity, autonomy, and technical quality</strong>.
-          <br />
-          Active Open Source contributor to{' '}
+          <br />I care deeply about Open Source and support it through code,
+          issue triage, and funding. That includes contributions to{' '}
           <ExternalLink href="https://github.com/mswjs/msw">
             msw
-          </ExternalLink>,{' '}
+          </ExternalLink>{' '}
+          and{' '}
           <ExternalLink href="https://github.com/cure53/DOMPurify">
             DOMPurify
           </ExternalLink>
-          , and creator of{' '}
+          , creating{' '}
           <ExternalLink href="https://github.com/tdeekens/flopflip">
             flopflip
           </ExternalLink>{' '}
@@ -118,7 +119,9 @@ const CurriculumVitae: NextPage = () => (
           <ExternalLink href="https://github.com/tdeekens/promster">
             promster
           </ExternalLink>
-          .
+          , and additional libraries and projects on GitHub. I also initiated
+          and led a democratic funding program that supported 20+ projects
+          financially over four years.
         </Text.Paragraph>
         <Text.Paragraph>
           Beyond work: retired, lanky basketball player, self-taught and lousy
