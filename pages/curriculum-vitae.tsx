@@ -85,18 +85,23 @@ const CurriculumVitae: NextPage = () => (
       </Text.Headline>
       <article className="py-4">
         <Text.Paragraph>
-          Engineer, architect, retired basketball player, mentor, lousy
-          guitarist and speaker with experience across{' '}
-          <strong>frontend platforms, APIs, and engineering leadership</strong>.
-          Enjoys <strong>building products end to end</strong> and helping teams
-          grow stronger in both{' '}
-          <strong>technical judgment and execution</strong>. Work spans the{' '}
-          <strong>full product lifecycle</strong>, from shaping architecture and
-          engineering practices to delivering robust frontends,{' '}
-          <strong>RESTful and GraphQL APIs</strong>, and supporting
-          infrastructure from Kubernetes to Prometheus. Cares deeply about{' '}
-          <strong>mentoring</strong>, cross-team collaboration, and building
-          systems that scale both technically and organisationally.
+          I work at the intersection of software architecture, technical
+          leadership, and cross-team execution, scaling products, engineering
+          practices, and teams without losing delivery autonomy.
+        </Text.Paragraph>
+        <Text.Paragraph>
+          My work spans software architecture, technical leadership, and
+          cross-team delivery across{' '}
+          <strong>
+            frontend platforms, APIs, and supporting infrastructure
+          </strong>
+          . I am most effective working with teams to make technical decisions,
+          make tradeoffs explicit, and build the alignment needed for execution
+          without needing formal authority in the process. I care about{' '}
+          <strong>building products end to end</strong>,{' '}
+          <strong>mentoring engineers</strong>, and scaling systems and
+          practices with{' '}
+          <strong>clarity, autonomy, and technical quality</strong>.
           <br />
           Active Open Source contributor to{' '}
           <ExternalLink href="https://github.com/mswjs/msw">
@@ -114,6 +119,11 @@ const CurriculumVitae: NextPage = () => (
             promster
           </ExternalLink>
           .
+        </Text.Paragraph>
+        <Text.Paragraph>
+          Beyond work: retired, lanky basketball player, self-taught and lousy
+          guitarist, and avid home cook for the household who enjoys getting
+          frustrated about his latte art.
         </Text.Paragraph>
       </article>
     </section>
@@ -145,11 +155,11 @@ const CurriculumVitae: NextPage = () => (
           </Text.Headline>
           <List.Unordered>
             <List.Item>
-              <span className="italic">Technical direction setting:</span>{' '}
-              Contributed to tech strategies and their alignment with product
-              strategies across the product development department. Provided
-              technical support and guidance for various teams to assist with
-              their deliverables.
+              <span className="italic">Technical direction setting:</span> Drove
+              key parts of the tech strategy and aligned them with product
+              strategy across the product development department. Guided
+              technical direction across teams and unblocked delivery on
+              critical initiatives.
             </List.Item>
             <List.Item>
               <span className="italic">Hiring & onboarding:</span> Defined
@@ -163,11 +173,11 @@ const CurriculumVitae: NextPage = () => (
               to sustain technical quality over 8+ years within my discipline.
             </List.Item>
             <List.Item>
-              <span className="italic">Public visibility:</span> Contributed to
-              internal and external visibility of the company by publishing blog
-              posts, giving conference talks and building partnerships with
-              other companies. Managed an Open Source donation program for three
-              years supporting 20+ projects financially.
+              <span className="italic">Public visibility:</span> Built internal
+              and external technical visibility through blog posts, conference
+              talks, and partnerships with other companies. Managed an Open
+              Source donation program for three years supporting 20+ projects
+              financially.
             </List.Item>
           </List.Unordered>
         </section>
@@ -199,10 +209,10 @@ const CurriculumVitae: NextPage = () => (
                   department&apos;s way of working.
                 </List.Item>
                 <List.Item>
-                  Evaluated and introduced GitHub Copilot, Cursor, Claude Code,
-                  Codex and OpenCode.{' '}
-                  <strong>Scaled Claude Code to 100+ seats</strong>, GitHub
-                  Copilot, and Cursor to 80+ users, backed by vendor contracts
+                  Defined and led the evaluation and rollout of GitHub Copilot,
+                  Cursor, Claude Code, Codex and OpenCode across engineering.{' '}
+                  <strong>Scaled Claude Code to 100+ seats</strong> and GitHub
+                  Copilot and Cursor to 80+ users, backed by vendor contracts
                   and an updated IT Security policy for AI usage.
                 </List.Item>
               </List.Unordered>
@@ -214,11 +224,13 @@ const CurriculumVitae: NextPage = () => (
               </Text.Headline>
               <List.Unordered>
                 <List.Item>
-                  Introduced and upskilled contributors for an{' '}
-                  <strong>on-call rotation for Business User Tooling</strong>{' '}
-                  covering frontend and APIs, then ran Wheel of Misfortune
-                  exercises and retrospectives to onboard replacements and
-                  prepare the rotation for Black Friday.
+                  Introduced and owned an{' '}
+                  <strong>on-call rotation for frontend and APIs</strong>,
+                  integrated it with support workflows, and used postmortems to
+                  drive improvements that reduced incidents from two per month
+                  to zero over six months, met the company&apos;s highest SLA,
+                  and enabled 10-minute response times for high-priority
+                  tickets.
                 </List.Item>
                 <List.Item>
                   Drove <strong>multi-cloud resilience</strong> for Business
@@ -240,21 +252,22 @@ const CurriculumVitae: NextPage = () => (
               </Text.Headline>
               <List.Unordered>
                 <List.Item>
-                  Led <strong>two large-scale redesigns</strong> of Business
-                  User Tooling involving eight teams over two and four months
-                  respectively, helping define how cross-team projects are led
-                  in engineering through tech leadership.
+                  Owned cross-team product, architecture, design, and UX
+                  improvements across eight teams, creating a repeatable model
+                  for multi-team delivery through tech leadership and improving
+                  the product&apos;s positioning in the Gartner Magic Quadrant.
                 </List.Item>
                 <List.Item>
                   Defined and led <strong>technical working groups</strong>{' '}
-                  spanning multiple teams and disciplines, using RFCs and design
-                  documents to shape architecture for 5+ teams.
+                  spanning multiple teams and disciplines, shaping architecture
+                  for 5+ teams through RFCs and design documents.
                 </List.Item>
                 <List.Item>
                   Facilitated <strong>PR/FAQ processes</strong> for 5+ Business
                   User Tooling initiatives, including a new Design System and
-                  Filters &amp; Navigation improvements, aligning discovery and
-                  execution across engineering, product management, and UX.
+                  Filters &amp; Navigation improvements, aligning engineering,
+                  product management, and UX around shared discovery and
+                  execution plans.
                 </List.Item>
               </List.Unordered>
             </div>
@@ -387,14 +400,14 @@ const CurriculumVitae: NextPage = () => (
             <Text.Headline as="h3">Initiatives</Text.Headline>
             <List.Unordered>
               <List.Item>
-                Guided the implementation of a testing strategy allowing
-                continuous deployment of ten independent frontends owned by
-                various teams. Increasing the deployment velocity from a weekly
+                Defined and rolled out a testing strategy that enabled
+                continuous deployment across ten independent frontends owned by
+                multiple teams, increasing deployment velocity from a weekly
                 cadence to multiple times a day.
               </List.Item>
               <List.Item>
                 Set up a recurring democratic Open Source donation model for
-                projects used inside the company, allowing commercetools to
+                projects used inside the company and enabled commercetools to
                 financially support various projects.
               </List.Item>
               <List.Item>
@@ -403,13 +416,12 @@ const CurriculumVitae: NextPage = () => (
               </List.Item>
               <List.Item>
                 Set up and steered a frontend chapter consisting of six members
-                meeting to guide execution of cross-cutting technical concerns
-                across teams with product managers.
+                that drove execution of cross-cutting technical concerns across
+                teams with product managers.
               </List.Item>
               <List.Item>
-                Contributed to the long-term structure in the engineering
-                department from each team&apos;s responsibilities to roles
-                within and across teams.
+                Shaped the long-term engineering organization, from team
+                responsibilities to roles within and across teams.
               </List.Item>
             </List.Unordered>
           </section>
@@ -497,46 +509,45 @@ const CurriculumVitae: NextPage = () => (
             <Text.Headline as="h3">Initiatives</Text.Headline>
             <List.Unordered>
               <List.Item>
-                Introducing feature toggling via LaunchDarkly with the
+                Introduced feature toggling via LaunchDarkly with the
                 self-written{' '}
                 <ExternalLink href="https://github.com/tdeekens/flopflip">
                   flopflip
                 </ExternalLink>{' '}
-                library. Allowing more frequent deployments and beta testing of
-                features with collaboration with selected customers product
-                managers.
+                library, enabling more frequent deployments and beta testing of
+                features with selected customers and product managers.
               </List.Item>
               <List.Item>
-                Migrating Frontend and Node.js monitoring from Influx to{' '}
+                Migrated frontend and Node.js monitoring from Influx to{' '}
                 <ExternalLink href="https://prometheus.io/">
                   Prometheus
                 </ExternalLink>{' '}
-                and Grafana with the help of{' '}
+                and Grafana using{' '}
                 <ExternalLink href="https://github.com/tdeekens/promster">
                   promster
                 </ExternalLink>
-                . Increasing observability of the platform to increase its
-                health but also enable auto scaling.
+                , increasing observability of the platform, improving its
+                health, and enabling auto scaling.
               </List.Item>
               <List.Item>
-                Introducing and advocating{' '}
+                Introduced and advocated{' '}
                 <ExternalLink href="https://github.com/prettier/prettier">
                   prettier
                 </ExternalLink>{' '}
-                for automatic code formatting. Simplifying and speeding up code
+                for automatic code formatting, simplifying and speeding up code
                 changes while removing discussions around code formatting.
               </List.Item>
               <List.Item>
-                Migrating the JavaScript SDK to a{' '}
+                Migrated the JavaScript SDK to a{' '}
                 <ExternalLink href="https://github.com/rollup/rollup">
                   Rollup
                 </ExternalLink>{' '}
-                based build via CircleCI. Speeding up Continuous Integration but
-                also enabling an automated release process without needing a
-                local machine.
+                based build via CircleCI, speeding up Continuous Integration and
+                enabling an automated release process without needing a local
+                machine.
               </List.Item>
               <List.Item>
-                Adding a dual deployment workflow to AWS and GCP onto a
+                Added a dual deployment workflow to AWS and GCP onto a
                 Kubernetes cluster with Helm into six production environments.
               </List.Item>
             </List.Unordered>
