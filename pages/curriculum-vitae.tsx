@@ -434,7 +434,7 @@ const CurriculumVitae: NextPage = () => (
       <article className="py-4">
         <Job.Headline
           jobRole="Senior Software Engineer at"
-          location="from Vienna, Austria"
+          location="from Berlin, Germany and Vienna, Austria"
           duration="April 2017 - January 2020"
           company="commercetools"
           href="https://commercetools.com"
