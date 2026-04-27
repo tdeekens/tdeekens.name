@@ -2,11 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Text from '@components/text';
 import List from '@components/list';
-import path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
+import { getAllPosts } from '../lib/posts';
 
 type THomeProps = {
   posts: Array<{
@@ -215,24 +213,14 @@ const Home = (props: THomeProps) => (
   </>
 );
 
-const postsDirectory = path.join(process.cwd(), '_posts');
-
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(postsDirectory);
-  const posts = files.reverse().map((filename) => {
-    const rawPost = fs.readFileSync(`${postsDirectory}/${filename}`, 'utf-8');
-    const parsedWithFrontmatter = matter(rawPost);
-
-    return {
-      title: parsedWithFrontmatter.data.title,
-      slug: parsedWithFrontmatter.data.slug,
-      draft: parsedWithFrontmatter.data.draft,
-    };
-  });
-
   return {
     props: {
-      posts,
+      posts: getAllPosts().map((post) => ({
+        title: post.title,
+        slug: post.slug,
+        draft: post.draft,
+      })),
     },
   };
 };
