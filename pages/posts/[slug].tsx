@@ -3,15 +3,13 @@ import type { THeadlineProps, TParagraphProps } from '@components/text';
 import type { TOrderedProps, TUnorderedProps } from '@components/list';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MDXRemote } from 'next-mdx-remote';
-import fs from 'fs';
-import path from 'path';
 import Head from 'next/head';
 import Image from 'next/image';
-import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import Text from '@components/text';
 import List from '@components/list';
 import Blockquote from '@components/blockquote';
+import { getAllPosts, getPostBySlug } from '../../lib/posts';
 
 type TPostProps = {
   matter: {
@@ -46,41 +44,33 @@ const Post = (props: TPostProps) => (
   </>
 );
 
-const postsDirectory = path.join(process.cwd(), '_posts');
-
 export async function getStaticProps(
   context: GetStaticPropsContext<Pick<TPostProps, 'slug'>>,
 ) {
-  const files = fs.readdirSync(postsDirectory);
-  // @ts-expect-error params always exist (pray)
-  const post = files.find((file) => file.includes(context.params.slug));
-  const postFile = `${postsDirectory}/${post}`;
-  const rawPost = fs.readFileSync(path.resolve(postFile), 'utf8');
-  const parsedWithFrontmatter = matter(rawPost);
-  const mdxSource = await serialize(parsedWithFrontmatter.content);
+  const slug = context.params?.slug;
+  const post = slug ? getPostBySlug(slug) : undefined;
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const mdxSource = await serialize(post.content);
 
   return {
     props: {
       source: mdxSource,
       matter: {
-        title: parsedWithFrontmatter.data.title,
-        postFile,
+        title: post.title,
+        postFile: post.postFile,
       },
     },
   };
 }
 
 export async function getStaticPaths() {
-  const paths = fs
-    .readdirSync(postsDirectory)
-    .map((path) =>
-      path
-        .replace(/\.mdx?$/, '')
-        .split('-')
-        .splice(1)
-        .join('-'),
-    )
-    .map((slug) => ({ params: { slug } }));
+  const paths = getAllPosts().map((post) => ({ params: { slug: post.slug } }));
 
   return {
     paths,

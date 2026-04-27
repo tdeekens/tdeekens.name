@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.tdeekens.name
+
+# Sitemaps
+Sitemap: https://www.tdeekens.name/sitemap.xml
