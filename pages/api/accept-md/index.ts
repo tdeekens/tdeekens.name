@@ -75,7 +75,7 @@ export default async function handler(
     req.headers['x-original-path'] ||
     req.headers['x-rewrite-path'];
   const pathname = normalizePath(
-    pathFromHeader || pathFromMatchedHeader || pathFromQuery,
+    pathFromHeader || pathFromQuery || pathFromMatchedHeader,
   );
 
   if (pathname.startsWith('/api/') || pathname.startsWith('/_next/')) {
