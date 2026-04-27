@@ -24,7 +24,8 @@
       "Bash(awk -F'\\\\t' '$1==\"Bash\" && $2 ~ /^gh api/ {print $2}' /tmp/toolcalls.tsv)",
       "Bash(/bin/ls -la .claude/)",
       "Bash(pnpm typecheck *)",
-      "Bash(pnpm remove *)"
+      "Bash(pnpm remove *)",
+      "Bash(git rm *)"
     ]
   }
 }
