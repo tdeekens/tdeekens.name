@@ -1,46 +1,26 @@
 import { useState, type FormEvent } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport, type UIMessage } from 'ai';
-import Markdown, { type Components } from 'react-markdown';
+import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
-const MARKDOWN_COMPONENTS: Components = {
-  p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-  ul: ({ children }) => (
-    <ul className="mb-2 list-disc pl-5 last:mb-0">{children}</ul>
-  ),
-  ol: ({ children }) => (
-    <ol className="mb-2 list-decimal pl-5 last:mb-0">{children}</ol>
-  ),
-  li: ({ children }) => <li className="mb-1 last:mb-0">{children}</li>,
-  a: ({ href, children }) => (
-    <a href={href} className="underline hover:no-underline">
-      {children}
-    </a>
-  ),
-  strong: ({ children }) => (
-    <strong className="font-semibold">{children}</strong>
-  ),
-  code: ({ children }) => (
-    <code className="px-1 py-0.5 bg-gray-100 text-sm">{children}</code>
-  ),
-  pre: ({ children }) => (
-    <pre className="mb-2 p-2 bg-gray-100 text-sm overflow-x-auto">
-      {children}
-    </pre>
-  ),
-  blockquote: ({ children }) => (
-    <blockquote className="mb-2 pl-3 border-l-2 border-gray-400 italic">
-      {children}
-    </blockquote>
-  ),
-};
 
 const SUGGESTIONS = [
   "What's Tobias's current role?",
   'What books has Tobias read recently?',
   'What open-source work has Tobias done?',
 ] as const;
+
+const MARKDOWN_CLASSES = [
+  '[&_p]:mb-2 [&_p:last-child]:mb-0',
+  '[&_ul]:mb-2 [&_ul]:list-disc [&_ul]:pl-5',
+  '[&_ol]:mb-2 [&_ol]:list-decimal [&_ol]:pl-5',
+  '[&_li]:mb-1',
+  '[&_a]:underline hover:[&_a]:no-underline',
+  '[&_strong]:font-semibold',
+  '[&_code]:px-1 [&_code]:py-0.5 [&_code]:bg-gray-100 [&_code]:text-sm',
+  '[&_pre]:p-2 [&_pre]:bg-gray-100 [&_pre]:overflow-x-auto [&_pre]:mb-2',
+  '[&_blockquote]:pl-3 [&_blockquote]:border-l-2 [&_blockquote]:border-gray-400 [&_blockquote]:italic [&_blockquote]:mb-2',
+].join(' ');
 
 const renderMessageText = (message: UIMessage): string =>
   message.parts.map((part) => (part.type === 'text' ? part.text : '')).join('');
@@ -52,9 +32,9 @@ function AskAboutMe() {
   });
 
   const isBusy = status === 'submitted' || status === 'streaming';
-  const lastAssistantMessage = [...messages]
-    .reverse()
-    .find((message) => message.role === 'assistant');
+  const lastAssistantMessage = messages.findLast(
+    (message) => message.role === 'assistant',
+  );
   const lastAnswer = lastAssistantMessage
     ? renderMessageText(lastAssistantMessage)
     : '';
@@ -116,13 +96,8 @@ function AskAboutMe() {
       )}
 
       {lastAnswer && (
-        <div className="mt-4">
-          <Markdown
-            remarkPlugins={[remarkGfm]}
-            components={MARKDOWN_COMPONENTS}
-          >
-            {lastAnswer}
-          </Markdown>
+        <div className={`mt-4 ${MARKDOWN_CLASSES}`}>
+          <Markdown remarkPlugins={[remarkGfm]}>{lastAnswer}</Markdown>
         </div>
       )}
 

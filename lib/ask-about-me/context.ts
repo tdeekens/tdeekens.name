@@ -2,25 +2,15 @@ import { getMarkdownForPath, loadConfig } from 'accept-md-runtime';
 import { getPublishedPosts } from '../posts';
 import { ASK_ABOUT_ME_CONFIG, type SourcePath } from './config';
 
-type ContextSource = {
-  path: SourcePath;
-  title: string;
-  markdown: string;
-};
-
 export type CvContext = {
-  sources: ContextSource[];
   combinedMarkdown: string;
   approxTokens: number;
   builtAt: number;
 };
 
-type CachedContext = {
-  baseUrl: string;
-  context: CvContext;
-};
+const acceptMdConfig = loadConfig(process.cwd());
 
-let cached: CachedContext | null = null;
+let cached: CvContext | null = null;
 
 const titleFromPath = (path: SourcePath): string => {
   if (path === '/curriculum-vitae') return 'Curriculum vitae';
@@ -37,15 +27,12 @@ const trimToParagraph = (markdown: string, maxChars: number): string => {
   return (lastBreak > 0 ? cut.slice(0, lastBreak) : cut).trimEnd() + '…';
 };
 
-const fetchPageMarkdown = async (
-  path: SourcePath,
-  baseUrl: string,
-): Promise<string> => {
-  const config = loadConfig(process.cwd());
-  return getMarkdownForPath({ pathname: path, baseUrl, config });
-};
+const fetchPageMarkdown = (path: SourcePath, baseUrl: string) =>
+  getMarkdownForPath({ pathname: path, baseUrl, config: acceptMdConfig });
 
-const loadPostSources = (): ContextSource[] => {
+type Source = { path: SourcePath; title: string; markdown: string };
+
+const loadPostSources = (): Source[] => {
   const posts = getPublishedPosts() as Array<{
     slug: string;
     title?: string;
@@ -61,7 +48,7 @@ const loadPostSources = (): ContextSource[] => {
   }));
 };
 
-const combineSources = (sources: ContextSource[]): string =>
+const combineSources = (sources: Source[]): string =>
   sources
     .map(
       (source) =>
@@ -69,52 +56,35 @@ const combineSources = (sources: ContextSource[]): string =>
     )
     .join('\n\n---\n\n');
 
-const estimateTokens = (text: string): number => Math.ceil(text.length / 4);
-
-export type GetCvContextOptions = {
-  baseUrl: string;
-  now?: () => number;
-};
-
-export const buildCvContext = async (
-  opts: GetCvContextOptions,
-): Promise<CvContext> => {
-  const pageSources = await Promise.all(
+const buildCvContext = async (baseUrl: string): Promise<CvContext> => {
+  const pageSources: Source[] = await Promise.all(
     ASK_ABOUT_ME_CONFIG.pageSourcePaths.map(async (path) => ({
       path,
       title: titleFromPath(path),
-      markdown: await fetchPageMarkdown(path, opts.baseUrl),
+      markdown: await fetchPageMarkdown(path, baseUrl),
     })),
   );
 
-  const postSources = ASK_ABOUT_ME_CONFIG.includePosts ? loadPostSources() : [];
-  const sources = [...pageSources, ...postSources];
+  const sources = ASK_ABOUT_ME_CONFIG.includePosts
+    ? [...pageSources, ...loadPostSources()]
+    : pageSources;
+
   const combinedMarkdown = combineSources(sources);
 
   return {
-    sources,
     combinedMarkdown,
-    approxTokens: estimateTokens(combinedMarkdown),
-    builtAt: opts.now?.() ?? Date.now(),
+    approxTokens: Math.ceil(combinedMarkdown.length / 4),
+    builtAt: Date.now(),
   };
 };
 
-export const getCvContext = async (
-  opts: GetCvContextOptions,
-): Promise<CvContext> => {
-  const now = opts.now?.() ?? Date.now();
+export const getCvContext = async (baseUrl: string): Promise<CvContext> => {
   if (
     cached &&
-    cached.baseUrl === opts.baseUrl &&
-    now - cached.context.builtAt < ASK_ABOUT_ME_CONFIG.contextTtlMs
+    Date.now() - cached.builtAt < ASK_ABOUT_ME_CONFIG.contextTtlMs
   ) {
-    return cached.context;
+    return cached;
   }
-  const context = await buildCvContext(opts);
-  cached = { baseUrl: opts.baseUrl, context };
-  return context;
-};
-
-export const invalidateCvContext = (): void => {
-  cached = null;
+  cached = await buildCvContext(baseUrl);
+  return cached;
 };

@@ -1,11 +1,9 @@
-type RateLimitResult = {
-  allowed: boolean;
-  remaining: number;
-  resetAt: number;
-};
-
 export type RateLimiter = {
-  check: (key: string) => RateLimitResult;
+  check: (key: string) => {
+    allowed: boolean;
+    remaining: number;
+    resetAt: number;
+  };
 };
 
 type Bucket = {
@@ -13,39 +11,40 @@ type Bucket = {
   windowStart: number;
 };
 
-type CreateRateLimiterOptions = {
+const MAX_TRACKED_KEYS = 1000;
+
+export const createInMemoryRateLimiter = (opts: {
   windowMs: number;
   maxRequests: number;
-  now?: () => number;
-};
-
-export const createInMemoryRateLimiter = ({
-  windowMs,
-  maxRequests,
-  now = Date.now,
-}: CreateRateLimiterOptions): RateLimiter => {
+}): RateLimiter => {
   const buckets = new Map<string, Bucket>();
+
+  const evictExpired = (now: number) => {
+    buckets.forEach((bucket, key) => {
+      if (now - bucket.windowStart >= opts.windowMs) buckets.delete(key);
+    });
+  };
 
   return {
     check: (key) => {
-      const current = now();
-      const bucket = buckets.get(key);
+      const now = Date.now();
+      if (buckets.size >= MAX_TRACKED_KEYS) evictExpired(now);
 
-      if (!bucket || current - bucket.windowStart >= windowMs) {
-        buckets.set(key, { count: 1, windowStart: current });
+      const bucket = buckets.get(key);
+      if (!bucket || now - bucket.windowStart >= opts.windowMs) {
+        buckets.set(key, { count: 1, windowStart: now });
         return {
           allowed: true,
-          remaining: maxRequests - 1,
-          resetAt: current + windowMs,
+          remaining: opts.maxRequests - 1,
+          resetAt: now + opts.windowMs,
         };
       }
 
       bucket.count += 1;
-      const resetAt = bucket.windowStart + windowMs;
       return {
-        allowed: bucket.count <= maxRequests,
-        remaining: Math.max(0, maxRequests - bucket.count),
-        resetAt,
+        allowed: bucket.count <= opts.maxRequests,
+        remaining: Math.max(0, opts.maxRequests - bucket.count),
+        resetAt: bucket.windowStart + opts.windowMs,
       };
     },
   };

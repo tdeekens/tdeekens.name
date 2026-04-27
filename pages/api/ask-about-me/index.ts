@@ -10,14 +10,25 @@ import { getCvContext } from '@lib/ask-about-me/context';
 import { buildSystemMessages } from '@lib/ask-about-me/system-prompt';
 import { askRequestSchema } from '@lib/ask-about-me/schema';
 import { createInMemoryRateLimiter } from '@lib/ask-about-me/rate-limit';
-import type { AskErrorResponse } from '@lib/ask-about-me/shared-types';
+
+type AskErrorCode =
+  | 'method_not_allowed'
+  | 'invalid_body'
+  | 'rate_limited'
+  | 'context_unavailable';
+
+type AskErrorBody = {
+  error: AskErrorCode;
+  message: string;
+  retryAfterSeconds?: number;
+};
 
 const limiter = createInMemoryRateLimiter(ASK_ABOUT_ME_CONFIG.rateLimit);
 
 const sendError = (
   res: NextApiResponse,
   status: number,
-  body: AskErrorResponse,
+  body: AskErrorBody,
 ) => {
   res.status(status).json(body);
 };
@@ -44,7 +55,7 @@ const getBaseUrl = (req: NextApiRequest): string => {
 const getClientKey = (req: NextApiRequest): string => {
   const forwarded = firstHeaderValue(req.headers['x-forwarded-for']);
   if (forwarded) return forwarded.split(',')[0].trim();
-  return req.socket.remoteAddress ?? 'anon';
+  return req.socket.remoteAddress ?? '';
 };
 
 export const config = { api: { bodyParser: { sizeLimit: '64kb' } } };
@@ -72,21 +83,17 @@ export default async function handler(
 
   const limit = limiter.check(getClientKey(req));
   if (!limit.allowed) {
-    res.setHeader(
-      'Retry-After',
-      String(Math.ceil((limit.resetAt - Date.now()) / 1000)),
-    );
+    const retryAfterSeconds = Math.ceil((limit.resetAt - Date.now()) / 1000);
+    res.setHeader('Retry-After', String(retryAfterSeconds));
     return sendError(res, 429, {
       error: 'rate_limited',
       message: 'Too many requests. Try again later.',
-      retryAfterSeconds: Math.ceil((limit.resetAt - Date.now()) / 1000),
+      retryAfterSeconds,
     });
   }
 
-  let context;
-  try {
-    context = await getCvContext({ baseUrl: getBaseUrl(req) });
-  } catch {
+  const context = await getCvContext(getBaseUrl(req)).catch(() => null);
+  if (!context) {
     return sendError(res, 503, {
       error: 'context_unavailable',
       message: 'Could not load context',
@@ -101,11 +108,15 @@ export default async function handler(
     ...userMessages,
   ];
 
+  const controller = new AbortController();
+  res.on('close', () => controller.abort());
+
   const result = streamText({
     model: ASK_ABOUT_ME_CONFIG.model.id,
     messages,
     maxOutputTokens: ASK_ABOUT_ME_CONFIG.model.maxOutputTokens,
     temperature: ASK_ABOUT_ME_CONFIG.model.temperature,
+    abortSignal: controller.signal,
   });
 
   result.pipeUIMessageStreamToResponse(res, {
@@ -113,6 +124,7 @@ export default async function handler(
       'Cache-Control': 'no-cache, no-transform',
       'Content-Encoding': 'none',
       'X-Accel-Buffering': 'no',
+      'X-Context-Tokens': String(context.approxTokens),
     },
     onError: () => 'Something went wrong. Please try again.',
   });
