@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import { ASK_ABOUT_ME_CONFIG } from './config';
-import type { AskRequestBody } from './shared-types';
 
 const { maxMessages, maxCharsPerMessage } = ASK_ABOUT_ME_CONFIG.request;
 
@@ -31,8 +30,3 @@ export const askRequestSchema = z.object({
       'At least one user message is required',
     ),
 });
-
-export type AskRequestParsed = z.infer<typeof askRequestSchema>;
-
-export const isAskRequestBody = (value: unknown): value is AskRequestBody =>
-  askRequestSchema.safeParse(value).success;

@@ -22,16 +22,13 @@ Formatting:
 - Do not use headings (#, ##) unless the visitor explicitly asks for a structured answer.
 - Do not wrap the entire reply in a code block.`;
 
-const buildContextBlock = (context: CvContext): string =>
-  `CONTEXT (Tobias Deekens's CV, bookshelf, blogroll, and recent posts):\n\n${context.combinedMarkdown}`;
-
 export const buildSystemMessages = (
   context: CvContext,
 ): SystemModelMessage[] => [
   { role: 'system', content: RULES },
   {
     role: 'system',
-    content: buildContextBlock(context),
+    content: `CONTEXT (Tobias Deekens's CV, bookshelf, blogroll, and recent posts):\n\n${context.combinedMarkdown}`,
     providerOptions: {
       anthropic: { cacheControl: { type: 'ephemeral' } },
     },
