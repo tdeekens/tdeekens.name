@@ -4,6 +4,15 @@ module.exports = {
   async headers() {
     return [
       {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Vary',
+            value: 'Accept',
+          },
+        ],
+      },
+      {
         source: '/',
         headers: [
           {
@@ -14,6 +23,29 @@ module.exports = {
         ],
       },
     ];
+  },
+  async rewrites() {
+    const markdownAcceptHeader = {
+      type: 'header',
+      key: 'accept',
+      value: '.*\\b[Tt][Ee][Xx][Tt]/[Mm][Aa][Rr][Kk][Dd][Oo][Ww][Nn]\\b.*',
+    };
+
+    return {
+      beforeFiles: [
+        {
+          source: '/',
+          has: [markdownAcceptHeader],
+          destination: '/api/accept-md?path=/',
+        },
+        {
+          source:
+            '/:path((?!api/|_next/|favicon.ico|robots.txt|sitemap.xml|site.webmanifest|.*\\..*).*)',
+          has: [markdownAcceptHeader],
+          destination: '/api/accept-md?path=/:path',
+        },
+      ],
+    };
   },
   async redirects() {
     return [
