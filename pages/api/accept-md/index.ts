@@ -58,8 +58,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    res.setHeader('Allow', 'GET, HEAD');
     res.status(405).end();
 
     return;
@@ -107,6 +107,12 @@ export default async function handler(
         'Cache-Control',
         'public, s-maxage=60, stale-while-revalidate',
       );
+    }
+
+    if (req.method === 'HEAD') {
+      res.status(200).end();
+
+      return;
     }
 
     res.status(200).send(markdown);
