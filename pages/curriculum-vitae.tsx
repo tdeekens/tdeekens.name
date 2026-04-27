@@ -6,6 +6,7 @@ import List from '@components/list';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
 import Job from '@components/job';
+import AskAboutMe from '@components/ask-about-me';
 
 const CurriculumVitae: NextPage = () => (
   <>
@@ -14,6 +15,8 @@ const CurriculumVitae: NextPage = () => (
     </Head>
 
     <Text.Headline as="h1">Curriculum vitae</Text.Headline>
+
+    <AskAboutMe />
 
     <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-center md:place-content-between">
       <ul className="">
