@@ -22,7 +22,9 @@
       "Bash(xargs -I {} jq -r 'select\\(.message.content\\) | .message.content[]? | select\\(.type==\"tool_use\"\\) | [.name, \\(.input.command // \"\"\\)] | @tsv' {})",
       "Bash(awk -F'\\\\t' '$1==\"Bash\" && $2 ~ /^claude / {print $2}' /tmp/toolcalls.tsv)",
       "Bash(awk -F'\\\\t' '$1==\"Bash\" && $2 ~ /^gh api/ {print $2}' /tmp/toolcalls.tsv)",
-      "Bash(/bin/ls -la .claude/)"
+      "Bash(/bin/ls -la .claude/)",
+      "Bash(pnpm typecheck *)",
+      "Bash(pnpm remove *)"
     ]
   }
 }
