@@ -1123,8 +1123,9 @@ const CurriculumVitae: NextPage = () => (
       <article className="py-2">
         <Text.Headline as="h3">Cooking and family</Text.Headline>
         <Text.Paragraph>
-          I enjoy to run the kitchen for my family with two girls. I secretly
-          watch cooking shows at night to surprise them for dinner. I maintain a{' '}
+          I enjoy running the kitchen for the family with two little girls. I
+          secretly watch cooking shows at night to surprise them with new dishes
+          for dinner. I maintain a{' '}
           <InternalLink href="/cooking-diary">cooking-diary</InternalLink> for
           the curious.
         </Text.Paragraph>
@@ -1134,7 +1135,7 @@ const CurriculumVitae: NextPage = () => (
         <Text.Paragraph>
           I enjoy following newsletters and Podcasts while I strive to read a
           book a month. I maintain a{' '}
-          <InternalLink href="/bookshelf">bookshelf</InternalLink> and
+          <InternalLink href="/bookshelf">bookshelf</InternalLink> and{' '}
           <InternalLink href="/blogroll">blogroll</InternalLink> for
           inspiration.
         </Text.Paragraph>
