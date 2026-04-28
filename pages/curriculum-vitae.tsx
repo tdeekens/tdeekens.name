@@ -1102,17 +1102,41 @@ const CurriculumVitae: NextPage = () => (
       <article className="py-2">
         <Text.Headline as="h3">Basketball and sports</Text.Headline>
         <Text.Paragraph>
-          Been actively engaged in teams and clubs since the age of nine playing
-          in many cities and countries. Helping clubs, taking over coaching at
-          times and just enjoying being around a team while playing at a high
-          level. Recently been focusing more on guitar than basketball.
+          I have been actively engaged in teams and clubs since the age of nine,
+          playing in various cities and countries. I have helped clubs, taken on
+          coaching roles at times, and enjoyed being part of a team while
+          playing at a competitive level. Recently, I have been focusing more on
+          guitar than basketball.
         </Text.Paragraph>
       </article>
       <article className="py-2">
         <Text.Headline as="h3">Guitar and music</Text.Headline>
         <Text.Paragraph>
-          Picked up the guitar as an autodidact learning to play for four years
-          now.
+          I picked up the guitar during my studies in 2007 and have been
+          learning to play ever since. I play for my own enjoyment and for the
+          joy of deciphering songs and music theory as an intellectual
+          challenge. I hope to be able to play songs of my{' '}
+          <InternalLink href="/jukebox">jukebox</InternalLink> in a band once I
+          grow old but am far from it.
+        </Text.Paragraph>
+      </article>
+      <article className="py-2">
+        <Text.Headline as="h3">Cooking and family</Text.Headline>
+        <Text.Paragraph>
+          I enjoy to run the kitchen for my family with two girls. I secretly
+          watch cooking shows at night to surprise them for dinner. I maintain a{' '}
+          <InternalLink href="/cooking-diary">cooking-diary</InternalLink> for
+          the curious.
+        </Text.Paragraph>
+      </article>
+      <article className="py-2">
+        <Text.Headline as="h3">Reading</Text.Headline>
+        <Text.Paragraph>
+          I enjoy following newsletters and Podcasts while I strive to read a
+          book a month. I maintain a{' '}
+          <InternalLink href="/bookshelf">bookshelf</InternalLink> and
+          <InternalLink href="/blogroll">blogroll</InternalLink> for
+          inspiration.
         </Text.Paragraph>
       </article>
     </section>
