@@ -6,7 +6,15 @@ import List from '@components/list';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
 import Job from '@components/job';
-import AskAboutMe from '@components/ask-about-me';
+import dynamic from 'next/dynamic';
+import TableOfContents from '@components/table-of-contents';
+
+const AskAboutMe = dynamic(() => import('@components/ask-about-me'), {
+  ssr: false,
+  loading: () => (
+    <section className="my-8 h-[80px] print:hidden" aria-hidden="true" />
+  ),
+});
 
 const CurriculumVitae: NextPage = () => (
   <>
@@ -14,7 +22,12 @@ const CurriculumVitae: NextPage = () => (
       <title>Curriculum vitae of Tobias Deekens</title>
     </Head>
 
-    <Text.Headline as="h1">Curriculum vitae</Text.Headline>
+    <div className="relative z-50">
+      <Text.Headline as="h1">Curriculum vitae</Text.Headline>
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 print:hidden">
+        <TableOfContents />
+      </div>
+    </div>
 
     <AskAboutMe />
 
@@ -83,7 +96,7 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section className="flex flex-col justify-center align-middle">
-      <Text.Headline as="h2" testId="cv-profile-heading">
+      <Text.Headline as="h2" id="profile" testId="cv-profile-heading">
         Profile
       </Text.Headline>
       <article className="py-4">
@@ -135,7 +148,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Work experience</Text.Headline>
+      <Text.Headline as="h2" id="work-experience">
+        Work experience
+      </Text.Headline>
 
       <article className="py-4">
         <Job.Headline
@@ -806,7 +821,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Technology experiences</Text.Headline>
+      <Text.Headline as="h2" id="technology">
+        Technology experiences
+      </Text.Headline>
 
       <section className="flex-row items-stretch sm:block md:flex text-md">
         <article className="flex-1 flex-grow pr-8 sm:my-4">
@@ -843,8 +860,8 @@ const CurriculumVitae: NextPage = () => (
               MySQL, SQLite, PostgreSQL, MongoDB, Solr and Redis (Databases)
             </List.Item>
             <List.Item>
-              Rolldown, tsup, webpack, Next.js, Rollup, Gulp, Grunt, SBT and ANT
-              (Build Tools)
+              Rolldown, tsup, turborepo, webpack, Next.js, Rollup, Gulp, Grunt,
+              SBT and ANT (Build Tools)
             </List.Item>
             <List.Item>
               vitest, Jest, Cypress, Jasmine, Mocha, Sinon, GitHub Actions,
@@ -857,7 +874,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Side projects</Text.Headline>
+      <Text.Headline as="h2" id="side-projects">
+        Side projects
+      </Text.Headline>
 
       <article className="py-2">
         <Text.Headline as="h3">
@@ -976,7 +995,9 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section>
-      <Text.Headline as="h2">Blog posts, talks and workshops</Text.Headline>
+      <Text.Headline as="h2" id="writing-and-talks">
+        Blog posts, talks and workshops
+      </Text.Headline>
 
       <section className="flex-row items-stretch sm:block md:flex text-md">
         <article className="flex-1 flex-grow pr-8 sm:my-4">
@@ -1102,7 +1123,11 @@ const CurriculumVitae: NextPage = () => (
     </section>
 
     <section className="print:hidden">
-      <Text.Headline as="h2" testId="cv-extracurricular-activities-heading">
+      <Text.Headline
+        as="h2"
+        id="extracurricular-activities"
+        testId="cv-extracurricular-activities-heading"
+      >
         Extracurricular activities
       </Text.Headline>
       <article className="py-2">
@@ -1150,7 +1175,9 @@ const CurriculumVitae: NextPage = () => (
 
     <section className="print:hidden">
       <article className="py-2">
-        <Text.Headline as="h2">University education</Text.Headline>
+        <Text.Headline as="h2" id="education">
+          University education
+        </Text.Headline>
         <Text.Headline as="h3">
           Gothenburg University (Chalmers), Sweden{' '}
           <span className="xl:float-right xl:font-thin">

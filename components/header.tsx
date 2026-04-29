@@ -5,7 +5,7 @@ import InternalLink from '@components/internal-link';
 function Header() {
   const router = useRouter();
 
-  const path = router.asPath;
+  const path = router.asPath.split('#')[0].split('?')[0];
 
   if (path === '/') return null;
 

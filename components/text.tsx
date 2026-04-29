@@ -4,6 +4,7 @@ export type THeadlineProps = {
   pageBreak?: boolean;
   children: React.ReactNode;
   testId?: string;
+  id?: string;
 };
 
 function Headline(props: THeadlineProps) {
@@ -33,7 +34,11 @@ function Headline(props: THeadlineProps) {
   }
 
   return (
-    <HeadlineElement data-test-id={props.testId} className={className}>
+    <HeadlineElement
+      id={props.id}
+      data-test-id={props.testId}
+      className={className}
+    >
       {props.children}
     </HeadlineElement>
   );
