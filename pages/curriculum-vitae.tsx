@@ -818,6 +818,8 @@ const CurriculumVitae: NextPage = () => (
             <List.Item>Java (intermediate)</List.Item>
             <List.Item>ActionScript & MXML (intermediate)</List.Item>
             <List.Item>Objective-C (basic)</List.Item>
+            <List.Item>Gleam (beginner)</List.Item>
+            <List.Item>Go (beginner)</List.Item>
             <List.Item>Python (beginner)</List.Item>
             <List.Item>Elixir & Rust (goof-off)</List.Item>
           </List.Unordered>
@@ -826,24 +828,28 @@ const CurriculumVitae: NextPage = () => (
           <Text.Headline as="h3">Technology stacks</Text.Headline>
           <List.Unordered>
             <List.Item>
-              React, Redux & Apollo, AngularJS, Node.js, Backbone.js, Express
-              and Hapi.js: (JavaScript)
+              biome, Oxc, React, Redux & Apollo, AngularJS, Node.js,
+              Backbone.js, Express and Hapi.js: (JavaScript)
             </List.Item>
             <List.Item>
-              Kubernetes, Prometheus, Kibana and Grafana: (Operations)
+              Kubernetes, Prometheus, LogScale, Vault, Kibana and Grafana:
+              (Operations)
             </List.Item>
             <List.Item>
-              CSS3, PostCSS, Stylus, SASS and LESS (CSS & Preprocessors)
+              Styled Components, emotion, CSS3, PostCSS, Stylus, SASS and LESS
+              (CSS & Preprocessors)
             </List.Item>
             <List.Item>
               MySQL, SQLite, PostgreSQL, MongoDB, Solr and Redis (Databases)
             </List.Item>
             <List.Item>
-              Webpack, Next.js, Rollup, Gulp, Grunt, SBT and ANT (Build Tools)
+              Rolldown, tsup, webpack, Next.js, Rollup, Gulp, Grunt, SBT and ANT
+              (Build Tools)
             </List.Item>
             <List.Item>
-              Jest, Cypress, Jasmine, Mocha, Sinon, GitHub Actions, CircleCI,
-              TeamCity, Jenkins and Coveralls (Testing & CI)
+              vitest, Jest, Cypress, Jasmine, Mocha, Sinon, GitHub Actions,
+              CircleCI, TeamCity, Jenkins, Sentry, Checkly and Coveralls
+              (Testing & CI)
             </List.Item>
           </List.Unordered>
         </article>
