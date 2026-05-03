@@ -19,6 +19,12 @@ const Bookshelf = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
       <Book
+        title="Bullshit Jobs: A Theory"
+        href="https://amazon.de/-/en/Bullshit-Jobs-Theory-David-Graeber/dp/0141983477"
+        src="/bookshelf/bullshit-jobs.jpg"
+        author="David Graeber"
+      />
+      <Book
         title="The Five Dysfunctions of a Team"
         href="https://amazon.de/dp/0787960756"
         src="/bookshelf/five-dysfunctions.jpg"

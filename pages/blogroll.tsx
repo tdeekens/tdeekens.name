@@ -18,6 +18,146 @@ const Blogroll = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2">
       <BlogrollEntry
+        title="DeepSeek V4: Frontier Performance at a Fraction of the Price"
+        href="https://simonwillison.net/2026/Apr/24/deepseek-v4/"
+        author="Simon Willison"
+        teaser="DeepSeek V4-Pro and V4-Flash hit competitive frontier performance while undercutting price dramatically. Flash undercuts GPT-5.4 Nano, Pro undercuts every flagship."
+        tags={['ai']}
+      />
+      <BlogrollEntry
+        title="DO_NOT_TRACK: A Privacy Standard for CLIs"
+        href="https://donottrack.sh/"
+        author="DO_NOT_TRACK"
+        teaser="One environment variable replaces a patchwork of per-tool telemetry opt-outs. A single standard for CLI and TUI tools to respect user intent without bespoke flags."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="A Product Manager's Guide to Painted-Door Tests"
+        href="https://crstanier.medium.com/a-product-managers-guide-to-painted-door-tests-a1a5de33b473"
+        author="C.R. Stanier"
+        teaser="Painted-door tests gauge demand without engineering investment by showing fake features and measuring take-rate. A binary signal beats intuition before you commit resources."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="How to Be Direct and Strategic"
+        href="https://news.theuncommonexecutive.com/p/how-to-be-direct-and-strategic"
+        author="The Uncommon Executive"
+        teaser="Directness without strategy is just venting. Reading current beliefs and emotional impact before framing your message is what makes the same words actually land."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Ghostty Is Leaving GitHub"
+        href="https://mitchellh.com/writing/ghostty-leaving-github"
+        author="Mitchell Hashimoto"
+        teaser="A long-time GitHub user moves off the platform after repeated reliability failures in PRs, issues, and Actions. The pain point is the surrounding infrastructure, not git."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="The State of Engineering Management in 2026"
+        href="https://olczyk.substack.com/p/the-state-of-engineering-management"
+        author="Olczyk"
+        teaser="The middle layer of facilitation roles got squeezed as AI absorbed coordination work. Surviving engineering management demands either deep technical involvement or strategic portfolio leadership."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Resolve Merge Conflicts the Easy Way"
+        href="https://haacked.com/archive/2026/03/25/resolve-merge-conflicts/"
+        author="Phil Haack"
+        teaser="Structural merging via mergiraf plus a Claude Code skill turns conflict resolution into a workflow, not a slog. Tools handle syntax-aware merges so you only weigh in on genuine ambiguity."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="AI's Economics Don't Make Sense"
+        href="https://www.wheresyoured.at/ais-economics-dont-make-sense/"
+        author="Ed Zitron"
+        teaser="Subscription pricing has been hiding the real per-token cost of AI products. As billing shifts to usage-based, the unit economics underneath the industry start to unravel."
+        tags={['ai']}
+      />
+      <BlogrollEntry
+        title="The React Compiler at Eighteen Months"
+        href="https://saschb2b.com/blog/react-compiler-year-in-review"
+        author="Sasha Baranov"
+        teaser="Eighteen months in, the compiler auto-memoizes components and retires an entire bug class. Greenfield adoption is smooth; brownfield migrations still surface the rough edges."
+        tags={['frontend']}
+      />
+      <BlogrollEntry
+        title="AI Should Elevate Your Thinking, Not Replace It"
+        href="https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it/"
+        author="Koshy John"
+        teaser="AI removes drudgery, but outsourcing understanding creates a quiet intellectual dependency. Judgment and adaptability stay irreplaceable; tools can only extend them."
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
+        title="Moving Railway's Frontend Off Next.js"
+        href="https://blog.railway.com/p/moving-railways-frontend-off-nextjs"
+        author="Railway"
+        teaser="Railway swapped Next.js for Vite plus TanStack Router and cut build times from 10+ minutes to under two. Framework choice matters more than hype when iteration speed is the moat."
+        tags={['frontend']}
+      />
+      <BlogrollEntry
+        title="Do I Belong in Tech Anymore?"
+        href="https://ky.fyi/posts/ai-burnout"
+        author="ky.fyi"
+        teaser="AI saturation breeds exhaustion, not from the tools but from unreviewed code and pressure to adopt without consent. The burnout here is grief over the field's abandoned ideals."
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
+        title="The Critical Shift in What Differentiates Great Leaders"
+        href="https://news.theuncommonexecutive.com/p/feelings-over-logic"
+        author="The Uncommon Executive"
+        teaser="AI commoditizes knowledge and makes raw intellect table stakes. Leaders now differentiate on emotional wisdom, ethical judgment, and creativity, the parts algorithms still miss."
+        tags={['leadership', 'ai']}
+      />
+      <BlogrollEntry
+        title="Laws of Software Engineering"
+        href="https://lawsofsoftwareengineering.com/"
+        author="Laws of Software Engineering"
+        teaser="A catalog of principles covering architecture, teams, and decision-making. Read together they reveal that software reflects organizational structure and human constraints more than technology."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="DigitalOcean to Hetzner: $1,432 to $233/month With Zero Downtime"
+        href="https://isayeter.com/posts/digitalocean-to-hetzner-migration/"
+        author="Ismail Sayeter"
+        teaser="A zero-downtime migration of 248 GB of MySQL, 34 Nginx sites, GitLab, and Neo4j cuts the bill by 84%. Cloud pricing turns inefficient fast once your workload stops being spiky."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="LateOn-Code and ColGrep: Code Retrieval for Agents"
+        href="https://huggingface.co/blog/lightonai/colgrep-lateon-code"
+        author="LightOn AI"
+        teaser="LightOn shipped semantic code search models that beat much larger alternatives, plus ColGrep for local hybrid search. Agents find relevant code measurably faster."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Why Isn't Everything Different Yet?"
+        href="https://davegriffith.substack.com/p/why-isnt-everything-different-yet"
+        author="Dave Griffith"
+        teaser="Transformative technology takes decades to reshape society. AI is moving faster than historical norms yet still feels glacial because expectations outpace physics."
+        tags={['ai']}
+      />
+      <BlogrollEntry
+        title="Where Feedback Goes to Die"
+        href="https://www.bonnycode.com/posts/where-feedback-goes-to-die/"
+        author="BonnyCode"
+        teaser="Feedback turns actionable only when leaders stop judging and start listening. Real change requires earning trust through curiosity, not defending against the signal."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="What's In It For Me Architecture"
+        href="https://frederickvanbrabant.com/blog/2026-04-04-whats-in-it-for-me-architecture/"
+        author="Frederick Vanbrabant"
+        teaser="Technical excellence alone does not ship. Architects succeed by reading stakeholder motivations and building credibility with decision-makers, not by drawing better diagrams."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The AI Coding Agent Manifesto"
+        href="https://medium.com/wix-engineering/the-ai-coding-agent-manifesto-c8f61629d677"
+        author="Wix Engineering"
+        teaser="Generation speed is no longer the bottleneck. Production-grade agent work shifts focus to verification, explicit contracts, and architectural clarity the agent can actually execute."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
         title="React Server Components Your Way"
         href="https://tanstack.com/blog/react-server-components"
         author="Tanner Linsley"
