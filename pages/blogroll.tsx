@@ -18,6 +18,118 @@ const Blogroll = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2">
       <BlogrollEntry
+        title="Sometimes Your Job is to Get in the Way"
+        href="https://randsinrepose.com/archives/sometimes-your-job-is-to-get-in-the-way/"
+        author="Rands"
+        teaser="Effective leadership demands knowing when to step back and when to decisively intervene. The discipline is not picking a stance, it is recognizing which moment you are in."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Local AI Needs to Be the Norm"
+        href="https://unix.foo/posts/local-ai-needs-to-be-norm/"
+        author="unix.foo"
+        teaser="On-device AI eliminates vendor dependencies, privacy baggage, and network fragility. You build trust by not needing a privacy policy in the first place."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Why Can't They Just? Revisited"
+        href="https://larahogan.me/blog/why-cant-they-just-revisited/"
+        author="Lara Hogan"
+        teaser="Frustration masks incomplete context. Leaders shift the question toward collaborative problem-solving, acknowledging real constraints while identifying where influence actually exists."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Behind the Scenes Hardening Firefox"
+        href="https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/"
+        author="Mozilla Hacks"
+        teaser="AI-powered bug hunting surfaced 271 Firefox vulnerabilities by steering agents to generate and validate hypotheses. Models finally got capable enough to separate signal from slop."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Accessibility in React: Common Mistakes and How to Fix Them"
+        href="https://certificates.dev/blog/accessibility-in-react-common-mistakes-and-how-to-fix-them"
+        author="Certificates.dev"
+        teaser="Semantic HTML, proper labels, focus management in SPAs, and live regions cover most accessibility failures. Native elements do the work for free."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Projecting React"
+        href="https://tannerlinsley.com/posts/projecting-react"
+        author="Tanner Linsley"
+        teaser="React's API becomes a specification, not the implementation. An AI-generated lightweight variant lands ~9KB client and 2-3x faster SSR by treating the API surface as a target rather than a source."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Why Engineering Teams Swing Between Process Extremes"
+        href="https://blog.incrementalforgetting.tech/p/the-tech-pendulum"
+        author="Incremental Forgetting"
+        teaser="Trade-offs are permanent, not solvable, so teams oscillate instead of settling. Healthier course corrections come from watching direction of movement, not chasing the next opposite."
+        tags={['engineering', 'leadership']}
+      />
+      <BlogrollEntry
+        title="Becoming a Business Leader, Not Just a Technical One"
+        href="https://kevingoldsmith.substack.com/p/becoming-a-business-leader-not-just"
+        author="Kevin Goldsmith"
+        teaser="Senior engineers plateau at the business fluency ceiling, not the technical one. Translating technical choices into revenue impact and customer consequence is the work that earns a seat at the table."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Pushing Local Models With Focus and Polish"
+        href="https://lucumr.pocoo.org/2026/5/8/local-models/"
+        author="Armin Ronacher"
+        teaser="Local inference fails on fragmentation, not capability. Picking one configuration and treating every failure as a product bug builds confidence faster than chasing breadth across hardware and models."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="4 Behaviors That Make You Look Junior"
+        href="https://alifeengineered.substack.com/p/4-behaviors-that-make-you-look-junior"
+        author="A Life Engineered"
+        teaser="Visible irritation, emotional bleed, defensive responses, and pessimism erode credibility faster than weak work. Composure under stress is the signal senior looks like from the outside."
+        tags={['career', 'leadership']}
+      />
+      <BlogrollEntry
+        title="10 Lessons for Agentic Coding"
+        href="https://www.dbreunig.com/2026/05/04/10-lessons-for-agentic-coding.html"
+        author="Drew Breunig"
+        teaser="When code is cheap, the moat shifts. Value lives in identifying genuinely hard problems and navigating their complexity, not in automating trivial generation."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="How React Streams UI Out of Order"
+        href="https://inside-react.vercel.app/blog/how-react-streams-ui-out-of-order"
+        author="Sankalpa Acharya"
+        teaser="React decouples delivery from completion. Fast components ship immediately with placeholder markers while slow resolvers fill in asynchronously, turning streaming into a composition primitive."
+        tags={['frontend']}
+      />
+      <BlogrollEntry
+        title="Managing a Team That Didn't Choose You"
+        href="https://newsletter.manager.dev/p/managing-a-team-that-didn-t-choose-you"
+        author="Anton Zaides"
+        teaser="The 30-60-90 onboarding plan breaks on inherited teams. Reading context first, fractured morale, structural gaps, unmet needs, beats imposing a template that ignores what's already there."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Rift"
+        href="https://christophermeiklejohn.com/ai/personal/phish/flow/agents/2026/05/03/rift.html"
+        author="Christopher Meiklejohn"
+        teaser="Thirty years of writing code with Phish on dissolved when managing agents replaced hands-on work. The trade buys leverage but surfaces a harder question: where does flow live in a queue-driven workflow?"
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
+        title="The Shift to Managing Managers"
+        href="https://blog.kevingoldsmith.com/2026/04/29/the-shift-to-managing-managers/"
+        author="Kevin Goldsmith"
+        teaser="Hands-on managers who keep solving problems directly stall the layer below them. The lever shifts to enabling other managers through shared context, multiplying impact precisely when you step away."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Managing Context in Long-Run Agentic Applications"
+        href="https://slack.engineering/managing-context-in-long-run-agentic-applications/"
+        author="Slack Engineering"
+        teaser="Multi-agent systems collapse under accumulated message history. Slack uses structured journals, credibility scoring, and consolidated timelines to keep coherence across hundreds of requests without passing raw history forward."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
         title="DeepSeek V4: Frontier Performance at a Fraction of the Price"
         href="https://simonwillison.net/2026/Apr/24/deepseek-v4/"
         author="Simon Willison"
