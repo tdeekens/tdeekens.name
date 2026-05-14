@@ -18,6 +18,83 @@ const Blogroll = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2">
       <BlogrollEntry
+        title="How Engineering Leaders Calculate AI ROI"
+        href="https://rdel.substack.com/p/rdel-141-how-can-engineering-leaders"
+        author="Research-Driven Engineering Leadership"
+        teaser="AI amplifies the system you already have rather than fixing it. Expect a productivity dip over three months before compounding gains arrive, with realistic first-year ROI around 39%."
+        tags={['ai', 'leadership']}
+      />
+      <BlogrollEntry
+        title="Sandboxes and Worktrees: My Secure Agentic AI Setup in 2026"
+        href="https://mikemcquaid.com/sandboxed-agent-worktrees-my-coding-and-ai-setup-in-2026/"
+        author="Mike McQuaid"
+        teaser="Stop babysitting one agent at a time. Sandboxes let them run wild safely and git worktrees let them run in parallel, trading more tokens for measurable velocity."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The Brag Doc"
+        href="https://ben.balter.com/2026/04/27/the-brag-doc/"
+        author="Ben Balter"
+        teaser="A weekly five-minute record of impact protects your work from recency bias and review-cycle amnesia. Product-manage your career using shipped outcomes, not memory."
+        tags={['career', 'leadership']}
+      />
+      <BlogrollEntry
+        title="Build the Right Thing"
+        href="https://mikefisher.substack.com/p/build-the-right-thing"
+        author="Mike Fisher"
+        teaser="Premature financial validation kills discovery. Early-stage product needs financials as guardrails, not goals, so teams optimize for customer outcomes instead of spreadsheet output."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="Being Strategic: What That Actually Means"
+        href="https://blog.jgefroh.com/p/being-strategic"
+        author="J. Gefroh"
+        teaser="Strategic thinking is a teachable progression of analytical habits, not an innate trait that separates executives from managers. Moving up requires unlearning the habits that worked one level down."
+        tags={['leadership', 'career']}
+      />
+      <BlogrollEntry
+        title="Common Engineering Strategy Failure Factors"
+        href="https://learnings.aleixmorgadas.dev/p/common-engineering-strategy-failure"
+        author="Aleix Morgadas"
+        teaser="Technical decisions dominate engineering strategy while human alignment, communication, and realistic planning get skipped. Execution lives in those overlooked organizational factors, not the architecture diagram."
+        tags={['engineering', 'leadership']}
+      />
+      <BlogrollEntry
+        title="Agile in the Age of AI"
+        href="https://miren.dev/blog/agile-in-the-age-of-ai/"
+        author="Miren"
+        teaser="AI authors code at scale while humans shift to editor and director. The constraint is not technology but the human cognitive ceiling and the 24/7 pressure that erodes Agile's core principle."
+        tags={['ai', 'leadership']}
+      />
+      <BlogrollEntry
+        title="How I Moved My Digital Stack to Europe"
+        href="https://monokai.com/articles/how-i-moved-my-digital-stack-to-europe/"
+        author="Monokai"
+        teaser="European infrastructure providers run at production quality for most workloads. A two-month migration shows sovereignty is feasible; keep US services only where the context-specific advantage outweighs the cost."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="Open Source Resistance"
+        href="https://ossresistance.com/"
+        author="Open Source Resistance"
+        teaser="Maintainers should treat OSS work on company time as legitimate professional work, not a side hustle. A direct-action stance on balancing corporate value extraction with maintainer sustainability."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="Why Senior Developers Fail to Communicate Their Expertise"
+        href="https://nair.sh/guides-and-opinions/communicating-your-expertise/why-senior-developers-fail-to-communicate-their-expertise"
+        author="Nair"
+        teaser="Seniors talk in complexity while the business talks in uncertainty. Reframing expertise as a solution to speed problems shifts seniors from objectors into editors of rapid AI-generated output."
+        tags={['leadership', 'career']}
+      />
+      <BlogrollEntry
+        title="You Need AI That Reduces Maintenance Costs"
+        href="https://www.jamesshore.com/v2/blog/2026/you-need-ai-that-reduces-your-maintenance-costs"
+        author="James Shore"
+        teaser="Productivity gains turn into permanent indenture if maintenance cost rises with output. Doubling code volume without halving its long-term cost leaves teams trapped under their own velocity."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
         title="Sometimes Your Job is to Get in the Way"
         href="https://randsinrepose.com/archives/sometimes-your-job-is-to-get-in-the-way/"
         author="Rands"
