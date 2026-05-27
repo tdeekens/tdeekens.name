@@ -37,3 +37,6 @@ npm-debug.log*
 # typescript incremental build cache
 tsconfig.tsbuildinfo
 
+# claude local
+.claude/settings.local.json
+
