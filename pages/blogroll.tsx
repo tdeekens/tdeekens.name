@@ -18,6 +18,174 @@ const Blogroll = () => (
 
     <section className="grid gap-4 my-8 sm:grid-cols-1 md:grid-cols-2">
       <BlogrollEntry
+        title="The State of CSS Centering in 2026"
+        href="https://css-tricks.com/the-state-of-css-centering-in-2026/"
+        author="CSS-Tricks"
+        teaser="Centering looks simple but demands different analysis across Flexbox, Grid, and positioning. Modern properties like text-box and anchor-center finally close the historical precision gaps that older recipes papered over."
+        tags={['frontend']}
+      />
+      <BlogrollEntry
+        title="Is AI Causing a Repeat of Frontend's Lost Decade?"
+        href="https://mastrojs.github.io/blog/2026-05-23-is-AI-causing-a-repeat-of-frontends-lost-decade/"
+        author="Mastro"
+        teaser="AI abstracts away manual coding the way frameworks abstracted browser mechanics, lowering both skill requirements and worker leverage. Leaky abstractions resurface when the tooling fails, and understanding the layer below stays non-negotiable."
+        tags={['ai', 'frontend']}
+      />
+      <BlogrollEntry
+        title="Exception, Presence, Delegation"
+        href="https://cutlefish.substack.com/p/tbm-422-exception-presence-delegation"
+        author="John Cutler"
+        teaser="Three management motions form one system. Exceptions flag deviations, presence transfers tacit knowledge, delegation pushes authority to local expertise. Run any of them alone and you get dashboards no one reads or leaders trapped in every meeting."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="AI-Assisted Engineers Are Burning Out"
+        href="https://evilmartians.com/chronicles/ai-assisted-engineers-are-burning-out-is-this-fine"
+        author="Evil Martians"
+        teaser="Code generation compresses work into shorter timeframes but concentrates cognitive load, replacing craft satisfaction with reviews and iteration. More output ships, less fulfillment remains, and burnout follows the density of thinking, not the hours."
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
+        title="State of the Software Engineering Job Market in 2026"
+        href="https://newsletter.pragmaticengineer.com/p/state-of-the-job-market-2026"
+        author="Gergely Orosz"
+        teaser="Tech hiring growth diverges by geography. The US and UK expanded while Germany and France contracted. AI engineering roles surged 50 to 100% at major firms, outpacing general software engineer recruitment."
+        tags={['ai', 'career']}
+      />
+      <BlogrollEntry
+        title="Maintainability Sensors for Coding Agents"
+        href="https://martinfowler.com/articles/sensors-for-coding-agents.html"
+        author="Martin Fowler"
+        teaser="Coding agents produce better code when given real-time feedback loops like linting, dependency rules, and mutation testing. Computational analysis catches mechanics; semantic issues across files still need LLM interpretation to surface."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Migrating from Go to Rust"
+        href="https://corrode.dev/learn/migration-guides/go-to-rust/"
+        author="corrode"
+        teaser="Go validates at runtime through discipline and tools. Rust encodes correctness into compile-time types that prevent entire categories of bugs. The trade is steeper upfront complexity for dramatically fewer production incidents."
+        tags={['engineering']}
+      />
+      <BlogrollEntry
+        title="You Taught the Company to Overload You"
+        href="https://avivbenyosef.com/you-taught-the-company-to-overload-you/"
+        author="Aviv Ben-Yosef"
+        teaser="Leaders who always say yes erase their own judgment and train the organization to keep demanding more. Making commitment costs visible and holding operational boundaries breaks the loop before it becomes the role."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="The Design System Advantage Is Memory"
+        href="https://learn.thedesignsystem.guide/p/the-design-system-advantage-is-memory"
+        author="The Design System Guide"
+        teaser="Design system value lives in accessible organizational memory, not in the tooling. Agents make confident mistakes when decision history scatters across Slack and ADRs. Structure data and governance first, then layer orchestration on top."
+        tags={['frontend', 'ai']}
+      />
+      <BlogrollEntry
+        title="Fix Delivery First"
+        href="https://www.antmurphy.me/newsletter/fix-delivery-first"
+        author="Ant Murphy"
+        teaser="Discovery, OKRs, and AI rarely help a struggling product org until delivery works. Slow release cycles and accumulated tech debt are the actual bottleneck, and everything strategic downstream treats symptoms instead of cause."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="How to Finish Engineering Projects Early Without Added Stress"
+        href="https://newsletter.eng-leadership.com/p/how-to-use-critical-chain-methodology"
+        author="Eng Leadership"
+        teaser="Critical chain pools task buffers at the project level instead of padding individual estimates. Cutting estimates in half and tracking buffer consumption against progress surfaces scope creep weeks earlier than burndown charts."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The Science of Social Loafing"
+        href="https://www.corporate-rebels.com/blog/social-loafing"
+        author="Corporate Rebels"
+        teaser="Group effort drops predictably as team size grows, an effect Ringelmann measured a century ago. Small autonomous units, radical transparency, and peer accountability counter it better than adding hierarchical oversight."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="The Anatomy of an AI-Native Org"
+        href="https://ajeygore.in/content/the-anatomy-of-an-ai-native-org"
+        author="Ajey Gore"
+        teaser="AI collapses the translation layer between strategy and execution, eating most middle-management coordination. The 'what' expands while the 'how' shrinks, leaving judgment-heavy engineering and product roles as the only ones that scale."
+        tags={['ai', 'leadership']}
+      />
+      <BlogrollEntry
+        title="LLMs Are Functions, Not Brains"
+        href="https://james-pritchard.com/blog/llms-are-functions"
+        author="James Pritchard"
+        teaser="Treating language models as autonomous agents adds latency and unpredictability. Typed input-output functions enable testability, composability, and debugging at lower cost than agentic workflows trying to reason their way to the same result."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="GitLab Act 2"
+        href="https://about.gitlab.com/blog/gitlab-act-2/"
+        author="GitLab"
+        teaser="GitLab restructures around five architectural bets and flattens hierarchies to position itself for machine-directed development. The premise is that agentic software construction requires fundamental platform redesign, not AI bolted on the side."
+        tags={['leadership', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Apple Silicon Costs More Than OpenRouter"
+        href="https://www.williamangel.net/blog/2026/05/17/offline-llm-energy-use.html"
+        author="William Angel"
+        teaser="Local LLM inference on Apple Silicon costs roughly 3x more per token than cloud providers once hardware depreciation is included. Speed and privacy, not raw cost, are what justify keeping inference on the machine."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Not So Locked In Anymore"
+        href="https://simonwillison.net/2026/May/14/not-so-locked-in/"
+        author="Simon Willison"
+        teaser="Coding agents drop the cost of porting between languages, turning stack choices from permanent lock-in into manageable technical debt. Bun's Zig to Rust migration hints at how fluid these decisions become."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Year in Open Source"
+        href="https://blog.rman.dev/year-in-open-source/"
+        author="rman.dev"
+        teaser="Consistent contribution and visible work in open source accelerates growth past traditional career paths. Communication and community engagement earn recognition and responsibility faster than corporate ladders measure them."
+        tags={['career', 'engineering']}
+      />
+      <BlogrollEntry
+        title="Claude Is Not Your Architect"
+        href="https://www.hollandtech.net/claude-is-not-your-architect"
+        author="Holland Tech"
+        teaser="AI agents are strong implementers but lack accountability and contextual judgment for the decisions that actually matter. Human debate about constraints and trade-offs still produces better architecture than deferring to confident but ungrounded machine output."
+        tags={['ai', 'leadership']}
+      />
+      <BlogrollEntry
+        title="Prosocial Contagion"
+        href="https://andiroberts.com/citizenship/prosocial-behaviour-contagion-citizenship-leadership"
+        author="Andi Roberts"
+        teaser="Individual actions propagate through social networks up to three degrees of separation. Modeling citizenship through visible behavior shifts organizational norms more reliably than any policy mandate."
+        tags={['leadership']}
+      />
+      <BlogrollEntry
+        title="AI Is Too Expensive"
+        href="https://www.wheresyoured.at/ai-is-too-expensive/"
+        author="Ed Zitron"
+        teaser="Hyperscalers burned hundreds of billions on AI infrastructure without a clear path to profitability. Enterprise spend lacks measurable ROI, exposing the gap between executive narrative and what the unit economics actually support."
+        tags={['ai']}
+      />
+      <BlogrollEntry
+        title="How to Avoid AI Code Slop"
+        href="https://newsletter.eng-leadership.com/p/how-to-avoid-ai-code-slop"
+        author="Eng Leadership"
+        teaser="AI-generated code passes the eye test while hiding subtle logical errors. Documenting intent before generation and automating surface checks catches design issues earlier than waiting on code review to find them."
+        tags={['ai', 'engineering']}
+      />
+      <BlogrollEntry
+        title="The Last Six Months in LLMs in Five Minutes"
+        href="https://simonwillison.net/2026/May/19/5-minute-llms/"
+        author="Simon Willison"
+        teaser="Coding agents crossed into production-ready reliability while open-weight models exceeded expectations on consumer hardware. Model leadership shifted across providers five times in six months."
+        tags={['ai']}
+      />
+      <BlogrollEntry
+        title="A Technical Deep Dive Into the New Raycast"
+        href="https://www.raycast.com/blog/a-technical-deep-dive-into-the-new-raycast"
+        author="Raycast"
+        teaser="A hybrid architecture pairing native shells with React shows web technology can deliver desktop feel without Chromium bloat. Cross-platform parity came from intentional choices about feel, not framework selection."
+        tags={['frontend', 'engineering']}
+      />
+      <BlogrollEntry
         title="How Engineering Leaders Calculate AI ROI"
         href="https://rdel.substack.com/p/rdel-141-how-can-engineering-leaders"
         author="Research-Driven Engineering Leadership"
