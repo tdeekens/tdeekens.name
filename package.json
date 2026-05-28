@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.29.3",
   "scripts": {
+    "predev": "tsx scripts/generate-blogroll-rss.ts",
     "dev": "(export PATH=$(npm bin):$PATH; trap 'jobs -pr | xargs kill' EXIT; TAILWIND_MODE=watch postcss ./styles/tailwind.css -o ./styles/globals.css --watch </dev/zero & next dev)",
     "build": "next build && next-sitemap && tsx scripts/generate-blogroll-rss.ts",
     "format": "prettier --write '**/*.{js, ts, tsx}'",

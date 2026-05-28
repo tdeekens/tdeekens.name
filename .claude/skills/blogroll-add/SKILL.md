@@ -78,7 +78,7 @@ Each entry follows this exact shape — match the indentation in the file (2 spa
   },
 ```
 
-`addedAt` is mandatory. Use the current time in ISO 8601 (`new Date().toISOString()`). All new entries in a single run share the same `addedAt`; that becomes their RSS `pubDate`. Escape single quotes in strings as `\'`. Drop the `tags:` line entirely if no tags apply (the field is optional).
+`addedAt` is mandatory. Use the current time in ISO 8601 (`new Date().toISOString()`). All new entries in a single run share the same `addedAt`; that becomes their RSS `pubDate`. Write valid TS string literals — prettier reformats quote choice (single vs double) automatically when content contains the conflicting quote, so do not hand-escape. Drop the `tags:` line entirely if no tags apply (the field is optional).
 
 Use a single `Edit` call with `old_string` matching the existing first entry and `new_string` being all new entries followed by that same existing first entry. This keeps the diff to one hunk.
 
