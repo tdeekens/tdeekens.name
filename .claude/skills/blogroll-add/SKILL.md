@@ -1,11 +1,11 @@
 ---
 name: blogroll-add
-description: Add new blog posts from the Anybox "Reading" folder to pages/blogroll.tsx. Use whenever the user says "new blog posts", "add to blogroll", "blog roll", "update blogroll", "let's go" in a blogroll context, or asks to pull new entries from Anybox. Reads bookmarks via the mcp__anybox MCP, filters against URLs already present in blogroll.tsx, fans out Haiku subagents to write style-matched teasers in parallel, then inserts the new <BlogrollEntry> blocks at the top of the grid. Trigger even if the user only says "do it again" or "go" right after a recent blogroll update.
+description: Add new blog posts from the Anybox "Reading" folder to lib/blogroll.ts. Use whenever the user says "new blog posts", "add to blogroll", "blog roll", "update blogroll", "let's go" in a blogroll context, or asks to pull new entries from Anybox. Reads bookmarks via the mcp__anybox MCP, filters against URLs already present in lib/blogroll.ts, fans out Haiku subagents to write style-matched teasers in parallel, then inserts new TBlogrollEntry objects at the top of the array. Trigger even if the user only says "do it again" or "go" right after a recent blogroll update.
 ---
 
 # blogroll-add
 
-Adds new blog posts from the user's Anybox "Reading" folder to `pages/blogroll.tsx` in this repo. Style and ordering match what already exists. The user runs this often; keep it boring and consistent.
+Adds new blog posts from the user's Anybox "Reading" folder to `lib/blogroll.ts` in this repo. Style and ordering match what already exists. The user runs this often; keep it boring and consistent.
 
 ## Why it exists
 
@@ -14,7 +14,8 @@ User curates reading in Anybox. Posts they like end up in the **Reading** folder
 ## Inputs you need
 
 - The repo is the current working directory: `/Users/tdeekens/Development/tdeekens`.
-- Blogroll file: `pages/blogroll.tsx`. Entries are `<BlogrollEntry>` JSX inside a single `<section>`. Newest sits at the top.
+- Blogroll data: `lib/blogroll.ts`. Entries are `TBlogrollEntry` objects inside `export const blogroll: TBlogrollEntry[] = [...]`. Newest sits at the top of the array. `pages/blogroll.tsx` renders from this array — do not edit it.
+- RSS feed `public/blogroll.xml` is generated from the array at build time via `scripts/generate-blogroll-rss.ts`. No manual update needed; the build script picks it up.
 - Anybox Reading folder ID: `C116BEF6-87B5-4661-94E7-557665E1889D`. Fetch via `mcp__anybox__search_bookmarks` with `folder_id`. If the ID has rotated, call `mcp__anybox__list_folders` and look for `Reading`.
 
 ## Workflow
@@ -25,7 +26,7 @@ Call `mcp__anybox__search_bookmarks` with the Reading folder ID. A `limit` of 15
 
 ### 2. Filter out what's already in the blogroll
 
-Read `pages/blogroll.tsx`. Build a set of existing `href=` URLs. Drop any Anybox bookmark whose URL is already in that set. Also drop:
+Read `lib/blogroll.ts`. Build a set of existing `href:` values from the array. Drop any Anybox bookmark whose URL is already in that set. Also drop:
 
 - Twitter/X posts (`x.com`, `twitter.com`) - the teaser format does not fit threads.
 - Anything obviously not a long-form post (raw image links, Anybox itself, etc).
@@ -49,7 +50,8 @@ Tags must come from: frontend, engineering, leadership, ai, career.
 Map coding -> engineering or frontend (judge by content). Pick 1-2 tags.
 
 Output ONLY JSON. Items: {title, href, author, teaser, tags}. Concise title,
-drop site suffixes like " | Medium" or " - MDN Blog".
+drop site suffixes like " | Medium" or " - MDN Blog". Do not include addedAt;
+the orchestrator stamps it.
 
 URLs:
 1. <url> - author: <author>
@@ -59,21 +61,24 @@ URLs:
 
 The reason to batch and parallelize: 15+ WebFetches in series is slow, and the user wants this fast. Haiku is fine for summarization quality at this scope. The reason to constrain the teaser style explicitly: existing entries set a voice (terse, observational, no marketing verbs). Without the example, Haiku drifts into "this post explores..." filler.
 
-### 4. Insert entries at the top of the section
+### 4. Insert entries at the top of the array
 
-Order new entries newest-first, matching Anybox's order (already newest-first from the API). Insert the whole block before the existing first `<BlogrollEntry>`.
+Order new entries newest-first, matching Anybox's order (already newest-first from the API). Insert the whole block immediately after `export const blogroll: TBlogrollEntry[] = [` and before the existing first object.
 
-Each block follows this exact shape - match the indentation in the file (6 spaces before `<BlogrollEntry`):
+Each entry follows this exact shape — match the indentation in the file (2 spaces before `{`, 4 spaces before fields):
 
-```jsx
-<BlogrollEntry
-  title="..."
-  href="..."
-  author="..."
-  teaser="..."
-  tags={['ai', 'engineering']}
-/>
+```ts
+  {
+    title: '...',
+    href: '...',
+    author: '...',
+    teaser: '...',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-05-28T14:00:00.000Z',
+  },
 ```
+
+`addedAt` is mandatory. Use the current time in ISO 8601 (`new Date().toISOString()`). All new entries in a single run share the same `addedAt`; that becomes their RSS `pubDate`. Escape single quotes in strings as `\'`. Drop the `tags:` line entirely if no tags apply (the field is optional).
 
 Use a single `Edit` call with `old_string` matching the existing first entry and `new_string` being all new entries followed by that same existing first entry. This keeps the diff to one hunk.
 
