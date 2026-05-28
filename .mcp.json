@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "anybox": {
+      "type": "stdio",
+      "command": "/Users/tdeekens/Development/anyboxMCP/venv/bin/python",
+      "args": ["/Users/tdeekens/Development/anyboxMCP/anybox_mcp_server.py"],
+      "env": {
+        "ANYBOX_API_KEY": "${ANYBOX_API_KEY}"
+      }
+    }
+  }
+}
