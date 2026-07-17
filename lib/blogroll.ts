@@ -9,15 +9,6 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
-    title: 'Working with the CEO',
-    href: 'https://blog.kevingoldsmith.com/2026/07/08/working-with-the-ceo/',
-    author: 'Kevin Goldsmith',
-    teaser:
-      'CEOs hold hiring power but depend on technical judgment they cannot independently evaluate. The partnership survives on candor and shared context, not technical competence alone.',
-    tags: ['leadership', 'engineering'],
-    addedAt: '2026-07-17T19:38:27.230Z',
-  },
-  {
     title: 'React Compiler Is a Retrofit',
     href: 'https://longho.dev/posts/react-compiler-is-a-retrofit/',
     author: 'Long Ho',
@@ -1370,6 +1361,15 @@ export const blogroll: TBlogrollEntry[] = [
       'Manager instinct often says fix everything at once, but the easy way forward is paradoxically harder. Tackle bottlenecks sequentially to avoid chaos.',
     tags: ['leadership'],
     addedAt: '2026-04-08T22:28:03+02:00',
+  },
+  {
+    title: 'Working with the CEO',
+    href: 'https://blog.kevingoldsmith.com/2026/07/08/working-with-the-ceo/',
+    author: 'Kevin Goldsmith',
+    teaser:
+      'CEOs hold hiring power but depend on technical judgment they cannot independently evaluate. The partnership survives on candor and shared context, not technical competence alone.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
     title: 'The Next Two Years of Software Engineering',
