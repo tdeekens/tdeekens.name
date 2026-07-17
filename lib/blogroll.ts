@@ -9,6 +9,231 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
+    title: 'Working with the CEO',
+    href: 'https://blog.kevingoldsmith.com/2026/07/08/working-with-the-ceo/',
+    author: 'Kevin Goldsmith',
+    teaser:
+      'CEOs hold hiring power but depend on technical judgment they cannot independently evaluate. The partnership survives on candor and shared context, not technical competence alone.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'React Compiler Is a Retrofit',
+    href: 'https://longho.dev/posts/react-compiler-is-a-retrofit/',
+    author: 'Long Ho',
+    teaser:
+      'React Compiler retrofits optimization into existing code rather than requiring architectural redesign. The approach treats compilation as pragmatic enhancement, adoptable without forcing developers toward new patterns.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'What Is Loop Engineering',
+    href: 'https://newsletter.pragmaticengineer.com/p/what-is-loop-engineering',
+    author: 'Gergely Orosz',
+    teaser:
+      'Loop engineering automates repetitive AI prompting by designing systems where agents run toward defined goals. Developers report drift and cost concerns, suggesting loops suit specific workflows rather than universal application.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Code Yellow, Code Red',
+    href: 'https://theengineeringmanager.substack.com/p/code-yellow-code-red',
+    author: 'The Engineering Manager',
+    teaser:
+      'Code Yellows and Code Reds formalize escalation protocols for infrastructure crises across Meta, LinkedIn, and Shopify. Success requires clear problem statements, measurable exit criteria, and cross-functional authority.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Laws of Software Project Management',
+    href: 'https://lucasfcosta.com/blog/laws-of-software-project-management',
+    author: 'Lucas F. Costa',
+    teaser:
+      'Software projects fail not from poor execution but from ignoring uncertainty in scope and deadlines. Successful delivery requires adaptive scope, incremental validation, and cross-functional viability from the start.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Own the Outer Loop',
+    href: 'https://addyo.substack.com/p/own-the-outer-loop',
+    author: 'Addy Osmani',
+    teaser:
+      'Agents generate code faster than humans can review it. The boundary between automation and accountability must remain human; someone has to answer for what ships.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Why I Stopped Arguing With People',
+    href: 'https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html',
+    author: 'Cong Wang',
+    teaser:
+      'Winning arguments rarely changes minds; they just wound egos. Divergent viewpoints shipped beat ideas proven correct, since success comes from competitive advantage, not intellectual victory.',
+    tags: ['career', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Harness Engineering for Self-Improvement',
+    href: 'https://lilianweng.github.io/posts/2026-07-04-harness/',
+    author: 'Lilian Weng',
+    teaser:
+      'Self-improving AI systems succeed through harness architecture, not raw capability. Workflow orchestration and persistent memory outweigh model weights; human stewardship remains essential throughout the loop.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Three Bad Managers',
+    href: 'https://randsinrepose.com/archives/three-bad-managers/',
+    author: 'Michael Lopp',
+    teaser:
+      'Senior managers seldom change; people adapt to them instead. The Artist demands written clarity, the Dictator responds to preparation and pushback, the Knife requires distance, and adjustment beats transformation.',
+    tags: ['leadership', 'career'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Introducing Meerkat',
+    href: 'https://blog.cloudflare.com/meerkat-introduction/',
+    author: 'Cloudflare',
+    teaser:
+      'Meerkat eliminates leader-dependent bottlenecks in distributed consensus. All replicas write concurrently, and the trade-off is latency proportional to distance, ideal for consistency-critical control-plane state.',
+    tags: ['engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Chat Control 1.0 vs 2.0',
+    href: 'https://fightchatcontrol.eu/chat-control-overview',
+    author: 'Fight Chat Control',
+    teaser:
+      'Two EU surveillance proposals advance in parallel. A temporary rule faced expiration then reinstatement in July 2026 while a permanent regulation deadlocks over voluntary versus mandatory scanning of private communications.',
+    tags: ['engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Let AI Burn',
+    href: 'https://www.wheresyoured.at/let-ai-burn/',
+    author: 'Ed Zitron',
+    teaser:
+      'The AI industry survives on circular venture capital, not real demand. Hyperscalers consume 70% of revenues while subsidized pricing and relentless hype substitute for authentic user need.',
+    tags: ['ai'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Write an Effective Design Document',
+    href: 'https://refactoringenglish.com/excerpts/write-an-effective-design-doc/',
+    author: 'Michael Lynch',
+    teaser:
+      "Design docs answer one question: what's the penalty for being wrong. Catching expensive decisions before implementation beats exhaustive specifications that move coding problems to the design phase.",
+    tags: ['engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'The Four Pillars of Engineering Management',
+    href: 'https://softwareleads.substack.com/p/the-four-pillars-of-engineering-management',
+    author: 'Software Leads',
+    teaser:
+      "Engineering managers amplify team effectiveness through four responsibilities: people, technical, product, and delivery leadership. Each pillar's emphasis shifts with organizational context, but collectively they remove obstacles to success.",
+    tags: ['leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'How Meta Sets Up Super IC Teams',
+    href: 'https://news.theuncommonexecutive.com/p/how-to-get-the-most-out-of-your-super',
+    author: 'The Uncommon Executive',
+    teaser:
+      "Meta's incubation teams succeed not through talent selection but organizational structure. Executive sponsorship, self-sufficient resources, clear customer problems, and advance scaling plans embed excellence beyond individual projects.",
+    tags: ['leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'The Goldilocks Customizable Select Height',
+    href: 'https://jakearchibald.com/2026/goldilocks-select-height/',
+    author: 'Jake Archibald',
+    teaser:
+      'Custom select dropdowns need balanced sizing. Small pickers become unusable and oversized ones awkward, while calc-size() enables intrinsic sizing that respects viewport margins and minimum constraints without forcing unwanted expansion.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'A Lot of Software Engineering Is Becoming Engineering Leadership',
+    href: 'https://newsletter.eng-leadership.com/p/a-lot-of-software-engineering-is',
+    author: 'Eng Leadership',
+    teaser:
+      'AI commoditizes code production, so engineers write less but review more and bottleneck on decisions. Technical proficiency no longer differentiates; judgment about problem selection and trade-offs becomes the rare capability.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Software Is Made Between Commits',
+    href: 'https://zed.dev/blog/introducing-deltadb',
+    author: 'Zed',
+    teaser:
+      'Development conversation currently happens after commits, yet real collaboration occurs continuously. DeltaDB captures every operation as linked deltas, letting teams and agents work simultaneously while conversation and code remain connected.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Managing Sideways',
+    href: 'https://kevingoldsmith.substack.com/p/managing-sideways',
+    author: 'Kevin Goldsmith',
+    teaser:
+      'Leaders assume authority drives adoption; teams comply temporarily then revert. Peer-driven change succeeds where mandates fail, since resistance framed as technical objection usually masks autonomy or identity concerns beneath.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'So You Want to Fix Your All Hands',
+    href: 'https://randsinrepose.com/archives/so-you-want-to-fix-your-all-hands/',
+    author: 'Michael Lopp',
+    teaser:
+      'All-hands meetings fail when perceived as leadership spectacle disconnected from daily work. Consistent structure, peer achievements, and mystery guests shift meetings from noise to information inoculation against gossip.',
+    tags: ['leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Building Software Is Learning',
+    href: 'https://registerspill.thorstenball.com/p/building-software-is-learning',
+    author: 'Thorsten Ball',
+    teaser:
+      "Software teams gain velocity by treating development as continuous discovery. Collapsing the time from 'let me try something' to user feedback through daily shipping and narrow scope becomes the competitive moat.",
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: "NPM's Packument Size Limit",
+    href: 'https://www.vlt.io/blog/packument-size-limits',
+    author: 'vlt',
+    teaser:
+      'NPM registries maintain packuments that accumulate metadata for all versions. Drizzle ORM hit the 100MB ceiling after roughly 763 releases, preventing new publication to the registry for weeks.',
+    tags: ['engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'The End of the People Manager',
+    href: 'https://www.practicalengineering.management/p/the-end-of-the-people-manager',
+    author: 'Practical Engineering Management',
+    teaser:
+      'AI capabilities are rendering the traditional dedicated people manager archetype obsolete. Engineering leaders must evolve from pure people management into design-focused roles to remain relevant.',
+    tags: ['leadership', 'career'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'Cross-Team Pragmatics',
+    href: 'https://philcalcado.com/2026/06/01/cross_team_pragmatics.html',
+    author: 'Phil Calcado',
+    teaser:
+      'Cross-team collaboration dysfunction typically stems from organizational structure and cascading goal incoherence, not collaboration skills. Restructure to eliminate unnecessary dependencies rather than perfecting collaboration itself.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
+    title: 'The AI Industry Is Losing',
+    href: 'https://www.wheresyoured.at/the-ai-industry-is-losing/',
+    author: 'Ed Zitron',
+    teaser:
+      "Hyperscaler AI capex spending now exceeds free cash flow growth. OpenAI and Anthropic capture approximately two-thirds of the industry's claimed revenues, while other deployments accumulate losses across fragmented applications.",
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-07-17T19:38:27.230Z',
+  },
+  {
     title: 'A Technical Deep Dive Into the New Raycast',
     href: 'https://www.raycast.com/blog/a-technical-deep-dive-into-the-new-raycast',
     author: 'Raycast',
