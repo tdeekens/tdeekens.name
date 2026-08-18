@@ -1,4 +1,5 @@
 import { getMarkdownForPath, loadConfig } from 'accept-md-runtime';
+
 import { getPublishedPosts } from '../posts';
 import { ASK_ABOUT_ME_CONFIG, type SourcePath } from './config';
 
@@ -13,15 +14,23 @@ const acceptMdConfig = loadConfig(process.cwd());
 let cached: CvContext | null = null;
 
 const titleFromPath = (path: SourcePath): string => {
-  if (path === '/curriculum-vitae') return 'Curriculum vitae';
-  if (path === '/bookshelf') return 'Bookshelf';
-  if (path === '/blogroll') return 'Blogroll';
+  if (path === '/curriculum-vitae') {
+    return 'Curriculum vitae';
+  }
+  if (path === '/bookshelf') {
+    return 'Bookshelf';
+  }
+  if (path === '/blogroll') {
+    return 'Blogroll';
+  }
   return path.replace('/posts/', 'Post: ');
 };
 
 const trimToParagraph = (markdown: string, maxChars: number): string => {
   const trimmed = markdown.trim();
-  if (trimmed.length <= maxChars) return trimmed;
+  if (trimmed.length <= maxChars) {
+    return trimmed;
+  }
   const cut = trimmed.slice(0, maxChars);
   const lastBreak = cut.lastIndexOf('\n\n');
   return (lastBreak > 0 ? cut.slice(0, lastBreak) : cut).trimEnd() + '…';
@@ -33,11 +42,11 @@ const fetchPageMarkdown = (path: SourcePath, baseUrl: string) =>
 type Source = { path: SourcePath; title: string; markdown: string };
 
 const loadPostSources = (): Source[] => {
-  const posts = getPublishedPosts() as Array<{
+  const posts = getPublishedPosts() as {
     slug: string;
     title?: string;
     content: string;
-  }>;
+  }[];
   return posts.map((post) => ({
     path: `/posts/${post.slug}` as const,
     title: post.title ?? post.slug,

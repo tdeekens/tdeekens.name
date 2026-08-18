@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import Text from '@components/text';
 import Track from '@components/track';
+import Head from 'next/head';
 
 const tracks = [
   { artist: 'Causa Sui', song: 'Red Valley', id: 'lr4LVeNmIbk' },

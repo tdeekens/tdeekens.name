@@ -1,13 +1,15 @@
+import InternalLink from '@components/internal-link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import InternalLink from '@components/internal-link';
 
 function Header() {
   const router = useRouter();
 
   const path = router.asPath.split('#')[0].split('?')[0];
 
-  if (path === '/') return null;
+  if (path === '/') {
+    return null;
+  }
 
   const breadcrumbs = path.split('/').slice(1);
 

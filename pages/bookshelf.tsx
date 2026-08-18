@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import Book from '@components/book';
 import Text from '@components/text';
+import Head from 'next/head';
 
 const Bookshelf = () => (
   <>

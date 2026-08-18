@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import BlogrollEntry from '@components/blogroll-entry';
 import Text from '@components/text';
 import { blogroll } from '@lib/blogroll';
+import Head from 'next/head';
 
 const Blogroll = () => (
   <>
@@ -22,6 +22,9 @@ const Blogroll = () => (
     <Text.Paragraph>
       A collection of blog posts I enjoyed reading and found worth sharing. Also
       available as an{' '}
+      {/* The feed is a static file in `public`, not a Next.js page, so `<a>` is
+          correct here and `next/link` would be wrong. */}
+      {/* oxlint-disable-next-line nextjs/no-html-link-for-pages */}
       <a href="/blogroll.xml" className="underline hover:no-underline">
         RSS feed
       </a>

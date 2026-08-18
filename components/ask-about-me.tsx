@@ -1,10 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
 import { useChat } from '@ai-sdk/react';
-import { DefaultChatTransport, type UIMessage } from 'ai';
-import Markdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import AskAboutMeShell from '@components/ask-about-me-shell';
 import type { AskVariant } from '@lib/ask-about-me/variants';
+import { DefaultChatTransport, type UIMessage } from 'ai';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const MARKDOWN_CLASSES = [
   '[&_p]:mb-2 [&_p:last-child]:mb-0',
@@ -68,15 +68,21 @@ function AskAboutMe(props: TAskAboutMeProps) {
 
   const submit = async (text: string) => {
     const trimmed = text.trim();
-    if (!trimmed || isBusy) return;
+    if (!trimmed || isBusy) {
+      return;
+    }
     setInput('');
-    if (error) clearError();
+    if (error) {
+      clearError();
+    }
     await sendMessage({ text: trimmed });
   };
 
   const hasMountedRef = useRef(false);
   useEffect(() => {
-    if (hasMountedRef.current) return;
+    if (hasMountedRef.current) {
+      return;
+    }
     hasMountedRef.current = true;
 
     if (props.shouldFocusOnMount) {
@@ -84,7 +90,9 @@ function AskAboutMe(props: TAskAboutMeProps) {
       element?.focus();
       element?.setSelectionRange(element.value.length, element.value.length);
     }
-    if (props.initialQuestion) void submit(props.initialQuestion);
+    if (props.initialQuestion) {
+      void submit(props.initialQuestion);
+    }
     // Mount-only hand-over. Re-running would resubmit the initial question.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

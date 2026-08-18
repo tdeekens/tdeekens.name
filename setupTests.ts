@@ -4,6 +4,7 @@ import {
   WritableStream,
 } from 'node:stream/web';
 import { TextDecoder, TextEncoder } from 'node:util';
+
 // The /jest-globals entry point extends the `expect` imported from
 // @jest/globals rather than a global one, and carries the matcher type
 // augmentation with it. Because this file is TypeScript and covered by

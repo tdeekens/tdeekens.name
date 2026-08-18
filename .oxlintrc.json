@@ -1,0 +1,87 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "eslint",
+    "typescript",
+    "unicorn",
+    "react",
+    "jsx-a11y",
+    "nextjs",
+    "import",
+    "jest",
+    "oxc"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2024": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "ignorePatterns": [
+    "**/node_modules/",
+    "**/.next/",
+    "**/.local/",
+    "**/coverage/",
+    "**/public/",
+    "styles/globals.css"
+  ],
+  "rules": {
+    "eqeqeq": ["error", "smart"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+    ],
+    "no-undef": "error",
+    "no-void": "off",
+    "no-negated-condition": "error",
+    "no-restricted-globals": ["error", "event", "atob", "btoa"],
+    "curly": "error",
+    "no-lonely-if": "error",
+    "no-param-reassign": "error",
+    "default-param-last": "error",
+    "no-empty": "error",
+    "no-empty-function": "error",
+    "no-array-constructor": "error",
+    "typescript/no-explicit-any": "off",
+    "typescript/no-inferrable-types": "error",
+    "typescript/array-type": ["error", { "default": "array" }],
+    "typescript/prefer-for-of": "error",
+    "typescript/prefer-enum-initializers": "error",
+    "unicorn/prefer-number-properties": "error",
+    "react/self-closing-comp": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/refs": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-duplicates": "error",
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/no-unassigned-import": "off",
+    "jest/no-disabled-tests": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/prefer-tag-over-role": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**", "*.config.js", "*.config.ts"],
+      "rules": {
+        "no-console": "off"
+      }
+    },
+    {
+      "files": ["**/*.test.*", "**/*.spec.*", "setupTests.ts"],
+      "rules": {
+        "no-console": "off",
+        "no-empty-function": "off"
+      }
+    }
+  ]
+}

@@ -4,8 +4,8 @@ type TTrackProps = {
   song: string;
 };
 
-import Text from '@components/text';
 import ExternalLink from '@components/external-link';
+import Text from '@components/text';
 
 function Track(props: TTrackProps) {
   return (

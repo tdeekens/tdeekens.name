@@ -21,14 +21,18 @@ export const createInMemoryRateLimiter = (opts: {
 
   const evictExpired = (now: number) => {
     buckets.forEach((bucket, key) => {
-      if (now - bucket.windowStart >= opts.windowMs) buckets.delete(key);
+      if (now - bucket.windowStart >= opts.windowMs) {
+        buckets.delete(key);
+      }
     });
   };
 
   return {
     check: (key) => {
       const now = Date.now();
-      if (buckets.size >= MAX_TRACKED_KEYS) evictExpired(now);
+      if (buckets.size >= MAX_TRACKED_KEYS) {
+        evictExpired(now);
+      }
 
       const bucket = buckets.get(key);
       if (!bucket || now - bucket.windowStart >= opts.windowMs) {

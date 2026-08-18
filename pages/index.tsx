@@ -1,18 +1,19 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Text from '@components/text';
-import List from '@components/list';
+import AskAboutMe from '@components/ask-about-me-lazy';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
-import AskAboutMe from '@components/ask-about-me-lazy';
+import List from '@components/list';
+import Text from '@components/text';
+import Head from 'next/head';
+import Image from 'next/image';
+
 import { getAllPosts } from '../lib/posts';
 
 type THomeProps = {
-  posts: Array<{
+  posts: {
     title: string;
     slug: string;
     draft: boolean;
-  }>;
+  }[];
 };
 
 const Home = (props: THomeProps) => (

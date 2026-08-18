@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { getMarkdownForPath, loadConfig } from 'accept-md-runtime';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const cache = new Map();
 
@@ -91,7 +91,7 @@ export default async function handler(
       pathname,
       baseUrl: getBaseUrl(req, config.baseUrl),
       config,
-      cache: config.cache !== false ? cache : undefined,
+      cache: config.cache === false ? undefined : cache,
       headers: getForwardHeaders(req),
     });
 

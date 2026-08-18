@@ -14,7 +14,9 @@ function TableOfContents() {
   const ref = useRef<HTMLDetailsElement>(null);
 
   const close = () => {
-    if (ref.current) ref.current.open = false;
+    if (ref.current) {
+      ref.current.open = false;
+    }
   };
 
   useEffect(() => {

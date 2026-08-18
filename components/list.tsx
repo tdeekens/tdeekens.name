@@ -1,7 +1,7 @@
 import { Children, cloneElement } from 'react';
 
 export type TUnorderedProps = {
-  children: Array<React.ReactElement>;
+  children: React.ReactElement[];
 };
 
 function Unordered(props: TUnorderedProps) {
@@ -20,7 +20,7 @@ function Unordered(props: TUnorderedProps) {
 }
 
 export type TOrderedProps = {
-  children: Array<React.ReactElement>;
+  children: React.ReactElement[];
 };
 function Ordered(props: TOrderedProps) {
   const itemElements = Children.map(props.children, (child) => {

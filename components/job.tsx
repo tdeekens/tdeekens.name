@@ -1,6 +1,6 @@
-import { type ReactElement, Children, cloneElement } from 'react';
-import Text from '@components/text';
 import ExternalLink from '@components/external-link';
+import Text from '@components/text';
+import { type ReactElement, Children, cloneElement } from 'react';
 
 type TJobHeadlineProps = {
   jobRole: string;

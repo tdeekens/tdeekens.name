@@ -4,8 +4,9 @@
 import { describe, expect, it } from '@jest/globals';
 import { streamText } from 'ai';
 import { MockLanguageModelV4, simulateReadableStream } from 'ai/test';
-import { buildSystemMessages } from './system-prompt';
+
 import type { CvContext } from './context';
+import { buildSystemMessages } from './system-prompt';
 
 // @ai-sdk/provider is only a transitive dependency, so derive the stream part
 // type from the mock rather than importing it and pinning a second version.

@@ -1,5 +1,5 @@
-import Text from '@components/text';
 import ExternalLink from '@components/external-link';
+import Text from '@components/text';
 
 type TBlogrollEntryProps = {
   title: string;

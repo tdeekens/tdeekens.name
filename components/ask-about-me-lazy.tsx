@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState, type ComponentType } from 'react';
-import AskAboutMeShell from '@components/ask-about-me-shell';
 import type { TAskAboutMeProps } from '@components/ask-about-me';
+import AskAboutMeShell from '@components/ask-about-me-shell';
 import {
   ASK_ABOUT_ME_VARIANTS,
   type AskVariant,
 } from '@lib/ask-about-me/variants';
+import { useEffect, useRef, useState, type ComponentType } from 'react';
 
 type TAskAboutMeLazyProps = {
   variant: AskVariant;
@@ -36,8 +36,12 @@ function AskAboutMeLazy(props: TAskAboutMeLazyProps) {
   };
 
   useEffect(() => {
-    if (!config.autoFocusOnDesktop) return;
-    if (!window.matchMedia('(min-width: 768px)').matches) return;
+    if (!config.autoFocusOnDesktop) {
+      return;
+    }
+    if (!window.matchMedia('(min-width: 768px)').matches) {
+      return;
+    }
     // Flagged so the autofocus below does not count as intent and warm the chunk.
     isProgrammaticFocusRef.current = true;
     inputRef.current?.focus();
@@ -59,7 +63,9 @@ function AskAboutMeLazy(props: TAskAboutMeLazyProps) {
 
   const onSubmit = (text: string) => {
     const trimmed = text.trim();
-    if (!trimmed) return;
+    if (!trimmed) {
+      return;
+    }
     setInput('');
     setPendingQuestion(trimmed);
     load();

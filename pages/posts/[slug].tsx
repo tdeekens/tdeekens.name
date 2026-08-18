@@ -1,14 +1,15 @@
-import type { GetStaticPropsContext } from 'next';
-import type { THeadlineProps, TParagraphProps } from '@components/text';
+import Blockquote from '@components/blockquote';
 import type { TOrderedProps, TUnorderedProps } from '@components/list';
+import List from '@components/list';
+import type { THeadlineProps, TParagraphProps } from '@components/text';
+import Text from '@components/text';
+import type { GetStaticPropsContext } from 'next';
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
 import Head from 'next/head';
 import Image from 'next/image';
-import { serialize } from 'next-mdx-remote/serialize';
-import Text from '@components/text';
-import List from '@components/list';
-import Blockquote from '@components/blockquote';
+
 import { getAllPosts, getPostBySlug } from '../../lib/posts';
 
 type TPostProps = {

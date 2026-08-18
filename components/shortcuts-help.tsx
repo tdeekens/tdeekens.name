@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { shortcuts } from '@lib/shortcuts';
+import { useEffect } from 'react';
 
 type TShortcutsHelpProps = {
   open: boolean;
@@ -8,15 +8,21 @@ type TShortcutsHelpProps = {
 
 function ShortcutsHelp(props: TShortcutsHelpProps) {
   useEffect(() => {
-    if (!props.open) return;
+    if (!props.open) {
+      return;
+    }
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') props.onClose();
+      if (e.key === 'Escape') {
+        props.onClose();
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [props.open, props.onClose]);
 
-  if (!props.open) return null;
+  if (!props.open) {
+    return null;
+  }
 
   const allRows = [
     ...shortcuts.map((s) => ({ keys: s.keys, label: s.label })),

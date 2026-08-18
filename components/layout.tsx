@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import Header from '@components/header';
 import { Analytics } from '@vercel/analytics/next';
+import Head from 'next/head';
 
 type TLayoutProps = {
   children: React.ReactElement;

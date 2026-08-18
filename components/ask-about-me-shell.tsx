@@ -1,8 +1,8 @@
-import type { FormEvent, ReactNode, Ref } from 'react';
 import {
   ASK_ABOUT_ME_VARIANTS,
   type AskVariant,
 } from '@lib/ask-about-me/variants';
+import type { FormEvent, ReactNode, Ref } from 'react';
 
 type TAskAboutMeShellProps = {
   variant: AskVariant;

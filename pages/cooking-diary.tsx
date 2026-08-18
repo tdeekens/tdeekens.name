@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import Dishes from '@components/dishes';
 import Text from '@components/text';
+import Head from 'next/head';
 
 const dishes1 = [
   {

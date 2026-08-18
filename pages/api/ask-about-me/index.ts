@@ -1,17 +1,17 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { ASK_ABOUT_ME_CONFIG } from '@lib/ask-about-me/config';
+import { getCvContext } from '@lib/ask-about-me/context';
+import { logger, flushLogger } from '@lib/ask-about-me/logger';
+import { createInMemoryRateLimiter } from '@lib/ask-about-me/rate-limit';
+import { askRequestSchema } from '@lib/ask-about-me/schema';
+import { buildSystemMessages } from '@lib/ask-about-me/system-prompt';
+import { waitUntil } from '@vercel/functions';
 import {
   convertToModelMessages,
   streamText,
   type ModelMessage,
   type UIMessage,
 } from 'ai';
-import { waitUntil } from '@vercel/functions';
-import { ASK_ABOUT_ME_CONFIG } from '@lib/ask-about-me/config';
-import { getCvContext } from '@lib/ask-about-me/context';
-import { buildSystemMessages } from '@lib/ask-about-me/system-prompt';
-import { askRequestSchema } from '@lib/ask-about-me/schema';
-import { createInMemoryRateLimiter } from '@lib/ask-about-me/rate-limit';
-import { logger, flushLogger } from '@lib/ask-about-me/logger';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 type AskErrorCode =
   | 'method_not_allowed'
@@ -56,7 +56,9 @@ const getBaseUrl = (req: NextApiRequest): string => {
 
 const getClientKey = (req: NextApiRequest): string => {
   const forwarded = firstHeaderValue(req.headers['x-forwarded-for']);
-  if (forwarded) return forwarded.split(',')[0].trim();
+  if (forwarded) {
+    return forwarded.split(',')[0].trim();
+  }
   return req.socket.remoteAddress ?? '';
 };
 

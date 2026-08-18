@@ -1,5 +1,6 @@
 #!/usr/bin/env tsx
 import { writeFileSync } from 'node:fs';
+
 import { blogroll } from '../lib/blogroll';
 
 const siteUrl = (process.env.SITE_URL || 'https://www.tdeekens.name').replace(

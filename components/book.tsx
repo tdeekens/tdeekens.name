@@ -5,9 +5,9 @@ type TBookProps = {
   title: string;
 };
 
-import Image from 'next/image';
-import Text from '@components/text';
 import ExternalLink from '@components/external-link';
+import Text from '@components/text';
+import Image from 'next/image';
 
 function Book(props: TBookProps) {
   return (

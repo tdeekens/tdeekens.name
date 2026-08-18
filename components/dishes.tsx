@@ -1,7 +1,7 @@
 type TDishesProps = {
-  images: Array<{
+  images: {
     src: string;
-  }>;
+  }[];
 };
 
 import Image from 'next/image';

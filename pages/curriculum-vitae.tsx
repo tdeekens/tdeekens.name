@@ -1,13 +1,13 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Text from '@components/text';
-import List from '@components/list';
+import AskAboutMe from '@components/ask-about-me-lazy';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
 import Job from '@components/job';
-import AskAboutMe from '@components/ask-about-me-lazy';
+import List from '@components/list';
 import TableOfContents from '@components/table-of-contents';
+import Text from '@components/text';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 
 const CurriculumVitae: NextPage = () => (
   <>

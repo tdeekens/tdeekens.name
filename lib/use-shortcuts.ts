@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { tinykeys } from 'tinykeys';
 import { shortcuts } from '@lib/shortcuts';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { tinykeys } from 'tinykeys';
 
 function isEditableTarget(target: EventTarget | null) {
-  if (!(target instanceof HTMLElement)) return false;
+  if (!(target instanceof HTMLElement)) {
+    return false;
+  }
   return target.matches('input, textarea, select, [contenteditable="true"]');
 }
 
@@ -14,7 +16,9 @@ export function useShortcuts(onHelp: () => void) {
   useEffect(() => {
     const map: Record<string, (e: KeyboardEvent) => void> = {
       'Shift+?': (e) => {
-        if (isEditableTarget(e.target)) return;
+        if (isEditableTarget(e.target)) {
+          return;
+        }
         e.preventDefault();
         onHelp();
       },
@@ -22,7 +26,9 @@ export function useShortcuts(onHelp: () => void) {
 
     for (const { keys, path } of shortcuts) {
       map[keys] = (e) => {
-        if (isEditableTarget(e.target)) return;
+        if (isEditableTarget(e.target)) {
+          return;
+        }
         router.push(path);
       };
     }
