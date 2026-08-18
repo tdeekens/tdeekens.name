@@ -125,24 +125,21 @@ export default async function handler(
 
   log.info({ question, turn, contextTokens: context.approxTokens }, 'asked');
 
-  const userMessages = await convertToModelMessages(
+  const messages: ModelMessage[] = await convertToModelMessages(
     parsed.data.messages as UIMessage[],
   );
-  const messages: ModelMessage[] = [
-    ...buildSystemMessages(context),
-    ...userMessages,
-  ];
 
   const controller = new AbortController();
   res.on('close', () => controller.abort());
 
   const result = streamText({
     model: ASK_ABOUT_ME_CONFIG.model.id,
+    instructions: buildSystemMessages(context),
     messages,
     maxOutputTokens: ASK_ABOUT_ME_CONFIG.model.maxOutputTokens,
     temperature: ASK_ABOUT_ME_CONFIG.model.temperature,
     abortSignal: controller.signal,
-    onFinish: ({ usage, finishReason, text }) => {
+    onEnd: ({ usage, finishReason, text }) => {
       log.info(
         {
           question,
@@ -150,7 +147,7 @@ export default async function handler(
           finishReason,
           latencyMs: Date.now() - startedAt,
           inputTokens: usage.inputTokens,
-          cachedInputTokens: usage.cachedInputTokens,
+          cachedInputTokens: usage.inputTokenDetails.cacheReadTokens,
           outputTokens: usage.outputTokens,
           answerChars: text.length,
         },

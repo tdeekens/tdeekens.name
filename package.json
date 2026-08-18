@@ -17,12 +17,12 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@ai-sdk/react": "3.0.193",
+    "@ai-sdk/react": "4.0.70",
     "@u-wave/react-youtube": "^0.7.4",
     "@vercel/functions": "3.9.3",
     "@vercel/speed-insights": "2.0.0",
     "accept-md-runtime": "5.0.2",
-    "ai": "6.0.191",
+    "ai": "7.0.67",
     "gray-matter": "4.0.3",
     "next": "16.3.1",
     "next-mdx-remote": "6.0.0",
