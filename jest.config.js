@@ -1,13 +1,13 @@
-module.exports = {
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
-  },
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': '<rootDir>/styles/__mocks__/styleMock.js',
-    '\\.(css|less|scss|sass)$': '<rootDir>/styles/__mocks__/styleMock.js',
-    '^@pages/(.*)$': '<rootDir>/pages/$1',
-    '^@components/(.*)$': '<rootDir>/components/$1',
-  },
+const nextJest = require('next/jest');
+
+const createJestConfig = nextJest({ dir: './' });
+
+/** @type {import('jest').Config} */
+const config = {
+  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  testEnvironment: 'jsdom',
+  testPathIgnorePatterns: ['<rootDir>/.next/'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 };
+
+module.exports = createJestConfig(config);
