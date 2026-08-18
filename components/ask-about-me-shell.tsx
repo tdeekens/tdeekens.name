@@ -31,7 +31,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
 
   return (
     <section
-      className="my-8 w-full md:w-3/4 mx-auto print:hidden"
+      className={`my-8 mx-auto print:hidden ${config.widthClassName}`}
       data-no-markdown
       aria-label={config.sectionLabel}
     >

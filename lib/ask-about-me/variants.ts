@@ -9,6 +9,12 @@ type AskVariantConfig = {
   footnote: string;
   autoFocusOnDesktop: boolean;
   suggestions: readonly string[];
+  /**
+   * Tailwind width utilities for the section. The CV page leads with the
+   * question box, so it takes the full column, while on the homepage it sits
+   * next to other content and stays narrower.
+   */
+  widthClassName: string;
 };
 
 export const ASK_ABOUT_ME_VARIANTS: Record<AskVariant, AskVariantConfig> = {
@@ -19,6 +25,7 @@ export const ASK_ABOUT_ME_VARIANTS: Record<AskVariant, AskVariantConfig> = {
     footnote:
       "Answers come from Tobias's CV, with his bookshelf, blogroll, and writing as background. Replies stream live and may be wrong.",
     autoFocusOnDesktop: true,
+    widthClassName: 'w-full',
     suggestions: [
       "What's Tobias's current role?",
       'Which companies has Tobias worked at?',
@@ -32,6 +39,7 @@ export const ASK_ABOUT_ME_VARIANTS: Record<AskVariant, AskVariantConfig> = {
     footnote:
       "Answers come from Tobias's CV, bookshelf, blogroll, and writing. Replies stream live and may be wrong.",
     autoFocusOnDesktop: false,
+    widthClassName: 'w-full md:w-3/4',
     suggestions: [
       'What does Tobias work on?',
       'What books has Tobias read recently?',
