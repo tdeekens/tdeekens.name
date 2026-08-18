@@ -9,6 +9,195 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
+    title: 'Landing the Plane',
+    href: 'https://theengineeringmanager.substack.com/p/landing-the-plane',
+    author: 'James Stanier',
+    teaser:
+      'Project completion hits a wall that takeoff never does. The ninety-ninety rule compounds edge cases, integration problems, and small decisions as teams drift toward easier wins under pressure.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Agentic Code Quality',
+    href: 'https://addyo.substack.com/p/agentic-code-quality',
+    author: 'Addy Osmani',
+    teaser:
+      'Human review becomes the bottleneck at agentic scale. Quality gates migrate upstream into constraints, with tests, linting rules, security scanners, and benchmarks acting as enforceable guardrails.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: "AI;DR (AI; Didn't Read)",
+    href: 'https://www.rickmanelius.com/p/aidr-ai-didnt-read',
+    author: 'Rick Manelius',
+    teaser:
+      'Raw model output carries a signal of its own. Pasting unedited generations without refinement reads as laziness rather than collaboration, no matter where the thinking originated.',
+    tags: ['ai', 'career'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Baking a Model',
+    href: 'https://newsletter.kentbeck.com/p/baking-a-model',
+    author: 'Kent Beck',
+    teaser:
+      'Model training is closer to baking than to sequential logic. Pre-training sets conditions at continental scale, while post-training nudges numbers through experiment, and the architecture reflects that split.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Quick: An Internal Hosting Platform for the AI Era',
+    href: 'https://shopify.engineering/quick',
+    author: 'Shopify Engineering',
+    teaser:
+      'Quick reframes internal deployment as dropping assets in a folder and getting back a URL. Deliberate constraints on the platform surface became the catalyst for rapid prototyping across Shopify.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Agentic Engineering at Zalando: A Snapshot',
+    href: 'https://engineering.zalando.com/posts/2026/08/agentic-engineering-at-zalando-a-snapshot.html',
+    author: 'Zalando Engineering',
+    teaser:
+      'A proxy layer unified LLM access across 250 teams and cut PR lead time by 20 to 40 percent through automated low-risk approvals. Agentic engineering moved from experiment to infrastructure.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Why Is Everyone in Tech So Sad',
+    href: 'https://www.noemamag.com/why-is-everyone-in-tech-so-sad',
+    author: 'Aaron Horwath',
+    teaser:
+      'AI removes the collaborative messy middle that made abstract knowledge work tolerable. Workism depends on that middle, and the constructed illusion collapses once efficiency supplants exploration.',
+    tags: ['career', 'ai'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'The Same Side of the Table',
+    href: 'https://staysaasy.com/the-same-side-of-the-table/',
+    author: 'Stay SaaSy',
+    teaser:
+      'Every meeting with a direct report is an extension of the manager, not a negotiation across a divide. Treating the team as an extension of yourself creates the permission structure for growth.',
+    tags: ['leadership'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'How I Find Problems to Solve as a Staff Engineer',
+    href: 'https://lalitm.com/post/find-problems-staff-engineer/',
+    author: 'Lalit Maganti',
+    teaser:
+      'Staff engineers find impact by absorbing day-to-day signals across teams rather than scheduling strategy sessions. Patterns surface across unrelated requests and point to problems worth solving at scale.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Giving and Taking Credit in Big Tech',
+    href: 'https://www.seangoedecke.com/giving-and-taking-credit/',
+    author: 'Sean Goedecke',
+    teaser:
+      'Credit travels through informal networks, since managers cannot independently assess complex work. Engineers who hand credit outward build the alliances that later carry their own projects.',
+    tags: ['career', 'leadership'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Type-Safe GraphQL Without Writing Response Types',
+    href: 'https://dev.to/robert_ozimek/type-safe-graphql-without-writing-a-single-response-type-k70',
+    author: 'Robert Ozimek',
+    teaser:
+      'Every query is a subset, so the response type belongs to the operation rather than the schema. Selections become the types, and dropping a field fails compilation immediately.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Why Does Opus 5 Feel Worse to Work With',
+    href: 'https://mun-logadan.github.io/why-does-opus-5-feel-worse/',
+    author: 'Mun Logadan',
+    teaser:
+      'Benchmark optimization pushes models toward confident assumptions instead of clarifying questions. That trade weakens exploratory work, where user guidance shifts from valued signal to penalized interruption.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Migrating a Large Flow Monorepo to TypeScript',
+    href: 'https://engineeringblog.yelp.com/2026/08/migrating-a-large-flow-monorepo-to-typescript.html',
+    author: 'Shawn Walton',
+    teaser:
+      'Yelp moved 1.4 million lines from Flow to TypeScript over three years, one package at a time, with both type systems running side by side. Gradual conversion beat a wholesale rewrite.',
+    tags: ['engineering', 'frontend'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: '99% of My Website Traffic Is Bots',
+    href: 'https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/',
+    author: 'Nick Gray',
+    teaser:
+      'Client-side analytics reported 5,977 pageviews a week while the server logged 2.5 million requests a day. Geographic blocks and user-agent rules cut the noise without locking out real readers.',
+    tags: ['engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Your SPA Is Leaking Memory. Soak Test It',
+    href: 'https://denodell.com/blog/your-spa-is-leaking-memory-soak-test-it',
+    author: 'Den Odell',
+    teaser:
+      'Listeners, timers, and subscriptions linger long after the view that created them. Soak testing compresses hours of real usage into minutes and catches the accumulation before production does.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'The End of No Code',
+    href: 'https://blog.exe.dev/the-end-of-no-code',
+    author: 'Philip Zeyliger',
+    teaser:
+      'No-code platforms won the middle ground between building and buying because custom software was expensive. Coding agents change that math and make bespoke code cheaper than platform lock-in.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'The Case for Hiring Junior Engineers',
+    href: 'https://refactoring.fm/p/the-case-for-hiring-junior-engineers',
+    author: 'Luca Rossi',
+    teaser:
+      'Juniors have nothing to unlearn on new tools while seniors build the guardrails and process around them. Mixed-seniority teams produce stronger systems than either extreme on its own.',
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Before You Delegate, Ask Yourself These 6 Questions',
+    href: 'https://newsletter.weskao.com/p/before-you-delegate-ask-yourself',
+    author: 'Wes Kao',
+    teaser:
+      'Delegation fails quietly when intent stays in the delegator head. Six questions on context, purpose, resources, success criteria, timeline, and risk surface the gap before work starts.',
+    tags: ['leadership'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Avoid the Trap of Magical Thinking',
+    href: 'https://bjorg.bjornroche.com/management/magical-thinking/',
+    author: 'Bjorn Roche',
+    teaser:
+      'Magical thinking substitutes a simple story for the actual work of leadership. Understanding constraints, removing bottlenecks, and shaping team dynamics beat inspirational speeches and hiring myths.',
+    tags: ['leadership'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: 'Get Up to Speed Unbelievably Fast',
+    href: 'https://alifeengineered.substack.com/p/get-up-to-speed-unbelievably-fast-712',
+    author: 'Steve Huynh',
+    teaser:
+      'Knowledge splits into facts, processes, and concepts, each needing a different learning strategy. Conceptual frameworks transfer across projects while the rest requires reference material or repetition.',
+    tags: ['career', 'engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
+    title: '"Code Was Never the Hard Part" Is an Insult',
+    href: 'https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers',
+    author: 'Senko Rasic',
+    teaser:
+      'Calling code the easy part erases the craft of turning vague requirements into systems that hold up. The hard part was always the code, because that is where the ambiguity gets resolved.',
+    tags: ['engineering'],
+    addedAt: '2026-08-18T20:40:12.574Z',
+  },
+  {
     title: 'React Compiler Is a Retrofit',
     href: 'https://longho.dev/posts/react-compiler-is-a-retrofit/',
     author: 'Long Ho',
