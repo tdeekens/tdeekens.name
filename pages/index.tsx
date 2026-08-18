@@ -4,6 +4,7 @@ import Text from '@components/text';
 import List from '@components/list';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
+import AskAboutMe from '@components/ask-about-me-lazy';
 import { getAllPosts } from '../lib/posts';
 
 type THomeProps = {
@@ -43,6 +44,8 @@ const Home = (props: THomeProps) => (
           commercetools as a Principal Engineer on the Composable Commerce Team
           focussing on Frontend Architecture.
         </Text.Paragraph>
+
+        <AskAboutMe variant="general" />
 
         <Text.Paragraph>You can also find me on:</Text.Paragraph>
 

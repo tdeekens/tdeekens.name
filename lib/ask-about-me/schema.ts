@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { ASK_ABOUT_ME_CONFIG } from './config';
+import { ASK_VARIANTS } from './variants';
 
 const { maxMessages, maxCharsPerMessage } = ASK_ABOUT_ME_CONFIG.request;
 
@@ -29,4 +30,6 @@ export const askRequestSchema = z.object({
       (messages) => messages.some((m) => m.role === 'user'),
       'At least one user message is required',
     ),
+  // Defaulted so a cached client from before this field existed keeps working.
+  variant: z.enum(ASK_VARIANTS).default('general'),
 });

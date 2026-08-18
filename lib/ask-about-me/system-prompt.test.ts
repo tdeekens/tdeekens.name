@@ -43,13 +43,24 @@ const createModel = () =>
 
 describe('buildSystemMessages', () => {
   it('marks the context message as cacheable for anthropic', () => {
-    const [rules, ctx] = buildSystemMessages(context);
+    const [rules, ctx] = buildSystemMessages(context, 'cv');
 
     expect(rules.providerOptions).toBeUndefined();
     expect(ctx.providerOptions).toEqual({
       anthropic: { cacheControl: { type: 'ephemeral' } },
     });
     expect(ctx.content).toContain(context.combinedMarkdown);
+  });
+
+  // The homepage and the CV page send different variants. Anthropic caches the
+  // prefix up to the breakpoint, so everything up to and including the context
+  // has to stay byte-identical or each variant pays for its own cache entry.
+  it('keeps the cacheable prefix identical across variants', () => {
+    const cv = buildSystemMessages(context, 'cv');
+    const general = buildSystemMessages(context, 'general');
+
+    expect(cv.slice(0, 2)).toEqual(general.slice(0, 2));
+    expect(cv.at(-1)?.content).not.toEqual(general.at(-1)?.content);
   });
 
   // Regression guard for the AI SDK v7 upgrade. v7 rejects system messages
@@ -60,7 +71,7 @@ describe('buildSystemMessages', () => {
 
     const result = streamText({
       model,
-      instructions: buildSystemMessages(context),
+      instructions: buildSystemMessages(context, 'cv'),
       messages: [
         { role: 'user', content: 'Does Tobias work at commercetools?' },
       ],
@@ -76,7 +87,7 @@ describe('buildSystemMessages', () => {
 
     const result = streamText({
       model,
-      instructions: buildSystemMessages(context),
+      instructions: buildSystemMessages(context, 'cv'),
       messages: [{ role: 'user', content: 'Where does he work?' }],
     });
     const usage = await result.usage;
@@ -91,7 +102,7 @@ describe('buildSystemMessages', () => {
 
     const result = streamText({
       model,
-      instructions: buildSystemMessages(context),
+      instructions: buildSystemMessages(context, 'cv'),
       messages: [{ role: 'user', content: 'Where does he work?' }],
     });
     await result.consumeStream();
@@ -99,10 +110,14 @@ describe('buildSystemMessages', () => {
     const prompt = model.doStreamCalls[0].prompt;
     const systemMessages = prompt.filter((m) => m.role === 'system');
 
-    expect(systemMessages).toHaveLength(2);
+    // Order is load-bearing: rules, then the cacheable context, then the
+    // variant nudge. The nudge must stay behind the breakpoint and uncached.
+    expect(systemMessages).toHaveLength(3);
     expect(systemMessages[1].providerOptions).toEqual({
       anthropic: { cacheControl: { type: 'ephemeral' } },
     });
+    expect(systemMessages[2].providerOptions).toBeUndefined();
+    expect(systemMessages[2].content).toMatch(/curriculum vitae/i);
   });
 
   // Documents why `instructions` is not just a stylistic preference. v7
@@ -116,7 +131,7 @@ describe('buildSystemMessages', () => {
     const result = streamText({
       model,
       messages: [
-        ...buildSystemMessages(context),
+        ...buildSystemMessages(context, 'cv'),
         { role: 'user', content: 'Where does he work?' },
       ],
       onError: ({ error }) => {

@@ -6,15 +6,8 @@ import List from '@components/list';
 import ExternalLink from '@components/external-link';
 import InternalLink from '@components/internal-link';
 import Job from '@components/job';
-import dynamic from 'next/dynamic';
+import AskAboutMe from '@components/ask-about-me-lazy';
 import TableOfContents from '@components/table-of-contents';
-
-const AskAboutMe = dynamic(() => import('@components/ask-about-me'), {
-  ssr: false,
-  loading: () => (
-    <section className="my-8 h-[80px] print:hidden" aria-hidden="true" />
-  ),
-});
 
 const CurriculumVitae: NextPage = () => (
   <>
@@ -29,7 +22,7 @@ const CurriculumVitae: NextPage = () => (
       </div>
     </div>
 
-    <AskAboutMe />
+    <AskAboutMe variant="cv" />
 
     <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-center md:place-content-between">
       <ul className="">

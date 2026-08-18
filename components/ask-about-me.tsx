@@ -1,14 +1,10 @@
-import { useEffect, useRef, useState, type FormEvent } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useChat } from '@ai-sdk/react';
 import { DefaultChatTransport, type UIMessage } from 'ai';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-
-const SUGGESTIONS = [
-  "What's Tobias's current role?",
-  'What books has Tobias read recently?',
-  'What open-source work has Tobias done?',
-] as const;
+import AskAboutMeShell from '@components/ask-about-me-shell';
+import type { AskVariant } from '@lib/ask-about-me/variants';
 
 const MARKDOWN_CLASSES = [
   '[&_p]:mb-2 [&_p:last-child]:mb-0',
@@ -28,12 +24,30 @@ const STREAMING_CARET_CLASSES =
 const renderMessageText = (message: UIMessage): string =>
   message.parts.map((part) => (part.type === 'text' ? part.text : '')).join('');
 
-function AskAboutMe() {
-  const [input, setInput] = useState('');
+export type TAskAboutMeProps = {
+  variant: AskVariant;
+  /** Carried over from the placeholder so in-flight typing survives the swap. */
+  initialInput?: string;
+  /** Sent on mount when the visitor submitted before this chunk had loaded. */
+  initialQuestion?: string;
+  /** Restores focus after the placeholder's input is replaced by this one. */
+  shouldFocusOnMount?: boolean;
+};
+
+function AskAboutMe(props: TAskAboutMeProps) {
+  const [input, setInput] = useState(props.initialInput ?? '');
   const inputRef = useRef<HTMLInputElement>(null);
   const answerRef = useRef<HTMLDivElement>(null);
+  const transport = useMemo(
+    () =>
+      new DefaultChatTransport({
+        api: '/api/ask-about-me',
+        body: { variant: props.variant },
+      }),
+    [props.variant],
+  );
   const { messages, sendMessage, status, error, clearError } = useChat({
-    transport: new DefaultChatTransport({ api: '/api/ask-about-me' }),
+    transport,
   });
 
   const isBusy = status === 'submitted' || status === 'streaming';
@@ -52,10 +66,27 @@ function AskAboutMe() {
     : '';
   const hasFirstTokens = lastAnswer.length > 0;
 
+  const submit = async (text: string) => {
+    const trimmed = text.trim();
+    if (!trimmed || isBusy) return;
+    setInput('');
+    if (error) clearError();
+    await sendMessage({ text: trimmed });
+  };
+
+  const hasMountedRef = useRef(false);
   useEffect(() => {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      inputRef.current?.focus();
+    if (hasMountedRef.current) return;
+    hasMountedRef.current = true;
+
+    if (props.shouldFocusOnMount) {
+      const element = inputRef.current;
+      element?.focus();
+      element?.setSelectionRange(element.value.length, element.value.length);
     }
+    if (props.initialQuestion) void submit(props.initialQuestion);
+    // Mount-only hand-over. Re-running would resubmit the initial question.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -67,67 +98,16 @@ function AskAboutMe() {
     }
   }, [hasFirstTokens]);
 
-  const submit = async (text: string) => {
-    const trimmed = text.trim();
-    if (!trimmed || isBusy) return;
-    setInput('');
-    if (error) clearError();
-    await sendMessage({ text: trimmed });
-  };
-
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    void submit(input);
-  };
-
   return (
-    <section
-      className="my-8 print:hidden"
-      data-no-markdown
-      aria-label="Ask about Tobias"
+    <AskAboutMeShell
+      variant={props.variant}
+      input={input}
+      isBusy={isBusy}
+      showSuggestions={messages.length === 0}
+      inputRef={inputRef}
+      onInputChange={setInput}
+      onSubmit={(text) => void submit(text)}
     >
-      <form
-        onSubmit={onSubmit}
-        aria-label="Ask Tobias a question"
-        className="flex border border-black focus-within:ring-2 focus-within:ring-black focus-within:ring-offset-1"
-      >
-        <input
-          ref={inputRef}
-          type="text"
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-          placeholder="Ask about Tobias…"
-          maxLength={2000}
-          disabled={isBusy}
-          className="flex-1 px-4 py-2 outline-none disabled:opacity-50"
-          aria-label="Ask about Tobias"
-        />
-        <button
-          type="submit"
-          disabled={isBusy || input.trim().length === 0}
-          className="px-4 py-2 border-l border-black hover:bg-black hover:text-white transition-colors focus-visible:outline-none focus-visible:bg-black focus-visible:text-white disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
-        >
-          {isBusy ? 'Sending…' : 'Send'}
-        </button>
-      </form>
-
-      {messages.length === 0 && (
-        <ul className="mt-2 flex flex-wrap gap-2">
-          {SUGGESTIONS.map((suggestion) => (
-            <li key={suggestion}>
-              <button
-                type="button"
-                onClick={() => void submit(suggestion)}
-                disabled={isBusy}
-                className="px-2 py-1 text-sm border border-gray-400 hover:bg-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black disabled:opacity-50"
-              >
-                {suggestion}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
-
       {status === 'submitted' && (
         <p
           role="status"
@@ -190,12 +170,7 @@ function AskAboutMe() {
           {error.message || 'Something went wrong. Please try again.'}
         </p>
       )}
-
-      <p className="mt-2 text-xs text-gray-500">
-        Answers come from Tobias&apos;s CV, bookshelf, blogroll, and writing.
-        Replies stream live and may be wrong.
-      </p>
-    </section>
+    </AskAboutMeShell>
   );
 }
 

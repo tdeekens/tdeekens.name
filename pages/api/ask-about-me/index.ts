@@ -123,7 +123,12 @@ export default async function handler(
       .trim() ?? '';
   const turn = userMessagesIn.length;
 
-  log.info({ question, turn, contextTokens: context.approxTokens }, 'asked');
+  const { variant } = parsed.data;
+
+  log.info(
+    { question, turn, variant, contextTokens: context.approxTokens },
+    'asked',
+  );
 
   const messages: ModelMessage[] = await convertToModelMessages(
     parsed.data.messages as UIMessage[],
@@ -134,7 +139,7 @@ export default async function handler(
 
   const result = streamText({
     model: ASK_ABOUT_ME_CONFIG.model.id,
-    instructions: buildSystemMessages(context),
+    instructions: buildSystemMessages(context, variant),
     messages,
     maxOutputTokens: ASK_ABOUT_ME_CONFIG.model.maxOutputTokens,
     temperature: ASK_ABOUT_ME_CONFIG.model.temperature,
@@ -144,6 +149,7 @@ export default async function handler(
         {
           question,
           turn,
+          variant,
           finishReason,
           latencyMs: Date.now() - startedAt,
           inputTokens: usage.inputTokens,

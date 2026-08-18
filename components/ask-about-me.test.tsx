@@ -33,15 +33,35 @@ beforeEach(() => {
 
 describe('AskAboutMe', () => {
   it('offers suggestions until a question is asked', () => {
-    render(<AskAboutMe />);
+    render(<AskAboutMe variant="general" />);
+
+    expect(
+      screen.getByRole('button', { name: 'What does Tobias work on?' }),
+    ).toBeInTheDocument();
+  });
+
+  // The whole point of the variants: the CV page steers visitors at the career
+  // history, the homepage invites anything in the context.
+  it('scopes its suggestions to the variant', () => {
+    const { unmount } = render(<AskAboutMe variant="cv" />);
 
     expect(
       screen.getByRole('button', { name: "What's Tobias's current role?" }),
     ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: 'What does Tobias work on?' }),
+    ).not.toBeInTheDocument();
+    unmount();
+
+    render(<AskAboutMe variant="general" />);
+
+    expect(
+      screen.queryByRole('button', { name: "What's Tobias's current role?" }),
+    ).not.toBeInTheDocument();
   });
 
   it('sends the typed question and clears the input', async () => {
-    render(<AskAboutMe />);
+    render(<AskAboutMe variant="general" />);
 
     await userEvent.type(
       screen.getByRole('textbox', { name: 'Ask about Tobias' }),
@@ -55,9 +75,27 @@ describe('AskAboutMe', () => {
     ).toHaveValue('');
   });
 
+  it('submits the question handed over by the placeholder on mount', () => {
+    render(
+      <AskAboutMe variant="general" initialQuestion="Where does he work?" />,
+    );
+
+    expect(sendMessage).toHaveBeenCalledTimes(1);
+    expect(sendMessage).toHaveBeenCalledWith({ text: 'Where does he work?' });
+  });
+
+  it('adopts input typed into the placeholder before the chunk loaded', () => {
+    render(<AskAboutMe variant="general" initialInput="Where does he" />);
+
+    expect(
+      screen.getByRole('textbox', { name: 'Ask about Tobias' }),
+    ).toHaveValue('Where does he');
+    expect(sendMessage).not.toHaveBeenCalled();
+  });
+
   it('disables input while a request is in flight', () => {
     chatState = { messages: [], status: 'submitted' };
-    render(<AskAboutMe />);
+    render(<AskAboutMe variant="general" />);
 
     expect(
       screen.getByRole('textbox', { name: 'Ask about Tobias' }),
@@ -74,11 +112,11 @@ describe('AskAboutMe', () => {
       ],
       status: 'ready',
     };
-    render(<AskAboutMe />);
+    render(<AskAboutMe variant="general" />);
 
     expect(screen.getByText('commercetools').tagName).toBe('STRONG');
     expect(
-      screen.queryByRole('button', { name: "What's Tobias's current role?" }),
+      screen.queryByRole('button', { name: 'What does Tobias work on?' }),
     ).not.toBeInTheDocument();
   });
 });
