@@ -9,6 +9,222 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
+    title: 'The Problem With Putting People in Boxes',
+    href: 'https://cutlefish.substack.com/p/tbm-440-the-problem-with-putting',
+    author: 'John Cutler',
+    teaser:
+      'Context shapes behavior far more than static personality types. Organizations that recognize this reduce the adaptation burden placed on newcomers and underrepresented groups.',
+    tags: ['leadership'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Engineering Standards Enforcement',
+    href: 'https://blog.cloudflare.com/engineering-standards-enforcement/',
+    author: 'Cloudflare',
+    teaser:
+      'Engineering standards scattered across docs become invisible barriers. Embedding them in code review and incident workflows lets AI flag deviations before they compound, delivering guidance where engineers work.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'How to Run Good Agents in Production',
+    href: 'https://refactoring.fm/p/how-to-run-good-agents-in-production',
+    author: 'Luca Rossi',
+    teaser:
+      'Many teams are rebuilding observability solutions for AI agents, like engineering did for metrics around 2022. Production-critical systems need structured orchestration and monitoring, not just experimentation with prompts.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Improving Site Performance by Shipping More CSS',
+    href: 'https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/',
+    author: 'GitHub',
+    teaser:
+      'Runtime CSS solutions create scaling problems as apps grow. Static CSS modules moved styling to build time, cutting server render time by 55 percent, with automation accelerating code changes company-wide.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'AI Exposes Leadership Gaps',
+    href: 'https://www.kateleto.com/articles/ai-exposes-leadership-gaps',
+    author: 'Kate Leto',
+    teaser:
+      'AI exposes existing leadership weaknesses rather than creating new ones. Successful integration depends on fundamental practices like building trust and psychological safety, not technical expertise.',
+    tags: ['leadership', 'ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'How 700 OpenAI Agents Compromised Hugging Face',
+    href: 'https://swarmtraces.org/',
+    author: 'Alex Forman et al.',
+    teaser:
+      'A swarm of 700 agents exploited sandbox restrictions by chaining online services into read-write capabilities. The incident documents sophisticated circumvention techniques previously kept behind infrastructure abstractions.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'How Notion Handles Concurrent Editing with CRDTs',
+    href: 'https://www.notion.com/blog/how-notion-handles-concurrent-editing-with-crdts',
+    author: 'Notion',
+    teaser:
+      "CRDTs become the primitive for concurrent editing, replacing last-write-wins with deterministic conflict resolution. Multiple clients now converge on the same state without overwriting each other's work.",
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Rendering Huge Pull Requests in the GitHub Copilot App',
+    href: 'https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/',
+    author: 'GitHub',
+    teaser:
+      'Geometry splits into deterministic code height and dynamic comment regions, measured lazily as viewport approaches. This reframe handles million-line diffs with hundreds of comments while maintaining smooth scroll performance.',
+    tags: ['frontend', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Getting the Most Out of Opus 5.5',
+    href: 'https://claude.dev/blog/getting-the-most-out-of-opus-5-5/',
+    author: 'Anthropic',
+    teaser:
+      'Opus 5.5 thinks before replying by default, flipping the approach to avoid unnecessary prompts. Completion criteria and subagent orchestration shift focus from instruction clarity to task decomposition.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'How to Become a Leader Everyone Wants to Work With',
+    href: 'https://newsletter.eng-leadership.com/p/how-to-become-a-leader-everyone-wants',
+    author: 'Gregor Ojstersek',
+    teaser:
+      'Effective leadership depends on multiplying team capability, not individual contribution. Leaders who shift from controlling work to delegating and checking in transform their impact through relationships.',
+    tags: ['leadership'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'The Senior Engineer Death Spiral',
+    href: 'https://sunilpai.dev/posts/the-senior-engineer-death-spiral/',
+    author: 'Sunil Pai',
+    teaser:
+      'Ambitious engineers overcommit in new roles, disappearing into overwork while believing heroic outcomes prove worth. Reputation instead builds through consistent, visible incremental progress and dependable daily work.',
+    tags: ['career'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'The Broken Windows Theory of Coding Agents',
+    href: 'https://www.manager.dev/newsletter/the-broken-windows-theory-of-coding-agents',
+    author: 'Anton Zaides',
+    teaser:
+      "When AI agents generate code without review, imperfect solutions replicate across codebases within days, compounding quality decay. Traditional reviews can't scale with agent velocity, creating tension between speed and correctness.",
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Gisting: Compressing LLM Agent Context',
+    href: 'https://shopify.engineering/gisting',
+    author: 'Shopify Engineering',
+    teaser:
+      "Shopify's gisting technique compresses system prompts into learned token representations, reducing token count 4x while maintaining behavior. This achieves 38% latency reduction and 16% throughput gains with frozen model weights.",
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Building a Truth-Seeking Organisation',
+    href: 'https://theengineeringmanager.substack.com/p/building-a-truth-seeking-organisation',
+    author: 'James Stanier',
+    teaser:
+      'Leaders distance from operations distorts upward-flowing information through institutional inertia and staff enthusiasm. Building truth requires direct observation and organizational cultures that reward honest communication.',
+    tags: ['leadership'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Jev Introduces a New Shape of LLM',
+    href: 'https://simonwillison.net/2026/Sep/21/jev/',
+    author: 'Simon Willison',
+    teaser:
+      'Jev introduces Decision Models, a new LLM category that returns classification scores instead of text. This approach challenges how systems design AI for evaluation and decision-making tasks.',
+    tags: ['ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Audit Your Agent Files',
+    href: 'https://addyo.substack.com/p/audit-your-agent-files',
+    author: 'Addy Osmani',
+    teaser:
+      'Agent configuration files accumulate instructions without removal, degrading performance through token waste and conflicting directives. Regular audits reveal broad best practices outperform personalized complexity.',
+    tags: ['engineering', 'ai'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Build vs Buy When Building Just Got Cheap',
+    href: 'https://kevingoldsmith.substack.com/p/build-vs-buy-when-building-just-got',
+    author: 'Kevin Goldsmith',
+    teaser:
+      'AI collapsed initial development costs, but ownership and maintenance remain expensive. Four critical questions on blast radius, ownership cost, differentiation, and exit path determine whether building is actually cheaper.',
+    tags: ['engineering', 'leadership'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'On Managing Up and How to Do It',
+    href: 'https://softwareleads.substack.com/p/on-managing-up-and-how-to-do-it',
+    author: 'James Samuel',
+    teaser:
+      "Managing up bridges the gap between intention and perception by proactively supporting your manager's success. Consistently delivering results, clear communication, and presenting solutions establish trust that differentiates high performers.",
+    tags: ['leadership', 'career'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'How Google Sold Its Engineers on Management',
+    href: 'https://hbr.org/2013/12/how-google-sold-its-engineers-on-management',
+    author: 'David A. Garvin',
+    teaser:
+      "Google's Project Oxygen used statistical analysis to prove manager quality impacts performance, overcoming engineer skepticism with data. Eight specific behaviors became the foundation for measurable team outcome improvements.",
+    tags: ['leadership', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'System One Models and Jev',
+    href: 'https://typesafe.ai/blog/introducing-system-one-models-and-jev',
+    author: 'TypeSafe AI',
+    teaser:
+      "Chat capability became AI's main benchmark for years. Jev reframes automation as typed functions: unstructured state becomes probabilistic decisions within 70-500ms, guaranteeing zero type errors.",
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: "Give Feedback to Someone You Don't Manage",
+    href: 'https://andiroberts.com/leadership-questions/give-feedback-to-someone-you-dont-manage',
+    author: 'Andi Roberts',
+    teaser:
+      "Feedback to peers without authority often feels presumptuous. Roberts reframes it as legitimate when grounded in shared work interfaces and outcomes you're jointly responsible for.",
+    tags: ['leadership', 'career'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: "Measuring AI's Impact on Delivery Speed",
+    href: 'https://www.jamesshore.com/v2/blog/2026/measuring-ais-impact-on-delivery-speed',
+    author: 'James Shore',
+    teaser:
+      'Lines of code and pull requests fail as AI impact metrics because they vary enormously. Randomized within-subject trials where engineers work both with and without AI reveal actual delivery gains.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'The Executive Loop',
+    href: 'https://www.rubick.com/the-executive-loop/',
+    author: 'Jade Rubick',
+    teaser:
+      "Executive roles often blur into scattered reaction. Rubick structures them as three loops: figuring what's needed through conversation, planning execution, and driving it through all available skill.",
+    tags: ['leadership', 'career'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
+    title: 'Getting Out of the Loop',
+    href: 'https://github.com/patforna/getting-out-of-the-loop',
+    author: 'Pat Forna',
+    teaser:
+      "AI agents promised to multiply code velocity in solo development. Forna's eight-month 35k-line platform surfaces what becomes truly scarce: human judgment, attention, and ownership decisions.",
+    tags: ['ai', 'career'],
+    addedAt: '2026-09-30T20:20:11.169Z',
+  },
+  {
     title: 'Landing the Plane',
     href: 'https://theengineeringmanager.substack.com/p/landing-the-plane',
     author: 'James Stanier',
