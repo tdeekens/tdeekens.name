@@ -58,7 +58,7 @@ URLs:
 
 ### 4. Insert entries at the top of the array
 
-The repo has no prettier config, so prettier's default double quotes would rewrite the whole file. Always format with `npx prettier --single-quote --write lib/blogroll.ts`. Then confirm `git diff --stat lib/blogroll.ts` shows only insertions (no `-` lines) and run `npx tsc --noEmit -p .`.
+The repo formats with oxfmt, not prettier. After inserting, run `npm run format` (or `npx oxfmt lib/blogroll.ts`), then confirm `git diff --stat lib/blogroll.ts` shows only insertions (no `-` lines) and run `npm run lint` and `npm run typecheck`.
 
 Order new entries newest-first, matching Anybox. Insert the block right after `export const blogroll: TBlogrollEntry[] = [` and before the existing first object. Use one `edit` call whose `oldText` is the existing first entry and whose `newText` is the new entries followed by that same entry, so the diff is one hunk.
 
