@@ -19,7 +19,7 @@ Adds new blog posts from the user's Anybox "Reading" folder to `lib/blogroll.ts`
 
 ### 1. Pull recent bookmarks
 
-Call `mcp__anybox__search_bookmarks` with the Reading folder ID and `limit` 15-25 (more only if the user says they added a lot). Results are newest-first.
+Call `mcp__anybox__search_bookmarks` with the Reading folder ID and `limit` 50 (the tool's maximum). Results are newest-first. The tool has no offset, so if it returns 50 results, say so: older bookmarks may be unchecked. Ask the user before going further, or narrow with `query`.
 
 ### 2. Filter out what's already in the blogroll
 
@@ -57,6 +57,8 @@ URLs:
 ```
 
 ### 4. Insert entries at the top of the array
+
+The repo has no prettier config, so prettier's default double quotes would rewrite the whole file. Always format with `npx prettier --single-quote --write lib/blogroll.ts`. Then confirm `git diff --stat lib/blogroll.ts` shows only insertions (no `-` lines) and run `npx tsc --noEmit -p .`.
 
 Order new entries newest-first, matching Anybox. Insert the block right after `export const blogroll: TBlogrollEntry[] = [` and before the existing first object. Use one `edit` call whose `oldText` is the existing first entry and whose `newText` is the new entries followed by that same entry, so the diff is one hunk.
 

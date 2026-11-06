@@ -9,6 +9,230 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
+    title: "Nothing Installs at Our Company Until It's a Week Old",
+    href: 'https://brunoj.com/nothing-installs-at-our-company-until-its-a-week-old/',
+    author: 'Bruno J.',
+    teaser:
+      'A company proxy now holds new npm and PyPI releases for seven days before anyone can install them. In its first twelve days the gate refused 71 downloads, mostly harmless packages that were simply too new.',
+    tags: ['engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: "Don't Let Fear Drive Your Decisions",
+    href: 'https://yewjin.substack.com/p/dont-let-fear-drive-your-decisions',
+    author: 'Yewjin',
+    teaser:
+      'Calm is a skill almost nobody develops on purpose, and it changes the quality of every decision made under pressure. The piece treats composure as something you can practice rather than a fixed trait.',
+    tags: ['leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'The End of Startups',
+    href: 'https://evanjconrad.com/posts/end-of-startups',
+    author: 'Evan J. Conrad',
+    teaser:
+      'AI startups are running into a compute shortage that money alone cannot fix. Cloud providers now ask non-investment-grade customers for large upfront payments, so most may lose access to capacity within months.',
+    tags: ['ai'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'A Select Should Tell You Something',
+    href: 'https://alfy.blog/2026/10/27/a-select-should-tell-you-something.html',
+    author: 'Alfy',
+    teaser:
+      'Customizable select lets each option carry more than a line of text, such as a preview, a number, or a warning. Five before-and-after demos show how richer options change what people can decide from the control itself.',
+    tags: ['frontend'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Project Speed',
+    href: 'https://building.owner.com/project-speed',
+    author: 'Owner',
+    teaser:
+      'Owner moved more than 10,000 restaurant websites from a Next.js stack to Astro on Cloudflare Workers, serving cached pages from the edge and using React only where needed. The change lifted per-restaurant revenue by more than 4% across the network.',
+    tags: ['frontend'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'How Meta Built Forum With AI-Native Engineering',
+    href: 'https://engineering.fb.com/2026/10/15/ml-applications/how-meta-built-forum-ai-native-engineering/',
+    author: 'Meta',
+    teaser:
+      'Meta built Forum, a standalone Groups app, with an AI agent as a participant in the development cycle. The write-up covers how the codebase, tests, and tooling were adapted for agentic work, and what failed along the way.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Can AI Review Agents Take Humans Out of Code Review?',
+    href: 'https://rdel.substack.com/p/rdel-165-can-ai-review-agents-take',
+    author: 'RDEL',
+    teaser:
+      'Humans and AI review agents caught different bugs, and together they found 82.1% of issues, against about half for humans alone and 71.9% for the best agent. The question is when people can safely step out of the review loop.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'OpenAI and Anthropic Cut Their LLM Prices by Up to 80%. Why?',
+    href: 'https://minimaxir.com/2026/10/cheap-llms/',
+    author: 'Max Woolf',
+    teaser:
+      'A timeline of recent OpenAI and Anthropic model launches shows list prices falling by up to 80% within a few months. The post asks what the true cost of a token is once input, output, and cache reads are counted.',
+    tags: ['ai'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'The Golden Age',
+    href: 'https://dark.ronacher.eu/2026/10/31/golden-age/',
+    author: 'Armin Ronacher',
+    teaser:
+      'A family outing to a Halloween circus becomes a reflection on how ordinary traditions feel in a world shaped by war and displacement. Friends who fled conflict make the question personal.',
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'The AI Cost of JavaScript Frameworks',
+    href: 'https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/',
+    author: 'Nolan Lawson',
+    teaser:
+      'Framework choices are usually justified by vibes, with claims of being blazing fast and little evidence. The post applies the same skepticism to what frameworks now cost in AI-assisted development.',
+    tags: ['frontend', 'ai'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'node:vfs: What Actually Landed',
+    href: 'https://blog.platformatic.dev/article-slug-node-vfs-nodejs-virtual-filesystem',
+    author: 'Platformatic',
+    teaser:
+      'Node.js apps expect their files on disk, which breaks when code ships inside a ZIP, a single executable, or memory. The virtual filesystem lets modules, configuration, and templates load from those sources as if they were real paths.',
+    tags: ['engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: "I'm Not Doing 996",
+    href: 'https://www.elenaverna.com/p/im-not-doing-996',
+    author: 'Elena Verna',
+    teaser:
+      'A working parent at a fast-moving AI company rejects the 996 culture of 9am to 9pm, six days a week, that is becoming a badge of honor. The argument is that long hours should not be the measure of seriousness.',
+    tags: ['leadership', 'ai'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Do I Really Have to Do Pricing?',
+    href: 'https://infinify.com/do-i-really-have-to-do-pricing/',
+    author: 'Infinify',
+    teaser:
+      'Pricing affects revenue and positioning, yet product leaders often inherit it without clear ownership. The post argues you do not need to master the whole discipline, only its foundations, to start well.',
+    tags: ['leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'How AI Is Changing Engineering Management',
+    href: 'https://refactoring.fm/p/how-ai-is-changing-engineering-management',
+    author: 'Luca Rossi',
+    teaser:
+      'The work of engineering managers is shifting as AI changes how teams operate. The essay draws on research and practitioner stories to show what managers are actually doing differently.',
+    tags: ['ai', 'leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Tada After tsserver Plugins',
+    href: 'https://jovidecroock.com/blog/typescript-7-content-mappers',
+    author: 'Jovi De Croock',
+    teaser:
+      'TypeScript 7 no longer loads tsserver plugins, so GraphQL diagnostics in the editor vanish without a warning even though the config still parses. The post explains what is lost when the switch happens.',
+    tags: ['engineering', 'frontend'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'What I Learned Building an AI Software Factory',
+    href: 'https://codecapsule.com/2026/10/04/what-i-learned-building-an-ai-software-factory/',
+    author: 'Code Capsule',
+    teaser:
+      'Building an AI-enhanced workflow taught the author more than reading about it did. The post covers the limits of AI and argues for mechanical verification over trusting AI-written prose.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'The Future of CSS',
+    href: 'https://www.joshwcomeau.com/css/interop-2027/',
+    author: 'Josh W. Comeau',
+    teaser:
+      'Browser vendors coordinate through Interop to bring new CSS and web features to near-universal support within a year. The post walks through that track record and previews the features under consideration for next year.',
+    tags: ['frontend'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Nine Questions I Now Ask in Interviews',
+    href: 'https://louisedeason.substack.com/p/nine-questions-i-now-ask-in-interviews',
+    author: 'Louise Deason',
+    teaser:
+      'Interviews are a two-way conversation, but candidates usually treat them as exams. The post shares nine questions to ask at the end that reveal how a company actually works.',
+    tags: ['career'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Speeding Up Code Review With small-change',
+    href: 'https://lethain.com/small-changes/',
+    author: 'Will Larson',
+    teaser:
+      'Imprint engineers merged several times more PRs than two years earlier, and incidents fell 42% half over half. The post argues that quality and velocity are not the tradeoff people assume.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'The Role of the Digital Engineer',
+    href: 'https://konfi.kommitment.works/~hannes/obsidian/the-role-of-the-digital-engineer',
+    author: 'Johannes Mainusch',
+    teaser:
+      'Engineering has always been about change, and the current AI shift is one more chapter in that history. The essay looks back for perspective rather than predicting what will happen to the job.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Management in the Age of AI',
+    href: 'https://staysaasy.com/management-in-the-age-of-ai/',
+    author: 'StaySaaSy',
+    teaser:
+      'AI is making management more important, even as flattening layoffs suggest otherwise. The post lays out the biggest shifts, including people collaborating less while needing more collaboration.',
+    tags: ['ai', 'leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Harnesses Are Situated Agents',
+    href: 'https://www.dbreunig.com/2026/08/14/harnesses-are-situated-agents.html',
+    author: 'Drew Breunig',
+    teaser:
+      'Agent harnesses are best understood as situated agents, shaped by the session, company, and domain they run in. The post surveys the wave of new coding harnesses and what they have in common.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Mastering the Four Abstraction Levels of Refinement',
+    href: 'https://mdalmijn.com/p/mastering-the-four-abstraction-levels',
+    author: 'Dalmijn',
+    teaser:
+      'Refinement meetings stall when people argue at different levels, from wallpaper to plumbing. The post offers four levels to keep the discussion aligned and focused on what really matters.',
+    tags: ['leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'I Am Often Wrong',
+    href: 'https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html',
+    author: 'Boris Cherny',
+    teaser:
+      'Good product work is a loop: gather information, define the problem, set a goal, and act with urgency, then revisit each step as new facts arrive. Being wrong along the way is expected rather than a failure.',
+    tags: ['leadership'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
+    title: 'Manifesto for AI Software Engineering',
+    href: 'https://metamagic.substack.com/p/manifesto-for-ai-software-development',
+    author: 'Metamagic',
+    teaser:
+      'When code becomes cheap to generate, specifications matter more than implementation. The manifesto treats code as disposable and treats intent, feedback loops, and machine comprehension as the durable assets.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-06T19:26:50.000Z',
+  },
+  {
     title: 'The Problem With Putting People in Boxes',
     href: 'https://cutlefish.substack.com/p/tbm-440-the-problem-with-putting',
     author: 'John Cutler',
