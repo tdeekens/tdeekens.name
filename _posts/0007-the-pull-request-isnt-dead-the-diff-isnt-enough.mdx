@@ -1,0 +1,51 @@
+---
+title: The pull request isn’t dead. The diff just isn’t enough.
+slug: the-pull-request-isnt-dead-the-diff-isnt-enough
+draft: true
+---
+
+I feel old when I realized I've been authoring pull requests for fifteen years. It has survived new frameworks, processes and companies. Now AI generated changes are said to make it look obsolete. **The problem isn’t the pull request itself. It’s the assumption that the diff and human discussion has to remain its full content.**
+
+Let's take a step back. A pull request has always done more than show changed lines. It has served several purposes:
+
+* Recording a change before it reaches production for e.g. rollback purposes
+* Providing a second pair of eyes and a review record that can support audit requirements
+* Sharing knowledge and helping new teammates understand the codebase
+* Triggering CI, integration tests and other checks
+
+There’s a different model: ship to `main` behind feature flags, then review after changes have been pushed. That may work well for some teams. It’s a separate debate. In this discussion the question is what happens to pull requests when agents produce more code than people can reasonably review.
+
+## The diff has become a bottleneck
+
+A change that runs into hundreds of lines costs more effort to understand as a whole and provide a meaningful code review on. It gets easier to miss a consequential detail. The number of lines is not a scientific measure of review quality, but the practical problem is familiar: **attention is finite and anything larger than 2 Lines of Code (LoC) quickly receives a LGTM.**
+
+Entering agents, they can produce thousands of lines in one run. This is partly problem in the way of working. A person can direct an agent to make smaller, focused changes and open a sequence of pull requests. But when a large change arrives all at once, the old review ritual doesn’t make it manageable. The code is still there to inspect, but the reviewers will not be able to fully grasp it. This is when pull request review becomes a theatre than being a useful process.
+
+## A transcript isn’t a better diff
+
+One proposed alternative is to review the prompt or the full history of the agent’s work. That history can show what the person asked for, what the agent tried and where it was redirected. Those details can explain decisions that the final code doesn’t make obvious.
+
+But a raw trace is not easy to review. It may contain tool calls, intermediate code, repeated attempts and output that mattered to the agent but not to the final change. Reading all of it can be harder than reading the diff.
+
+And the trace cannot replace the code. Run the same prompts again and a non deterministic system may produce a different result. **The code in the pull request is the record of what was actually built.** The prompt and trace are context for understanding it.
+
+## Let the reviewer enter the session
+
+**The useful shift is to treat the agent history as a session a reviewer can resume or fork, rather than a transcript they must read from beginning to end.**
+
+The pull request still shows the code and the shape of the change. A reviewer could:
+
+* Ask why the agent made a particular decision
+* See where a person redirected the agent
+* Fork the session and ask the agent to make a change
+* Share that fork with the author, who can inspect and continue the work
+
+The discussion stays connected to the work that produced the code. The reviewer can ask for a change in context instead of leaving a comment and waiting for another round of review.
+
+## Similar ideas by other projects
+
+[Zed’s Delta](https://zed.dev/blog/introducing-delta) brings code and the conversations that produced it together. Its DeltaDB records edits between commits alongside the human and agent messages. Teammates can join a thread, ask the agent about a decision and explore a change in a separate review thread without disrupting the original work. Delta is not simply a way to attach a session to a conventional pull request. It is exploring a collaborative workflow in which threads and review threads can take the place of pull requests.
+
+[Pi Durable](https://github.com/earendil-works/pi/tree/main/packages/durable) addresses a different layer. It stores agent conversations and tasks so work can resume after a process stops. Conversations can be forked from a chosen point, giving a reviewer a way to continue in a separate branch of the session. Pi Durable provides the building blocks for persistent, forkable agent work. It does not by itself connect that work to a pull request, code review interface or shared worktree.
+
+Neither tool alone promises faster reviews. **They make the proposal more concrete: keep the code as the record of what changed, and give reviewers a way to engage with the session behind it.** The pull request does not need to disappear. It needs to carry more than a diff.
