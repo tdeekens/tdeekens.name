@@ -4,6 +4,34 @@
   --font-custom:
     'Manrope', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+
+  /*
+   * Semantic colour tokens. Components only use these (`bg-surface`,
+   * `text-muted`, `border-line`, …) so a theme is just a different set of
+   * values. The light values reproduce the original black & white design.
+   */
+  --color-bg: #fff;
+  --color-fg: #000;
+  --color-fg-soft: oklch(37.3% 0.034 259.733); /* gray-700 */
+  --color-subtle: oklch(44.6% 0.03 256.802); /* gray-600 */
+  --color-muted: oklch(55.1% 0.027 264.364); /* gray-500 */
+  --color-faint: oklch(70.7% 0.022 261.325); /* gray-400 */
+  --color-line: #000;
+  --color-line-soft: oklch(87.2% 0.01 258.338); /* gray-300 */
+  --color-line-faint: oklch(92.8% 0.006 264.531); /* gray-200 */
+  --color-surface: #fff;
+  --color-surface-2: oklch(96.7% 0.003 264.542); /* gray-100 */
+  --color-surface-muted: oklch(98.5% 0.002 247.839); /* gray-50 */
+  --color-focus: #000;
+  --color-error: oklch(50.5% 0.213 27.518); /* red-700 */
+  --color-error-line: oklch(63.7% 0.237 25.331); /* red-500 */
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
 }
 
 .page-break {

@@ -27,7 +27,7 @@ function Header() {
         </InternalLink>
       </div>
 
-      <span className="flex-shrink text-gray-500">
+      <span className="flex-shrink text-muted">
         <InternalLink testId="index-link" href="/" underline={false}>
           tdeekens
         </InternalLink>

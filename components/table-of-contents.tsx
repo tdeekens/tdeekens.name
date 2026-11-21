@@ -31,16 +31,16 @@ function TableOfContents() {
 
   return (
     <details ref={ref} className="relative print:hidden">
-      <summary className="cursor-pointer underline hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black">
+      <summary className="cursor-pointer underline hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus">
         Jump to section
       </summary>
-      <ul className="absolute right-0 z-50 mt-2 w-64 bg-white border border-black shadow-lg py-2">
+      <ul className="absolute right-0 z-50 mt-2 w-64 bg-surface border border-line shadow-lg py-2">
         {SECTIONS.map((section) => (
           <li key={section.id}>
             <a
               href={`#${section.id}`}
               onClick={close}
-              className="block px-4 py-1 hover:bg-gray-100 focus-visible:outline-none focus-visible:bg-gray-100"
+              className="block px-4 py-1 hover:bg-surface-2 focus-visible:outline-none focus-visible:bg-surface-2"
             >
               {section.label}
             </a>

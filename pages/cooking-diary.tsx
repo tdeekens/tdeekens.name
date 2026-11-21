@@ -218,7 +218,7 @@ const Bookshelf = () => (
       hobbies to relax and socialize.
     </Text.Paragraph>
 
-    <section className="overflow-hidden text-gray-700">
+    <section className="overflow-hidden text-fg-soft">
       <Dishes images={dishes10} />
       <Dishes images={dishes9} />
       <Dishes images={dishes8} />

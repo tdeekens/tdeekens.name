@@ -38,12 +38,12 @@ function ShortcutsHelp(props: TShortcutsHelpProps) {
       aria-label="Keyboard shortcuts"
     >
       <div
-        className="w-full max-w-sm mx-4 overflow-hidden bg-white rounded-md shadow-2xl font-mono text-xs"
+        className="w-full max-w-sm mx-4 overflow-hidden bg-surface rounded-md shadow-2xl font-mono text-xs"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-gray-50">
-          <h2 className="font-semibold text-gray-700">Keyboard shortcuts</h2>
-          <span className="text-[10px] text-gray-400">esc to close</span>
+        <div className="flex items-center justify-between px-4 py-2 border-b border-line-faint bg-surface-muted">
+          <h2 className="font-semibold text-fg-soft">Keyboard shortcuts</h2>
+          <span className="text-[10px] text-faint">esc to close</span>
         </div>
         <ul className="px-2 py-2">
           {allRows.map((row) => (
@@ -51,12 +51,12 @@ function ShortcutsHelp(props: TShortcutsHelpProps) {
               key={row.keys}
               className="flex items-center justify-between px-2 py-1.5"
             >
-              <span className="text-gray-700">{row.label}</span>
+              <span className="text-fg-soft">{row.label}</span>
               <span className="flex gap-1">
                 {row.keys.split(' ').map((k, i) => (
                   <kbd
                     key={i}
-                    className="px-1.5 min-w-[1.5rem] text-center py-0.5 text-[11px] text-gray-700 bg-gray-100 border border-gray-300 rounded shadow-[0_1px_0_0_rgba(0,0,0,0.08)]"
+                    className="px-1.5 min-w-[1.5rem] text-center py-0.5 text-[11px] text-fg-soft bg-surface-2 border border-line-soft rounded shadow-[0_1px_0_0_rgba(0,0,0,0.08)]"
                   >
                     {k}
                   </kbd>

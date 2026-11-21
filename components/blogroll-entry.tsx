@@ -22,7 +22,7 @@ function BlogrollEntry(props: TBlogrollEntryProps) {
             {props.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-1.5 py-0.5 rounded-full border border-gray-300 text-gray-600"
+                className="text-xs px-1.5 py-0.5 rounded-full border border-line-soft text-subtle"
               >
                 {tag}
               </span>
