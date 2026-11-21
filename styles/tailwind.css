@@ -1,9 +1,107 @@
 @import 'tailwindcss';
 
+/* `dark:` applies under `<html data-theme="dark">`, set by `_document`. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
 @theme {
   --font-custom:
     'Manrope', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
+
+  /*
+   * Semantic colour tokens. Components only use these (`bg-surface`,
+   * `text-muted`, `border-line`, …) so a theme is just a different set of
+   * values. The light values reproduce the original black & white design.
+   */
+  --color-bg: #fff;
+  --color-fg: #000;
+  --color-fg-soft: oklch(37.3% 0.034 259.733); /* gray-700 */
+  --color-subtle: oklch(44.6% 0.03 256.802); /* gray-600 */
+  --color-muted: oklch(55.1% 0.027 264.364); /* gray-500 */
+  --color-faint: oklch(70.7% 0.022 261.325); /* gray-400 */
+  --color-line: #000;
+  --color-line-soft: oklch(87.2% 0.01 258.338); /* gray-300 */
+  --color-line-faint: oklch(92.8% 0.006 264.531); /* gray-200 */
+  --color-surface: #fff;
+  --color-surface-2: oklch(96.7% 0.003 264.542); /* gray-100 */
+  --color-surface-muted: oklch(98.5% 0.002 247.839); /* gray-50 */
+  --color-focus: #000;
+  --color-error: oklch(50.5% 0.213 27.518); /* red-700 */
+  --color-error-line: oklch(63.7% 0.237 25.331); /* red-500 */
+
+  /* Accents: `currentColor` keeps the light theme monochrome. */
+  --color-heading: currentColor;
+  --color-link: currentColor;
+  --color-link-hover: currentColor;
+  --color-link-underline: currentColor;
+  --color-strong: currentColor;
+  --color-avatar-ring: transparent;
+}
+
+/*
+ * Kanagawa Wave (https://github.com/rebelot/kanagawa.nvim). Screen only, so
+ * printing (e.g. the CV) always uses the light palette.
+ */
+@media screen {
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+
+    --color-bg: #1f1f28; /* sumiInk3 */
+    --color-fg: #dcd7ba; /* fujiWhite */
+    --color-fg-soft: #c8c093; /* oldWhite */
+    --color-subtle: #9cabca; /* springViolet2 */
+    --color-muted: #938aa9; /* springViolet1 (fujiGray fails AA) */
+    --color-faint: #727169; /* fujiGray, decorative only */
+    --color-line: #54546d; /* sumiInk6 */
+    --color-line-soft: #54546d; /* sumiInk6 */
+    --color-line-faint: #363646; /* sumiInk5 */
+    --color-surface: #2a2a37; /* sumiInk4 */
+    --color-surface-2: #363646; /* sumiInk5 */
+    --color-surface-muted: #363646; /* sumiInk5 */
+    --color-focus: #957fb8; /* oniViolet */
+    --color-error: #e46876; /* waveRed */
+    --color-error-line: #e82424; /* samuraiRed */
+
+    --color-heading: #e6c384; /* carpYellow */
+    --color-link: #7e9cd8; /* crystalBlue */
+    --color-link-hover: #7fb4ca; /* springBlue */
+    --color-link-underline: rgb(126 156 216 / 0.5);
+    --color-strong: #d27e99; /* sakuraPink */
+    --color-avatar-ring: rgb(230 195 132 / 0.6);
+  }
+
+  :root[data-theme='dark'] ::selection {
+    background-color: #2d4f67; /* waveBlue2 */
+    color: var(--color-fg);
+  }
+
+  /* Monochrome SVG icons (black) need flipping to read on the dark ink. */
+  :root[data-theme='dark'] .theme-invert {
+    filter: invert(88%) sepia(12%) saturate(300%) hue-rotate(10deg);
+  }
+}
+
+@media screen {
+  :root:not([data-theme='dark']) {
+    color-scheme: light;
+  }
+}
+
+/* Neither page control works without JS; the init script sets data-theme. */
+:root:not([data-theme]) [data-page-controls] {
+  display: none;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  strong,
+  b {
+    color: var(--color-strong);
+  }
 }
 
 .page-break {

@@ -25,7 +25,10 @@ const Blogroll = () => (
       {/* The feed is a static file in `public`, not a Next.js page, so `<a>` is
           correct here and `next/link` would be wrong. */}
       {/* oxlint-disable-next-line nextjs/no-html-link-for-pages */}
-      <a href="/blogroll.xml" className="underline hover:no-underline">
+      <a
+        href="/blogroll.xml"
+        className="underline text-link decoration-link-underline hover:text-link-hover hover:no-underline"
+      >
         RSS feed
       </a>
       .

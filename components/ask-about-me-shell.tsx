@@ -38,7 +38,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
       <form
         onSubmit={onFormSubmit}
         aria-label="Ask Tobias a question"
-        className="flex border border-black focus-within:ring-2 focus-within:ring-black focus-within:ring-offset-1"
+        className="flex border border-line focus-within:ring-2 focus-within:ring-focus focus-within:ring-offset-1 focus-within:ring-offset-bg"
       >
         <input
           ref={props.inputRef}
@@ -49,13 +49,13 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
           placeholder={config.placeholder}
           maxLength={2000}
           disabled={props.isBusy}
-          className="flex-1 px-4 py-2 outline-none disabled:opacity-50"
+          className="flex-1 px-4 py-2 outline-hidden disabled:opacity-50"
           aria-label={config.inputLabel}
         />
         <button
           type="submit"
           disabled={props.isBusy || props.input.trim().length === 0}
-          className="px-4 py-2 border-l border-black hover:bg-black hover:text-white transition-colors focus-visible:outline-none focus-visible:bg-black focus-visible:text-white disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
+          className="px-4 py-2 border-l border-line hover:bg-fg hover:text-bg transition-colors focus-visible:outline-hidden focus-visible:bg-fg focus-visible:text-bg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
         >
           {props.isBusy ? 'Sending…' : 'Send'}
         </button>
@@ -69,7 +69,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
                 type="button"
                 onClick={() => props.onSubmit(suggestion)}
                 disabled={props.isBusy}
-                className="px-2 py-1 text-sm border border-gray-400 hover:bg-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black disabled:opacity-50"
+                className="px-2 py-1 text-sm border border-faint hover:bg-surface-2 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus disabled:opacity-50"
               >
                 {suggestion}
               </button>
@@ -80,7 +80,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
 
       {props.children}
 
-      <p className="mt-2 text-xs text-gray-500">{config.footnote}</p>
+      <p className="mt-2 text-xs text-muted">{config.footnote}</p>
     </section>
   );
 }

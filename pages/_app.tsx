@@ -1,6 +1,7 @@
 import Layout from '@components/layout';
 import ShortcutsHelp from '@components/shortcuts-help';
 import { useShortcuts } from '@lib/use-shortcuts';
+import { useThemeSync } from '@lib/use-theme';
 
 import '@styles/tailwind.css';
 
@@ -14,11 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   const closeHelp = useCallback(() => setHelpOpen(false), []);
 
   useShortcuts(openHelp);
+  useThemeSync();
 
   return (
     <>
       <SpeedInsights />
-      <Layout>
+      <Layout onOpenShortcuts={openHelp}>
         <Component {...pageProps} />
       </Layout>
       <ShortcutsHelp open={helpOpen} onClose={closeHelp} />

@@ -14,7 +14,11 @@ function InternalLink(props: TInternalLinkProps) {
     <Link
       href={props.href}
       data-test-id={props.testId}
-      className={[underline && 'underline', 'hover:no-underline']
+      className={[
+        underline &&
+          'underline text-link decoration-link-underline hover:text-link-hover',
+        'hover:no-underline',
+      ]
         .filter(Boolean)
         .join(' ')}
     >

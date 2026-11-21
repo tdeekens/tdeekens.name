@@ -1,72 +1,101 @@
 import { shortcuts } from '@lib/shortcuts';
-import { useEffect } from 'react';
+import {
+  setShortcutsEnabled,
+  useShortcutsEnabled,
+} from '@lib/shortcuts-preference';
+import { useEffect, useRef } from 'react';
 
 type TShortcutsHelpProps = {
   open: boolean;
   onClose: () => void;
 };
 
+const rows = [
+  ...shortcuts.map((s) => ({ keys: s.keys, label: s.label })),
+  { keys: '?', label: 'Show this help' },
+];
+
+/**
+ * Native modal `<dialog>`: the browser traps focus, makes the page inert,
+ * closes on Escape and returns focus to the opener on close.
+ */
 function ShortcutsHelp(props: TShortcutsHelpProps) {
+  const ref = useRef<HTMLDialogElement>(null);
+  const enabled = useShortcutsEnabled();
+
   useEffect(() => {
-    if (!props.open) {
+    const dialog = ref.current;
+    if (!dialog) {
       return;
     }
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        props.onClose();
-      }
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [props.open, props.onClose]);
-
-  if (!props.open) {
-    return null;
-  }
-
-  const allRows = [
-    ...shortcuts.map((s) => ({ keys: s.keys, label: s.label })),
-    { keys: '?', label: 'Show this help' },
-  ];
+    if (props.open && !dialog.open) {
+      dialog.showModal();
+    } else if (!props.open && dialog.open) {
+      dialog.close();
+    }
+  }, [props.open]);
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm print:hidden"
-      onClick={props.onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Keyboard shortcuts"
+    // Backdrop click is a mouse convenience; keyboard users have Escape
+    // (native) and the Close button.
+    // oxlint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+    <dialog
+      ref={ref}
+      aria-labelledby="shortcuts-help-title"
+      onClose={props.onClose}
+      onClick={(event) => {
+        // Clicks on the backdrop target the dialog element itself.
+        if (event.target === event.currentTarget) {
+          props.onClose();
+        }
+      }}
+      className="m-auto w-[calc(100%-2rem)] max-w-sm p-0 overflow-hidden bg-surface text-fg rounded-md shadow-2xl font-mono text-xs backdrop:bg-black/60 backdrop:backdrop-blur-sm print:hidden"
     >
-      <div
-        className="w-full max-w-sm mx-4 overflow-hidden bg-white rounded-md shadow-2xl font-mono text-xs"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200 bg-gray-50">
-          <h2 className="font-semibold text-gray-700">Keyboard shortcuts</h2>
-          <span className="text-[10px] text-gray-400">esc to close</span>
-        </div>
-        <ul className="px-2 py-2">
-          {allRows.map((row) => (
-            <li
-              key={row.keys}
-              className="flex items-center justify-between px-2 py-1.5"
-            >
-              <span className="text-gray-700">{row.label}</span>
-              <span className="flex gap-1">
-                {row.keys.split(' ').map((k, i) => (
-                  <kbd
-                    key={i}
-                    className="px-1.5 min-w-[1.5rem] text-center py-0.5 text-[11px] text-gray-700 bg-gray-100 border border-gray-300 rounded shadow-[0_1px_0_0_rgba(0,0,0,0.08)]"
-                  >
-                    {k}
-                  </kbd>
-                ))}
-              </span>
-            </li>
-          ))}
-        </ul>
+      <div className="flex items-center justify-between px-4 py-2 border-b border-line-faint bg-surface-muted">
+        <h2 id="shortcuts-help-title" className="font-semibold text-fg-soft">
+          Keyboard shortcuts
+        </h2>
+        <button
+          type="button"
+          onClick={props.onClose}
+          className="text-[10px] text-fg-soft hover:text-fg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus rounded px-1"
+        >
+          Close (esc)
+        </button>
       </div>
-    </div>
+      <ul
+        className={`px-2 py-2 ${enabled ? '' : 'opacity-50'}`}
+        aria-label={enabled ? undefined : 'Shortcuts (currently off)'}
+      >
+        {rows.map((row) => (
+          <li
+            key={row.keys}
+            className="flex items-center justify-between px-2 py-1.5"
+          >
+            <span className="text-fg-soft">{row.label}</span>
+            <span className="flex gap-1">
+              {row.keys.split(' ').map((k, i) => (
+                <kbd
+                  key={i}
+                  className="px-1.5 min-w-[1.5rem] text-center py-0.5 text-[11px] text-fg-soft bg-surface-2 border border-line-soft rounded shadow-[0_1px_0_0_rgba(0,0,0,0.08)]"
+                >
+                  {k}
+                </kbd>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <label className="flex items-center justify-between gap-4 px-4 py-2 border-t border-line-faint cursor-pointer">
+        <span className="text-fg-soft">Enable single-key shortcuts</span>
+        <input
+          type="checkbox"
+          checked={enabled}
+          onChange={(event) => setShortcutsEnabled(event.target.checked)}
+          className="w-4 h-4 accent-focus focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus"
+        />
+      </label>
+    </dialog>
   );
 }
 

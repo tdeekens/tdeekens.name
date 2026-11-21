@@ -27,7 +27,7 @@ const Home = (props: THomeProps) => (
         <div className="flex-auto mb-8 text-center">
           <center>
             <Image
-              className="object-cover rounded-full w-[200px] h-[200px]"
+              className="object-cover rounded-full w-[200px] h-[200px] ring-2 ring-avatar-ring"
               src="/me.jpg"
               alt="@tdeekens avatar"
               width="200"
@@ -59,6 +59,7 @@ const Home = (props: THomeProps) => (
               <div className="flex items-baseline space-x-2">
                 <Image
                   src="/github-icon.svg"
+                  className="theme-invert"
                   alt="GitHub profile"
                   width="13"
                   height="13"
@@ -72,6 +73,7 @@ const Home = (props: THomeProps) => (
               <div className="flex items-baseline space-x-2">
                 <Image
                   src="/twitter-icon.svg"
+                  className="theme-invert"
                   alt="Twitter profile"
                   width="13"
                   height="13"
@@ -88,6 +90,7 @@ const Home = (props: THomeProps) => (
               <div className="flex items-baseline space-x-2">
                 <Image
                   src="/linkedin-icon.svg"
+                  className="theme-invert"
                   alt="Linkedin profile"
                   width="11"
                   height="11"

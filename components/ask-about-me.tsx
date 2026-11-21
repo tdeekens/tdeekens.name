@@ -11,15 +11,15 @@ const MARKDOWN_CLASSES = [
   '[&_ul]:mb-2 [&_ul]:list-disc [&_ul]:pl-5',
   '[&_ol]:mb-2 [&_ol]:list-decimal [&_ol]:pl-5',
   '[&_li]:mb-1',
-  '[&_a]:underline hover:[&_a]:no-underline',
+  '[&_a]:underline [&_a]:text-link [&_a]:decoration-link-underline hover:[&_a]:no-underline hover:[&_a]:text-link-hover',
   '[&_strong]:font-semibold',
-  '[&_code]:px-1 [&_code]:py-0.5 [&_code]:bg-gray-100 [&_code]:text-sm',
-  '[&_pre]:p-2 [&_pre]:bg-gray-100 [&_pre]:overflow-x-auto [&_pre]:mb-2',
-  '[&_blockquote]:pl-3 [&_blockquote]:border-l-2 [&_blockquote]:border-gray-400 [&_blockquote]:italic [&_blockquote]:mb-2',
+  '[&_code]:px-1 [&_code]:py-0.5 [&_code]:bg-surface-2 [&_code]:text-sm',
+  '[&_pre]:p-2 [&_pre]:bg-surface-2 [&_pre]:overflow-x-auto [&_pre]:mb-2',
+  '[&_blockquote]:pl-3 [&_blockquote]:border-l-2 [&_blockquote]:border-faint [&_blockquote]:italic [&_blockquote]:mb-2',
 ].join(' ');
 
 const STREAMING_CARET_CLASSES =
-  "[&>*:last-child]:after:content-['▍'] [&>*:last-child]:after:ml-1 motion-safe:[&>*:last-child]:after:animate-pulse [&>*:last-child]:after:text-gray-500";
+  "[&>*:last-child]:after:content-['▍'] [&>*:last-child]:after:ml-1 motion-safe:[&>*:last-child]:after:animate-pulse [&>*:last-child]:after:text-muted";
 
 const renderMessageText = (message: UIMessage): string =>
   message.parts.map((part) => (part.type === 'text' ? part.text : '')).join('');
@@ -120,7 +120,7 @@ function AskAboutMe(props: TAskAboutMeProps) {
         <p
           role="status"
           aria-live="polite"
-          className="mt-4 flex items-center gap-0.5 text-sm text-gray-500"
+          className="mt-4 flex items-center gap-0.5 text-sm text-muted"
         >
           <span aria-hidden="true" className="motion-safe:animate-pulse">
             Thinking
@@ -156,7 +156,7 @@ function AskAboutMe(props: TAskAboutMeProps) {
           aria-busy={isStreaming}
         >
           {lastQuestion && (
-            <p className="mb-2 text-xs uppercase tracking-wide text-gray-500">
+            <p className="mb-2 text-xs uppercase tracking-wide text-muted">
               {lastQuestion}
             </p>
           )}
@@ -173,7 +173,7 @@ function AskAboutMe(props: TAskAboutMeProps) {
       {error && (
         <p
           role="alert"
-          className="mt-2 px-3 py-2 text-sm border border-red-500 text-red-700"
+          className="mt-2 px-3 py-2 text-sm border border-error-line text-error"
         >
           {error.message || 'Something went wrong. Please try again.'}
         </p>
