@@ -10,7 +10,11 @@ function ExternalLink(props: TExternalLinkProps) {
   return (
     <a
       href={props.href}
-      className={[underline && 'underline', 'hover:no-underline']
+      className={[
+        underline &&
+          'underline text-link decoration-link-underline hover:text-link-hover',
+        'hover:no-underline',
+      ]
         .filter(Boolean)
         .join(' ')}
     >

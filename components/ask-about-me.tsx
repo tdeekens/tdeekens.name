@@ -11,7 +11,7 @@ const MARKDOWN_CLASSES = [
   '[&_ul]:mb-2 [&_ul]:list-disc [&_ul]:pl-5',
   '[&_ol]:mb-2 [&_ol]:list-decimal [&_ol]:pl-5',
   '[&_li]:mb-1',
-  '[&_a]:underline hover:[&_a]:no-underline',
+  '[&_a]:underline [&_a]:text-link [&_a]:decoration-link-underline hover:[&_a]:no-underline hover:[&_a]:text-link-hover',
   '[&_strong]:font-semibold',
   '[&_code]:px-1 [&_code]:py-0.5 [&_code]:bg-surface-2 [&_code]:text-sm',
   '[&_pre]:p-2 [&_pre]:bg-surface-2 [&_pre]:overflow-x-auto [&_pre]:mb-2',

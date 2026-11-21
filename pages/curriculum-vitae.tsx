@@ -45,6 +45,7 @@ const CurriculumVitae: NextPage = () => (
             <div className="flex items-baseline space-x-2">
               <Image
                 src="/github-icon.svg"
+                className="theme-invert"
                 alt="GitHub profile"
                 width="13"
                 height="13"
@@ -61,6 +62,7 @@ const CurriculumVitae: NextPage = () => (
             <div className="flex items-baseline space-x-2">
               <Image
                 src="/linkedin-icon.svg"
+                className="theme-invert"
                 alt="LinkedIn profile"
                 width="11"
                 height="11"
@@ -77,6 +79,7 @@ const CurriculumVitae: NextPage = () => (
             <div className="flex items-baseline space-x-2">
               <Image
                 src="/pencil-icon.svg"
+                className="theme-invert"
                 alt="Link to curriculum vitae"
                 width="13"
                 height="13"

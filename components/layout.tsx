@@ -1,4 +1,5 @@
 import Header from '@components/header';
+import ThemeToggle from '@components/theme-toggle';
 import { Analytics } from '@vercel/analytics/next';
 import Head from 'next/head';
 
@@ -12,6 +13,7 @@ function Layout(props: TLayoutProps) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <ThemeToggle />
       <Header />
       <div className="flex items-center justify-center ">
         <main className="max-w-5xl mx-4 my-8 font-custom md:mx-16 xl:text-md print:text-sm">

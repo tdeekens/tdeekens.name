@@ -14,13 +14,15 @@ function Headline(props: THeadlineProps) {
   let className;
   switch (props.as) {
     case 'h1':
-      className = 'pb-2 mx-auto text-3xl text-center border-b border-line';
+      className =
+        'pb-2 mx-auto text-3xl text-center text-heading [a_&]:text-inherit border-b border-line';
       break;
     case 'h2':
-      className = 'pt-2 pb-1 mb-1 text-2xl border-b border-line';
+      className =
+        'pt-2 pb-1 mb-1 text-2xl text-heading [a_&]:text-inherit border-b border-line';
       break;
     case 'h3':
-      className = 'pb-1 font-bold text-l';
+      className = 'pb-1 font-bold text-l text-heading [a_&]:text-inherit';
       break;
     case 'h4':
       className = 'pb-1 text-sm font-semibold text-subtle';

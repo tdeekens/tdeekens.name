@@ -24,12 +24,16 @@ export function useShortcuts(onHelp: () => void) {
       },
     };
 
-    for (const { keys, path } of shortcuts) {
-      map[keys] = (e) => {
+    for (const shortcut of shortcuts) {
+      map[shortcut.keys] = (e) => {
         if (isEditableTarget(e.target)) {
           return;
         }
-        router.push(path);
+        if (shortcut.action) {
+          shortcut.action();
+          return;
+        }
+        router.push(shortcut.path);
       };
     }
 
