@@ -2,34 +2,23 @@ import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
 
 import {
   applyTheme,
+  DEFAULT_THEME,
   getStoredTheme,
-  getSystemTheme,
   setTheme,
+  syncThemeAcrossTabs,
   THEME_COLORS,
   THEME_STORAGE_KEY,
   themeInitScript,
   toggleTheme,
-  watchThemeSources,
 } from './theme';
 
-type TListener = () => void;
-
-function mockMatchMedia(prefersLight: boolean) {
-  const listeners = new Set<TListener>();
-  const media = {
-    matches: prefersLight,
-    addEventListener: (_: string, l: TListener) => listeners.add(l),
-    removeEventListener: (_: string, l: TListener) => listeners.delete(l),
-  };
-  window.matchMedia = (() => media) as unknown as typeof window.matchMedia;
-  return {
-    change(nextPrefersLight: boolean) {
-      media.matches = nextPrefersLight;
-      for (const l of listeners) {
-        l();
-      }
-    },
-  };
+function mockPrefersDark(prefersDark: boolean) {
+  window.matchMedia = ((query: string) => ({
+    matches: query.includes('dark') ? prefersDark : !prefersDark,
+    media: query,
+    addEventListener: () => {},
+    removeEventListener: () => {},
+  })) as unknown as typeof window.matchMedia;
 }
 
 const originalMatchMedia = window.matchMedia;
@@ -47,15 +36,7 @@ afterEach(() => {
 const appliedTheme = () => document.documentElement.dataset.theme;
 const metaColor = () =>
   document.querySelector('meta[name="theme-color"]')?.getAttribute('content');
-
-describe('getSystemTheme', () => {
-  it('is dark unless the OS prefers light', () => {
-    mockMatchMedia(false);
-    expect(getSystemTheme()).toBe('dark');
-    mockMatchMedia(true);
-    expect(getSystemTheme()).toBe('light');
-  });
-});
+const run = () => new Function(themeInitScript)();
 
 describe('applyTheme', () => {
   it('sets data-theme and theme-color without persisting', () => {
@@ -68,19 +49,19 @@ describe('applyTheme', () => {
 
 describe('setTheme / toggleTheme', () => {
   it('persists the explicit choice', () => {
-    setTheme('light');
-    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe('light');
-    expect(appliedTheme()).toBe('light');
+    setTheme('dark');
+    expect(localStorage.getItem(THEME_STORAGE_KEY)).toBe('dark');
+    expect(appliedTheme()).toBe('dark');
   });
 
   it('toggles between the two themes', () => {
-    applyTheme('dark');
-    toggleTheme();
-    expect(appliedTheme()).toBe('light');
-    expect(getStoredTheme()).toBe('light');
+    applyTheme('light');
     toggleTheme();
     expect(appliedTheme()).toBe('dark');
     expect(getStoredTheme()).toBe('dark');
+    toggleTheme();
+    expect(appliedTheme()).toBe('light');
+    expect(getStoredTheme()).toBe('light');
   });
 
   it('ignores garbage in storage', () => {
@@ -89,56 +70,50 @@ describe('setTheme / toggleTheme', () => {
   });
 });
 
-describe('watchThemeSources', () => {
-  it('follows OS changes until a choice is stored', () => {
-    const media = mockMatchMedia(false);
-    applyTheme('dark');
-    const stop = watchThemeSources();
+const fireStorage = () =>
+  window.dispatchEvent(new StorageEvent('storage', { key: THEME_STORAGE_KEY }));
 
-    media.change(true);
-    expect(appliedTheme()).toBe('light');
+describe('syncThemeAcrossTabs', () => {
+  it('mirrors choices made in other tabs', () => {
+    applyTheme('light');
+    const stop = syncThemeAcrossTabs();
 
-    setTheme('dark');
-    media.change(true);
+    localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+    fireStorage();
     expect(appliedTheme()).toBe('dark');
 
     stop();
   });
 
-  it('mirrors choices made in other tabs', () => {
-    mockMatchMedia(false);
+  it('falls back to the default when another tab clears the choice', () => {
     applyTheme('dark');
-    const stop = watchThemeSources();
+    const stop = syncThemeAcrossTabs();
 
-    localStorage.setItem(THEME_STORAGE_KEY, 'light');
-    window.dispatchEvent(
-      new StorageEvent('storage', { key: THEME_STORAGE_KEY }),
-    );
-    expect(appliedTheme()).toBe('light');
+    fireStorage();
+    expect(appliedTheme()).toBe(DEFAULT_THEME);
 
     stop();
   });
 });
 
-const run = () => new Function(themeInitScript)();
-
 describe('themeInitScript', () => {
-  it('prefers the stored choice', () => {
-    mockMatchMedia(false);
-    localStorage.setItem(THEME_STORAGE_KEY, 'light');
+  it('defaults to light', () => {
+    expect(DEFAULT_THEME).toBe('light');
     run();
     expect(appliedTheme()).toBe('light');
     expect(metaColor()).toBe(THEME_COLORS.light);
   });
 
-  it('falls back to the OS, defaulting to dark', () => {
-    mockMatchMedia(false);
+  it('ignores the OS preference', () => {
+    mockPrefersDark(true);
+    run();
+    expect(appliedTheme()).toBe('light');
+  });
+
+  it('applies a stored choice', () => {
+    localStorage.setItem(THEME_STORAGE_KEY, 'dark');
     run();
     expect(appliedTheme()).toBe('dark');
     expect(metaColor()).toBe(THEME_COLORS.dark);
-
-    mockMatchMedia(true);
-    run();
-    expect(appliedTheme()).toBe('light');
   });
 });

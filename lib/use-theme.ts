@@ -2,7 +2,7 @@ import {
   getAppliedTheme,
   type TTheme,
   toggleTheme,
-  watchThemeSources,
+  syncThemeAcrossTabs,
 } from '@lib/theme';
 import { useEffect, useSyncExternalStore } from 'react';
 
@@ -28,7 +28,7 @@ export function useTheme(): {
   return { theme, toggleTheme };
 }
 
-/** Mount once (in `_app`) to follow OS changes and other tabs. */
+/** Mount once (in `_app`) to mirror theme changes from other tabs. */
 export function useThemeSync() {
-  useEffect(() => watchThemeSources(), []);
+  useEffect(() => syncThemeAcrossTabs(), []);
 }

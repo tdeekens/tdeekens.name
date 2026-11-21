@@ -8,7 +8,8 @@ export const THEME_COLORS: Record<TTheme, string> = {
   dark: '#1f1f28',
 };
 
-const LIGHT_QUERY = '(prefers-color-scheme: light)';
+/** Shown until the visitor picks a theme. The OS preference is ignored. */
+export const DEFAULT_THEME: TTheme = 'light';
 
 function isTheme(value: unknown): value is TTheme {
   return value === 'light' || value === 'dark';
@@ -21,11 +22,6 @@ export function getStoredTheme(): TTheme | null {
   } catch {
     return null;
   }
-}
-
-/** Dark unless the OS explicitly asks for light. */
-export function getSystemTheme(): TTheme {
-  return window.matchMedia(LIGHT_QUERY).matches ? 'light' : 'dark';
 }
 
 export function getAppliedTheme(): TTheme | undefined {
@@ -71,30 +67,16 @@ export function toggleTheme() {
   setTheme(getAppliedTheme() === 'dark' ? 'light' : 'dark');
 }
 
-/**
- * Follows OS changes until the visitor picks a theme, and mirrors choices made
- * in other tabs. Returns a cleanup function.
- */
-function onSystemChange() {
-  if (!getStoredTheme()) {
-    applyTheme(getSystemTheme());
-  }
-}
-
 function onStorage(event: StorageEvent) {
   if (event.key === THEME_STORAGE_KEY || event.key === null) {
-    applyTheme(getStoredTheme() ?? getSystemTheme());
+    applyTheme(getStoredTheme() ?? DEFAULT_THEME);
   }
 }
 
-export function watchThemeSources(): () => void {
-  const media = window.matchMedia(LIGHT_QUERY);
-  media.addEventListener('change', onSystemChange);
+/** Mirrors choices made in other tabs. Returns a cleanup function. */
+export function syncThemeAcrossTabs(): () => void {
   window.addEventListener('storage', onStorage);
-  return () => {
-    media.removeEventListener('change', onSystemChange);
-    window.removeEventListener('storage', onStorage);
-  };
+  return () => window.removeEventListener('storage', onStorage);
 }
 
 /**
@@ -103,8 +85,6 @@ export function watchThemeSources(): () => void {
  */
 export const themeInitScript = `(function(){var t;try{t=localStorage.getItem(${JSON.stringify(
   THEME_STORAGE_KEY,
-)})}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia(${JSON.stringify(
-  LIGHT_QUERY,
-)}).matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute("content",t==="dark"?${JSON.stringify(
+)})}catch(e){}if(t!=="light"&&t!=="dark"){t=${JSON.stringify(DEFAULT_THEME)}}document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute("content",t==="dark"?${JSON.stringify(
   THEME_COLORS.dark,
 )}:${JSON.stringify(THEME_COLORS.light)})}})();`;
