@@ -49,13 +49,13 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
           placeholder={config.placeholder}
           maxLength={2000}
           disabled={props.isBusy}
-          className="flex-1 px-4 py-2 outline-none disabled:opacity-50"
+          className="flex-1 px-4 py-2 outline-hidden disabled:opacity-50"
           aria-label={config.inputLabel}
         />
         <button
           type="submit"
           disabled={props.isBusy || props.input.trim().length === 0}
-          className="px-4 py-2 border-l border-line hover:bg-fg hover:text-bg transition-colors focus-visible:outline-none focus-visible:bg-fg focus-visible:text-bg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
+          className="px-4 py-2 border-l border-line hover:bg-fg hover:text-bg transition-colors focus-visible:outline-hidden focus-visible:bg-fg focus-visible:text-bg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
         >
           {props.isBusy ? 'Sending…' : 'Send'}
         </button>
@@ -69,7 +69,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
                 type="button"
                 onClick={() => props.onSubmit(suggestion)}
                 disabled={props.isBusy}
-                className="px-2 py-1 text-sm border border-faint hover:bg-surface-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus disabled:opacity-50"
+                className="px-2 py-1 text-sm border border-faint hover:bg-surface-2 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus disabled:opacity-50"
               >
                 {suggestion}
               </button>

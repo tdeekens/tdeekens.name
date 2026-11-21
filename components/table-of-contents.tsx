@@ -31,7 +31,7 @@ function TableOfContents() {
 
   return (
     <details ref={ref} className="relative print:hidden">
-      <summary className="cursor-pointer underline hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus">
+      <summary className="cursor-pointer underline hover:no-underline focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus">
         Jump to section
       </summary>
       <ul className="absolute right-0 z-50 mt-2 w-64 bg-surface border border-line shadow-lg py-2">
@@ -40,7 +40,7 @@ function TableOfContents() {
             <a
               href={`#${section.id}`}
               onClick={close}
-              className="block px-4 py-1 hover:bg-surface-2 focus-visible:outline-none focus-visible:bg-surface-2"
+              className="block px-4 py-1 hover:bg-surface-2 focus-visible:outline-hidden focus-visible:bg-surface-2"
             >
               {section.label}
             </a>

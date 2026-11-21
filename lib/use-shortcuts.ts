@@ -1,4 +1,5 @@
 import { shortcuts } from '@lib/shortcuts';
+import { useShortcutsEnabled } from '@lib/shortcuts-preference';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { tinykeys } from 'tinykeys';
@@ -12,8 +13,16 @@ function isEditableTarget(target: EventTarget | null) {
 
 export function useShortcuts(onHelp: () => void) {
   const router = useRouter();
+  const enabled = useShortcutsEnabled();
 
   useEffect(() => {
+    // All of these are character-key shortcuts (WCAG 2.1.4), so the off
+    // switch disables every one of them, including `?`. The visible keyboard
+    // button in the page controls remains the way back to the dialog.
+    if (!enabled) {
+      return;
+    }
+
     const map: Record<string, (e: KeyboardEvent) => void> = {
       'Shift+?': (e) => {
         if (isEditableTarget(e.target)) {
@@ -38,5 +47,5 @@ export function useShortcuts(onHelp: () => void) {
     }
 
     return tinykeys(window, map);
-  }, [router, onHelp]);
+  }, [router, onHelp, enabled]);
 }

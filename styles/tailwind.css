@@ -87,6 +87,11 @@
   }
 }
 
+/* Neither page control works without JS; the init script sets data-theme. */
+:root:not([data-theme]) [data-page-controls] {
+  display: none;
+}
+
 @layer base {
   html {
     background-color: var(--color-bg);

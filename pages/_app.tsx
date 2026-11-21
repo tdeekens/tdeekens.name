@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <SpeedInsights />
-      <Layout>
+      <Layout onOpenShortcuts={openHelp}>
         <Component {...pageProps} />
       </Layout>
       <ShortcutsHelp open={helpOpen} onClose={closeHelp} />
