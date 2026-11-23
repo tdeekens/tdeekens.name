@@ -15,7 +15,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sev',
     teaser:
       'AI coding tools multiply pull requests, spread engineers across more features, and replace hallway questions with chats to Claude. The time saved quietly turns into more spikes, more tickets, and a board no manager can track.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'ai', 'leadership'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -24,7 +24,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Yue Zhao',
     teaser:
       'Boundaries fail when asking for help feels like failure or the hero identity takes over. Reframed as tradeoffs rather than refusals, saying no becomes a core senior leadership skill, not a personal weakness.',
-    tags: ['leadership'],
+    tags: ['wellbeing', 'leadership'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -42,7 +42,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Bjorn Roche',
     teaser:
       'AI works best layered onto workflows that already function, swapping humans out of a proven loop rather than inventing from scratch. Prototypes now beat designs, but judgement, big migrations, and resisting slop remain stubbornly human work.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'ai', 'leadership'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -51,7 +51,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Abdelrahman Awad',
     teaser:
       'Express observability has long relied on monkey patching, which breaks on bundling, load order, and handler signatures. The router now publishes a Node TracingChannel for every middleware and handler, letting APMs subscribe without touching the app.',
-    tags: ['engineering'],
+    tags: ['infrastructure'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -60,7 +60,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Simon Willison',
     teaser:
       'The external sandbox pattern keeps the agent outside and sends only code execution into an isolated box behind a localhost API. Three implementations (v86, Apple Containers, Quicksand) add an allow-list proxy and credential swapping, making local models safer to try.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -69,7 +69,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'vlt',
     teaser:
       "Installing from vlt's npm mirror used to mean an account, a token, and an auth line in .npmrc. It now serves npm, pnpm, yarn, bun, and deno with one registry flag, and strips credentials so stale tokens never cause a 401.",
-    tags: ['engineering'],
+    tags: ['open-source', 'infrastructure'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -78,7 +78,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Thomas Steiner',
     teaser:
       'Every site downloads its own copy of the same React build, Flutter Wasm runtime, or multi-gigabyte AI model. The proposed Cross-Origin Storage API keys files by hash so one cached copy can serve many origins.',
-    tags: ['frontend'],
+    tags: ['frontend', 'performance'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -87,7 +87,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jim Gumbley and Gautam Koul',
     teaser:
       'Coding assistants, editors, and MCP servers sit next to source code, cloud credentials, and deploy pipelines, making them prime supply chain targets. The fixes look familiar: zero trust for dependencies, pinned updates, and a smaller blast radius.',
-    tags: ['ai', 'engineering'],
+    tags: ['security', 'agents', 'ai'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -96,7 +96,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Cloudflare',
     teaser:
       'Kitesurf, a browser for AI agents, parses HTML, runs page JavaScript, and renders screenshots on Workers with no browser container. Now Apache 2.0 licensed, it can run locally, be driven over CDP with Puppeteer, or deploy to a personal Cloudflare account.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai', 'open-source'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -114,7 +114,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Dror Poleg',
     teaser:
       'Nine big software firms employ about 185,000 fewer people than their old revenue-to-headcount pattern predicts. AI acts less as the cause than as the shock that forces companies to cash in productivity gains sitting idle for years.',
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'ai', 'career'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -123,7 +123,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Philip Walton',
     teaser:
       "Unguided coding agents pass about half of Chrome's modern web checks, versus roughly 90% with Modern Web Guidance. The misses cluster in focus management, reduced motion, form details, performance, and security, the parts that separate working UI from good UI.",
-    tags: ['frontend', 'ai'],
+    tags: ['frontend', 'agents', 'ai'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -132,7 +132,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Yuri Iozzelli and Stefano De Rossi',
     teaser:
       'A Linux-like microVM built on WebAssembly now ships as a free npm library, with no account, key, or telemetry. Splitting the paid networking proxy into an optional service removed the friction that had kept it a metered hosted product.',
-    tags: ['engineering', 'frontend'],
+    tags: ['frontend', 'open-source'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -150,7 +150,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Pavel Gusev',
     teaser:
       'At typical sizes, six React chart libraries and hand-written SVG all land within one frame of each other. Only at 10,000 scatter points do they split, from 24 ms for plain SVG to 3.2 seconds for nivo, with Canvas never winning.',
-    tags: ['frontend'],
+    tags: ['react', 'frontend', 'performance'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -159,7 +159,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jakub T. Jankiewicz',
     teaser:
       'AI models were trained on scraped open source and Creative Commons code, so closing off their output looks like license laundering. Since purely machine-written code is likely not copyrightable anyway, releasing it as open source or CC0 is the consistent move.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'open-source'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -168,7 +168,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Marty Cagan',
     teaser:
       'Nobody argues output beats outcomes, yet AI-boosted teams ship more than ever while results stay scarce. The real trade-off is predictability versus outcomes, and most companies quietly pick predictability by pushing untested ideas onto dated roadmaps.',
-    tags: ['leadership', 'ai'],
+    tags: ['delivery', 'ai'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -177,7 +177,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Roman Nikolaev',
     teaser:
       'With AI doubling merged PRs and halving peer review, QA became the last human check. A Claude Code toolkit now runs most hands-on test execution, but the verdict stays human and the team still barely keeps up.',
-    tags: ['ai', 'engineering'],
+    tags: ['testing', 'agents', 'ai'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -195,7 +195,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Yue Zhao',
     teaser:
       'Bottom-up plans from existing teams mirror the current org, while reorganizing first invites a second reorg weeks later. Temporary planning teams per investment area break the chicken-and-egg loop without touching reporting lines or stalling ongoing work.',
-    tags: ['leadership'],
+    tags: ['org-design', 'delivery'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -204,7 +204,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Andi Roberts',
     teaser:
       'Recovery from sustained executive stress has to match the load, not just an evening away from the laptop. Sleep comes first, then early breaks, varied forms of rest, a lighter load, and recovery scheduled before the diary fills.',
-    tags: ['leadership', 'career'],
+    tags: ['wellbeing', 'leadership'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -213,7 +213,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Devographics',
     teaser:
       'Nearly half of 5,463 respondents report job insecurity, and two thirds feel less motivated and more cynical. The first Devographics look at mental state reads like a burnout report, with AI fueling uncertainty rather than relief.',
-    tags: ['career', 'ai'],
+    tags: ['wellbeing', 'career', 'ai-impact'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -222,7 +222,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sean Goedecke',
     teaser:
       'Plenty of engineers are driven less by money or mission than by a compulsion to solve problems someone else is stuck on. The post frames that urge as a dysfunction worth harnessing, steered toward management chains and away from ticket queues.',
-    tags: ['career'],
+    tags: ['career', 'wellbeing'],
     addedAt: '2026-11-23T08:51:28.000Z',
   },
   {
@@ -249,7 +249,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Bruno J.',
     teaser:
       'A company proxy now holds new npm and PyPI releases for seven days before anyone can install them. In its first twelve days the gate refused 71 downloads, mostly harmless packages that were simply too new.',
-    tags: ['engineering'],
+    tags: ['security', 'open-source'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -258,7 +258,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Yewjin',
     teaser:
       'Calm is a skill almost nobody develops on purpose, and it changes the quality of every decision made under pressure. The piece treats composure as something you can practice rather than a fixed trait.',
-    tags: ['leadership'],
+    tags: ['leadership', 'wellbeing'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -267,7 +267,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Evan J. Conrad',
     teaser:
       'AI startups are running into a compute shortage that money alone cannot fix. Cloud providers now ask non-investment-grade customers for large upfront payments, so most may lose access to capacity within months.',
-    tags: ['ai'],
+    tags: ['ai', 'infrastructure'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -285,7 +285,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Owner',
     teaser:
       'Owner moved more than 10,000 restaurant websites from a Next.js stack to Astro on Cloudflare Workers, serving cached pages from the edge and using React only where needed. The change lifted per-restaurant revenue by more than 4% across the network.',
-    tags: ['frontend'],
+    tags: ['frontend', 'performance', 'architecture'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -294,7 +294,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Meta',
     teaser:
       'Meta built Forum, a standalone Groups app, with an AI agent as a participant in the development cycle. The write-up covers how the codebase, tests, and tooling were adapted for agentic work, and what failed along the way.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -303,7 +303,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'RDEL',
     teaser:
       'Humans and AI review agents caught different bugs, and together they found 82.1% of issues, against about half for humans alone and 71.9% for the best agent. The question is when people can safely step out of the review loop.',
-    tags: ['ai', 'engineering'],
+    tags: ['testing', 'agents', 'ai'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -321,6 +321,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Armin Ronacher',
     teaser:
       'A family outing to a Halloween circus becomes a reflection on how ordinary traditions feel in a world shaped by war and displacement. Friends who fled conflict make the question personal.',
+    tags: ['wellbeing'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -347,7 +348,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Elena Verna',
     teaser:
       'A working parent at a fast-moving AI company rejects the 996 culture of 9am to 9pm, six days a week, that is becoming a badge of honor. The argument is that long hours should not be the measure of seriousness.',
-    tags: ['leadership', 'ai'],
+    tags: ['wellbeing', 'leadership'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -356,7 +357,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Infinify',
     teaser:
       'Pricing affects revenue and positioning, yet product leaders often inherit it without clear ownership. The post argues you do not need to master the whole discipline, only its foundations, to start well.',
-    tags: ['leadership'],
+    tags: ['delivery', 'leadership'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -365,7 +366,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Luca Rossi',
     teaser:
       'The work of engineering managers is shifting as AI changes how teams operate. The essay draws on research and practitioner stories to show what managers are actually doing differently.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'ai', 'leadership'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -374,7 +375,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jovi De Croock',
     teaser:
       'TypeScript 7 no longer loads tsserver plugins, so GraphQL diagnostics in the editor vanish without a warning even though the config still parses. The post explains what is lost when the switch happens.',
-    tags: ['engineering', 'frontend'],
+    tags: ['frontend'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -383,7 +384,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Code Capsule',
     teaser:
       'Building an AI-enhanced workflow taught the author more than reading about it did. The post covers the limits of AI and argues for mechanical verification over trusting AI-written prose.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'testing'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -410,7 +411,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Will Larson',
     teaser:
       'Imprint engineers merged several times more PRs than two years earlier, and incidents fell 42% half over half. The post argues that quality and velocity are not the tradeoff people assume.',
-    tags: ['ai', 'engineering'],
+    tags: ['testing', 'delivery'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -419,7 +420,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Johannes Mainusch',
     teaser:
       'Engineering has always been about change, and the current AI shift is one more chapter in that history. The essay looks back for perspective rather than predicting what will happen to the job.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -428,7 +429,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'StaySaaSy',
     teaser:
       'AI is making management more important, even as flattening layoffs suggest otherwise. The post lays out the biggest shifts, including people collaborating less while needing more collaboration.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -437,7 +438,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Drew Breunig',
     teaser:
       'Agent harnesses are best understood as situated agents, shaped by the session, company, and domain they run in. The post surveys the wave of new coding harnesses and what they have in common.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -446,7 +447,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Dalmijn',
     teaser:
       'Refinement meetings stall when people argue at different levels, from wallpaper to plumbing. The post offers four levels to keep the discussion aligned and focused on what really matters.',
-    tags: ['leadership'],
+    tags: ['delivery'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -455,7 +456,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Boris Cherny',
     teaser:
       'Good product work is a loop: gather information, define the problem, set a goal, and act with urgency, then revisit each step as new facts arrive. Being wrong along the way is expected rather than a failure.',
-    tags: ['leadership'],
+    tags: ['delivery'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -464,7 +465,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Metamagic',
     teaser:
       'When code becomes cheap to generate, specifications matter more than implementation. The manifesto treats code as disposable and treats intent, feedback loops, and machine comprehension as the durable assets.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-11-06T19:26:50.000Z',
   },
   {
@@ -482,7 +483,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Cloudflare',
     teaser:
       'Engineering standards scattered across docs become invisible barriers. Embedding them in code review and incident workflows lets AI flag deviations before they compound, delivering guidance where engineers work.',
-    tags: ['engineering', 'ai'],
+    tags: ['testing', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -491,7 +492,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Luca Rossi',
     teaser:
       'Many teams are rebuilding observability solutions for AI agents, like engineering did for metrics around 2022. Production-critical systems need structured orchestration and monitoring, not just experimentation with prompts.',
-    tags: ['engineering', 'ai'],
+    tags: ['agents', 'infrastructure', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -500,7 +501,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'GitHub',
     teaser:
       'Runtime CSS solutions create scaling problems as apps grow. Static CSS modules moved styling to build time, cutting server render time by 55 percent, with automation accelerating code changes company-wide.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'performance'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -509,7 +510,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kate Leto',
     teaser:
       'AI exposes existing leadership weaknesses rather than creating new ones. Successful integration depends on fundamental practices like building trust and psychological safety, not technical expertise.',
-    tags: ['leadership', 'ai'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -518,7 +519,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Alex Forman et al.',
     teaser:
       'A swarm of 700 agents exploited sandbox restrictions by chaining online services into read-write capabilities. The incident documents sophisticated circumvention techniques previously kept behind infrastructure abstractions.',
-    tags: ['ai', 'engineering'],
+    tags: ['security', 'agents', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -527,7 +528,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Notion',
     teaser:
       "CRDTs become the primitive for concurrent editing, replacing last-write-wins with deterministic conflict resolution. Multiple clients now converge on the same state without overwriting each other's work.",
-    tags: ['frontend', 'engineering'],
+    tags: ['architecture'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -536,7 +537,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'GitHub',
     teaser:
       'Geometry splits into deterministic code height and dynamic comment regions, measured lazily as viewport approaches. This reframe handles million-line diffs with hundreds of comments while maintaining smooth scroll performance.',
-    tags: ['frontend', 'engineering'],
+    tags: ['performance', 'frontend'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -545,7 +546,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Anthropic',
     teaser:
       'Opus 5.5 thinks before replying by default, flipping the approach to avoid unnecessary prompts. Completion criteria and subagent orchestration shift focus from instruction clarity to task decomposition.',
-    tags: ['engineering', 'ai'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -563,7 +564,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sunil Pai',
     teaser:
       'Ambitious engineers overcommit in new roles, disappearing into overwork while believing heroic outcomes prove worth. Reputation instead builds through consistent, visible incremental progress and dependable daily work.',
-    tags: ['career'],
+    tags: ['career', 'wellbeing'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -572,7 +573,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Anton Zaides',
     teaser:
       "When AI agents generate code without review, imperfect solutions replicate across codebases within days, compounding quality decay. Traditional reviews can't scale with agent velocity, creating tension between speed and correctness.",
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'testing', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -581,7 +582,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Shopify Engineering',
     teaser:
       "Shopify's gisting technique compresses system prompts into learned token representations, reducing token count 4x while maintaining behavior. This achieves 38% latency reduction and 16% throughput gains with frozen model weights.",
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'performance', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -608,7 +609,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'Agent configuration files accumulate instructions without removal, degrading performance through token waste and conflicting directives. Regular audits reveal broad best practices outperform personalized complexity.',
-    tags: ['engineering', 'ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -617,7 +618,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kevin Goldsmith',
     teaser:
       'AI collapsed initial development costs, but ownership and maintenance remain expensive. Four critical questions on blast radius, ownership cost, differentiation, and exit path determine whether building is actually cheaper.',
-    tags: ['engineering', 'leadership'],
+    tags: ['architecture', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -635,7 +636,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'David A. Garvin',
     teaser:
       "Google's Project Oxygen used statistical analysis to prove manager quality impacts performance, overcoming engineer skepticism with data. Eight specific behaviors became the foundation for measurable team outcome improvements.",
-    tags: ['leadership', 'engineering'],
+    tags: ['leadership', 'career'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -644,7 +645,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'TypeSafe AI',
     teaser:
       "Chat capability became AI's main benchmark for years. Jev reframes automation as typed functions: unstructured state becomes probabilistic decisions within 70-500ms, guaranteeing zero type errors.",
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'architecture'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -653,7 +654,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Andi Roberts',
     teaser:
       "Feedback to peers without authority often feels presumptuous. Roberts reframes it as legitimate when grounded in shared work interfaces and outcomes you're jointly responsible for.",
-    tags: ['leadership', 'career'],
+    tags: ['leadership'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -662,7 +663,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'James Shore',
     teaser:
       'Lines of code and pull requests fail as AI impact metrics because they vary enormously. Randomized within-subject trials where engineers work both with and without AI reveal actual delivery gains.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai-impact', 'delivery', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -671,7 +672,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jade Rubick',
     teaser:
       "Executive roles often blur into scattered reaction. Rubick structures them as three loops: figuring what's needed through conversation, planning execution, and driving it through all available skill.",
-    tags: ['leadership', 'career'],
+    tags: ['leadership', 'delivery'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -680,7 +681,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Pat Forna',
     teaser:
       "AI agents promised to multiply code velocity in solo development. Forna's eight-month 35k-line platform surfaces what becomes truly scarce: human judgment, attention, and ownership decisions.",
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'agents', 'ai'],
     addedAt: '2026-09-30T20:20:11.169Z',
   },
   {
@@ -689,7 +690,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'James Stanier',
     teaser:
       'Project completion hits a wall that takeoff never does. The ninety-ninety rule compounds edge cases, integration problems, and small decisions as teams drift toward easier wins under pressure.',
-    tags: ['leadership', 'engineering'],
+    tags: ['delivery', 'leadership'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -698,7 +699,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'Human review becomes the bottleneck at agentic scale. Quality gates migrate upstream into constraints, with tests, linting rules, security scanners, and benchmarks acting as enforceable guardrails.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'testing', 'ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -716,7 +717,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kent Beck',
     teaser:
       'Model training is closer to baking than to sequential logic. Pre-training sets conditions at continental scale, while post-training nudges numbers through experiment, and the architecture reflects that split.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -725,7 +726,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Shopify Engineering',
     teaser:
       'Quick reframes internal deployment as dropping assets in a folder and getting back a URL. Deliberate constraints on the platform surface became the catalyst for rapid prototyping across Shopify.',
-    tags: ['engineering', 'ai'],
+    tags: ['infrastructure', 'ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -734,7 +735,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Zalando Engineering',
     teaser:
       'A proxy layer unified LLM access across 250 teams and cut PR lead time by 20 to 40 percent through automated low-risk approvals. Agentic engineering moved from experiment to infrastructure.',
-    tags: ['engineering', 'ai'],
+    tags: ['agents', 'infrastructure', 'ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -743,7 +744,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Aaron Horwath',
     teaser:
       'AI removes the collaborative messy middle that made abstract knowledge work tolerable. Workism depends on that middle, and the constructed illusion collapses once efficiency supplants exploration.',
-    tags: ['career', 'ai'],
+    tags: ['ai-impact', 'wellbeing', 'ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -761,7 +762,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Lalit Maganti',
     teaser:
       'Staff engineers find impact by absorbing day-to-day signals across teams rather than scheduling strategy sessions. Patterns surface across unrelated requests and point to problems worth solving at scale.',
-    tags: ['leadership', 'engineering'],
+    tags: ['leadership', 'career'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -779,7 +780,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Robert Ozimek',
     teaser:
       'Every query is a subset, so the response type belongs to the operation rather than the schema. Selections become the types, and dropping a field fails compilation immediately.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'testing'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -788,7 +789,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mun Logadan',
     teaser:
       'Benchmark optimization pushes models toward confident assumptions instead of clarifying questions. That trade weakens exploratory work, where user guidance shifts from valued signal to penalized interruption.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -797,7 +798,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Shawn Walton',
     teaser:
       'Yelp moved 1.4 million lines from Flow to TypeScript over three years, one package at a time, with both type systems running side by side. Gradual conversion beat a wholesale rewrite.',
-    tags: ['engineering', 'frontend'],
+    tags: ['architecture'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -806,7 +807,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Nick Gray',
     teaser:
       'Client-side analytics reported 5,977 pageviews a week while the server logged 2.5 million requests a day. Geographic blocks and user-agent rules cut the noise without locking out real readers.',
-    tags: ['engineering'],
+    tags: ['security', 'infrastructure'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -815,7 +816,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Den Odell',
     teaser:
       'Listeners, timers, and subscriptions linger long after the view that created them. Soak testing compresses hours of real usage into minutes and catches the accumulation before production does.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'testing'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -824,7 +825,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Philip Zeyliger',
     teaser:
       'No-code platforms won the middle ground between building and buying because custom software was expensive. Coding agents change that math and make bespoke code cheaper than platform lock-in.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -833,7 +834,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Luca Rossi',
     teaser:
       'Juniors have nothing to unlearn on new tools while seniors build the guardrails and process around them. Mixed-seniority teams produce stronger systems than either extreme on its own.',
-    tags: ['leadership', 'engineering'],
+    tags: ['org-design', 'career'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -860,7 +861,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Steve Huynh',
     teaser:
       'Knowledge splits into facts, processes, and concepts, each needing a different learning strategy. Conceptual frameworks transfer across projects while the rest requires reference material or repetition.',
-    tags: ['career', 'engineering'],
+    tags: ['career'],
     addedAt: '2026-08-18T20:40:12.574Z',
   },
   {
@@ -878,7 +879,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Long Ho',
     teaser:
       'React Compiler retrofits optimization into existing code rather than requiring architectural redesign. The approach treats compilation as pragmatic enhancement, adoptable without forcing developers toward new patterns.',
-    tags: ['frontend', 'engineering'],
+    tags: ['react', 'frontend', 'performance'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -887,7 +888,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Gergely Orosz',
     teaser:
       'Loop engineering automates repetitive AI prompting by designing systems where agents run toward defined goals. Developers report drift and cost concerns, suggesting loops suit specific workflows rather than universal application.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -896,7 +897,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Engineering Manager',
     teaser:
       'Code Yellows and Code Reds formalize escalation protocols for infrastructure crises across Meta, LinkedIn, and Shopify. Success requires clear problem statements, measurable exit criteria, and cross-functional authority.',
-    tags: ['engineering', 'leadership'],
+    tags: ['infrastructure', 'delivery'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -905,7 +906,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Lucas F. Costa',
     teaser:
       'Software projects fail not from poor execution but from ignoring uncertainty in scope and deadlines. Successful delivery requires adaptive scope, incremental validation, and cross-functional viability from the start.',
-    tags: ['engineering', 'leadership'],
+    tags: ['delivery'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -914,7 +915,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'Agents generate code faster than humans can review it. The boundary between automation and accountability must remain human; someone has to answer for what ships.',
-    tags: ['engineering', 'leadership'],
+    tags: ['agents', 'ai-impact', 'ai'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -923,7 +924,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Cong Wang',
     teaser:
       'Winning arguments rarely changes minds; they just wound egos. Divergent viewpoints shipped beat ideas proven correct, since success comes from competitive advantage, not intellectual victory.',
-    tags: ['career', 'leadership'],
+    tags: ['leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -932,7 +933,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Lilian Weng',
     teaser:
       'Self-improving AI systems succeed through harness architecture, not raw capability. Workflow orchestration and persistent memory outweigh model weights; human stewardship remains essential throughout the loop.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -941,7 +942,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Michael Lopp',
     teaser:
       'Senior managers seldom change; people adapt to them instead. The Artist demands written clarity, the Dictator responds to preparation and pushback, the Knife requires distance, and adjustment beats transformation.',
-    tags: ['leadership', 'career'],
+    tags: ['leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -950,7 +951,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Cloudflare',
     teaser:
       'Meerkat eliminates leader-dependent bottlenecks in distributed consensus. All replicas write concurrently, and the trade-off is latency proportional to distance, ideal for consistency-critical control-plane state.',
-    tags: ['engineering'],
+    tags: ['architecture', 'infrastructure'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -959,7 +960,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Fight Chat Control',
     teaser:
       'Two EU surveillance proposals advance in parallel. A temporary rule faced expiration then reinstatement in July 2026 while a permanent regulation deadlocks over voluntary versus mandatory scanning of private communications.',
-    tags: ['engineering'],
+    tags: ['security'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -977,7 +978,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Michael Lynch',
     teaser:
       "Design docs answer one question: what's the penalty for being wrong. Catching expensive decisions before implementation beats exhaustive specifications that move coding problems to the design phase.",
-    tags: ['engineering'],
+    tags: ['architecture', 'delivery'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -986,7 +987,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Software Leads',
     teaser:
       "Engineering managers amplify team effectiveness through four responsibilities: people, technical, product, and delivery leadership. Each pillar's emphasis shifts with organizational context, but collectively they remove obstacles to success.",
-    tags: ['leadership'],
+    tags: ['leadership', 'delivery'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -995,7 +996,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Uncommon Executive',
     teaser:
       "Meta's incubation teams succeed not through talent selection but organizational structure. Executive sponsorship, self-sufficient resources, clear customer problems, and advance scaling plans embed excellence beyond individual projects.",
-    tags: ['leadership'],
+    tags: ['org-design', 'leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1004,7 +1005,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jake Archibald',
     teaser:
       'Custom select dropdowns need balanced sizing. Small pickers become unusable and oversized ones awkward, while calc-size() enables intrinsic sizing that respects viewport margins and minimum constraints without forcing unwanted expansion.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1013,7 +1014,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Eng Leadership',
     teaser:
       'AI commoditizes code production, so engineers write less but review more and bottleneck on decisions. Technical proficiency no longer differentiates; judgment about problem selection and trade-offs becomes the rare capability.',
-    tags: ['engineering', 'leadership'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1022,7 +1023,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Zed',
     teaser:
       'Development conversation currently happens after commits, yet real collaboration occurs continuously. DeltaDB captures every operation as linked deltas, letting teams and agents work simultaneously while conversation and code remain connected.',
-    tags: ['engineering', 'ai'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1031,7 +1032,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kevin Goldsmith',
     teaser:
       'Leaders assume authority drives adoption; teams comply temporarily then revert. Peer-driven change succeeds where mandates fail, since resistance framed as technical objection usually masks autonomy or identity concerns beneath.',
-    tags: ['leadership', 'engineering'],
+    tags: ['leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1049,7 +1050,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Thorsten Ball',
     teaser:
       "Software teams gain velocity by treating development as continuous discovery. Collapsing the time from 'let me try something' to user feedback through daily shipping and narrow scope becomes the competitive moat.",
-    tags: ['engineering', 'leadership'],
+    tags: ['delivery'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1058,7 +1059,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'vlt',
     teaser:
       'NPM registries maintain packuments that accumulate metadata for all versions. Drizzle ORM hit the 100MB ceiling after roughly 763 releases, preventing new publication to the registry for weeks.',
-    tags: ['engineering'],
+    tags: ['open-source', 'infrastructure'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1067,7 +1068,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Practical Engineering Management',
     teaser:
       'AI capabilities are rendering the traditional dedicated people manager archetype obsolete. Engineering leaders must evolve from pure people management into design-focused roles to remain relevant.',
-    tags: ['leadership', 'career'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1076,7 +1077,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Phil Calcado',
     teaser:
       'Cross-team collaboration dysfunction typically stems from organizational structure and cascading goal incoherence, not collaboration skills. Restructure to eliminate unnecessary dependencies rather than perfecting collaboration itself.',
-    tags: ['engineering', 'leadership'],
+    tags: ['org-design', 'leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1085,7 +1086,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ed Zitron',
     teaser:
       "Hyperscaler AI capex spending now exceeds free cash flow growth. OpenAI and Anthropic capture approximately two-thirds of the industry's claimed revenues, while other deployments accumulate losses across fragmented applications.",
-    tags: ['ai', 'engineering'],
+    tags: ['ai'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -1094,7 +1095,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Raycast',
     teaser:
       'A hybrid architecture pairing native shells with React shows web technology can deliver desktop feel without Chromium bloat. Cross-platform parity came from intentional choices about feel, not framework selection.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'react'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1103,7 +1104,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Simon Willison',
     teaser:
       'Coding agents crossed into production-ready reliability while open-weight models exceeded expectations on consumer hardware. Model leadership shifted across providers five times in six months.',
-    tags: ['ai'],
+    tags: ['ai', 'agents'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1112,7 +1113,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Eng Leadership',
     teaser:
       'AI-generated code passes the eye test while hiding subtle logical errors. Documenting intent before generation and automating surface checks catches design issues earlier than waiting on code review to find them.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'testing'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1139,7 +1140,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Holland Tech',
     teaser:
       'AI agents are strong implementers but lack accountability and contextual judgment for the decisions that actually matter. Human debate about constraints and trade-offs still produces better architecture than deferring to confident but ungrounded machine output.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai', 'agents', 'architecture'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1148,7 +1149,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'rman.dev',
     teaser:
       'Consistent contribution and visible work in open source accelerates growth past traditional career paths. Communication and community engagement earn recognition and responsibility faster than corporate ladders measure them.',
-    tags: ['career', 'engineering'],
+    tags: ['career', 'open-source'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1157,7 +1158,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Simon Willison',
     teaser:
       "Coding agents drop the cost of porting between languages, turning stack choices from permanent lock-in into manageable technical debt. Bun's Zig to Rust migration hints at how fluid these decisions become.",
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'agents', 'architecture'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1166,7 +1167,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'William Angel',
     teaser:
       'Local LLM inference on Apple Silicon costs roughly 3x more per token than cloud providers once hardware depreciation is included. Speed and privacy, not raw cost, are what justify keeping inference on the machine.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'infrastructure'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1175,7 +1176,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'GitLab',
     teaser:
       'GitLab restructures around five architectural bets and flattens hierarchies to position itself for machine-directed development. The premise is that agentic software construction requires fundamental platform redesign, not AI bolted on the side.',
-    tags: ['leadership', 'engineering'],
+    tags: ['ai', 'agents', 'org-design'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1184,7 +1185,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'James Pritchard',
     teaser:
       'Treating language models as autonomous agents adds latency and unpredictability. Typed input-output functions enable testability, composability, and debugging at lower cost than agentic workflows trying to reason their way to the same result.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'agents', 'testing'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1193,7 +1194,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ajey Gore',
     teaser:
       "AI collapses the translation layer between strategy and execution, eating most middle-management coordination. The 'what' expands while the 'how' shrinks, leaving judgment-heavy engineering and product roles as the only ones that scale.",
-    tags: ['ai', 'leadership'],
+    tags: ['ai', 'ai-impact', 'org-design'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1202,7 +1203,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Corporate Rebels',
     teaser:
       'Group effort drops predictably as team size grows, an effect Ringelmann measured a century ago. Small autonomous units, radical transparency, and peer accountability counter it better than adding hierarchical oversight.',
-    tags: ['leadership'],
+    tags: ['org-design', 'leadership'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1211,7 +1212,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Eng Leadership',
     teaser:
       'Critical chain pools task buffers at the project level instead of padding individual estimates. Cutting estimates in half and tracking buffer consumption against progress surfaces scope creep weeks earlier than burndown charts.',
-    tags: ['leadership', 'engineering'],
+    tags: ['delivery'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1220,7 +1221,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ant Murphy',
     teaser:
       'Discovery, OKRs, and AI rarely help a struggling product org until delivery works. Slow release cycles and accumulated tech debt are the actual bottleneck, and everything strategic downstream treats symptoms instead of cause.',
-    tags: ['leadership', 'engineering'],
+    tags: ['delivery', 'architecture'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1229,7 +1230,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Design System Guide',
     teaser:
       'Design system value lives in accessible organizational memory, not in the tooling. Agents make confident mistakes when decision history scatters across Slack and ADRs. Structure data and governance first, then layer orchestration on top.',
-    tags: ['frontend', 'ai'],
+    tags: ['frontend', 'agents', 'ai'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1238,7 +1239,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Aviv Ben-Yosef',
     teaser:
       'Leaders who always say yes erase their own judgment and train the organization to keep demanding more. Making commitment costs visible and holding operational boundaries breaks the loop before it becomes the role.',
-    tags: ['leadership'],
+    tags: ['leadership', 'wellbeing'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1247,7 +1248,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'corrode',
     teaser:
       'Go validates at runtime through discipline and tools. Rust encodes correctness into compile-time types that prevent entire categories of bugs. The trade is steeper upfront complexity for dramatically fewer production incidents.',
-    tags: ['engineering'],
+    tags: ['architecture', 'testing'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1256,7 +1257,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Martin Fowler',
     teaser:
       'Coding agents produce better code when given real-time feedback loops like linting, dependency rules, and mutation testing. Computational analysis catches mechanics; semantic issues across files still need LLM interpretation to surface.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'testing', 'ai'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1265,7 +1266,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Gergely Orosz',
     teaser:
       'Tech hiring growth diverges by geography. The US and UK expanded while Germany and France contracted. AI engineering roles surged 50 to 100% at major firms, outpacing general software engineer recruitment.',
-    tags: ['ai', 'career'],
+    tags: ['career', 'ai-impact', 'ai'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1274,7 +1275,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Evil Martians',
     teaser:
       'Code generation compresses work into shorter timeframes but concentrates cognitive load, replacing craft satisfaction with reviews and iteration. More output ships, less fulfillment remains, and burnout follows the density of thinking, not the hours.',
-    tags: ['ai', 'career'],
+    tags: ['wellbeing', 'ai-impact', 'ai'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1292,7 +1293,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mastro',
     teaser:
       'AI abstracts away manual coding the way frameworks abstracted browser mechanics, lowering both skill requirements and worker leverage. Leaky abstractions resurface when the tooling fails, and understanding the layer below stays non-negotiable.',
-    tags: ['ai', 'frontend'],
+    tags: ['ai-impact', 'ai', 'frontend'],
     addedAt: '2026-05-27T22:31:10+02:00',
   },
   {
@@ -1310,7 +1311,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'James Shore',
     teaser:
       'Productivity gains turn into permanent indenture if maintenance cost rises with output. Doubling code volume without halving its long-term cost leaves teams trapped under their own velocity.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'architecture'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1319,7 +1320,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Nair',
     teaser:
       'Seniors talk in complexity while the business talks in uncertainty. Reframing expertise as a solution to speed problems shifts seniors from objectors into editors of rapid AI-generated output.',
-    tags: ['leadership', 'career'],
+    tags: ['career', 'leadership'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1328,7 +1329,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Open Source Resistance',
     teaser:
       'Maintainers should treat OSS work on company time as legitimate professional work, not a side hustle. A direct-action stance on balancing corporate value extraction with maintainer sustainability.',
-    tags: ['engineering'],
+    tags: ['open-source', 'career'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1337,7 +1338,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Monokai',
     teaser:
       'European infrastructure providers run at production quality for most workloads. A two-month migration shows sovereignty is feasible; keep US services only where the context-specific advantage outweighs the cost.',
-    tags: ['engineering'],
+    tags: ['infrastructure', 'security'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1346,7 +1347,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Miren',
     teaser:
       "AI authors code at scale while humans shift to editor and director. The constraint is not technology but the human cognitive ceiling and the 24/7 pressure that erodes Agile's core principle.",
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'delivery', 'ai'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1355,7 +1356,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Aleix Morgadas',
     teaser:
       'Technical decisions dominate engineering strategy while human alignment, communication, and realistic planning get skipped. Execution lives in those overlooked organizational factors, not the architecture diagram.',
-    tags: ['engineering', 'leadership'],
+    tags: ['leadership', 'delivery'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1373,7 +1374,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mike Fisher',
     teaser:
       'Premature financial validation kills discovery. Early-stage product needs financials as guardrails, not goals, so teams optimize for customer outcomes instead of spreadsheet output.',
-    tags: ['leadership'],
+    tags: ['delivery'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1382,7 +1383,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ben Balter',
     teaser:
       'A weekly five-minute record of impact protects your work from recency bias and review-cycle amnesia. Product-manage your career using shipped outcomes, not memory.',
-    tags: ['career', 'leadership'],
+    tags: ['career'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1391,7 +1392,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mike McQuaid',
     teaser:
       'Stop babysitting one agent at a time. Sandboxes let them run wild safely and git worktrees let them run in parallel, trading more tokens for measurable velocity.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1400,7 +1401,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Research-Driven Engineering Leadership',
     teaser:
       'AI amplifies the system you already have rather than fixing it. Expect a productivity dip over three months before compounding gains arrive, with realistic first-year ROI around 39%.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-05-14T21:34:42+02:00',
   },
   {
@@ -1409,7 +1410,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Slack Engineering',
     teaser:
       'Multi-agent systems collapse under accumulated message history. Slack uses structured journals, credibility scoring, and consolidated timelines to keep coherence across hundreds of requests without passing raw history forward.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1418,7 +1419,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kevin Goldsmith',
     teaser:
       'Hands-on managers who keep solving problems directly stall the layer below them. The lever shifts to enabling other managers through shared context, multiplying impact precisely when you step away.',
-    tags: ['leadership'],
+    tags: ['leadership', 'org-design'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1427,7 +1428,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Christopher Meiklejohn',
     teaser:
       'Thirty years of writing code with Phish on dissolved when managing agents replaced hands-on work. The trade buys leverage but surfaces a harder question: where does flow live in a queue-driven workflow?',
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'agents', 'ai'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1445,7 +1446,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sankalpa Acharya',
     teaser:
       'React decouples delivery from completion. Fast components ship immediately with placeholder markers while slow resolvers fill in asynchronously, turning streaming into a composition primitive.',
-    tags: ['frontend'],
+    tags: ['react', 'frontend'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1454,7 +1455,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Drew Breunig',
     teaser:
       'When code is cheap, the moat shifts. Value lives in identifying genuinely hard problems and navigating their complexity, not in automating trivial generation.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1472,7 +1473,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Armin Ronacher',
     teaser:
       'Local inference fails on fragmentation, not capability. Picking one configuration and treating every failure as a product bug builds confidence faster than chasing breadth across hardware and models.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1481,7 +1482,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kevin Goldsmith',
     teaser:
       'Senior engineers plateau at the business fluency ceiling, not the technical one. Translating technical choices into revenue impact and customer consequence is the work that earns a seat at the table.',
-    tags: ['leadership'],
+    tags: ['leadership', 'career'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1490,7 +1491,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Incremental Forgetting',
     teaser:
       'Trade-offs are permanent, not solvable, so teams oscillate instead of settling. Healthier course corrections come from watching direction of movement, not chasing the next opposite.',
-    tags: ['engineering', 'leadership'],
+    tags: ['delivery', 'leadership'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1499,7 +1500,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Tanner Linsley',
     teaser:
       "React's API becomes a specification, not the implementation. An AI-generated lightweight variant lands ~9KB client and 2-3x faster SSR by treating the API surface as a target rather than a source.",
-    tags: ['frontend', 'engineering'],
+    tags: ['react', 'performance', 'ai'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1508,7 +1509,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Certificates.dev',
     teaser:
       'Semantic HTML, proper labels, focus management in SPAs, and live regions cover most accessibility failures. Native elements do the work for free.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'react'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1517,7 +1518,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mozilla Hacks',
     teaser:
       'AI-powered bug hunting surfaced 271 Firefox vulnerabilities by steering agents to generate and validate hypotheses. Models finally got capable enough to separate signal from slop.',
-    tags: ['ai', 'engineering'],
+    tags: ['security', 'ai', 'agents'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1535,7 +1536,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'unix.foo',
     teaser:
       'On-device AI eliminates vendor dependencies, privacy baggage, and network fragility. You build trust by not needing a privacy policy in the first place.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'security'],
     addedAt: '2026-05-11T13:50:47+02:00',
   },
   {
@@ -1553,7 +1554,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Wix Engineering',
     teaser:
       'Generation speed is no longer the bottleneck. Production-grade agent work shifts focus to verification, explicit contracts, and architectural clarity the agent can actually execute.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai', 'testing'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1562,7 +1563,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Frederick Vanbrabant',
     teaser:
       'Technical excellence alone does not ship. Architects succeed by reading stakeholder motivations and building credibility with decision-makers, not by drawing better diagrams.',
-    tags: ['leadership', 'engineering'],
+    tags: ['architecture', 'leadership'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1580,7 +1581,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Dave Griffith',
     teaser:
       'Transformative technology takes decades to reshape society. AI is moving faster than historical norms yet still feels glacial because expectations outpace physics.',
-    tags: ['ai'],
+    tags: ['ai', 'ai-impact'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1589,7 +1590,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'LightOn AI',
     teaser:
       'LightOn shipped semantic code search models that beat much larger alternatives, plus ColGrep for local hybrid search. Agents find relevant code measurably faster.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1598,7 +1599,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ismail Sayeter',
     teaser:
       'A zero-downtime migration of 248 GB of MySQL, 34 Nginx sites, GitLab, and Neo4j cuts the bill by 84%. Cloud pricing turns inefficient fast once your workload stops being spiky.',
-    tags: ['engineering'],
+    tags: ['infrastructure', 'architecture'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1607,7 +1608,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Laws of Software Engineering',
     teaser:
       'A catalog of principles covering architecture, teams, and decision-making. Read together they reveal that software reflects organizational structure and human constraints more than technology.',
-    tags: ['engineering'],
+    tags: ['architecture', 'org-design'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1625,7 +1626,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'ky.fyi',
     teaser:
       "AI saturation breeds exhaustion, not from the tools but from unreviewed code and pressure to adopt without consent. The burnout here is grief over the field's abandoned ideals.",
-    tags: ['ai', 'career'],
+    tags: ['wellbeing', 'ai', 'career'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1634,7 +1635,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Railway',
     teaser:
       'Railway swapped Next.js for Vite plus TanStack Router and cut build times from 10+ minutes to under two. Framework choice matters more than hype when iteration speed is the moat.',
-    tags: ['frontend'],
+    tags: ['frontend', 'react'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1643,7 +1644,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Koshy John',
     teaser:
       'AI removes drudgery, but outsourcing understanding creates a quiet intellectual dependency. Judgment and adaptability stay irreplaceable; tools can only extend them.',
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1652,7 +1653,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sasha Baranov',
     teaser:
       'Eighteen months in, the compiler auto-memoizes components and retires an entire bug class. Greenfield adoption is smooth; brownfield migrations still surface the rough edges.',
-    tags: ['frontend'],
+    tags: ['react', 'frontend', 'performance'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1670,7 +1671,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Phil Haack',
     teaser:
       'Structural merging via mergiraf plus a Claude Code skill turns conflict resolution into a workflow, not a slog. Tools handle syntax-aware merges so you only weigh in on genuine ambiguity.',
-    tags: ['engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1679,7 +1680,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Olczyk',
     teaser:
       'The middle layer of facilitation roles got squeezed as AI absorbed coordination work. Surviving engineering management demands either deep technical involvement or strategic portfolio leadership.',
-    tags: ['leadership', 'engineering'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1688,7 +1689,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mitchell Hashimoto',
     teaser:
       'A long-time GitHub user moves off the platform after repeated reliability failures in PRs, issues, and Actions. The pain point is the surrounding infrastructure, not git.',
-    tags: ['engineering'],
+    tags: ['infrastructure', 'open-source'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1706,7 +1707,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'C.R. Stanier',
     teaser:
       'Painted-door tests gauge demand without engineering investment by showing fake features and measuring take-rate. A binary signal beats intuition before you commit resources.',
-    tags: ['leadership', 'engineering'],
+    tags: ['delivery'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1715,7 +1716,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'DO_NOT_TRACK',
     teaser:
       'One environment variable replaces a patchwork of per-tool telemetry opt-outs. A single standard for CLI and TUI tools to respect user intent without bespoke flags.',
-    tags: ['engineering'],
+    tags: ['security'],
     addedAt: '2026-05-03T15:20:34+02:00',
   },
   {
@@ -1733,7 +1734,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Annie Vella',
     teaser:
       'Forty of the sharpest minds in software gathered to map the AI-shaped future. The biggest takeaway. Nobody has it figured out, and that shared uncertainty is oddly the most useful answer.',
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1742,7 +1743,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'A Life Engineered',
     teaser:
       'A decade as an Amazon Bar Raiser, distilled into what actually separates strong candidates from the rest. Signal beats polish, and most interviewers look for the wrong things.',
-    tags: ['leadership', 'career'],
+    tags: ['career', 'leadership'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1752,7 +1753,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mario Barrena',
     teaser:
       'Automated benchmarks miss what actually matters in enterprise GenAI. Real quality signals come from humans in the loop, not leaderboards.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'testing'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1761,7 +1762,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'GitHub Engineering',
     teaser:
       'GitHub rebuilt diff rendering and found the win was not smarter code but less of it. The fastest path to performance often runs through simplicity.',
-    tags: ['engineering', 'frontend'],
+    tags: ['performance', 'frontend'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1770,7 +1771,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Armin Ronacher',
     teaser:
       "The middle ground on AI isn't neutral. It's occupied by people who actually used the tools long enough to judge them. Non-use is not the same as balance.",
-    tags: ['ai', 'leadership'],
+    tags: ['ai', 'ai-impact'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1779,7 +1780,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Stanislav Fort',
     teaser:
       'Cybersecurity capability in LLMs is jagged. It does not scale smoothly with size, generation, or price. Small open-weights models matched a flagship on the same FreeBSD exploit at a fraction of the cost.',
-    tags: ['ai', 'engineering'],
+    tags: ['security', 'ai'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1788,7 +1789,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Viktor Cessan',
     teaser:
       'A team of eight engineers burns roughly 4,000 euros per working day, yet most organizations have no visibility into that number or what it takes to break even. Two decades of structural blindness now collides with the arrival of LLMs.',
-    tags: ['leadership', 'engineering'],
+    tags: ['org-design', 'delivery', 'ai'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1806,7 +1807,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sankalpa Acharya',
     teaser:
       'Recursive rendering blocks the browser. Fiber slices work into ~5ms chunks so the main thread stays responsive. A walk through the linked-list tree of fiber nodes that powers interruptible reconciliation.',
-    tags: ['frontend'],
+    tags: ['react', 'frontend', 'performance'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1815,7 +1816,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Willy Brauner',
     teaser:
       'Signals power Solid, Vue, and modern reactivity, yet few devs can explain their internals. Pushes notify downward, pulls re-evaluate upward, and together they keep reactive graphs efficient.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'performance'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1824,7 +1825,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Dominik Dorfmeister',
     teaser:
       'Organizing code by technical layer scales poorly once features cross boundaries. Slicing vertically by feature keeps related code colocated, reduces cross-cutting churn, and makes ownership obvious.',
-    tags: ['frontend', 'engineering'],
+    tags: ['architecture', 'frontend'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1833,7 +1834,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Leo McArdle',
     teaser:
       'MDN rebuilt its frontend and unpacks the why. Lit-powered web components replace a tangle of four git repos, cutting friction for authors of interactive examples.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'architecture'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1842,7 +1843,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Anton Zaides',
     teaser:
       'One year after ditching Scrum for Shape Up, the team moved from maintenance mode to high output with happier engineers. Fixed time with variable scope beat the sprint treadmill.',
-    tags: ['leadership', 'engineering'],
+    tags: ['delivery'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1851,7 +1852,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'James Coglan',
     teaser:
       'Promise.then() implicitly flattens nested promises, a choice that lost functional programmers the Promises/A+ debate but won on convenience. Real concurrency control code reveals rare but legitimate uses for keeping the nesting intact.',
-    tags: ['engineering', 'frontend'],
+    tags: ['frontend'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1860,7 +1861,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Tanner Linsley',
     teaser:
       'RSCs became a paradigm you orbit around, not a primitive you reach for. TanStack reframes them as just streams of data the client fetches, caches, and composes. Powerful primitives lose their leverage the moment a framework makes them mandatory.',
-    tags: ['frontend', 'engineering'],
+    tags: ['react', 'frontend'],
     addedAt: '2026-04-18T14:17:45+02:00',
   },
   {
@@ -1869,7 +1870,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Comptime',
     teaser:
       'Move computation from runtime to build time. A Vite plugin that evaluates TypeScript expressions at compile time for smaller bundles and better performance.',
-    tags: ['frontend'],
+    tags: ['performance', 'frontend'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1878,7 +1879,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Google Engineering',
     teaser:
       "Google's testing playbook: test size taxonomy, test selection strategies, and how to scale CI/CD without creating brittleness or slow feedback loops.",
-    tags: ['engineering'],
+    tags: ['testing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1887,7 +1888,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'HumanLayer',
     teaser:
       'Agents reason better with structured context. How to engineer context quality so agents understand code intent and constraints.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1914,7 +1915,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Leadership Garden',
     teaser:
       'Knowledge silos compound every other technical debt. Practical strategies to identify and break them down before they paralyze your team.',
-    tags: ['engineering', 'leadership'],
+    tags: ['leadership', 'org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1923,7 +1924,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Refactoring',
     teaser:
       'Skip the metrics theater. How to design a minimal, effective process that uses the right metrics to drive real improvements in engineering productivity.',
-    tags: ['engineering'],
+    tags: ['delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1960,7 +1961,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jack Danger',
     teaser:
       'Technical debt is a strategic tool for CTOs, not a burden to minimize. When managed intentionally as a financing mechanism, it accelerates delivery without sacrificing velocity.',
-    tags: ['engineering'],
+    tags: ['architecture', 'delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1969,7 +1970,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Engineering Manager',
     teaser:
       'Rather than top-down reorganization, solve staffing problems from the inside out using concentric circles to progressively expand and restructure teams.',
-    tags: ['leadership'],
+    tags: ['org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1979,7 +1980,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Charity Majors',
     teaser:
       'Navigating a startup culture that rejects management infrastructure. When flat structures work and when they create scaling friction.',
-    tags: ['leadership'],
+    tags: ['org-design', 'leadership'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1988,7 +1989,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'InfoQ',
     teaser:
       'As systems scale, platforms must evolve into managed runtimes that abstract complexity and cognitive load. Moving from passive infrastructure to active runtime enablers.',
-    tags: ['engineering'],
+    tags: ['infrastructure'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -1998,7 +1999,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Slack Engineering',
     teaser:
       'Slack open-sourced their AI-driven migration tool that automatically converts Enzyme tests to React Testing Library, balancing modernization with preservation of testing intent.',
-    tags: ['ai', 'frontend'],
+    tags: ['ai', 'testing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2007,7 +2008,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Egor Savochkin',
     teaser:
       "Booking.com doubled their team's delivery performance in a year by systematically measuring and improving the four DORA metrics.",
-    tags: ['engineering'],
+    tags: ['delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2016,7 +2017,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'AI coding assistants can accelerate delivery but risk eroding the fundamentals that make engineers effective. Strategies to maintain depth while leveraging AI.',
-    tags: ['ai', 'career'],
+    tags: ['ai', 'ai-impact', 'career'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2025,7 +2026,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Irakli Nadareishvili',
     teaser:
       "Design docs are a cornerstone of Google's engineering culture, serving as the mechanism for aligning teams and capturing architectural reasoning before code is written.",
-    tags: ['engineering'],
+    tags: ['architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2034,7 +2035,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Slack Engineering',
     teaser:
       'Cookies are ubiquitous client-side state flowing across every request, making them a critical security surface. How Slack detects and mitigates compromised session cookies.',
-    tags: ['engineering'],
+    tags: ['security'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2043,7 +2044,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Zahra Jabeen',
     teaser:
       'Continuous incremental shipping beats ambitious batches. Regular releases reduce risk, gather feedback faster, and keep momentum strong.',
-    tags: ['engineering'],
+    tags: ['delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2061,7 +2062,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Abdul A. Popoola',
     teaser:
       'Engineering challenges shift as products mature. Startup hustle, scaleup organization, and enterprise reliability each demand different strategies.',
-    tags: ['leadership'],
+    tags: ['leadership', 'org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2070,7 +2071,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Airbnb Engineering',
     teaser:
       "Incremental infrastructure modernization avoids the risk of full rewrites. Airbnb's approach to rolling out new React features while maintaining stability.",
-    tags: ['frontend', 'engineering'],
+    tags: ['react', 'frontend'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2115,7 +2116,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'What the data really shows about AI coding tools in 2025. Most effective as assistants handling boilerplate, not as replacements for human judgment.',
-    tags: ['ai'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2124,7 +2125,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Zed',
     teaser:
       'Writing code is only one part of effective software engineering. LLMs excel at code generation but lack the architectural thinking and quality assurance that define professional development.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2133,7 +2134,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Engineering Manager',
     teaser:
       'Effective organizations communicate fluidly across org chart boundaries rather than rigidly following reporting lines, accelerating decision-making.',
-    tags: ['leadership'],
+    tags: ['leadership', 'org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2142,7 +2143,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Zach Wills',
     teaser:
       'Lessons from building a metrics tool using subagents to split work in parallel, demonstrating concrete patterns for AI-accelerated development workflows.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2151,7 +2152,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Peter Steinberger',
     teaser:
       'A grounded, practical approach to working with AI coding agents that cuts through hype and focuses on what actually works.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2160,7 +2161,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Shopify Engineering',
     teaser:
       'Technical strategies and infrastructure patterns for handling peak traffic during Black Friday and Cyber Monday at scale.',
-    tags: ['engineering'],
+    tags: ['infrastructure', 'performance'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2169,7 +2170,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Anthropic',
     teaser:
       'Claude can now discover and dynamically execute tools in real-time, enabling AI agents to take actions directly in external systems without pre-integration.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2205,7 +2206,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Bjorn Roche',
     teaser:
       'Document templates and structural tools that help scaling engineering organizations maintain clarity and alignment as teams grow.',
-    tags: ['leadership'],
+    tags: ['org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2223,7 +2224,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'The Engineering Manager',
     teaser:
       'Manager instinct often says fix everything at once, but the easy way forward is paradoxically harder. Tackle bottlenecks sequentially to avoid chaos.',
-    tags: ['leadership'],
+    tags: ['delivery', 'leadership'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2232,7 +2233,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kevin Goldsmith',
     teaser:
       'CEOs hold hiring power but depend on technical judgment they cannot independently evaluate. The partnership survives on candor and shared context, not technical competence alone.',
-    tags: ['leadership', 'engineering'],
+    tags: ['leadership'],
     addedAt: '2026-07-17T19:38:27.230Z',
   },
   {
@@ -2241,7 +2242,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'Five critical questions are reshaping how we build software. Competing scenarios for each and what they mean for your choices today.',
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'ai-impact'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2250,7 +2251,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Developers Voice',
     teaser:
       'Scale frontend architecture without scaling complexity. Module Federation enables independent teams to ship in parallel without coordination overhead.',
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2268,7 +2269,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Dan Teodosiu and Dave Kellogg',
     teaser:
       'When product and go-to-market strategies drift, founders lose leverage. How to align both around metrics that actually predict customer success.',
-    tags: ['leadership'],
+    tags: ['delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2286,7 +2287,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'AI Coding',
     teaser:
       'A resilience pattern that tests whether your system can survive the removal of its own components. Architecture thinking at its most practical.',
-    tags: ['ai', 'engineering'],
+    tags: ['architecture', 'testing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2304,7 +2305,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Platformatic',
     teaser:
       'Performance gains matter in production. Practical optimizations to run Next.js faster in Kubernetes environments.',
-    tags: ['frontend', 'engineering'],
+    tags: ['react', 'performance', 'infrastructure'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2331,7 +2332,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mitchell Hashimoto',
     teaser:
       "Real lessons from integrating AI tools into daily development work: what worked, what didn't, and how adoption patterns are changing how senior engineers operate.",
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2340,7 +2341,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Commerce Layer',
     teaser:
       'How agentic AI workers with Mastra.ai and MCP can automate e-commerce operations end-to-end, reducing manual overhead significantly.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2349,7 +2350,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Philipp Schmid',
     teaser:
       'Move beyond simple request-response loops to deep agents that maintain state, reason over extended periods, and handle genuinely complex multi-step workflows.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2358,7 +2359,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Anthropic',
     teaser:
       "Anthropic's battle-tested principles for building reliable, production-ready AI agents that actually work at scale.",
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2367,7 +2368,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Agent Recipes',
     teaser:
       'Skip the experimentation phase with ready-to-use agent patterns and copy-paste code snippets designed to improve your LLM applications immediately.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2376,7 +2377,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'Understand the evolution from simple automation to intelligent agents: their architecture, capabilities, and why they represent a fundamental shift in how we build software.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2385,7 +2386,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ben Houston',
     teaser:
       'As AI coding agents evolve from tools to collaborators, our code organization and documentation must evolve with them. How to structure projects for agent-friendly codebases.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2394,7 +2395,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Ryan Seddon',
     teaser:
       'Build fully functional agents using on-device models like Phi-4-mini in under 200 lines of code, bringing AI inference closer to users.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2403,7 +2404,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Shopify Engineering',
     teaser:
       'MCP UI extends the Model Context Protocol to let AI agents return interactive components instead of just text, making agent outputs more actionable.',
-    tags: ['ai', 'frontend'],
+    tags: ['agents', 'frontend', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2412,7 +2413,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Craig Condon',
     teaser:
       'What happens when you build production infrastructure using only AI agents writing code? A two-month experiment in agentic development constraints.',
-    tags: ['ai'],
+    tags: ['agents', 'infrastructure', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2421,7 +2422,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Philterd',
     teaser:
       "Relying on LLMs for sensitive data redaction introduces hallucination risks where accuracy isn't optional. Deterministic approaches are essential.",
-    tags: ['ai'],
+    tags: ['security', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2430,7 +2431,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Surma',
     teaser:
       'LangGraph codifies complex workflow architectures as executable automations, giving structure to stateful AI reasoning.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2439,7 +2440,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Addy Osmani',
     teaser:
       'The Model Context Protocol is creating a common language between AI and apps, enabling a new category of integrations and possibilities.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2448,7 +2449,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Matt Shumer',
     teaser:
       'A grounded take on what AI is actually changing for non-tech folks, cutting through the noise to explain real implications.',
-    tags: ['ai'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2457,7 +2458,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'MapAI',
     teaser:
       'Beyond technical debt: a framework for understanding four types of system debt including technical, evolutionary, and cognitive dimensions.',
-    tags: ['engineering'],
+    tags: ['architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2466,7 +2467,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Lukas Niessen',
     teaser:
       "Microservices unlocked backend autonomy, but applying the same pattern to frontends isn't always the solution. When micro frontends genuinely add value.",
-    tags: ['frontend', 'engineering'],
+    tags: ['frontend', 'architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2484,7 +2485,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Cloudflare',
     teaser:
       'One engineer rebuilt Next.js on Vite with AI assistance, achieving 4x faster builds, 57% smaller bundles, and Workers deployment in a week.',
-    tags: ['ai', 'frontend'],
+    tags: ['react', 'performance', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2493,7 +2494,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Kan Yilmaz',
     teaser:
       'A concrete cost comparison between CLI and MCP approaches reveals surprising economics for agent deployment.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2502,7 +2503,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'EJ Holmes',
     teaser:
       'Why CLI-based patterns are winning over MCP for building AI agents and what it means for the tooling landscape.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2520,7 +2521,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Simon Willison',
     teaser:
       "Agentic patterns aren't about replacing engineers. They're about building systems that elevate code quality and developer productivity.",
-    tags: ['ai', 'engineering'],
+    tags: ['ai', 'testing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2529,7 +2530,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Stay SaaSy',
     teaser:
       'The role of managers is evolving with AI, not disappearing. What changes and what stays the same.',
-    tags: ['ai', 'leadership'],
+    tags: ['ai-impact', 'leadership', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2539,7 +2540,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'New York Times Engineering',
     teaser:
       "AI tools are helping engineers write better tests at scale, tackling one of engineering's persistent blind spots.",
-    tags: ['ai', 'engineering'],
+    tags: ['testing', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2549,7 +2550,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'A Life Engineered',
     teaser:
       "Being right doesn't matter if nobody understands what you're saying. Learn the core gap between clarity and correctness.",
-    tags: ['leadership', 'career'],
+    tags: ['leadership'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2558,7 +2559,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Patreon Engineering',
     teaser:
       'A decade-long journey of migrating an entire codebase to TypeScript reveals lessons about gradual modernization at scale.',
-    tags: ['engineering', 'frontend'],
+    tags: ['architecture', 'frontend'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2576,7 +2577,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'AI Coding',
     teaser:
       'True rigor in modern systems often looks like apparent recklessness. The Phoenix Architecture challenges conventional wisdom about structure and control.',
-    tags: ['ai', 'engineering'],
+    tags: ['architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2585,7 +2586,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Jan Bosch',
     teaser:
       "Transforming into an AI-first company isn't about tools. It's about fundamentally rethinking how software gets built and how engineering teams organize around that change.",
-    tags: ['ai', 'leadership'],
+    tags: ['ai', 'org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2594,7 +2595,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Mario Zechner',
     teaser:
       'A reflection on the cost of constant acceleration and what happens when you deliberately choose to slow down.',
-    tags: ['ai', 'career'],
+    tags: ['wellbeing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2621,7 +2622,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Daily Dose of DS',
     teaser:
       'The .claude folder is where you configure your entire Claude Code experience. How CLAUDE.md, custom commands, skills, agents, and permissions work together.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2630,7 +2631,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Academind',
     teaser:
       'A hands-on guide to making Claude Code part of your actual development workflow.',
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2639,7 +2640,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sasha Baranov',
     teaser:
       "React's use() hook reads promises and context at render time without the complexity of useEffect. The missing piece that finally makes async patterns feel native to component rendering.",
-    tags: ['frontend'],
+    tags: ['react', 'frontend'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2648,7 +2649,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Rands',
     teaser:
       "A relentless focus on velocity led to building more interesting, random, and useless scripts and tools than ever before. Sometimes the best learning comes from building things that don't need to exist.",
-    tags: ['ai'],
+    tags: ['delivery'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2658,7 +2659,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Inside Product',
     teaser:
       'When a CTO is genuinely aligned with the business, the entire organization temperature shifts. Misalignment creates hidden friction that compounds across teams.',
-    tags: ['leadership'],
+    tags: ['leadership', 'org-design'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2667,7 +2668,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Lubeno',
     teaser:
       'Code review catches bugs, but great review reduces comprehension debt. PRs should help teams understand the codebase faster, not just validate changes.',
-    tags: ['engineering'],
+    tags: ['testing'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2676,7 +2677,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Sebastian Raschka',
     teaser:
       "Coding agents work when they combine three things well: tools, memory, and repository context. Understanding these components explains why some agents fail and others don't.",
-    tags: ['ai'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2694,7 +2695,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Martin Fowler',
     teaser:
       'Building reliable systems around AI agents requires intentional design patterns. Harness engineering treats the agent as a fallible component in a larger architecture.',
-    tags: ['ai', 'engineering'],
+    tags: ['agents', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2712,7 +2713,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Piechowski',
     teaser:
       "Technical debt isn't an engineering morale problem. It's a code problem. A quick audit reveals whether you're fighting the system or the people.",
-    tags: ['leadership', 'engineering'],
+    tags: ['architecture'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2721,7 +2722,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Annie Vella',
     teaser:
       'Time investment shapes thought patterns, which compound into skill. Where you focus your hours is where your expertise emerges.',
-    tags: ['ai', 'career'],
+    tags: ['career'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
   {
@@ -2748,7 +2749,7 @@ export const blogroll: TBlogrollEntry[] = [
     author: 'Raj Nandan',
     teaser:
       "AI commoditizes competence, but judgment becomes scarce. The real edge isn't in output quality but in pairing taste with context and the conviction to build something meaningful.",
-    tags: ['ai', 'career'],
+    tags: ['ai-impact', 'ai'],
     addedAt: '2026-04-08T22:28:03+02:00',
   },
 ];
