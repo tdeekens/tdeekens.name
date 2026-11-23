@@ -9,7 +9,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { AppProps } from 'next/app';
 import { useCallback, useState } from 'react';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   const [helpOpen, setHelpOpen] = useState(false);
   const openHelp = useCallback(() => setHelpOpen(true), []);
   const closeHelp = useCallback(() => setHelpOpen(false), []);
@@ -23,7 +23,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout onOpenShortcuts={openHelp}>
         <Component {...pageProps} />
       </Layout>
-      <ShortcutsHelp open={helpOpen} onClose={closeHelp} />
+      <ShortcutsHelp
+        open={helpOpen}
+        onClose={closeHelp}
+        pathname={router.pathname}
+      />
     </>
   );
 }
