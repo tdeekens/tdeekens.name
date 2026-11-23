@@ -38,6 +38,11 @@ function WithShortcuts() {
 const articles = () => screen.queryAllByRole('article');
 const search = () => screen.getByRole('searchbox');
 const tagBar = () => screen.getByRole('group', { name: 'Filter by tag' });
+/** Tag bar button by exact tag, e.g. "ai" must not match "ai-impact". */
+const tagButton = (tag: string) =>
+  within(tagBar()).getByRole('button', {
+    name: (name) => name.split(' ')[0] === tag,
+  });
 const lastReplace = () =>
   (router.replace.mock.calls.at(-1)?.[0] as { query: unknown } | undefined)
     ?.query;
@@ -88,10 +93,8 @@ describe('Blogroll search', () => {
   it('toggles tags from the bar with OR semantics and pressed state', async () => {
     const user = setup();
     render(<Blogroll />);
-    const career = within(tagBar()).getByRole('button', { name: /^career/ });
-    const frontend = within(tagBar()).getByRole('button', {
-      name: /^frontend/,
-    });
+    const career = tagButton('career');
+    const frontend = tagButton('frontend');
 
     await user.click(career);
     expect(career).toHaveAttribute('aria-pressed', 'true');
@@ -131,11 +134,7 @@ describe('Blogroll search', () => {
     await user.click(
       within(first).getByRole('button', { name: `Filter by tag: ${tag}` }),
     );
-    expect(
-      within(tagBar()).getByRole('button', {
-        name: (name) => name.startsWith(tag),
-      }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    expect(tagButton(tag)).toHaveAttribute('aria-pressed', 'true');
     expect(articles().length).toBeLessThan(blogroll.length);
   });
 
@@ -169,9 +168,7 @@ describe('Blogroll search', () => {
     render(<Blogroll />);
 
     expect(search()).toHaveValue('agent');
-    expect(
-      within(tagBar()).getByRole('button', { name: /^ai/ }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    expect(tagButton('ai')).toHaveAttribute('aria-pressed', 'true');
     expect(articles().length).toBeLessThan(blogroll.length);
   });
 
