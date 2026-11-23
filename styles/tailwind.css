@@ -65,11 +65,11 @@
     --color-error: #e46876; /* waveRed */
     --color-error-line: #e82424; /* samuraiRed */
 
-    --color-heading: #e6c384; /* carpYellow */
+    --color-heading: #ff5d62; /* peachRed, 5.4:1 */
     --color-link: #7e9cd8; /* crystalBlue */
     --color-link-hover: #7fb4ca; /* springBlue */
     --color-link-underline: rgb(126 156 216 / 0.5);
-    --color-strong: #d27e99; /* sakuraPink */
+    --color-strong: #e6c384; /* carpYellow, 9.7:1 */
     --color-avatar-ring: rgb(230 195 132 / 0.6);
   }
 
