@@ -4,22 +4,22 @@ slug: the-pull-request-isnt-dead-the-diff-isnt-enough
 draft: false
 ---
 
-I feel old when I realized I've been authoring pull requests for fifteen years. It has survived new frameworks, processes and companies. Now AI generated changes are said to make it look obsolete. **The problem isn’t the pull request itself. It’s the assumption that the diff and human discussion has to remain its full content.**
+I feel old when I realize I’ve been authoring pull requests for fifteen years. The pull request has survived new frameworks, processes and companies. Now AI-generated changes are said to make it look obsolete. **The problem isn’t the pull request itself. It’s the assumption that the diff and human discussion have to remain its full content.**
 
-Let's take a step back. A pull request has always done more than show changed lines. It has served several purposes:
+Let’s take a step back. A pull request has always done more than show changed lines. It has served several purposes:
 
-* Recording a change before it reaches production for e.g. rollback purposes
+* Recording a change before it reaches production, e.g. for rollback purposes
 * Providing a second pair of eyes and a review record that can support audit requirements
 * Sharing knowledge and helping new teammates understand the codebase
 * Triggering CI, integration tests and other checks
 
-There’s a different model: ship to `main` behind feature flags, then review after changes have been pushed. That may work well for some teams. It’s a separate debate. In this discussion the question is what happens to pull requests when agents produce more code than people can reasonably review.
+There’s a different model: ship to `main` behind feature flags, then review after changes have been pushed. That may work well for some teams. It’s a separate debate. In this discussion, the question is what happens to pull requests when agents produce more code than people can reasonably review.
 
 ## The diff has become a bottleneck
 
-A change that runs into hundreds of lines costs more effort to understand as a whole and provide a meaningful code review on. It gets easier to miss a consequential detail. The number of lines is not a scientific measure of review quality, but the practical problem is familiar: **attention is finite and anything larger than 2 Lines of Code (LoC) quickly receives a LGTM.**
+A change that runs into hundreds of lines takes more effort to understand as a whole and to review meaningfully. It gets easier to miss a consequential detail. The number of lines is not a scientific measure of review quality, but the practical problem is familiar: **attention is finite, and anything larger than 2 lines of code (LoC) quickly receives an LGTM.**
 
-Entering agents, they can produce thousands of lines in one run. This is partly problem in the way of working. A person can direct an agent to make smaller, focused changes and open a sequence of pull requests. But when a large change arrives all at once, the old review ritual doesn’t make it manageable. The code is still there to inspect, but the reviewers will not be able to fully grasp it. This is when pull request review becomes a theatre than being a useful process.
+Enter agents: they can produce thousands of lines in one run. This is partly a problem with the way of working. A person can direct an agent to make smaller, focused changes and open a sequence of pull requests. But when a large change arrives all at once, the old review ritual doesn’t make it manageable. The code is still there to inspect, but the reviewers will not be able to fully grasp it. This is when pull request review becomes theatre rather than a useful process.
 
 ## A transcript isn’t a better diff
 
@@ -27,7 +27,7 @@ One proposed alternative is to review the prompt or the full history of the agen
 
 But a raw trace is not easy to review. It may contain tool calls, intermediate code, repeated attempts and output that mattered to the agent but not to the final change. Reading all of it can be harder than reading the diff.
 
-And the trace cannot replace the code. Run the same prompts again and a non deterministic system may produce a different result. **The code in the pull request is the record of what was actually built.** The prompt and trace are context for understanding it.
+And the trace cannot replace the code. Run the same prompts again and a non-deterministic system may produce a different result. **The code in the pull request is the record of what was actually built.** The prompt and trace are context for understanding it.
 
 ## Let the reviewer enter the session
 
@@ -42,7 +42,7 @@ The pull request still shows the code and the shape of the change. A reviewer co
 
 The discussion stays connected to the work that produced the code. The reviewer can ask for a change in context instead of leaving a comment and waiting for another round of review.
 
-## Similar ideas by other projects
+## Similar ideas from other projects
 
 [Zed’s Delta](https://zed.dev/blog/introducing-delta) brings code and the conversations that produced it together. Its DeltaDB records edits between commits alongside the human and agent messages. Teammates can join a thread, ask the agent about a decision and explore a change in a separate review thread without disrupting the original work. Delta is not simply a way to attach a session to a conventional pull request. It is exploring a collaborative workflow in which threads and review threads can take the place of pull requests.
 
