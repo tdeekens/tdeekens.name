@@ -10,7 +10,7 @@ const ANNOUNCEMENTS = {
 /**
  * A toggle button with a fixed name and `aria-pressed`, which screen readers
  * announce reliably ("Dark theme, toggle button, pressed"). Changes not made
- * via the focused button (the `t` shortcut, another tab) are announced
+ * via the focused button (the `t` shortcut, another tab, the OS) are announced
  * through a polite live region instead.
  *
  * Both icons are always rendered and CSS picks one from `<html data-theme>`,

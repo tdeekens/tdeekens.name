@@ -8,8 +8,10 @@ export const THEME_COLORS: Record<TTheme, string> = {
   dark: '#1f1f28',
 };
 
-/** Shown until the visitor picks a theme. The OS preference is ignored. */
-export const DEFAULT_THEME: TTheme = 'light';
+/** Used when neither a stored choice nor an OS preference exists. */
+export const FALLBACK_THEME: TTheme = 'light';
+
+const DARK_QUERY = '(prefers-color-scheme: dark)';
 
 function isTheme(value: unknown): value is TTheme {
   return value === 'light' || value === 'dark';
@@ -22,6 +24,11 @@ export function getStoredTheme(): TTheme | null {
   } catch {
     return null;
   }
+}
+
+/** The OS preference: dark only if the device asks for it, else light. */
+export function getSystemTheme(): TTheme {
+  return window.matchMedia(DARK_QUERY).matches ? 'dark' : FALLBACK_THEME;
 }
 
 export function getAppliedTheme(): TTheme | undefined {
@@ -67,16 +74,30 @@ export function toggleTheme() {
   setTheme(getAppliedTheme() === 'dark' ? 'light' : 'dark');
 }
 
-function onStorage(event: StorageEvent) {
-  if (event.key === THEME_STORAGE_KEY || event.key === null) {
-    applyTheme(getStoredTheme() ?? DEFAULT_THEME);
+function onSystemChange() {
+  if (!getStoredTheme()) {
+    applyTheme(getSystemTheme());
   }
 }
 
-/** Mirrors choices made in other tabs. Returns a cleanup function. */
-export function syncThemeAcrossTabs(): () => void {
+function onStorage(event: StorageEvent) {
+  if (event.key === THEME_STORAGE_KEY || event.key === null) {
+    applyTheme(getStoredTheme() ?? getSystemTheme());
+  }
+}
+
+/**
+ * Follows OS changes until the visitor picks a theme, and mirrors choices made
+ * in other tabs. Returns a cleanup function.
+ */
+export function watchThemeSources(): () => void {
+  const media = window.matchMedia(DARK_QUERY);
+  media.addEventListener('change', onSystemChange);
   window.addEventListener('storage', onStorage);
-  return () => window.removeEventListener('storage', onStorage);
+  return () => {
+    media.removeEventListener('change', onSystemChange);
+    window.removeEventListener('storage', onStorage);
+  };
 }
 
 /**
@@ -85,6 +106,8 @@ export function syncThemeAcrossTabs(): () => void {
  */
 export const themeInitScript = `(function(){var t;try{t=localStorage.getItem(${JSON.stringify(
   THEME_STORAGE_KEY,
-)})}catch(e){}if(t!=="light"&&t!=="dark"){t=${JSON.stringify(DEFAULT_THEME)}}document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute("content",t==="dark"?${JSON.stringify(
+)})}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia(${JSON.stringify(
+  DARK_QUERY,
+)}).matches?"dark":${JSON.stringify(FALLBACK_THEME)}}document.documentElement.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m){m.setAttribute("content",t==="dark"?${JSON.stringify(
   THEME_COLORS.dark,
 )}:${JSON.stringify(THEME_COLORS.light)})}})();`;

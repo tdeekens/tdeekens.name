@@ -2,23 +2,42 @@ import { afterEach, beforeEach, describe, expect, it } from '@jest/globals';
 
 import {
   applyTheme,
-  DEFAULT_THEME,
+  FALLBACK_THEME,
   getStoredTheme,
+  getSystemTheme,
   setTheme,
-  syncThemeAcrossTabs,
   THEME_COLORS,
   THEME_STORAGE_KEY,
   themeInitScript,
   toggleTheme,
+  watchThemeSources,
 } from './theme';
 
-function mockPrefersDark(prefersDark: boolean) {
+type TListener = () => void;
+
+/** `null` models a device without a colour-scheme preference. */
+function mockPrefersDark(prefersDark: boolean | null) {
+  const listeners = new Set<TListener>();
+  let current = prefersDark;
   window.matchMedia = ((query: string) => ({
-    matches: query.includes('dark') ? prefersDark : !prefersDark,
+    get matches() {
+      if (current === null) {
+        return false;
+      }
+      return query.includes('dark') ? current : !current;
+    },
     media: query,
-    addEventListener: () => {},
-    removeEventListener: () => {},
+    addEventListener: (_: string, l: TListener) => listeners.add(l),
+    removeEventListener: (_: string, l: TListener) => listeners.delete(l),
   })) as unknown as typeof window.matchMedia;
+  return {
+    change(next: boolean) {
+      current = next;
+      for (const l of listeners) {
+        l();
+      }
+    },
+  };
 }
 
 const originalMatchMedia = window.matchMedia;
@@ -73,10 +92,38 @@ describe('setTheme / toggleTheme', () => {
 const fireStorage = () =>
   window.dispatchEvent(new StorageEvent('storage', { key: THEME_STORAGE_KEY }));
 
-describe('syncThemeAcrossTabs', () => {
-  it('mirrors choices made in other tabs', () => {
+describe('getSystemTheme', () => {
+  it('follows the device preference, falling back to light', () => {
+    mockPrefersDark(true);
+    expect(getSystemTheme()).toBe('dark');
+    mockPrefersDark(false);
+    expect(getSystemTheme()).toBe('light');
+    mockPrefersDark(null);
+    expect(getSystemTheme()).toBe(FALLBACK_THEME);
+    expect(FALLBACK_THEME).toBe('light');
+  });
+});
+
+describe('watchThemeSources', () => {
+  it('follows OS changes until a choice is stored', () => {
+    const media = mockPrefersDark(false);
     applyTheme('light');
-    const stop = syncThemeAcrossTabs();
+    const stop = watchThemeSources();
+
+    media.change(true);
+    expect(appliedTheme()).toBe('dark');
+
+    setTheme('light');
+    media.change(true);
+    expect(appliedTheme()).toBe('light');
+
+    stop();
+  });
+
+  it('mirrors choices made in other tabs', () => {
+    mockPrefersDark(false);
+    applyTheme('light');
+    const stop = watchThemeSources();
 
     localStorage.setItem(THEME_STORAGE_KEY, 'dark');
     fireStorage();
@@ -85,35 +132,43 @@ describe('syncThemeAcrossTabs', () => {
     stop();
   });
 
-  it('falls back to the default when another tab clears the choice', () => {
-    applyTheme('dark');
-    const stop = syncThemeAcrossTabs();
+  it('falls back to the OS when another tab clears the choice', () => {
+    mockPrefersDark(true);
+    applyTheme('light');
+    const stop = watchThemeSources();
 
     fireStorage();
-    expect(appliedTheme()).toBe(DEFAULT_THEME);
+    expect(appliedTheme()).toBe('dark');
 
     stop();
   });
 });
 
 describe('themeInitScript', () => {
-  it('defaults to light', () => {
-    expect(DEFAULT_THEME).toBe('light');
+  it('follows a dark device preference', () => {
+    mockPrefersDark(true);
+    run();
+    expect(appliedTheme()).toBe('dark');
+    expect(metaColor()).toBe(THEME_COLORS.dark);
+  });
+
+  it('follows a light device preference', () => {
+    mockPrefersDark(false);
     run();
     expect(appliedTheme()).toBe('light');
     expect(metaColor()).toBe(THEME_COLORS.light);
   });
 
-  it('ignores the OS preference', () => {
-    mockPrefersDark(true);
+  it('falls back to light without a device preference', () => {
+    mockPrefersDark(null);
     run();
     expect(appliedTheme()).toBe('light');
   });
 
-  it('applies a stored choice', () => {
-    localStorage.setItem(THEME_STORAGE_KEY, 'dark');
+  it('prefers a stored choice over the device', () => {
+    mockPrefersDark(true);
+    localStorage.setItem(THEME_STORAGE_KEY, 'light');
     run();
-    expect(appliedTheme()).toBe('dark');
-    expect(metaColor()).toBe(THEME_COLORS.dark);
+    expect(appliedTheme()).toBe('light');
   });
 });
