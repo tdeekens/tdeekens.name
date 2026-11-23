@@ -34,7 +34,7 @@ function TableOfContents() {
       <summary className="cursor-pointer underline hover:no-underline focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus">
         Jump to section
       </summary>
-      <ul className="absolute right-0 z-50 mt-2 w-64 bg-surface border border-line shadow-lg py-2">
+      <ul className="absolute right-0 z-50 mt-2 w-64 bg-surface border border-control-line shadow-lg py-2">
         {SECTIONS.map((section) => (
           <li key={section.id}>
             <a

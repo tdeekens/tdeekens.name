@@ -38,7 +38,7 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
       <form
         onSubmit={onFormSubmit}
         aria-label="Ask Tobias a question"
-        className="flex border border-line focus-within:ring-2 focus-within:ring-focus focus-within:ring-offset-1 focus-within:ring-offset-bg"
+        className="flex border border-control-line focus-within:ring-2 focus-within:ring-focus focus-within:ring-offset-1 focus-within:ring-offset-bg"
       >
         <input
           ref={props.inputRef}
@@ -49,13 +49,13 @@ function AskAboutMeShell(props: TAskAboutMeShellProps) {
           placeholder={config.placeholder}
           maxLength={2000}
           disabled={props.isBusy}
-          className="flex-1 px-4 py-2 outline-hidden disabled:opacity-50"
+          className="flex-1 px-4 py-2 outline-hidden placeholder:text-muted disabled:opacity-50"
           aria-label={config.inputLabel}
         />
         <button
           type="submit"
           disabled={props.isBusy || props.input.trim().length === 0}
-          className="px-4 py-2 border-l border-line hover:bg-fg hover:text-bg transition-colors focus-visible:outline-hidden focus-visible:bg-fg focus-visible:text-bg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
+          className="px-4 py-2 border-l border-control-line hover:bg-fg hover:text-bg transition-colors focus-visible:outline-hidden focus-visible:bg-fg focus-visible:text-bg disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-current"
         >
           {props.isBusy ? 'Sending…' : 'Send'}
         </button>
