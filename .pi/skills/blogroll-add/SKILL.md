@@ -45,8 +45,12 @@ Mirror style: "RSCs became a paradigm you orbit around, not a primitive you reac
 for. TanStack reframes them as just streams of data the client fetches, caches,
 and composes."
 
-Tags must come from: frontend, engineering, leadership, ai, career.
-Map coding -> engineering or frontend (judge by content). Pick 1-2 tags.
+Tags must come from: ai, agents, ai-impact, frontend, react, performance,
+testing, security, architecture, infrastructure, open-source, engineering,
+leadership, org-design, delivery, career, wellbeing.
+Pick 1-3 tags, most relevant first. Prefer specific tags; use engineering only
+if no specific technical tag fits. agents/ai-impact imply ai; react implies
+frontend (add them when there is room).
 
 Output ONLY JSON. Items: {title, href, author, teaser, tags}. Concise title,
 drop site suffixes like " | Medium" or " - MDN Blog". Do not include addedAt.
@@ -75,7 +79,7 @@ Entry shape (2 spaces before `{`, 4 spaces before fields):
   },
 ```
 
-`addedAt` is mandatory: use the current time as ISO 8601. All entries in one run share it; it becomes the RSS `pubDate`. Drop the `tags:` line if no tags apply. Do not hand-escape quotes; prettier handles quote choice.
+`addedAt` is mandatory: use the current time as ISO 8601. All entries in one run share it; it becomes the RSS `pubDate`. Every entry gets 1-3 tags. Do not hand-escape quotes; prettier handles quote choice.
 
 ### 5. Report back
 
@@ -91,17 +95,33 @@ One sentence: how many added, how many skipped and why (tweets, dupes, fetch fai
 
 If a teaser breaks these, rewrite it inline rather than re-running the child.
 
-## Tag mapping
+## Tags
 
-| Anybox     | Blogroll                                                |
-| ---------- | ------------------------------------------------------- |
-| coding     | engineering (or frontend if web/UI-focused)             |
-| ai         | ai                                                      |
-| leadership | leadership                                              |
-| a11y       | frontend                                                |
-| (none)     | infer from content                                      |
+The tags drive the filter bar on `/blogroll`. Use only these:
 
-Limit to 1-2 tags. Only use the allowed set.
+| Tag            | Covers                                                        |
+| -------------- | ------------------------------------------------------------- |
+| ai             | AI broadly: models, products, economics of AI                 |
+| agents         | AI and coding agents, agent harnesses, sandboxes, MCP         |
+| ai-impact      | How AI changes jobs, teams, productivity, hiring              |
+| frontend       | Browser UI, CSS, web platform, frontend tooling               |
+| react          | React, React Server Components, Next.js                       |
+| performance    | Speed, rendering cost, bundle size, latency                   |
+| testing        | Testing, code review, correctness and quality checks          |
+| security       | Security, supply chain, privacy                               |
+| architecture   | System and codebase design, tech debt, migrations             |
+| infrastructure | Platforms, production systems, observability, hosting         |
+| open-source    | Open-source maintenance, packages, ecosystems                 |
+| engineering    | Fallback for general engineering no specific tag covers       |
+| leadership     | Leading and managing people, influence, communication, culture |
+| org-design     | Team and company structure, planning, reorgs                  |
+| delivery       | Planning, shipping, process, product outcomes                 |
+| career         | Individual growth, reputation, job market                     |
+| wellbeing      | Stress, burnout, boundaries, sustainable pace                 |
+
+Anybox tags are hints only (e.g. `coding` usually maps to a specific technical tag, `a11y` to frontend); judge by the post's content.
+
+Rules: 1-3 tags, most relevant first. `agents` and `ai-impact` imply `ai`; `react` implies `frontend` (add the umbrella when there is room).
 
 ## Edge cases
 
