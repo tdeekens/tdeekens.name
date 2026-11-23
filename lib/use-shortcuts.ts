@@ -1,4 +1,4 @@
-import { shortcuts } from '@lib/shortcuts';
+import { shortcutsFor } from '@lib/shortcuts';
 import { useShortcutsEnabled } from '@lib/shortcuts-preference';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -33,12 +33,15 @@ export function useShortcuts(onHelp: () => void) {
       },
     };
 
-    for (const shortcut of shortcuts) {
+    for (const shortcut of shortcutsFor(router.pathname)) {
       map[shortcut.keys] = (e) => {
         if (isEditableTarget(e.target)) {
           return;
         }
         if (shortcut.action) {
+          // Keeps e.g. `/` from being typed into the field it focuses, and
+          // from opening Firefox's quick find.
+          e.preventDefault();
           shortcut.action();
           return;
         }

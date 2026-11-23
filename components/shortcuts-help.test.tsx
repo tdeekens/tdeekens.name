@@ -14,7 +14,7 @@ beforeEach(() => {
 
 describe('ShortcutsHelp', () => {
   it('opens as a labelled dialog', () => {
-    render(<ShortcutsHelp open onClose={() => {}} />);
+    render(<ShortcutsHelp open pathname="/" onClose={() => {}} />);
     expect(
       screen.getByRole('dialog', { name: 'Keyboard shortcuts' }),
     ).toBeInTheDocument();
@@ -22,7 +22,7 @@ describe('ShortcutsHelp', () => {
 
   it('turns single-key shortcuts off and on again', async () => {
     const user = userEvent.setup();
-    render(<ShortcutsHelp open onClose={() => {}} />);
+    render(<ShortcutsHelp open pathname="/" onClose={() => {}} />);
     const checkbox = screen.getByRole('checkbox', {
       name: 'Enable single-key shortcuts',
     });
@@ -37,10 +37,20 @@ describe('ShortcutsHelp', () => {
     expect(getShortcutsEnabled()).toBe(true);
   });
 
+  it('lists page-specific shortcuts only on their page', () => {
+    const { rerender } = render(
+      <ShortcutsHelp open pathname="/" onClose={() => {}} />,
+    );
+    expect(screen.queryByText('Search the blogroll')).not.toBeInTheDocument();
+
+    rerender(<ShortcutsHelp open pathname="/blogroll" onClose={() => {}} />);
+    expect(screen.getByText('Search the blogroll')).toBeInTheDocument();
+  });
+
   it('closes via the close button', async () => {
     const user = userEvent.setup();
     const onClose = jest.fn();
-    render(<ShortcutsHelp open onClose={onClose} />);
+    render(<ShortcutsHelp open pathname="/" onClose={onClose} />);
 
     await user.click(screen.getByRole('button', { name: 'Close (esc)' }));
     expect(onClose).toHaveBeenCalled();

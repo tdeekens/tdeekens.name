@@ -1,4 +1,4 @@
-import { shortcuts } from '@lib/shortcuts';
+import { shortcutsFor } from '@lib/shortcuts';
 import {
   setShortcutsEnabled,
   useShortcutsEnabled,
@@ -8,12 +8,9 @@ import { useEffect, useRef } from 'react';
 type TShortcutsHelpProps = {
   open: boolean;
   onClose: () => void;
+  /** Current route; page-specific shortcuts are listed only there. */
+  pathname: string;
 };
-
-const rows = [
-  ...shortcuts.map((s) => ({ keys: s.keys, label: s.label })),
-  { keys: '?', label: 'Show this help' },
-];
 
 /**
  * Native modal `<dialog>`: the browser traps focus, makes the page inert,
@@ -22,6 +19,13 @@ const rows = [
 function ShortcutsHelp(props: TShortcutsHelpProps) {
   const ref = useRef<HTMLDialogElement>(null);
   const enabled = useShortcutsEnabled();
+  const rows = [
+    ...shortcutsFor(props.pathname).map((s) => ({
+      keys: s.keys,
+      label: s.label,
+    })),
+    { keys: '?', label: 'Show this help' },
+  ];
 
   useEffect(() => {
     const dialog = ref.current;
