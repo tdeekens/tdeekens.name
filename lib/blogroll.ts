@@ -9,6 +9,241 @@ export type TBlogrollEntry = {
 
 export const blogroll: TBlogrollEntry[] = [
   {
+    title:
+      'More Code, More Chaos: What AI Tools Are Doing to Engineering Teams',
+    href: 'https://authenticmanager.substack.com/p/more-code-more-chaos-what-ai-tools',
+    author: 'Sev',
+    teaser:
+      'AI coding tools multiply pull requests, spread engineers across more features, and replace hallway questions with chats to Claude. The time saved quietly turns into more spikes, more tickets, and a board no manager can track.',
+    tags: ['ai', 'leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'How to Set and Protect Your Boundaries at Work',
+    href: 'https://news.theuncommonexecutive.com/p/how-to-set-boundaries-when-everything',
+    author: 'Yue Zhao',
+    teaser:
+      'Boundaries fail when asking for help feels like failure or the hero identity takes over. Reframed as tradeoffs rather than refusals, saying no becomes a core senior leadership skill, not a personal weakness.',
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'The Coffee Bit',
+    href: 'https://erikzaadi.com/2026/11/02/the-coffee-bit/',
+    author: 'Erik Zaadi',
+    teaser:
+      'People rarely quit because they hate the job. A quiet internal flag flips to open for coffee when 1:1s dwindle, and a human-first opener, continuous feedback, and a visible next rung keep it at zero.',
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'How AI Will Change Engineering Leadership in 2027',
+    href: 'https://bjorg.bjornroche.com/management/ai-in-2027/',
+    author: 'Bjorn Roche',
+    teaser:
+      'AI works best layered onto workflows that already function, swapping humans out of a proven loop rather than inventing from scratch. Prototypes now beat designs, but judgement, big migrations, and resisting slop remain stubbornly human work.',
+    tags: ['ai', 'leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Express Is Now Observable by Design',
+    href: 'https://expressjs.com/en/blog/2026-11-17-express-tracing-channels/',
+    author: 'Abdelrahman Awad',
+    teaser:
+      'Express observability has long relied on monkey patching, which breaks on bundling, load order, and handler signatures. The router now publishes a Node TracingChannel for every middleware and handler, letting APMs subscribe without touching the app.',
+    tags: ['engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'External sandboxes for coding agents',
+    href: 'https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/',
+    author: 'Simon Willison',
+    teaser:
+      'The external sandbox pattern keeps the agent outside and sends only code execution into an isolated box behind a localhost API. Three implementations (v86, Apple Containers, Quicksand) add an allow-list proxy and credential swapping, making local models safer to try.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'vlt is open to everyone: a free npm registry, no account, no token',
+    href: 'https://www.vlt.io/blog/free-public-npm-mirror',
+    author: 'vlt',
+    teaser:
+      "Installing from vlt's npm mirror used to mean an account, a token, and an auth line in .npmrc. It now serves npm, pnpm, yarn, bun, and deno with one registry flag, and strips credentials so stale tokens never cause a 401.",
+    tags: ['engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Introducing the Cross-Origin Storage API',
+    href: 'https://developer.chrome.com/blog/introducing-cross-origin-storage',
+    author: 'Thomas Steiner',
+    teaser:
+      'Every site downloads its own copy of the same React build, Flutter Wasm runtime, or multi-gigabyte AI model. The proposed Cross-Origin Storage API keys files by hash so one cached copy can serve many origins.',
+    tags: ['frontend'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Attackers are targeting the AI tools that produce our software',
+    href: 'https://www.thoughtworks.com/insights/blog/generative-ai/attackers-are-targeting-the-ai-tools-that-produce-our-software',
+    author: 'Jim Gumbley and Gautam Koul',
+    teaser:
+      'Coding assistants, editors, and MCP servers sit next to source code, cloud credentials, and deploy pipelines, making them prime supply chain targets. The fixes look familiar: zero trust for dependencies, pinned updates, and a smaller blast radius.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Kitesurf is now open source',
+    href: 'https://blog.cloudflare.com/kitesurf-open-source/',
+    author: 'Cloudflare',
+    teaser:
+      'Kitesurf, a browser for AI agents, parses HTML, runs page JavaScript, and renders screenshots on Workers with no browser container. Now Apache 2.0 licensed, it can run locally, be driven over CDP with Puppeteer, or deploy to a personal Cloudflare account.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: "Don't anthropomorphize big tech companies",
+    href: 'https://www.seangoedecke.com/dont-anthropomorphize-big-tech-companies/',
+    author: 'Sean Goedecke',
+    teaser:
+      "Companies behave like machines, not people: they don't reward effort, hold grudges, or owe loyalty. Treating an employer like a lawnmower makes the mismatch between months of grind and fifteen-minute wins far less maddening.",
+    tags: ['career'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Are You Unhired or Unfired?',
+    href: 'https://newsletter.drorpoleg.com/p/unhired-or-unfired',
+    author: 'Dror Poleg',
+    teaser:
+      'Nine big software firms employ about 185,000 fewer people than their old revenue-to-headcount pattern predicts. AI acts less as the cause than as the shock that forces companies to cash in productivity gains sitting idle for years.',
+    tags: ['ai', 'career'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Top 10 things AI gets wrong in web development',
+    href: 'https://developer.chrome.com/blog/top-10-things-ai-gets-wrong-in-web-dev',
+    author: 'Philip Walton',
+    teaser:
+      "Unguided coding agents pass about half of Chrome's modern web checks, versus roughly 90% with Modern Web Guidance. The misses cluster in focus management, reduced motion, form details, performance, and security, the parts that separate working UI from good UI.",
+    tags: ['frontend', 'ai'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'BrowserPod 4.0: the microVM that runs in the browser',
+    href: 'https://browserpod.io/blog/browserpod-40/',
+    author: 'Yuri Iozzelli and Stefano De Rossi',
+    teaser:
+      'A Linux-like microVM built on WebAssembly now ships as a free npm library, with no account, key, or telemetry. Splitting the paid networking proxy into an optional service removed the friction that had kept it a metered hosted product.',
+    tags: ['engineering', 'frontend'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'The Conversation Before the Conversation',
+    href: 'https://blog.kevingoldsmith.com/2026/09/30/the-conversation-before-the-conversation/',
+    author: 'Kevin Goldsmith',
+    teaser:
+      'The conversations leaders regret are rarely the hard ones but the easy ones they postponed. Being wrong costs something immediate and visible, while being right but late costs more, just slowly and out of sight.',
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Six React chart libraries against hand-written SVG',
+    href: 'https://dev.to/gusevp/six-react-chart-libraries-against-hand-written-svg-what-i-found-46ib',
+    author: 'Pavel Gusev',
+    teaser:
+      'At typical sizes, six React chart libraries and hand-written SVG all land within one frame of each other. Only at 10,000 scatter points do they split, from 24 ms for plain SVG to 3.2 seconds for nivo, with Canvas never winning.',
+    tags: ['frontend'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'All AI-generated code should be Open Source',
+    href: 'https://jakub.jankiewicz.org/blog/ai-code-open-source/',
+    author: 'Jakub T. Jankiewicz',
+    teaser:
+      'AI models were trained on scraped open source and Creative Commons code, so closing off their output looks like license laundering. Since purely machine-written code is likely not copyrightable anyway, releasing it as open source or CC0 is the consistent move.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Predictability vs Outcomes',
+    href: 'https://www.svpg.com/predictability-vs-outcomes/',
+    author: 'Marty Cagan',
+    teaser:
+      'Nobody argues output beats outcomes, yet AI-boosted teams ship more than ever while results stay scarce. The real trade-off is predictability versus outcomes, and most companies quietly pick predictability by pushing untested ideas onto dated roadmaps.',
+    tags: ['leadership', 'ai'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'We handed testing to AI. Here is what stayed human.',
+    href: 'https://highimpactengineering.substack.com/p/we-handed-testing-to-ai-here-is-what',
+    author: 'Roman Nikolaev',
+    teaser:
+      'With AI doubling merged PRs and halving peer review, QA became the last human check. A Claude Code toolkit now runs most hands-on test execution, but the verdict stays human and the team still barely keeps up.',
+    tags: ['ai', 'engineering'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'The Paradox of Collaboration: You Need Troublemakers',
+    href: 'https://mdalmijn.com/p/the-paradox-of-collaboration-you',
+    author: 'Maarten Dalmijn',
+    teaser:
+      'Friction with legal, security, or sales usually comes from everyone staying safely in their lane. Better collaboration needs troublemakers who ask pesky questions and challenge silos, while preserving the relationship over winning any single battle.',
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'How to Sequence Annual Planning and Reorgs',
+    href: 'https://news.theuncommonexecutive.com/p/how-to-sequence-annual-planning-and',
+    author: 'Yue Zhao',
+    teaser:
+      'Bottom-up plans from existing teams mirror the current org, while reorganizing first invites a second reorg weeks later. Temporary planning teams per investment area break the chicken-and-egg loop without touching reporting lines or stalling ongoing work.',
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'How Can I Recover from Sustained Stress and Avoid Exhaustion?',
+    href: 'https://andiroberts.com/leadership-questions/recover-from-sustained-stress',
+    author: 'Andi Roberts',
+    teaser:
+      'Recovery from sustained executive stress has to match the load, not just an evening away from the laptop. Sleep comes first, then early breaks, varied forms of rest, a lighter load, and recovery scheduled before the diary fills.',
+    tags: ['leadership', 'career'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'State of Devs 2026',
+    href: 'https://2026.stateofdevs.com/en-US',
+    author: 'Devographics',
+    teaser:
+      'Nearly half of 5,463 respondents report job insecurity, and two thirds feel less motivated and more cynical. The first Devographics look at mental state reads like a burnout report, with AI fueling uncertainty rather than relief.',
+    tags: ['career', 'ai'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: "I'm addicted to being useful",
+    href: 'https://www.seangoedecke.com/addicted-to-being-useful/',
+    author: 'Sean Goedecke',
+    teaser:
+      'Plenty of engineers are driven less by money or mission than by a compulsion to solve problems someone else is stuck on. The post frames that urge as a dysfunction worth harnessing, steered toward management chains and away from ticket queues.',
+    tags: ['career'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'The rule of no surprises',
+    href: 'https://ben.balter.com/2026/10/29/the-rule-of-no-surprises/',
+    author: 'Ben Balter',
+    teaser:
+      "Setbacks are survivable, but hearing about them secondhand is what breaks trust. If news would surprise someone later, it belongs in front of them now, and a manager's reaction sets the price of every future warning.",
+    tags: ['leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
+    title: 'Fast and slow ways to improve your reputation',
+    href: 'https://www.seangoedecke.com/how-to-get-assigned-interesting-work/',
+    author: 'Sean Goedecke',
+    teaser:
+      'Managers hand high-profile projects to proven engineers because a failed launch hurts their own reputation, locking everyone else out. The slow fix is shipping small things reliably, while side bets, skip-level trust, and impressing peers work faster.',
+    tags: ['career', 'leadership'],
+    addedAt: '2026-11-23T08:51:28.000Z',
+  },
+  {
     title: "Nothing Installs at Our Company Until It's a Week Old",
     href: 'https://brunoj.com/nothing-installs-at-our-company-until-its-a-week-old/',
     author: 'Bruno J.',
