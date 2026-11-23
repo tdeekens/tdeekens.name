@@ -2,8 +2,9 @@ export default {
   // Lint and apply safe fixes; allow non-lintable files (e.g. .md, .json)
   '*': [
     'oxlint --fix --no-error-on-unmatched-pattern',
-    // Format and sort imports
-    'oxfmt --write',
+    // Format and sort imports; allow commits that only touch files oxfmt
+    // ignores (e.g. .mdx posts)
+    'oxfmt --write --no-error-on-unmatched-pattern',
   ],
   // Type-check the whole project instead of only the staged files, because a
   // staged change can break the types of a file that is not part of the commit.
