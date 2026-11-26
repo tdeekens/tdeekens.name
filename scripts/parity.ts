@@ -5,8 +5,8 @@
  * compared before a cutover.
  *
  *   pnpm parity snapshot https://www.tdeekens.name parity/production.json
- *   pnpm parity snapshot https://staging.tdeekens.name parity/staging.json
- *   pnpm parity diff parity/production.json parity/staging.json
+ *   pnpm parity snapshot https://<pullzone>.b-cdn.net parity/bunny.json
+ *   pnpm parity diff parity/production.json parity/bunny.json
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';

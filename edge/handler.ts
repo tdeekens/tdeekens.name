@@ -9,8 +9,8 @@ export type HandlerDeps = {
   /** Fetches a built file, e.g. `/bookshelf.html`, from storage. */
   fetchAsset: (path: string, method: 'GET' | 'HEAD') => Promise<Response>;
   ask: AskDeps;
-  /** True for hosts that must not be indexed, e.g. staging. */
-  isStaging: (url: URL) => boolean;
+  /** True for hosts that must not be indexed, e.g. the `*.b-cdn.net` one. */
+  isNoIndex: (url: URL) => boolean;
   /** Keeps the runtime alive until a streamed response has finished. */
   waitUntil?: (promise: Promise<unknown>) => void;
 };
@@ -73,7 +73,7 @@ export function createHandler(deps: HandlerDeps) {
     if (url.pathname === '/') {
       headers.set('Link', HOME_LINK);
     }
-    if (deps.isStaging(url)) {
+    if (deps.isNoIndex(url)) {
       headers.set('X-Robots-Tag', 'noindex, nofollow');
     }
     return new Response(response.body, {

@@ -60,7 +60,7 @@ async function main() {
         return new Response(null, { status: 404 });
       }
     },
-    isStaging: () => process.env.STAGING === '1',
+    isNoIndex: () => process.env.NOINDEX === '1',
     ask: {
       context,
       limiter: inMemoryRateLimiter(ASK_ABOUT_ME_CONFIG.rateLimit),

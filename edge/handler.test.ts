@@ -62,7 +62,7 @@ const waitUntil = vi.fn();
 
 const handle = createHandler({
   fetchAsset,
-  isStaging: (url) => url.hostname === 'staging.example.com',
+  isNoIndex: (url) => url.hostname === 'site.b-cdn.net',
   waitUntil,
   ask: {
     context,
@@ -195,15 +195,15 @@ describe('assets', () => {
   });
 });
 
-describe('staging', () => {
+describe('noindex hosts', () => {
   it('marks every response noindex', async () => {
     const response = await handle(
-      new Request('https://staging.example.com/bookshelf'),
+      new Request('https://site.b-cdn.net/bookshelf'),
     );
     expect(response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
   });
 
-  it('leaves production indexable', async () => {
+  it('leaves the real domain indexable', async () => {
     expect((await get('/bookshelf')).headers.get('x-robots-tag')).toBeNull();
   });
 });

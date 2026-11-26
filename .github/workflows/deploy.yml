@@ -1,46 +1,21 @@
 name: Deploy
 
-# main → production, staging branch or manual run → staging.
+# main → production. DNS decides whether visitors see it; before the cutover
+# the site is only reachable on the pull zone's *.b-cdn.net hostname.
 on:
   push:
-    branches: [main, staging]
+    branches: [main]
   workflow_dispatch:
-    inputs:
-      environment:
-        description: Target environment
-        type: choice
-        options: [staging, production]
-        default: staging
 
 permissions:
   contents: read
 
 jobs:
-  target:
-    runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ steps.pick.outputs.environment }}
-    steps:
-      - id: pick
-        run: |
-          if [ -n "$INPUT" ]; then
-            echo "environment=$INPUT" >> "$GITHUB_OUTPUT"
-          elif [ "$REF" = "main" ]; then
-            echo "environment=production" >> "$GITHUB_OUTPUT"
-          else
-            echo "environment=staging" >> "$GITHUB_OUTPUT"
-          fi
-        env:
-          INPUT: ${{ github.event.inputs.environment }}
-          REF: ${{ github.ref_name }}
-
   deploy:
-    needs: target
     runs-on: ubuntu-latest
-    # Each GitHub environment holds its own values for the secrets below.
-    environment: ${{ needs.target.outputs.environment }}
+    environment: production
     concurrency:
-      group: deploy-${{ needs.target.outputs.environment }}
+      group: deploy-production
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4

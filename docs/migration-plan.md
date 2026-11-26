@@ -16,8 +16,8 @@ Status: code complete on `migrate-to-astro`; Phase 0 spike and cutover need Bunn
 | AI | AI SDK via `AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL`. Gateway: **Eden AI EU endpoint**. Model: **Claude Haiku 5.5**, `maxOutputTokens: 400`. Spend limit set in Eden. |
 | Rate limit | 20 req/h per IP, shared store (Bunny Database). |
 | Host | **Bunny**: Storage (Frankfurt, optional Stockholm replica) + global CDN + Edge Script. |
-| Deploys | GitHub Actions on `main`: build → upload `dist/` → deploy edge script → purge cache. |
-| Staging | `staging.tdeekens.name`, deployed from a manual trigger or the `staging` branch. No password, `X-Robots-Tag: noindex`. Shares the production AI key and rate limits. |
+| Deploys | GitHub Actions on `main` (or manual run): build → upload `dist/` → deploy edge script → purge cache. |
+| Staging | **None.** Before the cutover, production on Bunny is only reachable on its `*.b-cdn.net` hostname, which serves `X-Robots-Tag: noindex` (`NOINDEX_HOSTS`). Local testing via `pnpm serve:local`. |
 | Analytics | **Plausible** script embedded directly. Vercel Analytics + Speed Insights removed. |
 | Logging | Structured JSON to `console`, `pino` removed. |
 | DNS | Stays at **all-inkl** (mail stays untouched). `www` → CNAME to Bunny. Apex → all-inkl HTTPS redirect to `www`. |
@@ -66,26 +66,26 @@ Run before cutover work depends on Bunny. Each item needs a pass; any failure me
    - Redirects: `/cv` → `/curriculum-vitae` (301), trailing slash → 308, plus the remaining `next.config.js` redirects.
    - `Accept: text/markdown` → serve `<path>.md` with `Content-Type: text/markdown`, `Vary: Accept`, `X-Markdown-Tokens`.
    - `POST /api/ask-about-me` → streaming chat (port of `pages/api/ask-about-me`), rate limit, schema validation.
-   - Headers: `Vary: Accept` everywhere, `Link` on `/`, `X-Robots-Tag: noindex` on staging host.
+   - Headers: `Vary: Accept` everywhere, `Link` on `/`, `X-Robots-Tag: noindex` on `NOINDEX_HOSTS`.
 3. Thin adapters: `edge/bunny.ts` (Bunny Edge Scripting entry), optional `edge/cloudflare.ts`.
 
 ## Phase 3: Tests
 
 - Vitest + jsdom, port `setupTests.ts`, component tests and `lib/` tests.
-- New: handler unit tests (redirects, markdown negotiation, rate limit, staging header).
+- New: handler unit tests (redirects, markdown negotiation, rate limit, noindex header).
 - New: `scripts/parity.ts` (see below).
 
-## Phase 4: CI + staging
+## Phase 4: CI + deploy
 
 - GitHub Actions: lint, typecheck, test, build, deploy (Bunny Storage upload, Edge Script deploy, cache purge).
-- GitHub environments `production` and `staging`, each with secrets `BUNNY_API_KEY`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_SCRIPT_ID`, `BUNNY_STATIC_PULL_ZONE_ID`, `BUNNY_SITE_PULL_ZONE_ID` and variables `SITE_URL`, `BUNNY_STORAGE_HOST` (optional).
-- Edge script env (set in Bunny): `STATIC_ORIGIN` (storage pull zone URL), `STAGING_HOSTS`, `AI_BASE_URL=https://api.eu.edenai.run/v3/v1`, `AI_MODEL=anthropic/claude-haiku-5-5`, `AI_AUTH=bearer`, `AI_API_KEY` (secret, Eden key), `BUNNY_DATABASE_URL`, `BUNNY_DATABASE_AUTH_TOKEN` (added by "Add Secrets to Edge Script").
+- GitHub environment `production` with secrets `BUNNY_API_KEY`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_SCRIPT_ID`, `BUNNY_STATIC_PULL_ZONE_ID`, `BUNNY_SITE_PULL_ZONE_ID` and variables `SITE_URL`, `BUNNY_STORAGE_HOST` (optional).
+- Edge script env (set in Bunny): `STATIC_ORIGIN` (storage pull zone URL), `NOINDEX_HOSTS` (the script pull zone's `b-cdn.net` hostname), `AI_BASE_URL=https://api.eu.edenai.run/v3/v1`, `AI_MODEL=anthropic/claude-haiku-5-5`, `AI_AUTH=bearer`, `AI_API_KEY` (secret, Eden key), `BUNNY_DATABASE_URL`, `BUNNY_DATABASE_AUTH_TOKEN` (added by "Add Secrets to Edge Script").
 - Bunny setup per environment: storage zone (Frankfurt) → pull zone A (`STATIC_ORIGIN`); standalone edge script with linked pull zone B (custom hostname) and **Run script before cache** on; database with table `rate_limits` (see `edge/rate-limit.ts`).
 - Caching: HTML `Cache-Control: public, max-age=0, s-maxage=…` + purge on deploy; `/_astro/*` `immutable`.
 
 ## Parity checklist (`scripts/parity.ts`)
 
-Run against `https://www.tdeekens.name` (baseline) and staging; diff the results.
+Run against `https://www.tdeekens.name` (baseline) and the Bunny `b-cdn.net` hostname; diff the results.
 
 - Status, `Location`, `Link`, `Vary`, `Content-Type` for: every sitemap URL, `/cv`, trailing-slash variants, an unknown path (404), `GET /api/ask-about-me` (405).
 - `Accept: text/markdown` for every sitemap URL: status, content type, normalized body.
@@ -108,7 +108,7 @@ All differences against production are intended:
 ## Cutover runbook
 
 1. A day before: lower TTL of the `www` CNAME at all-inkl (e.g. 300 s).
-2. Parity check on staging until green.
+2. Parity check on the Bunny `b-cdn.net` hostname until green.
 3. Switch `www` CNAME to the Bunny pull zone hostname; configure the apex redirect at all-inkl (HTTPS via Let's Encrypt).
 4. Watch Plausible, Bunny logs, Eden dashboard.
 5. Rollback: point `www` (and apex) back to Vercel (`cname.vercel-dns.com` / `76.76.21.21`).
@@ -117,7 +117,7 @@ All differences against production are intended:
 
 ## Manual steps (owner)
 
-- Bunny: account, storage zone, pull zone, edge script, database, `staging` pull zone.
+- Bunny: storage zone, its pull zone, edge script (with linked pull zone), database.
 - Eden AI: account, EU endpoint key, spend limit.
 - Plausible: site for `tdeekens.name`.
 - GitHub Actions secrets + Bunny edge script env vars.

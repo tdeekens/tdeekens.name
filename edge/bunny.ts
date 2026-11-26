@@ -5,7 +5,7 @@ import process from 'node:process';
  * enabled). Static files come from a Bunny Storage zone exposed through its
  * own pull zone (`STATIC_ORIGIN`). Bundled by `scripts/build-edge.ts`.
  *
- * Env: STATIC_ORIGIN, STAGING_HOSTS (comma separated), AI_PROVIDER,
+ * Env: STATIC_ORIGIN, NOINDEX_HOSTS (comma separated, e.g. the b-cdn.net host), AI_PROVIDER,
  * AI_BASE_URL, AI_API_KEY, AI_MODEL, AI_AUTH, BUNNY_DATABASE_URL,
  * BUNNY_DATABASE_AUTH_TOKEN.
  */
@@ -31,8 +31,8 @@ const env = process.env;
 const log = createLog({ host: 'bunny' });
 
 const staticOrigin = (env.STATIC_ORIGIN ?? '').replace(/\/$/, '');
-const stagingHosts = new Set(
-  (env.STAGING_HOSTS ?? '')
+const noIndexHosts = new Set(
+  (env.NOINDEX_HOSTS ?? '')
     .split(',')
     .map((host) => host.trim())
     .filter(Boolean),
@@ -64,7 +64,7 @@ function createLimiter(): AsyncRateLimiter {
 
 const handle = createHandler({
   fetchAsset: (path, method) => fetch(`${staticOrigin}${path}`, { method }),
-  isStaging: (url) => stagingHosts.has(url.hostname),
+  isNoIndex: (url) => noIndexHosts.has(url.hostname),
   waitUntil: (promise) => Bunny.v1.waitUntil(promise),
   ask: {
     context: context as CvContext,
