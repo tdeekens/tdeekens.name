@@ -70,6 +70,7 @@ async function main() {
           AI_BASE_URL: process.env.AI_BASE_URL,
           AI_API_KEY: process.env.AI_API_KEY,
           AI_MODEL: process.env.AI_MODEL,
+          AI_AUTH: process.env.AI_AUTH,
         }),
       log: createLog({ host: 'local' }),
     },

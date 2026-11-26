@@ -11,8 +11,13 @@ export type AiEnv = {
   /** Gateway endpoint, e.g. Eden AI's EU Anthropic-compatible base URL. */
   AI_BASE_URL?: string;
   AI_API_KEY?: string;
-  /** Gateway-specific model id for Claude Haiku. */
+  /** Gateway-specific model id, e.g. `anthropic/claude-haiku-5-5` on Eden. */
   AI_MODEL?: string;
+  /**
+   * `bearer` sends the key as `Authorization: Bearer` (gateways such as Eden
+   * AI); otherwise the Anthropic default `x-api-key` header is used.
+   */
+  AI_AUTH?: string;
 };
 
 export class AiConfigError extends Error {}
@@ -35,7 +40,9 @@ export function createModel(env: AiEnv): LanguageModel {
   }
 
   return createAnthropic({
-    apiKey: env.AI_API_KEY,
+    ...(env.AI_AUTH === 'bearer'
+      ? { authToken: env.AI_API_KEY }
+      : { apiKey: env.AI_API_KEY }),
     ...(env.AI_BASE_URL ? { baseURL: env.AI_BASE_URL } : {}),
   })(env.AI_MODEL);
 }

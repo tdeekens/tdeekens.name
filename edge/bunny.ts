@@ -6,7 +6,7 @@ import process from 'node:process';
  * own pull zone (`STATIC_ORIGIN`). Bundled by `scripts/build-edge.ts`.
  *
  * Env: STATIC_ORIGIN, STAGING_HOSTS (comma separated), AI_PROVIDER,
- * AI_BASE_URL, AI_API_KEY, AI_MODEL, BUNNY_DATABASE_URL,
+ * AI_BASE_URL, AI_API_KEY, AI_MODEL, AI_AUTH, BUNNY_DATABASE_URL,
  * BUNNY_DATABASE_AUTH_TOKEN.
  */
 import { connect } from '@bunny.net/database-client';
@@ -75,6 +75,7 @@ const handle = createHandler({
         AI_BASE_URL: env.AI_BASE_URL,
         AI_API_KEY: env.AI_API_KEY,
         AI_MODEL: env.AI_MODEL,
+        AI_AUTH: env.AI_AUTH,
       }),
     log,
   },
