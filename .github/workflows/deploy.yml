@@ -35,7 +35,7 @@ jobs:
       - name: Upload site to Bunny Storage
         run: pnpm tsx scripts/deploy-storage.ts
         env:
-          BUNNY_STORAGE_ZONE: ${{ secrets.BUNNY_STORAGE_ZONE }}
+          BUNNY_STORAGE_ZONE: ${{ vars.BUNNY_STORAGE_ZONE }}
           BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
           BUNNY_STORAGE_HOST: ${{ vars.BUNNY_STORAGE_HOST }}
 
@@ -43,7 +43,7 @@ jobs:
         run: pnpm tsx scripts/deploy-edge.ts
         env:
           BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
-          BUNNY_SCRIPT_ID: ${{ secrets.BUNNY_SCRIPT_ID }}
+          BUNNY_SCRIPT_ID: ${{ vars.BUNNY_SCRIPT_ID }}
 
       - name: Purge CDN caches
         run: |
@@ -54,5 +54,5 @@ jobs:
           done
         env:
           BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
-          STATIC_PULL_ZONE_ID: ${{ secrets.BUNNY_STATIC_PULL_ZONE_ID }}
-          SITE_PULL_ZONE_ID: ${{ secrets.BUNNY_SITE_PULL_ZONE_ID }}
+          STATIC_PULL_ZONE_ID: ${{ vars.BUNNY_STATIC_PULL_ZONE_ID }}
+          SITE_PULL_ZONE_ID: ${{ vars.BUNNY_SITE_PULL_ZONE_ID }}

@@ -78,7 +78,7 @@ Run before cutover work depends on Bunny. Each item needs a pass; any failure me
 ## Phase 4: CI + deploy
 
 - GitHub Actions: lint, typecheck, test, build, deploy (Bunny Storage upload, Edge Script deploy, cache purge).
-- GitHub environment `production` with secrets `BUNNY_API_KEY`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_SCRIPT_ID`, `BUNNY_STATIC_PULL_ZONE_ID`, `BUNNY_SITE_PULL_ZONE_ID` and variables `SITE_URL`, `BUNNY_STORAGE_HOST` (optional).
+- GitHub environment `production`: secrets `BUNNY_API_KEY`, `BUNNY_STORAGE_PASSWORD`; variables `BUNNY_STORAGE_ZONE`, `BUNNY_SCRIPT_ID`, `BUNNY_STATIC_PULL_ZONE_ID`, `BUNNY_SITE_PULL_ZONE_ID`, `SITE_URL`, `BUNNY_STORAGE_HOST` (optional).
 - Edge script env (set in Bunny): `STATIC_ORIGIN` (storage pull zone URL), `NOINDEX_HOSTS` (the script pull zone's `b-cdn.net` hostname), `AI_BASE_URL=https://api.eu.edenai.run/v3/v1`, `AI_MODEL=anthropic/claude-haiku-5-5`, `AI_AUTH=bearer`, `AI_API_KEY` (secret, Eden key), `BUNNY_DATABASE_URL`, `BUNNY_DATABASE_AUTH_TOKEN` (added by "Add Secrets to Edge Script").
 - Bunny setup per environment: storage zone (Frankfurt) → pull zone A (`STATIC_ORIGIN`); standalone edge script with linked pull zone B (custom hostname) and **Run script before cache** on; database with table `rate_limits` (see `edge/rate-limit.ts`).
 - Caching: HTML `Cache-Control: public, max-age=0, s-maxage=…` + purge on deploy; `/_astro/*` `immutable`.
