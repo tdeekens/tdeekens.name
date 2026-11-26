@@ -15,7 +15,8 @@ const CONCURRENCY = 8;
 
 const zone = process.env.BUNNY_STORAGE_ZONE;
 const password = process.env.BUNNY_STORAGE_PASSWORD;
-const host = process.env.BUNNY_STORAGE_HOST ?? 'storage.bunnycdn.com';
+// `||`, not `??`: GitHub passes an unset variable as an empty string.
+const host = process.env.BUNNY_STORAGE_HOST || 'storage.bunnycdn.com';
 
 const listFiles = (dir: string): string[] =>
   readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
