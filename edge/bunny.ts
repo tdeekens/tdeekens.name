@@ -24,13 +24,18 @@ import {
   sqlRateLimiter,
   withFallback,
 } from './rate-limit';
+import {
+  createStaticFetch,
+  isSelfOrigin,
+  normalizeOrigin,
+} from './static-origin';
 
 declare const Bunny: { v1: { waitUntil: (promise: Promise<unknown>) => void } };
 
 const env = process.env;
 const log = createLog({ host: 'bunny' });
 
-const staticOrigin = (env.STATIC_ORIGIN ?? '').replace(/\/$/, '');
+const staticOrigin = normalizeOrigin(env.STATIC_ORIGIN);
 const noIndexHosts = new Set(
   (env.NOINDEX_HOSTS ?? '')
     .split(',')
@@ -63,7 +68,7 @@ function createLimiter(): AsyncRateLimiter {
 }
 
 const handle = createHandler({
-  fetchAsset: (path, method) => fetch(`${staticOrigin}${path}`, { method }),
+  fetchAsset: createStaticFetch(staticOrigin, log),
   isNoIndex: (url) => noIndexHosts.has(url.hostname),
   waitUntil: (promise) => Bunny.v1.waitUntil(promise),
   ask: {
@@ -82,6 +87,10 @@ const handle = createHandler({
 });
 
 BunnySDK.net.http.serve(async (request: Request) => {
+  if (isSelfOrigin(staticOrigin, new URL(request.url))) {
+    log.error({ staticOrigin }, 'STATIC_ORIGIN points at this script (loop)');
+    return new Response('Static origin misconfigured', { status: 508 });
+  }
   try {
     return await handle(request);
   } catch (error) {
