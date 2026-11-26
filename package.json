@@ -15,7 +15,8 @@
     "prepare": "husky",
     "parity": "tsx scripts/parity.ts",
     "preview": "astro preview",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "serve:local": "tsx scripts/serve-local.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "4.0.108",

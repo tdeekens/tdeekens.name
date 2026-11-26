@@ -45,3 +45,5 @@ tsconfig.tsbuildinfo
 /dist/
 /edge/generated/
 /dist-edge/
+/parity/*
+!/parity/production.json

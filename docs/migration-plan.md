@@ -1,6 +1,6 @@
 # Migration plan: Vercel + Next.js → Astro + Bunny
 
-Status: in progress · Branch: `migrate-to-astro`
+Status: in progress (Phases 1–3 done locally) · Branch: `migrate-to-astro`
 
 ## Decisions
 
@@ -90,6 +90,18 @@ Run against `https://www.tdeekens.name` (baseline) and staging; diff the results
 - `<title>`, meta description, canonical, Open Graph tags.
 - `robots.txt`, `sitemap.xml` (URL set), `blogroll.xml` (item count).
 - Chat smoke test (opt-in flag): streaming starts, 21st request in an hour → 429.
+
+### Local parity result (`pnpm build && pnpm serve:local`)
+
+All differences against production are intended:
+
+| Difference | Why |
+|---|---|
+| Sitemap gains `/posts/the-pull-request-isnt-dead-the-diff-isnt-enough` | Production's sitemap is stale; the post is live and not a draft. |
+| `Vary`: Next.js RSC values → `Accept` | No React Server Components any more. |
+| Post `<title>`s: empty → `Tobias Deekens (@tdeekens) - <title>` | Production lost post titles (bug). |
+| Redirects have no `Content-Type` | Empty redirect bodies. |
+| Markdown ~34 words shorter per page, image URLs `/me.jpg` instead of `/_next/image?…` | The keyboard-shortcuts dialog no longer leaks into markdown and chat context. |
 
 ## Cutover runbook
 

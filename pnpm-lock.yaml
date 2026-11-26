@@ -289,7 +289,7 @@ importers:
         specifier: 10.7.0
         version: 10.7.0(postcss@8.5.33)
       esbuild:
-        specifier: ^0.28.2
+        specifier: 0.28.2
         version: 0.28.2
       husky:
         specifier: 9.1.7
