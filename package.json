@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit --skipLibCheck",
     "css:dev": "TAILWIND_MODE=watch postcss ./styles/tailwind.css -o ./styles/globals.css --watch",
     "css:build": "postcss ./styles/tailwind.css -o ./styles/globals.css",
-    "prepare": "husky"
+    "prepare": "husky",
+    "parity": "tsx scripts/parity.ts"
   },
   "dependencies": {
     "@ai-sdk/react": "4.0.181",

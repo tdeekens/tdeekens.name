@@ -1,0 +1,195 @@
+{
+  "baseUrl": "https://www.tdeekens.name",
+  "takenAt": "2026-11-26T09:22:59.550Z",
+  "sitemapUrls": [
+    "/",
+    "/blogroll",
+    "/bookshelf",
+    "/cooking-diary",
+    "/curriculum-vitae",
+    "/jukebox",
+    "/nonsense",
+    "/posts/a-post-about-bitcoins",
+    "/posts/boundaries-of-code-review-or-who-to-involve",
+    "/posts/the-fear-and-addiction-within-gtd-getting-things-done",
+    "/posts/the-threat-of-the-standoff"
+  ],
+  "robotsTxt": "# *\nUser-agent: *\nContent-Signal: ai-train=no, search=yes, ai-input=no\nAllow: /\n\n# Host\nHost: https://www.tdeekens.name\n\n# Sitemaps\nSitemap: https://www.tdeekens.name/sitemap.xml",
+  "blogrollItems": 304,
+  "html": {
+    "/": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "link": "</sitemap.xml>; rel=\"index\"; type=\"application/xml\", </robots.txt>; rel=\"service-meta\"; type=\"text/plain\"",
+      "title": "Tobias Deekens (@tdeekens)"
+    },
+    "/blogroll": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Tobias Deekens (@tdeekens) - Blogroll"
+    },
+    "/bookshelf": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Tobias Deekens (@tdeekens) - Bookshelf"
+    },
+    "/cooking-diary": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Tobias Deekens (@tdeekens) - Cooking diary"
+    },
+    "/curriculum-vitae": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Curriculum vitae of Tobias Deekens"
+    },
+    "/jukebox": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Tobias Deekens (@tdeekens) - Jukebox"
+    },
+    "/nonsense": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "Tobias Deekens (@tdeekens) - Nonsense"
+    },
+    "/posts/a-post-about-bitcoins": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "title": ""
+    },
+    "/posts/boundaries-of-code-review-or-who-to-involve": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "title": ""
+    },
+    "/posts/the-fear-and-addiction-within-gtd-getting-things-done": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "title": ""
+    },
+    "/posts/the-threat-of-the-standoff": {
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "title": ""
+    },
+    "/cv": {
+      "status": 308,
+      "location": "/curriculum-vitae",
+      "contentType": "text/plain",
+      "vary": "Accept"
+    },
+    "/bookshelf/": {
+      "status": 308,
+      "location": "/bookshelf",
+      "contentType": "text/plain"
+    },
+    "/posts/a-post-about-bitcoins/": {
+      "status": 308,
+      "location": "/posts/a-post-about-bitcoins",
+      "contentType": "text/plain"
+    },
+    "/this-page-does-not-exist": {
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "vary": "Accept",
+      "title": "404: This page could not be found"
+    },
+    "/api/ask-about-me": {
+      "status": 405,
+      "contentType": "application/json; charset=utf-8",
+      "vary": "Accept"
+    }
+  },
+  "markdown": {
+    "/": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "link": "</sitemap.xml>; rel=\"index\"; type=\"application/xml\", </robots.txt>; rel=\"service-meta\"; type=\"text/plain\"",
+      "markdownWords": 337,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens)\" language: \"en\" --- Tobias Deekens (@tdeekens) ![@tdeekens avatar](/_next/image?u"
+    },
+    "/blogroll": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 11911,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens) - Blogroll\" language: \"en\" --- Tobias Deekens (@tdeekens) - Blogroll [![@tdeekens"
+    },
+    "/bookshelf": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 1592,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens) - Bookshelf\" language: \"en\" --- Tobias Deekens (@tdeekens) - Bookshelf [![@tdeeke"
+    },
+    "/cooking-diary": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 318,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens) - Cooking diary\" language: \"en\" --- Tobias Deekens (@tdeekens) - Cooking diary [!"
+    },
+    "/curriculum-vitae": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 3464,
+      "markdownStart": "--- title: \"Curriculum vitae of Tobias Deekens\" language: \"en\" --- Curriculum vitae of Tobias Deekens [![@tdeekens avata"
+    },
+    "/jukebox": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 656,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens) - Jukebox\" language: \"en\" --- Tobias Deekens (@tdeekens) - Jukebox [![@tdeekens a"
+    },
+    "/nonsense": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 211,
+      "markdownStart": "--- title: \"Tobias Deekens (@tdeekens) - Nonsense\" language: \"en\" --- Tobias Deekens (@tdeekens) - Nonsense [![@tdeekens"
+    },
+    "/posts/a-post-about-bitcoins": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 1909,
+      "markdownStart": "--- language: \"en\" --- [![@tdeekens avatar](/_next/image?url=%2Fme.jpg&w=96&q=75)](/) [tdeekens](/) [/ posts](/posts) [/"
+    },
+    "/posts/boundaries-of-code-review-or-who-to-involve": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 470,
+      "markdownStart": "--- language: \"en\" --- [![@tdeekens avatar](/_next/image?url=%2Fme.jpg&w=96&q=75)](/) [tdeekens](/) [/ posts](/posts) [/"
+    },
+    "/posts/the-fear-and-addiction-within-gtd-getting-things-done": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 547,
+      "markdownStart": "--- language: \"en\" --- [![@tdeekens avatar](/_next/image?url=%2Fme.jpg&w=96&q=75)](/) [tdeekens](/) [/ posts](/posts) [/"
+    },
+    "/posts/the-threat-of-the-standoff": {
+      "status": 200,
+      "contentType": "text/markdown; charset=utf-8",
+      "vary": "Accept",
+      "markdownWords": 455,
+      "markdownStart": "--- language: \"en\" --- [![@tdeekens avatar](/_next/image?url=%2Fme.jpg&w=96&q=75)](/) [tdeekens](/) [/ posts](/posts) [/"
+    }
+  }
+}
