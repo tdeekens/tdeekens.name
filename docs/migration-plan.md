@@ -78,7 +78,9 @@ Run before cutover work depends on Bunny. Each item needs a pass; any failure me
 ## Phase 4: CI + staging
 
 - GitHub Actions: lint, typecheck, test, build, deploy (Bunny Storage upload, Edge Script deploy, cache purge).
-- Secrets: `BUNNY_API_KEY`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_PULL_ZONE_ID`, `BUNNY_SCRIPT_ID`; edge script env: `AI_BASE_URL`, `AI_API_KEY`, `AI_MODEL`, `BUNNY_DATABASE_URL`, `BUNNY_DATABASE_TOKEN`.
+- GitHub environments `production` and `staging`, each with secrets `BUNNY_API_KEY`, `BUNNY_STORAGE_ZONE`, `BUNNY_STORAGE_PASSWORD`, `BUNNY_SCRIPT_ID`, `BUNNY_STATIC_PULL_ZONE_ID`, `BUNNY_SITE_PULL_ZONE_ID` and variables `SITE_URL`, `BUNNY_STORAGE_HOST` (optional).
+- Edge script env (set in Bunny): `STATIC_ORIGIN` (storage pull zone URL), `STAGING_HOSTS`, `AI_PROVIDER`, `AI_BASE_URL`, `AI_API_KEY` (secret), `AI_MODEL`, `BUNNY_DATABASE_URL`, `BUNNY_DATABASE_AUTH_TOKEN` (added by "Add Secrets to Edge Script").
+- Bunny setup per environment: storage zone (Frankfurt) → pull zone A (`STATIC_ORIGIN`); standalone edge script with linked pull zone B (custom hostname) and **Run script before cache** on; database with table `rate_limits` (see `edge/rate-limit.ts`).
 - Caching: HTML `Cache-Control: public, max-age=0, s-maxage=…` + purge on deploy; `/_astro/*` `immutable`.
 
 ## Parity checklist (`scripts/parity.ts`)

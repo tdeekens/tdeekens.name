@@ -11,12 +11,14 @@
     "lint:fix": "oxlint --fix",
     "lint:ci": "oxlint && oxfmt --check",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit --skipLibCheck",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky",
     "parity": "tsx scripts/parity.ts",
     "preview": "astro preview",
     "test:watch": "vitest",
-    "serve:local": "tsx scripts/serve-local.ts"
+    "serve:local": "tsx scripts/serve-local.ts",
+    "deploy:storage": "tsx scripts/deploy-storage.ts",
+    "deploy:edge": "tsx scripts/deploy-edge.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "4.0.108",

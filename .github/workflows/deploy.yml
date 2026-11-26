@@ -1,0 +1,83 @@
+name: Deploy
+
+# main → production, staging branch or manual run → staging.
+on:
+  push:
+    branches: [main, staging]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Target environment
+        type: choice
+        options: [staging, production]
+        default: staging
+
+permissions:
+  contents: read
+
+jobs:
+  target:
+    runs-on: ubuntu-latest
+    outputs:
+      environment: ${{ steps.pick.outputs.environment }}
+    steps:
+      - id: pick
+        run: |
+          if [ -n "$INPUT" ]; then
+            echo "environment=$INPUT" >> "$GITHUB_OUTPUT"
+          elif [ "$REF" = "main" ]; then
+            echo "environment=production" >> "$GITHUB_OUTPUT"
+          else
+            echo "environment=staging" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          INPUT: ${{ github.event.inputs.environment }}
+          REF: ${{ github.ref_name }}
+
+  deploy:
+    needs: target
+    runs-on: ubuntu-latest
+    # Each GitHub environment holds its own values for the secrets below.
+    environment: ${{ needs.target.outputs.environment }}
+    concurrency:
+      group: deploy-${{ needs.target.outputs.environment }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 26
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+
+      - name: Upload site to Bunny Storage
+        run: pnpm tsx scripts/deploy-storage.ts
+        env:
+          BUNNY_STORAGE_ZONE: ${{ secrets.BUNNY_STORAGE_ZONE }}
+          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          BUNNY_STORAGE_HOST: ${{ vars.BUNNY_STORAGE_HOST }}
+
+      - name: Deploy edge script
+        run: pnpm tsx scripts/deploy-edge.ts
+        env:
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          BUNNY_SCRIPT_ID: ${{ secrets.BUNNY_SCRIPT_ID }}
+
+      - name: Purge CDN caches
+        run: |
+          for zone in "$STATIC_PULL_ZONE_ID" "$SITE_PULL_ZONE_ID"; do
+            curl --fail-with-body -sS -X POST \
+              -H "AccessKey: $BUNNY_API_KEY" \
+              "https://api.bunny.net/pullzone/$zone/purgeCache"
+          done
+        env:
+          BUNNY_API_KEY: ${{ secrets.BUNNY_API_KEY }}
+          STATIC_PULL_ZONE_ID: ${{ secrets.BUNNY_STATIC_PULL_ZONE_ID }}
+          SITE_PULL_ZONE_ID: ${{ secrets.BUNNY_SITE_PULL_ZONE_ID }}
