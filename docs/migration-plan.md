@@ -1,6 +1,6 @@
 # Migration plan: Vercel + Next.js → Astro + Bunny
 
-Status: in progress (Phases 1–3 done locally) · Branch: `migrate-to-astro`
+Status: code complete on `migrate-to-astro`; Phase 0 spike and cutover need Bunny/Eden/Plausible accounts · Branch: `migrate-to-astro`
 
 ## Decisions
 
@@ -112,7 +112,8 @@ All differences against production are intended:
 3. Switch `www` CNAME to the Bunny pull zone hostname; configure the apex redirect at all-inkl (HTTPS via Let's Encrypt).
 4. Watch Plausible, Bunny logs, Eden dashboard.
 5. Rollback: point `www` (and apex) back to Vercel (`cname.vercel-dns.com` / `76.76.21.21`).
-6. After a week: delete the Vercel project; remove Next.js, `@vercel/*`, `next-sitemap`, `accept-md-runtime`, Jest.
+6. Before merging to `main`: disconnect the Vercel Git integration (or Vercel tries to build the Astro site). Vercel keeps serving its last production deployment, which is the rollback target.
+7. After a week: delete the Vercel project. (Next.js, `@vercel/*`, `next-sitemap`, `pino` and Jest are already removed from the repo.)
 
 ## Manual steps (owner)
 
