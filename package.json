@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && tsx scripts/postbuild.ts",
+    "build": "astro build && tsx scripts/postbuild.ts && tsx scripts/build-edge.ts",
     "format": "oxfmt --write",
     "format:check": "oxfmt --check",
     "lint": "oxlint",
@@ -52,6 +52,7 @@
     "@types/react-dom": "19.3.0",
     "@vercel/analytics": "2.0.1",
     "autoprefixer": "10.7.0",
+    "esbuild": "0.28.2",
     "husky": "9.1.7",
     "jsdom": "31.0.1",
     "lint-staged": "17.6.1",
