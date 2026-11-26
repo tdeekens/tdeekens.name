@@ -9,7 +9,6 @@ import {
   hasActiveFilters,
 } from '@lib/blogroll-search';
 import { useBlogrollFilters } from '@lib/use-blogroll-filters';
-import Head from 'next/head';
 import { useMemo } from 'react';
 
 // Fixed for the page's lifetime so buttons never reorder while filtering.
@@ -43,16 +42,6 @@ const Blogroll = () => {
 
   return (
     <>
-      <Head>
-        <title>Tobias Deekens (@tdeekens) - Blogroll</title>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="Tobias Deekens - Blogroll"
-          href="/blogroll.xml"
-        />
-      </Head>
-
       <Text.Headline testId="blogroll-heading" as="h1">
         Blogroll
       </Text.Headline>
@@ -60,9 +49,6 @@ const Blogroll = () => {
       <Text.Paragraph>
         A collection of blog posts I enjoyed reading and found worth sharing.
         Also available as an{' '}
-        {/* The feed is a static file in `public`, not a Next.js page, so `<a>` is
-          correct here and `next/link` would be wrong. */}
-        {/* oxlint-disable-next-line nextjs/no-html-link-for-pages */}
         <a
           href="/blogroll.xml"
           className="underline text-link decoration-link-underline hover:text-link-hover hover:no-underline"

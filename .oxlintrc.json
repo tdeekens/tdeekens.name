@@ -6,7 +6,6 @@
     "unicorn",
     "react",
     "jsx-a11y",
-    "nextjs",
     "import",
     "jest",
     "oxc"
@@ -30,10 +29,18 @@
   ],
   "rules": {
     "eqeqeq": ["error", "smart"],
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
     "no-unused-vars": [
       "error",
-      { "argsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+      {
+        "argsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
     ],
     "no-undef": "error",
     "no-void": "off",
@@ -48,7 +55,12 @@
     "no-array-constructor": "error",
     "typescript/no-explicit-any": "off",
     "typescript/no-inferrable-types": "error",
-    "typescript/array-type": ["error", { "default": "array" }],
+    "typescript/array-type": [
+      "error",
+      {
+        "default": "array"
+      }
+    ],
     "typescript/prefer-for-of": "error",
     "typescript/prefer-enum-initializers": "error",
     "unicorn/prefer-number-properties": "error",
@@ -81,6 +93,12 @@
       "rules": {
         "no-console": "off",
         "no-empty-function": "off"
+      }
+    },
+    {
+      "files": ["**/*.astro"],
+      "globals": {
+        "Astro": "readonly"
       }
     }
   ]

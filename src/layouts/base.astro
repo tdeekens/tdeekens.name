@@ -1,0 +1,47 @@
+---
+import AppChrome from '@components/app-chrome';
+import Header from '@components/header';
+import { THEME_COLORS, themeInitScript } from '@lib/theme';
+
+import '@styles/tailwind.css';
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+
+// With `build.format: 'file'` the URL can end in `.html` during the build.
+const pathname = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '') || '/';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content={THEME_COLORS.light} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.ico" />
+    {/* Sets data-theme before first paint to avoid a flash of the wrong theme. */}
+    <script is:inline set:html={themeInitScript} />
+    <script
+      is:inline
+      defer
+      data-domain="tdeekens.name"
+      src="https://plausible.io/js/script.js"
+    ></script>
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="relative">
+      <AppChrome client:load pathname={pathname} />
+      <Header pathname={pathname} />
+      <div class="flex items-center justify-center">
+        <main class="max-w-5xl mx-4 my-8 font-custom md:mx-16 xl:text-md print:text-sm">
+          <slot />
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

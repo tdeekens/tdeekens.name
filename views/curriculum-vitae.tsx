@@ -1,28 +1,27 @@
-import AskAboutMe from '@components/ask-about-me-lazy';
 import ExternalLink from '@components/external-link';
+import Image from '@components/image';
 import InternalLink from '@components/internal-link';
 import Job from '@components/job';
 import List from '@components/list';
-import TableOfContents from '@components/table-of-contents';
 import Text from '@components/text';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
 
-const CurriculumVitae: NextPage = () => (
+type TCurriculumVitaeProps = {
+  /** The ask-about-me island, rendered by Astro (named slot `ask`). */
+  ask?: React.ReactNode;
+  /** The table-of-contents island, rendered by Astro (named slot `toc`). */
+  toc?: React.ReactNode;
+};
+
+const CurriculumVitae = (props: TCurriculumVitaeProps) => (
   <>
-    <Head>
-      <title>Curriculum vitae of Tobias Deekens</title>
-    </Head>
-
     <div className="relative z-50">
       <Text.Headline as="h1">Curriculum vitae</Text.Headline>
       <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 print:hidden">
-        <TableOfContents />
+        {props.toc}
       </div>
     </div>
 
-    <AskAboutMe variant="cv" />
+    {props.ask}
 
     <section className="flex flex-row py-6 text-l print:place-content-evenly place-content-center md:place-content-between">
       <ul className="">

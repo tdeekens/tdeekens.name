@@ -1,10 +1,10 @@
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import {
   getShortcutsEnabled,
   SHORTCUTS_STORAGE_KEY,
 } from '@lib/shortcuts-preference';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import ShortcutsHelp from './shortcuts-help';
 
@@ -49,7 +49,7 @@ describe('ShortcutsHelp', () => {
 
   it('closes via the close button', async () => {
     const user = userEvent.setup();
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(<ShortcutsHelp open pathname="/" onClose={onClose} />);
 
     await user.click(screen.getByRole('button', { name: 'Close (esc)' }));

@@ -19,3 +19,4 @@ minimumReleaseAgeExclude:
   - '@next/swc-win32-x64-msvc@16.4.6'
   - ai@7.0.177
   - next@16.4.6
+  - tldts-core@7.5.6

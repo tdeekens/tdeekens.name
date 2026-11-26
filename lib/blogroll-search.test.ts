@@ -1,5 +1,5 @@
-import { describe, expect, it } from '@jest/globals';
 import type { TBlogrollEntry } from '@lib/blogroll';
+import { describe, expect, it } from 'vitest';
 
 import {
   countTags,

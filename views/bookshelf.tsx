@@ -1,13 +1,8 @@
 import Book from '@components/book';
 import Text from '@components/text';
-import Head from 'next/head';
 
 const Bookshelf = () => (
   <>
-    <Head>
-      <title>Tobias Deekens (@tdeekens) - Bookshelf</title>
-    </Head>
-
     <Text.Headline testId="bookshelf-heading" as="h1">
       Bookshelf
     </Text.Headline>

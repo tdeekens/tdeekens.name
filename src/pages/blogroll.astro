@@ -1,0 +1,16 @@
+---
+import Blogroll from '@views/blogroll';
+
+import Base from '../layouts/base.astro';
+---
+
+<Base title="Tobias Deekens (@tdeekens) - Blogroll">
+  <link
+    slot="head"
+    rel="alternate"
+    type="application/rss+xml"
+    title="Tobias Deekens - Blogroll"
+    href="/blogroll.xml"
+  />
+  <Blogroll client:load />
+</Base>

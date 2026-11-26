@@ -1,12 +1,8 @@
-import AskAboutMe from '@components/ask-about-me-lazy';
 import ExternalLink from '@components/external-link';
+import Image from '@components/image';
 import InternalLink from '@components/internal-link';
 import List from '@components/list';
 import Text from '@components/text';
-import Head from 'next/head';
-import Image from 'next/image';
-
-import { getAllPosts } from '../lib/posts';
 
 type THomeProps = {
   posts: {
@@ -14,14 +10,12 @@ type THomeProps = {
     slug: string;
     draft: boolean;
   }[];
+  /** The ask-about-me island, rendered by Astro (named slot `ask`). */
+  ask?: React.ReactNode;
 };
 
 const Home = (props: THomeProps) => (
   <>
-    <Head>
-      <title>Tobias Deekens (@tdeekens)</title>
-    </Head>
-
     <div className="flex-auto">
       <section>
         <div className="flex-auto mb-8 text-center">
@@ -32,6 +26,7 @@ const Home = (props: THomeProps) => (
               alt="@tdeekens avatar"
               width="200"
               height="200"
+              priority
             />
           </center>
         </div>
@@ -46,7 +41,7 @@ const Home = (props: THomeProps) => (
           focussing on Frontend Architecture.
         </Text.Paragraph>
 
-        <AskAboutMe variant="general" />
+        {props.ask}
 
         <Text.Paragraph>You can also find me on:</Text.Paragraph>
 
@@ -219,17 +214,5 @@ const Home = (props: THomeProps) => (
     </div>
   </>
 );
-
-export const getStaticProps = async () => {
-  return {
-    props: {
-      posts: getAllPosts().map((post) => ({
-        title: post.title,
-        slug: post.slug,
-        draft: post.draft,
-      })),
-    },
-  };
-};
 
 export default Home;

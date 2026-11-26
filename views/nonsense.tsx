@@ -1,14 +1,9 @@
 import Blockquote from '@components/blockquote';
 import ExternalLink from '@components/external-link';
 import Text from '@components/text';
-import Head from 'next/head';
 
 const Nonsense = () => (
   <>
-    <Head>
-      <title>Tobias Deekens (@tdeekens) - Nonsense</title>
-    </Head>
-
     <Text.Headline as="h1">Nonsense</Text.Headline>
 
     <Text.Paragraph>

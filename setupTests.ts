@@ -5,11 +5,13 @@ import {
 } from 'node:stream/web';
 import { TextDecoder, TextEncoder } from 'node:util';
 
-// The /jest-globals entry point extends the `expect` imported from
-// @jest/globals rather than a global one, and carries the matcher type
-// augmentation with it. Because this file is TypeScript and covered by
-// tsconfig, that augmentation applies to every test.
-import '@testing-library/jest-dom/jest-globals';
+// Extends Vitest's `expect` with the DOM matchers and their types.
+import '@testing-library/jest-dom/vitest';
+import { cleanup } from '@testing-library/react';
+import { afterEach, vi } from 'vitest';
+
+// Testing Library only auto-unmounts when test globals are enabled.
+afterEach(() => cleanup());
 
 // SAFETY: only used to fill in missing globals by name below; every key it
 // touches is checked with `??=` and assigned a Node built-in of the right type.
@@ -24,6 +26,13 @@ globals.TransformStream ??= TransformStream;
 globals.WritableStream ??= WritableStream;
 globals.TextDecoder ??= TextDecoder;
 globals.TextEncoder ??= TextEncoder;
+
+// After every user-event step Testing Library awaits a `setTimeout(0)` and
+// only advances it under fake timers when it finds a `jest` global. Without
+// this shim, tests using `vi.useFakeTimers()` hang on the first interaction.
+globals.jest ??= {
+  advanceTimersByTime: (ms: number) => vi.advanceTimersByTime(ms),
+};
 
 // jsdom lacks the modal dialog API; mimic the open/close/close-event bits.
 function showModalStub(this: HTMLDialogElement) {

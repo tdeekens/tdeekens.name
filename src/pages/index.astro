@@ -1,0 +1,20 @@
+---
+import AskAboutMe from '@components/ask-about-me-lazy';
+import Home from '@views/index';
+import { getCollection } from 'astro:content';
+
+import Base from '../layouts/base.astro';
+import { sortPosts } from '../posts';
+
+const posts = sortPosts(await getCollection('posts')).map((post) => ({
+  title: post.data.title,
+  slug: post.id,
+  draft: post.data.draft,
+}));
+---
+
+<Base title="Tobias Deekens (@tdeekens)">
+  <Home posts={posts}>
+    <AskAboutMe slot="ask" client:load variant="general" />
+  </Home>
+</Base>

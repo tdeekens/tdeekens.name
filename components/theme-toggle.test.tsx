@@ -1,8 +1,8 @@
-import { beforeEach, describe, expect, it } from '@jest/globals';
 import { setShortcutsEnabled } from '@lib/shortcuts-preference';
 import { THEME_STORAGE_KEY, toggleTheme } from '@lib/theme';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import ThemeToggle from './theme-toggle';
 

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 type TInternalLinkProps = {
   children: React.ReactNode;
   href: string;
@@ -11,7 +9,7 @@ function InternalLink(props: TInternalLinkProps) {
   const underline = props.underline ?? true;
 
   return (
-    <Link
+    <a
       href={props.href}
       data-test-id={props.testId}
       className={[
@@ -23,7 +21,7 @@ function InternalLink(props: TInternalLinkProps) {
         .join(' ')}
     >
       {props.children}
-    </Link>
+    </a>
   );
 }
 

@@ -1,39 +1,26 @@
+import { act, render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import {
   afterEach,
   beforeEach,
   describe,
   expect,
   it,
-  jest,
-} from '@jest/globals';
-import { act, render, screen, within } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+  vi,
+  type MockInstance,
+} from 'vitest';
 
-type TRouter = {
-  isReady: boolean;
-  pathname: string;
-  query: Record<string, string | string[]>;
-  replace: jest.Mock;
-};
-
-const router: TRouter = {
-  isReady: true,
-  pathname: '/blogroll',
-  query: {},
-  replace: jest.fn(),
-};
-
-jest.unstable_mockModule('next/router', () => ({ useRouter: () => router }));
-
-// Lives outside `pages/` because Next.js treats every file there as a route.
-const { default: Blogroll } = await import('@pages/blogroll');
+const { default: Blogroll } = await import('@views/blogroll');
 const { blogroll } = await import('@lib/blogroll');
 const { useShortcuts } = await import('@lib/use-shortcuts');
+const { readUrlQuery } = await import('@lib/use-blogroll-filters');
 
 function WithShortcuts() {
-  useShortcuts(() => {});
+  useShortcuts('/blogroll', () => {});
   return <Blogroll />;
 }
+
+let replaceState: MockInstance<History['replaceState']>;
 
 const articles = () => screen.queryAllByRole('article');
 const search = () => screen.getByRole('searchbox');
@@ -43,22 +30,27 @@ const tagButton = (tag: string) =>
   within(tagBar()).getByRole('button', {
     name: (name) => name.split(' ')[0] === tag,
   });
-const lastReplace = () =>
-  (router.replace.mock.calls.at(-1)?.[0] as { query: unknown } | undefined)
-    ?.query;
+/** Query of the last in-place URL update, e.g. `{ q: 'agent' }`. */
+const lastReplace = () => {
+  const url = replaceState.mock.calls.at(-1)?.[2];
+  return url === undefined || url === null
+    ? undefined
+    : readUrlQuery(new URL(String(url), 'http://localhost').search);
+};
 const setup = () =>
-  userEvent.setup({ advanceTimers: (ms) => jest.advanceTimersByTime(ms) });
-const settle = () => act(() => jest.advanceTimersByTime(300));
+  userEvent.setup({ advanceTimers: (ms) => vi.advanceTimersByTime(ms) });
+const settle = () => act(() => vi.advanceTimersByTime(300));
 
 beforeEach(() => {
-  jest.useFakeTimers();
-  router.query = {};
-  router.replace.mockClear();
+  vi.useFakeTimers();
+  window.history.replaceState(null, '', '/blogroll');
+  replaceState = vi.spyOn(window.history, 'replaceState');
   localStorage.clear();
 });
 
 afterEach(() => {
-  jest.useRealTimers();
+  vi.useRealTimers();
+  replaceState.mockRestore();
 });
 
 describe('Blogroll search', () => {
@@ -81,7 +73,7 @@ describe('Blogroll search', () => {
       screen.getByText(`Showing ${expected} of ${blogroll.length} posts`),
     ).toBeInTheDocument();
     // Nothing announced or written mid-typing...
-    expect(router.replace).not.toHaveBeenCalled();
+    expect(replaceState).not.toHaveBeenCalled();
 
     await settle();
     expect(lastReplace()).toEqual({ q: 'agent' });
@@ -164,7 +156,7 @@ describe('Blogroll search', () => {
   });
 
   it('applies filters from the URL on load, ignoring unknown tags', () => {
-    router.query = { q: 'agent', tag: ['AI', 'nope'] };
+    window.history.replaceState(null, '', '/blogroll?q=agent&tag=AI&tag=nope');
     render(<Blogroll />);
 
     expect(search()).toHaveValue('agent');

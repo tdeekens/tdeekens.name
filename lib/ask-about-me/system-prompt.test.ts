@@ -1,9 +1,9 @@
-/**
- * @jest-environment node
- */
-import { describe, expect, it } from '@jest/globals';
 import { streamText } from 'ai';
 import { MockLanguageModelV4, simulateReadableStream } from 'ai/test';
+/**
+ * @vitest-environment node
+ */
+import { describe, expect, it } from 'vitest';
 
 import type { CvContext } from './context';
 import { buildSystemMessages } from './system-prompt';

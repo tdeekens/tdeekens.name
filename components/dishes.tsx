@@ -4,7 +4,7 @@ type TDishesProps = {
   }[];
 };
 
-import Image from 'next/image';
+import Image from '@components/image';
 
 function Dishes(props: TDishesProps) {
   return (

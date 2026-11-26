@@ -1,6 +1,5 @@
 import Dishes from '@components/dishes';
 import Text from '@components/text';
-import Head from 'next/head';
 
 const dishes1 = [
   {
@@ -205,10 +204,6 @@ const dishes10 = [
 
 const Bookshelf = () => (
   <>
-    <Head>
-      <title>Tobias Deekens (@tdeekens) - Cooking diary</title>
-    </Head>
-
     <Text.Headline testId="bookshelf-heading" as="h1">
       Cooking diary
     </Text.Headline>
