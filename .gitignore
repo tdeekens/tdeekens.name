@@ -43,3 +43,4 @@ tsconfig.tsbuildinfo
 
 .astro/
 /dist/
+/edge/generated/

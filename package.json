@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && tsx scripts/postbuild.ts",
     "format": "oxfmt --write",
     "format:check": "oxfmt --check",
     "lint": "oxlint",
@@ -18,9 +18,13 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "4.0.108",
+    "@ai-sdk/openai-compatible": "3.0.94",
     "@ai-sdk/react": "4.0.181",
     "@astrojs/mdx": "8.1.6",
     "@astrojs/react": "7.1.9",
+    "@bunny.net/database-client": "0.0.3",
+    "@bunny.net/edgescript-sdk": "0.13.0",
     "@vercel/functions": "3.11.3",
     "@vercel/speed-insights": "2.1.0",
     "accept-md-runtime": "5.0.2",
