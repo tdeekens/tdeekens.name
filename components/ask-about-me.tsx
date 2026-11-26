@@ -2,7 +2,7 @@ import { useChat } from '@ai-sdk/react';
 import AskAboutMeShell from '@components/ask-about-me-shell';
 import type { AskVariant } from '@lib/ask-about-me/variants';
 import { DefaultChatTransport, type UIMessage } from 'ai';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -78,6 +78,19 @@ function AskAboutMe(props: TAskAboutMeProps) {
     await sendMessage({ text: trimmed });
   };
 
+  // Focus moves in the same commit that swaps the placeholder for the chat,
+  // so a keystroke typed during the hand-over cannot land on the detached
+  // placeholder. Only ever mounted client-side, so no SSR warning applies.
+  useLayoutEffect(() => {
+    if (props.shouldFocusOnMount) {
+      const element = inputRef.current;
+      element?.focus();
+      element?.setSelectionRange(element.value.length, element.value.length);
+    }
+    // Mount-only hand-over.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const hasMountedRef = useRef(false);
   useEffect(() => {
     if (hasMountedRef.current) {
@@ -85,11 +98,6 @@ function AskAboutMe(props: TAskAboutMeProps) {
     }
     hasMountedRef.current = true;
 
-    if (props.shouldFocusOnMount) {
-      const element = inputRef.current;
-      element?.focus();
-      element?.setSelectionRange(element.value.length, element.value.length);
-    }
     if (props.initialQuestion) {
       void submit(props.initialQuestion);
     }

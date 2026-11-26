@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import type { UIMessage } from 'ai';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 type ChatState = {
   messages: UIMessage[];
@@ -9,11 +9,11 @@ type ChatState = {
   error?: Error;
 };
 
-const sendMessage = jest.fn();
-const clearError = jest.fn();
+const sendMessage = vi.fn();
+const clearError = vi.fn();
 let chatState: ChatState;
 
-jest.unstable_mockModule('@ai-sdk/react', () => ({
+vi.doMock('@ai-sdk/react', () => ({
   useChat: () => ({ ...chatState, sendMessage, clearError }),
 }));
 

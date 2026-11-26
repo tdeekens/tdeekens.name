@@ -1,0 +1,14 @@
+---
+import AskAboutMe from '@components/ask-about-me-lazy';
+import TableOfContents from '@components/table-of-contents';
+import CurriculumVitae from '@views/curriculum-vitae';
+
+import Base from '../layouts/base.astro';
+---
+
+<Base title="Curriculum vitae of Tobias Deekens">
+  <CurriculumVitae>
+    <TableOfContents slot="toc" client:idle />
+    <AskAboutMe slot="ask" client:load variant="cv" />
+  </CurriculumVitae>
+</Base>

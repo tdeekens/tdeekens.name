@@ -29,10 +29,12 @@ function TagToggle(props: TTagToggleProps) {
       ].join(' ')}
     >
       <span>{props.tag}</span>
+      {/* Separates tag and count in the accessible name ("ai 12 posts"); flex
+        layout drops whitespace-only text, so nothing changes visually. */}
+      {props.count !== undefined && ' '}
       {props.count !== undefined && (
         <span className="tabular-nums">
-          {props.count}
-          <span className="sr-only"> posts</span>
+          {props.count} <span className="sr-only">posts</span>
         </span>
       )}
     </button>

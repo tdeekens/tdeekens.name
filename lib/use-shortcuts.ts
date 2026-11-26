@@ -1,8 +1,9 @@
 import { shortcutsFor } from '@lib/shortcuts';
 import { useShortcutsEnabled } from '@lib/shortcuts-preference';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { tinykeys } from 'tinykeys';
+
+import { navigate } from './navigate';
 
 function isEditableTarget(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) {
@@ -11,8 +12,8 @@ function isEditableTarget(target: EventTarget | null) {
   return target.matches('input, textarea, select, [contenteditable="true"]');
 }
 
-export function useShortcuts(onHelp: () => void) {
-  const router = useRouter();
+/** `pathname` scopes page-specific shortcuts, e.g. `/` on the blogroll. */
+export function useShortcuts(pathname: string, onHelp: () => void) {
   const enabled = useShortcutsEnabled();
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export function useShortcuts(onHelp: () => void) {
       },
     };
 
-    for (const shortcut of shortcutsFor(router.pathname)) {
+    for (const shortcut of shortcutsFor(pathname)) {
       map[shortcut.keys] = (e) => {
         if (isEditableTarget(e.target)) {
           return;
@@ -45,10 +46,10 @@ export function useShortcuts(onHelp: () => void) {
           shortcut.action();
           return;
         }
-        router.push(shortcut.path);
+        navigate(shortcut.path);
       };
     }
 
     return tinykeys(window, map);
-  }, [router, onHelp, enabled]);
+  }, [pathname, onHelp, enabled]);
 }

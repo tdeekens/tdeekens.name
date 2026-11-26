@@ -1,6 +1,3 @@
-import { getMarkdownForPath, loadConfig } from 'accept-md-runtime';
-
-import { getPublishedPosts } from '../posts';
 import { ASK_ABOUT_ME_CONFIG, type SourcePath } from './config';
 
 export type CvContext = {
@@ -9,11 +6,13 @@ export type CvContext = {
   builtAt: number;
 };
 
-const acceptMdConfig = loadConfig(process.cwd());
+export type ContextSource = {
+  path: SourcePath;
+  title: string;
+  markdown: string;
+};
 
-let cached: CvContext | null = null;
-
-const titleFromPath = (path: SourcePath): string => {
+export const titleFromPath = (path: SourcePath): string => {
   if (path === '/curriculum-vitae') {
     return 'Curriculum vitae';
   }
@@ -26,7 +25,7 @@ const titleFromPath = (path: SourcePath): string => {
   return path.replace('/posts/', 'Post: ');
 };
 
-const trimToParagraph = (markdown: string, maxChars: number): string => {
+export const trimToParagraph = (markdown: string, maxChars: number): string => {
   const trimmed = markdown.trim();
   if (trimmed.length <= maxChars) {
     return trimmed;
@@ -36,18 +35,11 @@ const trimToParagraph = (markdown: string, maxChars: number): string => {
   return (lastBreak > 0 ? cut.slice(0, lastBreak) : cut).trimEnd() + '…';
 };
 
-const fetchPageMarkdown = (path: SourcePath, baseUrl: string) =>
-  getMarkdownForPath({ pathname: path, baseUrl, config: acceptMdConfig });
-
-type Source = { path: SourcePath; title: string; markdown: string };
-
-const loadPostSources = (): Source[] => {
-  const posts = getPublishedPosts() as {
-    slug: string;
-    title?: string;
-    content: string;
-  }[];
-  return posts.map((post) => ({
+/** Published posts as excerpts, e.g. from `getPublishedPosts()`. */
+export const postSources = (
+  posts: { slug: string; title?: string; content: string }[],
+): ContextSource[] =>
+  posts.map((post) => ({
     path: `/posts/${post.slug}` as const,
     title: post.title ?? post.slug,
     markdown: trimToParagraph(
@@ -55,9 +47,8 @@ const loadPostSources = (): Source[] => {
       ASK_ABOUT_ME_CONFIG.postExcerptChars,
     ),
   }));
-};
 
-const combineSources = (sources: Source[]): string =>
+const combineSources = (sources: ContextSource[]): string =>
   sources
     .map(
       (source) =>
@@ -65,35 +56,23 @@ const combineSources = (sources: Source[]): string =>
     )
     .join('\n\n---\n\n');
 
-const buildCvContext = async (baseUrl: string): Promise<CvContext> => {
-  const pageSources: Source[] = await Promise.all(
-    ASK_ABOUT_ME_CONFIG.pageSourcePaths.map(async (path) => ({
-      path,
-      title: titleFromPath(path),
-      markdown: await fetchPageMarkdown(path, baseUrl),
-    })),
-  );
-
+/**
+ * Built once at build time (see `scripts/postbuild.ts`) from the rendered
+ * pages' markdown and post excerpts, then bundled into the edge script.
+ */
+export const buildCvContext = (
+  pageSources: ContextSource[],
+  posts: ContextSource[],
+  now: number = Date.now(),
+): CvContext => {
   const sources = ASK_ABOUT_ME_CONFIG.includePosts
-    ? [...pageSources, ...loadPostSources()]
+    ? [...pageSources, ...posts]
     : pageSources;
-
   const combinedMarkdown = combineSources(sources);
 
   return {
     combinedMarkdown,
     approxTokens: Math.ceil(combinedMarkdown.length / 4),
-    builtAt: Date.now(),
+    builtAt: now,
   };
-};
-
-export const getCvContext = async (baseUrl: string): Promise<CvContext> => {
-  if (
-    cached &&
-    Date.now() - cached.builtAt < ASK_ABOUT_ME_CONFIG.contextTtlMs
-  ) {
-    return cached;
-  }
-  cached = await buildCvContext(baseUrl);
-  return cached;
 };

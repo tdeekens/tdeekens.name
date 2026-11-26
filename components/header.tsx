@@ -1,11 +1,13 @@
+import Image from '@components/image';
 import InternalLink from '@components/internal-link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
 
-function Header() {
-  const router = useRouter();
+type THeaderProps = {
+  /** Current path, e.g. `/posts/some-slug`. */
+  pathname: string;
+};
 
-  const path = router.asPath.split('#')[0].split('?')[0];
+function Header(props: THeaderProps) {
+  const path = props.pathname.split('#')[0].split('?')[0];
 
   if (path === '/') {
     return null;

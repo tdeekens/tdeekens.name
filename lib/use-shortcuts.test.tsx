@@ -1,18 +1,16 @@
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { setShortcutsEnabled } from '@lib/shortcuts-preference';
 import { act, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const push = jest.fn();
-jest.unstable_mockModule('next/router', () => ({
-  useRouter: () => ({ push }),
-}));
+const push = vi.fn();
+vi.doMock('./navigate', () => ({ navigate: push }));
 
-// Imported after the mock so the hook picks up the fake router.
+// Imported after the mock so the hook picks up the fake navigation.
 const { useShortcuts } = await import('./use-shortcuts');
 
 function Harness() {
-  useShortcuts(() => {});
+  useShortcuts('/', () => {});
   return <input aria-label="field" />;
 }
 
@@ -43,9 +41,9 @@ describe('useShortcuts', () => {
 
   it('disables every shortcut, including ?, when turned off', async () => {
     const user = userEvent.setup();
-    const onHelp = jest.fn();
+    const onHelp = vi.fn();
     function HelpHarness() {
-      useShortcuts(onHelp);
+      useShortcuts('/', onHelp);
       return null;
     }
     render(<HelpHarness />);

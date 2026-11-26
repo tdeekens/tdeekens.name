@@ -1,18 +1,18 @@
-import { beforeEach, describe, expect, it, jest } from '@jest/globals';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-const sendMessage = jest.fn();
+const sendMessage = vi.fn();
 // Only the real chat calls useChat, so this doubles as the "chunk swapped in"
 // signal. Without it the hand-over tests would pass on the placeholder alone.
-const useChat = jest.fn(() => ({
+const useChat = vi.fn(() => ({
   messages: [],
   status: 'ready' as const,
   sendMessage,
-  clearError: jest.fn(),
+  clearError: vi.fn(),
 }));
 
-jest.unstable_mockModule('@ai-sdk/react', () => ({ useChat }));
+vi.doMock('@ai-sdk/react', () => ({ useChat }));
 
 const { default: AskAboutMeLazy } = await import('./ask-about-me-lazy');
 
